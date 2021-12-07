@@ -22,7 +22,9 @@ from sportsreference.ncaaf.conferences import Conferences
 
 # Establishing current day, month, and year for rankings. Adjust to rank for a previous week or year
 
-todayy = datetime.today()
+todays_datetime = os.environ.get('DATE_STRING', str(datetime.today()))
+todayy = datetime.fromisoformat(todays_datetime)
+
 today_month = todayy.month
 today_day = todayy.day
 today_year = todayy.year
@@ -67,7 +69,7 @@ def conference_rankings(year):
     conf_objects = {} # Dictionary to store conference objects & associate with the conference name
     games_played = []
         
-    teams = Teams( str(year) )
+    teams = Teams( year )
     
     '''
     Below I define the Power-5. Note that I punish the Independents (*cough cough* NOTRE DAME *cough cough*) for not playing 
@@ -86,7 +88,7 @@ def conference_rankings(year):
     
     for i_it,team in enumerate(teams):
         
-        conference = team.conference
+        conference = team.conference.lower()
         if conference in power5:
             is_p5 = True
         else:
@@ -97,8 +99,8 @@ def conference_rankings(year):
              conf_objects.update({conference:this_conf}) # Associate it with the correct name in the dictionary
         
         # Total W/L
-        wins = rfx.team_stat(team.wins)
-        losses = rfx.team_stat(team.losses)
+        wins = rfx.team_total_WL(team)[0]
+        losses = rfx.team_total_WL(team)[1]
         
         games_played.append(float(wins+losses))
         

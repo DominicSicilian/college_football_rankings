@@ -15,6 +15,12 @@ from sportsreference.ncaaf.boxscore import Boxscore
 from sportsreference.ncaaf.teams import Teams
 from sportsreference.ncaaf.conferences import Conferences
 
+#------------------------------------------------------------------------------
+#   
+#    BEGIN PRINT FORMATTING FUNCTIONS
+#
+#------------------------------------------------------------------------------
+
 def dashes():
     print('-'*120)
     
@@ -23,6 +29,17 @@ def skips():
 
 def spaced(mystring):
     print(' '*10, mystring, '\n')
+
+#------------------------------------------------------------------------------
+#   
+#    END PRINT FORMATTING FUNCTIONS
+#
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#   
+#    BEGIN WELCOME MESSAGE
+#
+#------------------------------------------------------------------------------
 
 dashes()
 skips()
@@ -42,7 +59,11 @@ spaced("ENJOY! AND GO CANES! #TheU")
 skips()
 dashes()
 
-
+#------------------------------------------------------------------------------
+#   
+#    END WELCOME MESSAGE
+#
+#------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #   
 #    BEGIN GLOBAL VARIABLES
@@ -51,7 +72,9 @@ dashes()
 
 # Establishing current day, month, and year for rankings. Adjust to rank for a previous week or year
 
-todayy = datetime.today()
+todays_datetime = os.environ.get('DATE_STRING', str(datetime.today()))
+todayy = datetime.fromisoformat(todays_datetime)
+
 today_month = todayy.month
 today_day = todayy.day
 today_year = todayy.year
@@ -116,7 +139,7 @@ team_objects = {}
 team_objects_by_name = {} 
 team_object_list = []
     
-teams = Teams( str(today_year) )
+teams = Teams( today_year )
 
 skips()
 spaced('COMPUTING "NATURE" STATISTIC')
@@ -131,7 +154,7 @@ for i_it,team in enumerate(teams):
     team_fullname = team.name   
     name_abbrev_converter.update({ team_abb: team_fullname})
     
-    conference = team.conference
+    conference = team.conference.lower()
     
     if conference not in team_objects:
         team_objects.update({conference:[]}) # Note that the team objects will be sorted into their respective conferences
@@ -194,8 +217,8 @@ for i_it,team in enumerate(teams):
     
     N_raw = rfx.Nature(A, TD,P, TDA,PA, TM,G, FIRST_DOWNS, OPP_FIRST_DOWNS)
     
-    wins = rfx.team_stat(team.wins)
-    losses = rfx.team_stat(team.losses)
+    wins = rfx.team_total_WL(team)[0]
+    losses = rfx.team_total_WL(team)[1]
 
     conf_wins = rfx.team_conf_WL(team)[0]
     conf_losses = rfx.team_conf_WL(team)[1]
@@ -319,7 +342,7 @@ spaced('COMPUTING STRENGTH OF RECORD...')
 
 SOR_raw_list = []
 
-teams = Teams( str(today_year) )
+teams = Teams( today_year )
 
 for i_it,team in enumerate(teams):
     
@@ -335,21 +358,25 @@ for i_it,team in enumerate(teams):
     
     for game in sched:
         
-        against_abb = game.opponent_abbr
-        if against_abb in name_abbrev_converter: # Checking if the team is in FBS or not
-            against = name_abbrev_converter[against_abb]
-            opp_object = team_objects_by_name[against]
-            oppCc = opp_object.overall_index # Obtain opponent's Cc index for outcome's SOR contribution
+        gametime = game.datetime 
         
-        else:
-            oppCc = 0.0 # If not in the dictionary, team is FCS and gets 0 credit towards Cc. No bonus for beating them, heaviest possible punishment for losing
+        if gametime < todayy:
             
-        outcome = game.result
-
-        if outcome == 'Win':
-            WCC.append(oppCc) # SOR contribution from wins
-        elif outcome == 'Loss':
-            LCC.append(oppCc) # SOR contribution from losses
+            against_abb = game.opponent_abbr.lower()
+            if against_abb in name_abbrev_converter: # Checking if the team is in FBS or not
+                against = name_abbrev_converter[against_abb]
+                opp_object = team_objects_by_name[against]
+                oppCc = opp_object.overall_index # Obtain opponent's Cc index for outcome's SOR contribution
+            
+            else:
+                oppCc = 0.0 # If not in the dictionary, team is FCS and gets 0 credit towards Cc. No bonus for beating them, heaviest possible punishment for losing
+                
+            outcome = game.result
+    
+            if outcome == 'Win':
+                WCC.append(oppCc) # SOR contribution from wins
+            elif outcome == 'Loss':
+                LCC.append(oppCc) # SOR contribution from losses
     
     team_object.winsCC = WCC # Update the team object so we can now compute the SOR_raw
     team_object.lossesCC = LCC

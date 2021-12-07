@@ -16,6 +16,42 @@ from sportsreference.ncaaf.conferences import Conferences
 
 #------------------------------------------------------------------------------
 #   
+#    BEGIN GLOBAL VARIABLES
+#
+#------------------------------------------------------------------------------
+
+# Establishing current day, month, and year for rankings. Adjust to rank for a previous week or year
+
+todays_datetime = os.environ.get('DATE_STRING', str(datetime.today()))
+todays_datetime = datetime.fromisoformat(todays_datetime)
+
+# Establish a conference conversion dictionary due to inconsistency between opponent conferences and team conferences
+
+conf_conversion = {
+        'american': ['american'],
+        'acc': ['acc'],
+        'big-12': ['big-12','big 12'],
+        'big-east': ['big-east', 'big east'],
+        'big-west': ['big-west', 'big west'],
+        'big-ten': ['big-ten', 'big ten'],
+        'cusa': ['cusa'],
+        'independent': ['independent', 'ind'],
+        'mac': ['mac'],
+        'mwc': ['mwc'],
+        'pac-10': ['pac-10', 'pac 10'],
+        'pac-12': ['pac-12'],
+        'sec': ['sec'],
+        'sun-belt': ['sun-belt', 'sun belt'],
+        'wac': ['wac']
+        }
+
+#------------------------------------------------------------------------------
+#   
+#    END GLOBAL VARIABLES
+#
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#   
 #    BEGIN FUNCTION DEFINITIONS
 #
 #------------------------------------------------------------------------------
@@ -79,25 +115,37 @@ Compute the conference record for an FBS-Independent team,
 treating the Independents as a conference.
 '''
     
-def indy_conf(sched, date_time_object):
+def total_and_conf_WL(team, date_time_object=todays_datetime):
+    
+    sched = team.schedule
+    team_conf = team.conference.lower()
     
     conf_wins = 0.0
     conf_losses = 0.0
+    
+    total_wins = 0.0
+    total_losses = 0.0
         
     for game in sched:
         
-        if game.opponent_conference == 'independent':
+        opp_conf = game.opponent_conference.lower()
         
-            gametime = game.datetime 
-            
-            if gametime < date_time_object:
-                outcome = game.result
-                if outcome == 'Win':
-                    conf_wins = conf_wins + 1.0
-                elif outcome == 'Loss':
-                    conf_losses = conf_losses + 1.0
+        gametime = game.datetime 
+        
+        if gametime < date_time_object:
+            outcome = game.result
+            if outcome == 'Win':
+                total_wins += 1.0
+                if opp_conf in conf_conversion[team_conf]:
+                    conf_wins += 1.0
+
+            elif outcome == 'Loss':
+                total_losses += 1.0
+                if opp_conf in conf_conversion[team_conf]:
+                    conf_losses += 1.0
+
                     
-    return [conf_wins, conf_losses]
+    return [[conf_wins, conf_losses], [total_wins, total_losses]]
     
 #------------------------------------------------------------------------------
 
@@ -107,18 +155,61 @@ Compute the conference record for a team
 
 def team_conf_WL(team):
     
-    if team.conference == 'independent': # If team is Independent, treat that as a conference and manually compute "conference" record
-
-        conf_WL = indy_conf(team.schedule, datetime.today())            
-        conf_wins = conf_WL[0]
-        conf_losses = conf_WL[1]
-        
-    else: # Otherwise, grab the values from the SportsReference team object
-        
-        conf_wins = team_stat(team.conference_wins)
-        conf_losses = team_stat(team.conference_losses)
+    conf_WL = total_and_conf_WL(team)[0]
     
-    return [conf_wins, conf_losses]
+    return conf_WL
+
+#------------------------------------------------------------------------------
+
+'''
+Compute the overall record for a team
+'''
+
+def team_total_WL(team):
+    
+    total_WL = total_and_conf_WL(team)[1]
+    
+    return total_WL
+    
+ #------------------------------------------------------------------------------   
+
+#def team_conf_WL(team):
+#    
+#    if team.conference == 'independent': # If team is Independent, treat that as a conference and manually compute "conference" record
+#
+#        conf_WL = indy_conf(team.schedule, todays_datetime)            
+#        conf_wins = conf_WL[0]
+#        conf_losses = conf_WL[1]
+#        
+#    else: # Otherwise, grab the values from the SportsReference team object
+#        
+#        conf_wins = team_stat(team.conference_wins)
+#        conf_losses = team_stat(team.conference_losses)
+#    
+#    return [conf_wins, conf_losses]
+
+#------------------------------------------------------------------------------
+
+#'''
+#Compute the conference record for a team
+#'''
+#
+#def team_WL_function(team):
+#    
+#    
+#    
+#    if team.conference == 'independent': # If team is Independent, treat that as a conference and manually compute "conference" record
+#
+#        conf_WL = indy_conf(team.schedule, todays_datetime)            
+#        conf_wins = conf_WL[0]
+#        conf_losses = conf_WL[1]
+#        
+#    else: # Otherwise, grab the values from the SportsReference team object
+#        
+#        conf_wins = team_stat(team.conference_wins)
+#        conf_losses = team_stat(team.conference_losses)
+#    
+#    return [conf_wins, conf_losses]
 
 #------------------------------------------------------------------------------
 
@@ -344,7 +435,7 @@ def display_and_save(SPI_final_rankings, conf_rankings):
     
     df_database = pd.DataFrame(rankings_database, index=df_index)
     df_database = df_database.transpose()
-    df_database.to_csv('SPI_Rankings.csv',sep=',')
+    df_database.to_csv('SPI_Rankings_'+str(todays_datetime)+'.csv',sep=',')
     
 
 #------------------------------------------------------------------------------
