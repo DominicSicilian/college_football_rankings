@@ -79,6 +79,11 @@ today_month = todayy.month
 today_day = todayy.day
 today_year = todayy.year
 
+sept1 = datetime(today_year, 9, 1)
+
+if todayy < sept1:
+    today_year = today_year - 1
+
 #------------------------------------------------------------------------------
 #   
 #    END GLOBAL VARIABLES
