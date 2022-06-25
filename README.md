@@ -20,11 +20,17 @@ After cloning the repository, to generate current rankings, run
 python cfb_full_rankings.py
 ```
 
-To generate rankings at any point in the past, change the environment variable ```DATE_STRING``` to a ```datetime```-compatible string of your choice.
+To generate rankings at any point in the past, change the environment variable ```DATE_STRING``` to a ```datetime```-compatible string of your choice. As an example, this can be done from ```python``` using
 
 ```python
 # Pick any valid year, month, and day strings
 os.environ["DATE_STRING"] = str(datetime(year, month, day, 0, 0, 0, 0))
+```
+
+or ```bash``` using
+
+```bash
+$ export DATETIME_STRING=<year>+"-"+<month>+"-"+<day>
 ```
 
 *Note: this is only compatible with seasons 2001-Present due to lack of data in the 1990s and prior available on the ```SportsReference``` database.*
