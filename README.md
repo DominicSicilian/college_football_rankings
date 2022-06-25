@@ -20,7 +20,7 @@ After cloning the repository, to generate current rankings, run
 python cfb_full_rankings.py
 ```
 
-To generate rankings at any point in the past, change the environment variable ```DATE_STRING``` to a ```datetime```-compatible string of your choice. As an example, this can be done from ```python``` using
+To generate rankings at any given date in the past, before running the code you can change the environment variable ```DATE_STRING``` to a ```datetime```-compatible string of your choice. For example, this can be done from ```python``` using
 
 ```python
 # Pick any valid year, month, and day strings
