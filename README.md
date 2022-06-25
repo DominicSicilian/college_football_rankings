@@ -26,7 +26,7 @@ Additionally, the infamous "eye test" is applied by the Committee, which is enti
 
 # SOR
 
-The first step of SOR is to protect against the self-perpetuating nature of SOR. This is done by using conference standings and ranking each conference among the other conferences to give an estimated level of strength to each team. A conference's rank is determined based on the total **non-conference** wins and losses of all teams in that conference, which gives that conference's total record vs. other conferences.
+The first step of SOR is to protect against the self-perpetuating nature of traditional SOR and SOR-like metrics. This is done by using conference standings and ranking each conference among the other conferences to give an estimated level of strength to each team. A conference's rank is determined based on the total **non-conference** wins and losses of all teams in that conference, which gives that conference's total record vs. other conferences.
 
 One caveat that is somewhat subjective is that all Power-5 (P5) conferences are ranked above all non-P5 conferences, regardless of W-L. So, effectively the top 5 is determined by the non-conference W-L of the P5 conferences, and the remainder of the rankings (6 and beyond) are determined by the non-conference W-L of the other conferences. FBS Independents are considered here as a single non-P5 conference. The strength of a conference is then described on a scale from 0-1 (with **1** being the **strongest**) with equal intervals between conferences.
 
