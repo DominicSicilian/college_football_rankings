@@ -24,7 +24,7 @@ What is notable here, however, is using a mathematical algorithm for both aspect
 
 Additionally, the infamous "eye test" is applied by the Committee, which is entirely subjective and causes constant rankings controversy. However, it is undoubtedly an important criteria, since almost any rational person would agree that, if there are two teams with nearly identical SORs, but one of them blows everyone out while the other barely wins most games, the more dominant team should clearly be ranked higher. That's why I use the formulaic **Nature of Gameplay** criteria to more objectively encapsulate this important aspect of rankings.
 
-# SOR
+## SOR
 
 The first step of SOR is to protect against the self-perpetuating nature of traditional SOR and SOR-like metrics. This is done by using conference standings and ranking each conference among the other conferences to give an estimated level of strength to each team. A conference's rank is determined based on the total **non-conference** wins and losses of all teams in that conference, which gives that conference's total record vs. other conferences.
 
@@ -34,6 +34,7 @@ Teams are then ranked within their own conferences by their intraconference wins
 
 Note that early in the season, when few games have been played, the previous season's conference play is considered. As the season progresses, the previous season carries less and less weight until eventually it is no longer needed.
 
+## Nature of Gameplay
 
 
 
