@@ -1,7 +1,6 @@
 # college_football_rankings
 
-To generate current rankings, run:
-cfb_full_rankings.py
+To generate current rankings, run ```bash cfb_full_rankings.py```
 
 To generate rankings at any point in the past, change the environment variable 'DATE_STRING' to a datetime-compatible string of your choice.
 Accomplish this straight from Python via a line like this, where you pick any valid year, month, and day integers:
