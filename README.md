@@ -14,10 +14,10 @@ Here, by formulating my own algorithm and data pulled from the [```SportsReferen
 
 ## Running the code
 
-To generate current rankings, run 
+After cloning the repository, to generate current rankings, run
 
 ```bash
-cfb_full_rankings.py
+python cfb_full_rankings.py
 ```
 
 To generate rankings at any point in the past, change the environment variable ```DATE_STRING``` to a ```datetime```-compatible string of your choice.
