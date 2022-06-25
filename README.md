@@ -1,5 +1,7 @@
 # Sicilian Power Rankings
 
+Welcome to the Sicilian Power Rankings code repository! Below is a brief introduction, motivation, and description of the algorithm.
+
 ## Background & Purpose
 
 Division I-A (FBS) college football is perhaps the most difficult sport in which to rank teams, and as a result, unsurprisingly, every ranking system is met with controversy and frustration. Due to the large number of teams (~130) but small number of regular season games (~12), as well as the wide variance in programs' resources & player/coaching talent, it is nearly impossible to devise a fair system that doesn't involve wildly subjective metrics (like "the eye test"), particularly for the postseason.
