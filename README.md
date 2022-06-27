@@ -55,10 +55,10 @@ To generate rankings at any given date in the past, before running the code you 
 os.environ["DATE_STRING"] = str(datetime(year, month, day, 0, 0, 0, 0))
 ```
 
-or the ```bash``` command line using
+or the ```bash``` command line using the following (with an arbitrary past date shown)
 
 ```bash
-$ export DATETIME_STRING=year+"-"+month+"-"+day
+$ export DATETIME_STRING="2019-11-30"
 ```
 
 *Note: this is only compatible with seasons 2001-Present due to lack of data in the 1990s and prior available on the ```SportsReference``` database.*
