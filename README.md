@@ -55,7 +55,7 @@ To generate rankings at any given date in the past, before running the code you 
 os.environ["DATE_STRING"] = str(datetime(year, month, day, 0, 0, 0, 0))
 ```
 
-or ```bash``` using
+or the ```bash``` command line using
 
 ```bash
 $ export DATETIME_STRING=<year>+"-"+<month>+"-"+<day>
