@@ -58,7 +58,7 @@ os.environ["DATE_STRING"] = str(datetime(year, month, day, 0, 0, 0, 0))
 or the ```bash``` command line using
 
 ```bash
-$ export DATETIME_STRING=<year>+"-"+<month>+"-"+<day>
+$ export DATETIME_STRING=year+"-"+month+"-"+day
 ```
 
 *Note: this is only compatible with seasons 2001-Present due to lack of data in the 1990s and prior available on the ```SportsReference``` database.*
