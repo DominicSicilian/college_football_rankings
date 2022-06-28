@@ -59,7 +59,7 @@ The SOR is found by adding up the rewards/penalties from all games played.
 After cloning the repository, to generate current rankings, run
 
 ```bash
-python cfb_full_rankings.py
+$ python cfb_full_rankings.py
 ```
 
 To generate rankings at any given date in the past, before running the code you can change the environment variable ```DATE_STRING``` to a ```datetime```-compatible string of your choice. For example, this can be done from ```python``` using
