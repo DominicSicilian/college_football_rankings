@@ -54,6 +54,10 @@ The SOR is found by adding up the rewards/penalties from all games played.
 
 *Section in progress*
 
+## Evaluation
+
+![SPI-based Prediction Accuracy](plots/Margin_vs_SPI.png)
+
 ## Running the code
 
 After cloning the repository, to generate current rankings, run
