@@ -6,7 +6,9 @@ Welcome to the Sicilian Power Rankings (**SPR**) code repository! Below is a bri
 
 Division I-A (FBS) college football is perhaps the most difficult sport in which to rank teams, and as a result, unsurprisingly, every ranking system is met with controversy and frustration. Due to the large number of teams (~130) but small number of regular season games (~12), as well as the wide variance in programs' resources & player/coaching talent, it is nearly impossible to devise a fair system that doesn't involve wildly subjective metrics (like "the eye test"), particularly for the postseason.
 
-Here, by formulating my own algorithm and data pulled from the [```SportsReference```](https://pypi.org/project/sportsreference/) Python API, I have given my best attempt at establishing a more objective ranking system for college football teams. The goal is not necessarily to predict the winner of a given game--a task optimized by the [ESPN Football Power Index (FPI)](https://www.espn.com/college-football/fpi)--but rather to assign a merit-based ranking to each team for establishing postseason worthiness. There should, of course, be a correlation between the relative ranking of two teams in a given game and the winner of that game, so my rankings do correctly predict the winner of a game >70% of the time (as discussed more thoroughly below), falling only a small margin short of FPI's predictive power (~75% accurate over the past 10 seasons). The inspiration I have drawn from ESPN FPI is evident in the metric computed to determine the rankings--a final number with a maximum value of 100 called the Sicilian Power Index (SPI), by which the teams are ranked in order from highest SPI to lowest SPI.
+Here, by formulating my own algorithm and data pulled from the [```SportsReference```](https://pypi.org/project/sportsreference/) Python API, I have given my best attempt at establishing a more objective ranking system for college football teams. The goal is not necessarily to predict the winner of a given game--a task optimized by the [ESPN Football Power Index (FPI)](https://www.espn.com/college-football/fpi)--but rather to assign a merit-based ranking to each team for establishing postseason worthiness.
+
+There should, of course, be a correlation between the relative ranking of two teams in a given game and the winner of that game, so my rankings do correctly predict the winner of a game >70% of the time (as discussed more thoroughly below), falling only a small margin short of FPI's predictive power (~75% accurate over the past 10 seasons; note that when computing these accuracy percentage for both my rankings and ESPN FPI, only FBS vs FBS games are considered). The inspiration I have drawn from ESPN FPI is evident in the metric computed to determine the rankings--a final number with a maximum value of 100 called the Sicilian Power Index (SPI), by which the teams are ranked in order from highest SPI to lowest SPI.
 
 # The Algorithm
 
@@ -34,27 +36,33 @@ One caveat that is somewhat subjective is all Power-5 (P5) conferences are ranke
 
 Teams are then ranked within their own conferences by their in-conference wins and losses, just as in the traditional conference standings (except here, divisions within conferences are entirely ignored). One exception is, once a conference champion is determined, the conference champion is guaranteed the top ranking in its own conference, even if another team manages to have a better in-conference W-L. *Note: Currently this feature is only being implemented for the most recent season (2021), but soon it will be fully available for all past seasons.*
 
-Then, each team's ***relative** strength within their own conference* is described on a scale from 0-1, mimicking the style of the conference strength scale. Finally, a team's ***overall** strength* (hereafter referred to as the **Strength Coefficient**) is found by multiplying the conference's strength by the team's in-conference strength to give a final value, also guaranteed to be between 0-1. Note that early in the season, when few games have been played, the previous season's conference play is considered. As the season progresses, the previous season carries less and less weight until eventually it is no longer needed. This is inspired by FPI's similar use of the previous season's data.
+Then, each team's ***relative** strength within their own conference* is described on a scale from 0-1, mimicking the style of the conference strength scale. Finally, a team's ***overall** strength* (hereafter referred to as the **Strength Coefficient**) is found by multiplying the conference's strength by the team's in-conference strength to give a final value, also guaranteed to be between 0-1.
+
+Note that early in the season, when few games have been played, the previous season's conference play is considered. As the season progresses, the previous season carries less and less weight until eventually it is no longer needed. This is inspired by FPI's similar use of the previous season's data.
+
+Also note that while FCS teams are not otherwise considered in the rankings, assigning them an overall strength is required to compute the SOR of any FBS teams that have played an FCS team during the season. Here, I assign an overall strength of exactly zero to all FCS teams.
 
 ### Using strength of opponents to compute SOR
 
 We can determine the strength of each team's record by considering the **Strength Coefficient** of each opponent that team has faced, as well as whether the team beat those opponents or not.
 
-For a Win, the team will be credited an amount of points equal to the opponent's Strength Coefficient. Beating the best team in the best conference will give the maximum possible reward (1 point), while beating a bad team in a weak conference will give a minimal reward (~0 points).
+For a Win, the team will be credited an amount of points equal to the opponent's Strength Coefficient. Beating the best team in the best conference will give the maximum possible reward (1 point), while beating a bad team in a weak conference will give a minimal reward (~0 points). Similarly, beating an FCS team will give the minimum possible reward (exactly 0 points).
 
-For a Loss, the team will be punished according to the opponent's Strength Coefficient. In this case, the penalty will be the *complement* of the opponent's Strength Coefficient, i.e. ```1 - Opponent's Strength Coefficient``` will be *subtracted* from the team's SOR. Losing to a bad team in a weak conference will therefore give the maximum possible penalty (subtracting ~1 point), while losing to the best team in the best conference will give no penalty (and losing to a great team in a top conference will also give a near-zero penalty).
+For a Loss, the team will be punished according to the opponent's Strength Coefficient. In this case, the penalty will be the *complement* of the opponent's Strength Coefficient, i.e. ```1 - Opponent's Strength Coefficient``` will be *subtracted* from the team's SOR. Losing to a bad team in a weak conference will therefore give a strong penalty (subtracting nearly 1 point). Losing to an FCS team will give the maximum possible penalty (subtracting exactly 1 point). On the other hand, losing to the best team in the best conference will give no penalty (and losing to a great team in a top conference will also give a near-zero penalty).
 
 The SOR is found by adding up the rewards/penalties from all games played.
 
 ## Nature of Gameplay
 
-*Section in progress*
+*Section under construction*
 
 ## Putting it all together
 
-*Section in progress*
+*Section under construction*
 
 ## Evaluation
+
+*Section under construction*
 
 ![SPI-based Prediction Accuracy](plots/Margin_vs_SPI.png)
 
