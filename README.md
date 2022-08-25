@@ -54,15 +54,34 @@ The SOR is found by adding up the rewards/penalties from all games played.
 
 ## Nature of Gameplay
 
-*Section under construction*
+Strength of Record tells us W-L information and opponent quality in those Wins and Losses. The Nature of Gameplay, on the other hand, is designed to illustrate *how* a team achieved its wins or suffered its losses. For this metric, we have several key stats, all of which are experimental and formulated based on my intuition from playing and watching the game of football for many years. Therefore, it works quite well, but leaves plenty of room for further improvement! We calculate Nature as a raw value for each team, then normalize the scores. The formula for a team's raw Nature score `N_raw` is:
+
+```python
+N_raw = A + ( 50.0*( ((TD * 7.0)/P)  - ((TDA * 7.0)/PA) )  + TM/G  )
+```
+Here, `A` is the average margin, i.e., the average difference between the team's total points scored (`P') and points allowed (`PA`). This is fairly straightforward and shows how close the team's games are on average, and shows whether they have outscored their opponents collectively.
+
+The next term contains another margin-like stat. It was formulated by iterative trial and error, and attempts to encapsulate how dominant a team is. First, we have the fraction of a team's total points that were scored via touchdowns (`TD`), which is designed to show how dominant the offense is. If a large fraction of their points are scored by TD, that suggests they may be difficult to stop *and* have consistently strong play regardless of field position (as opposed to offenses that crumble in the red zone). Next, we subtract the same ratio for the team's opponents--considering the touchdowns allowed (`TDA`) and points allowed (`PA`). This term, similarly, is designed to describe how strong the team's defense is, where a low fraction would suggest a dominant defense that does not often allow touchdowns.
+
+Lastly, there is the turnover margin--namely, the average turnover margin `TM` per game `G`. The concept here is simple--dominant teams often dominate the turnover battle and should have a high positive turnover margin, whereas weak teams will have a negative margin.
+
+After computing `N_raw` for all teams, the Nature scores are normalized to give the adjusted Nature score `N_adj` such that they have a maximum value of 1.0 to resemble SOR.
 
 ## Putting it all together
 
-*Section under construction*
+Once every team has a SOR and `N_adj`, the scores are weighted and combined to give the final stat--the Sicilian Power Index (SPI). Again, the weighting was determined by iterative trial and error, and absolutely has room for future investigation. The current weights are 65% for SOR and 35% for Nature. Qualitatively, this reflects that teams with a high SOR (i.e., who have high-quality wins from conquering a challenging schedule) and moderate Nature (i.e., teams who were moderately dominant in those challenging wins) appear to have an edge over teams with a moderate SOR (i.e., teams who beat decent competition) with high Nature scores (i.e., teams who completely dominated their mediocre schedule). A familiar example is the phenomenon of Pac-12 teams (like Washington or Oregon) or Notre Dame dominating their mediocre competition (moderate SOR, high Nature), then getting blown out in the CFP (by Alabama, Clemson, etc.) who had higher SOR. This is a very heuristic description, and I intend to investigate the specifics of the weighting much further.
+
+To apply the weights, SOR for every team is multiplied by 65, and Nature for every team is multiplied by 35, then they are added up to give the team's final score, the **SPI**, which has a maximum possible value of 100. From there, teams are ranked based on the value of their SPI, which yields the rankings--**SPR**.
 
 ## Evaluation
 
-*Section under construction*
+As mentioned, the goal of these rankings are not to predict winners of individual games--ESPN FPI is your stat if that's what you're interested in. The goal here is to put forth my best attempt at resume-based and achievement-oriented rankings. It therefore gives the "top" or "most accomplished" teams, rather than the "best" teams (since, as discussed extensively before, how could you ever know who the "best" teams actually are since each team only plays ~10% of the competition--the answer to that is you try to do the "eye test" which is the bane of my rankings philosophy due to its awful vulnerability to subjectivity).
+
+However, while "most accomplished" isn't the exact same thing as "best," the two concepts should **without a doubt be correlated**. So, while I would never expect the Sicilian Power Rankings to match ESPN FPI's ~75% accuracy, I do expect it should be close. So, below I have shown the results of applying the Sicilian Power Rankings to the 2021 college football season. In particular, for every game played, I have plotted the difference in Sicilian Power Index (Delta SPI) between the higher-ranked team and its opponent on the horizontal axis, and the margin of the outcome (relative to the higher-ranked team). Also plotted are percentile lines--the dotted line is the 50th percentile (i.e., it cuts the points y-values exactly in half), while the gray shaded region fills between the points' y-values +/- 1 sigma percentiles (84th and 16th percentiles, respectively).
+
+As shown, while the plot itself is highly scattered, SPI was ~72% effective at predicting the winners of the games. This is highly statistically significant (nearly 9 sigma), and is very close to the ~75% that ESPN FPI has reached across the past 10 years. This is a powerful reinforcer of the ranking algorithm because it shows a strong relationship between the winners of games and their rankings.
+
+Far more investigation on this topic is underway. For example, by visual inspection it is clear from the color scale (which indicates the date the game was played) that my rankings are successful at predicting the winners at all stages of the season, even early on when much of the SOR is based on the previous season (a trait shared by ESPN FPI), so I will soon be looking into the details on what impact (if any) time has on the prediction accuracy. Moreover, given the sparse data from the pandemic-limited 2020 season, it is surprising how well my rankings performed at the beginning of 2021. Therefore I am also working on performing the same analysis on all past seasons.
 
 ![SPI-based Prediction Accuracy](plots/Margin_vs_SPI.png)
 
