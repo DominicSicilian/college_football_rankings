@@ -2,6 +2,11 @@
 
 Welcome to the Sicilian Power Rankings (**SPR**) code repository! Below is a brief introduction, motivation, and description of the algorithm.
 
+## Notes
+
+1. The code (which I initially wrote in my early years of using Python) should be significantly refactored, as there is a lot of room for improvement, optimization, and cleanliness.
+2. I haven't updated this project in several years now, and during that time its dependencies have changed such that the code in its current form no longer functions properly.
+
 ## Background & Purpose
 
 Division I-A (FBS) college football is perhaps the most difficult sport in which to rank teams, and as a result, unsurprisingly, every ranking system is met with controversy and frustration. Due to the large number of teams (~130) but small number of regular season games for each (~12), as well as the wide variance in programs' resources & player/coaching talent, it is nearly impossible to devise a fair system that doesn't involve wildly subjective metrics (like "the eye test"), particularly for the postseason. As a lifelong football enthusiast and former Division I-A player (thanks to the brief time I spent playing on my beloved Hurricanes football team here at the University of Miami), I set out to create an alternative to subjective rankings.
