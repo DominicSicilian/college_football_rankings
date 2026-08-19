@@ -1,0 +1,1513 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPI Landscape and Historical Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='spi_dashboard.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="hero-kicker">College Football Analytics Desk</p>
+      <h1>SPI Command Center</h1>
+      <p>Current rankings, projected field, live matchup board, and historical backtest performance.</p>
+    </header>
+
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="currentTab">Current Landscape</button>
+      <button class="tab-btn" data-tab="futureTab">Future Matchups</button>
+      <button class="tab-btn" data-tab="projectedTab">Projected W-L</button>
+      <button class="tab-btn" data-tab="historicalTab">Historical Performance</button>
+    </nav>
+
+    <section id="currentTab" class="tab-panel active">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Current Snapshot</h2>
+          <label>Ranking Method (Official)
+            <select id="currentRankingMethod" disabled>
+              <option value="spi" selected>SPI Only (All Weeks)</option>
+            </select>
+          </label>
+        </div>
+        <p id="currentSnapshotMeta"></p>
+        <p id="currentRankingMethodMeta"></p>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Projected 12-Team Field (2026 Criteria Projection)</h2>
+          <label>Conference Champ Projection
+            <select id="champProjectionMode">
+              <option value="spi" selected>Highest SPI In Conference</option>
+              <option value="standings">#1 In Conference Standings</option>
+            </select>
+          </label>
+        </div>
+        <p id="champProjectionMeta"></p>
+        <div class="table-wrap"><table id="projectedFieldTable"></table></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>12-Team Bracket</h2>
+          <label>Bracket Mode
+            <select id="playoffBracketMode">
+              <option value="live" selected>Selection + Actual Results Only</option>
+              <option value="projection">Full SPI Projection</option>
+            </select>
+          </label>
+        </div>
+        <div class="toggle-row">
+          <label><input id="simulateRemainingToggle" type="checkbox"> Simulate unplayed games by SPI (off by default)</label>
+        </div>
+        <p id="playoffBracketMeta">Seeds 1-4 are conference-champion byes. First round is 5v12, 6v11, 7v10, 8v9.</p>
+        <div id="playoffBracket" class="playoff-bracket"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Current SPI Rankings (All Teams, Top 25 Highlighted)</h2>
+        <div class="table-wrap"><table id="rankingsTable"></table></div>
+      </article>
+
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Nature Component Rankings</h2>
+          <div class="table-wrap"><table id="nTable"></table></div>
+        </article>
+        <article class="panel">
+          <h2>SOR Component Rankings</h2>
+          <div class="table-wrap"><table id="sorTable"></table></div>
+        </article>
+      </section>
+
+      <article class="panel">
+        <h2>Next Week SPI Matchups</h2>
+        <p>Win probability uses normalized SPI: team SPI / (home SPI + away SPI).</p>
+        <p id="upcomingSourceMeta"></p>
+        <div class="table-wrap"><table id="upcomingTable"></table></div>
+      </article>
+    </section>
+
+    <section id="futureTab" class="tab-panel">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>All Future Matchups (Week-by-Week)</h2>
+          <label>Team Filter
+            <select id="futureTeamFilter">
+              <option value="">All Teams</option>
+            </select>
+          </label>
+        </div>
+        <p>This tab uses the optional full-future run from <code>predict_upcoming_matchups.py --all-pending</code>.</p>
+        <p id="futureSourceMeta"></p>
+        <p id="futureTeamProjectionMeta" class="future-team-projection-meta"></p>
+        <div id="futureByWeek" class="future-weeks"></div>
+      </article>
+    </section>
+
+    <section id="projectedTab" class="tab-panel">
+      <article class="panel">
+        <h2>Projected Team Records</h2>
+        <p>Sorted by projected final wins. Records shown already include each team’s current W-L.</p>
+        <p id="projectedRecordMeta" class="future-team-projection-meta"></p>
+        <div class="table-wrap"><table id="projectedRecordTable"></table></div>
+      </article>
+    </section>
+
+    <section id="historicalTab" class="tab-panel">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Filters</h2>
+          <div class="actions-row">
+            <button id="applyFiltersBtn" class="btn-primary">Apply</button>
+            <button id="resetFiltersBtn" class="btn-secondary">Reset</button>
+          </div>
+        </div>
+
+        <div class="filter-grid">
+          <label>Historical Dataset (Official)
+            <input type="text" value="Current Official Methodology Output" disabled>
+          </label>
+          <label>Years<select id="years" multiple></select></label>
+          <label>Season Types<select id="seasonTypes" multiple></select></label>
+          <label>Weeks<select id="weeks" multiple></select></label>
+          <label>Teams<select id="teams" multiple></select></label>
+          <label>Conference Involved<select id="conferenceInvolved" multiple></select></label>
+          <label>Conference-Play Conferences<select id="conferencePlayConferences" multiple></select></label>
+          <label>Specific Cross-Conference Matchups<select id="specificMatchups" multiple></select></label>
+          <label>Conference Pair A<select id="confPairA"></select></label>
+          <label>Conference Pair B<select id="confPairB"></select></label>
+          <label>Prediction Reason<select id="predictionReasons" multiple></select></label>
+          <label>Predicted Side<select id="predictedSides" multiple></select></label>
+          <label>Min Ranked Teams Used<input id="minSourceTeams" type="number" value="80" min="0"></label>
+          <label>Rows Per Page<input id="pageSize" type="number" value="250" min="25" max="2000" step="25"></label>
+        </div>
+
+        <div class="toggle-row">
+          <label><input id="conferencePlayOnly" type="checkbox"> Conference games only</label>
+          <label><input id="playoffOnly" type="checkbox"> Playoff only</label>
+          <label><input id="titleOnly" type="checkbox"> National championship only</label>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Baseline vs Filtered Accuracy</h2>
+        <p id="historicalDatasetMeta"></p>
+        <div id="metricCards" class="metric-grid"></div>
+      </article>
+
+      <article class="panel">
+        <h2>Accuracy By Year</h2>
+        <canvas id="yearChart"></canvas>
+      </article>
+
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Yearly Split Accuracy</h2>
+          <canvas id="yearSplitChart"></canvas>
+        </article>
+        <article class="panel">
+          <h2>Week Accuracy Across Years</h2>
+          <canvas id="weekAcrossYearsChart"></canvas>
+        </article>
+      </section>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>Within-Year Week Accuracy</h2>
+          <label>Focus Year<select id="focusYear"></select></label>
+        </div>
+        <canvas id="withinYearWeekChart"></canvas>
+      </article>
+
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Home/Away By Year</h2>
+          <canvas id="homeAwayYearChart"></canvas>
+        </article>
+        <article class="panel">
+          <h2>Home/Away By Week (All Years)</h2>
+          <canvas id="homeAwayWeekChart"></canvas>
+        </article>
+      </section>
+
+      <article class="panel">
+        <h2>Raw Predicted vs Actual Games</h2>
+        <p id="tableSummary"></p>
+        <div class="pager-row">
+          <button id="prevPageBtn" class="btn-secondary">Prev</button>
+          <span id="pageIndicator"></span>
+          <button id="nextPageBtn" class="btn-secondary">Next</button>
+        </div>
+        <div class="table-wrap"><table id="rawTable"></table></div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const state = {
+      page: 1,
+      totalPages: 1,
+      metadata: null,
+      latest: null,
+      charts: {},
+      futureRows: [],
+      spiRankByTeam: {},
+      currentRecordByTeam: {},
+      currentRankingsRows: [],
+      currentRankingsSort: { key: "rank", dir: "asc" },
+    };
+
+    function fmtPct(v) {
+      if (v === null || v === undefined || Number.isNaN(v)) return "-";
+      return (100 * v).toFixed(1) + "%";
+    }
+
+    function displayWinPct(value) {
+      if (value === null || value === undefined) return "";
+      if (typeof value === "number" && Number.isFinite(value)) {
+        const shown = value >= 99.95 ? 99.9 : value;
+        return `${shown.toFixed(1)}%`;
+      }
+      const raw = String(value).trim();
+      if (!raw) return "";
+      const n = parseFloat(raw.replace("%", ""));
+      if (!Number.isFinite(n)) return raw;
+      const shown = n >= 99.95 ? 99.9 : n;
+      return `${shown.toFixed(1)}%`;
+    }
+
+    function displayWinPctPair(leftValue, rightValue) {
+      const left = typeof leftValue === "number" ? leftValue : parseFloat(String(leftValue ?? "").replace("%", "").trim());
+      const right = typeof rightValue === "number" ? rightValue : parseFloat(String(rightValue ?? "").replace("%", "").trim());
+      const leftOk = Number.isFinite(left);
+      const rightOk = Number.isFinite(right);
+
+      if (leftOk && rightOk) {
+        if (left >= 99.95 && right <= 0.05) return ["99.9%", "0.1%"];
+        if (right >= 99.95 && left <= 0.05) return ["0.1%", "99.9%"];
+      }
+
+      return [displayWinPct(leftValue), displayWinPct(rightValue)];
+    }
+
+    function pctToNumber(value) {
+      if (value === null || value === undefined) return null;
+      const raw = String(value).replace("%", "").trim();
+      const n = parseFloat(raw);
+      return Number.isFinite(n) ? n : null;
+    }
+
+    function formatKickoffEspn(value) {
+      if (value === null || value === undefined) return "";
+      const raw = String(value).trim();
+      if (!raw) return "";
+
+      const normalized = raw.includes("T") ? raw : raw.replace(" ", "T");
+      const dt = new Date(normalized);
+      if (Number.isNaN(dt.getTime())) return raw;
+
+      const hasTz = /([zZ]|[+-]\d{2}:?\d{2})$/.test(normalized);
+      const dayFmt = new Intl.DateTimeFormat("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+        ...(hasTz ? { timeZone: "America/New_York" } : {})
+      });
+      const timeFmt = new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+        ...(hasTz ? { timeZone: "America/New_York" } : {})
+      });
+
+      return `${dayFmt.format(dt)} • ${timeFmt.format(dt)}${hasTz ? " ET" : ""}`;
+    }
+
+    function isPreseasonRankingFile(fileName) {
+      const name = String(fileName || "").trim().toLowerCase();
+      return name.startsWith("spi_rankings_preseason_");
+    }
+
+    function destroyChart(name) {
+      if (state.charts[name]) {
+        state.charts[name].destroy();
+        state.charts[name] = null;
+      }
+    }
+
+    function setTab(tabId) {
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.tab === tabId);
+      });
+      document.querySelectorAll(".tab-panel").forEach(panel => {
+        panel.classList.toggle("active", panel.id === tabId);
+      });
+    }
+
+    function setTable(tableId, rows, columns, rowClassFn) {
+      const table = document.getElementById(tableId);
+      table.innerHTML = "";
+
+      const thead = document.createElement("thead");
+      const trh = document.createElement("tr");
+      columns.forEach(c => {
+        const th = document.createElement("th");
+        th.textContent = prettyColumnName(c);
+        trh.appendChild(th);
+      });
+      thead.appendChild(trh);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        if (rowClassFn) {
+          const cls = rowClassFn(r);
+          if (cls) tr.className = cls;
+        }
+        columns.forEach(c => {
+          const td = document.createElement("td");
+          const val = r[c];
+          td.textContent = val === null || val === undefined ? "" : String(val);
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+    }
+
+    function prettyColumnName(col) {
+      const key = String(col || "").trim();
+      const map = {
+        seed: "Seed",
+        team: "Team",
+        conference: "Conference",
+        wins: "Wins",
+        losses: "Losses",
+        rank: "Rank",
+        spi: "SPI",
+        n_rank: "Nature Rank",
+        n_adj: "Nature",
+        sor_rank: "SOR Rank",
+        sor_adj: "SOR",
+        bid_type: "Bid Type",
+        auto_source: "Auto Bid Source",
+        has_bye: "First-Round Bye",
+        start_date: "Kickoff",
+        season_type: "Season Type",
+        week: "Week",
+        home_team: "Home Team",
+        away_team: "Away Team",
+        home_rank: "Home Rank",
+        away_rank: "Away Rank",
+        home_spi: "Home SPI",
+        away_spi: "Away SPI",
+        home_win_prob_pct: "Home Win %",
+        away_win_prob_pct: "Away Win %",
+        predicted_winner: "Projected Winner",
+        site_context: "Site Context",
+        notes: "Notes",
+        current_record: "Current Record",
+        games_left: "Games Left",
+        projected_record_prob: "Projected Record (Win Prob)",
+        projected_record_picks: "Projected Record (Game Picks)",
+      };
+      if (map[key]) return map[key];
+      return key
+        .split("_")
+        .filter(Boolean)
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" ");
+    }
+
+    function formatMaybeNumber(value, decimals=2) {
+      if (value === null || value === undefined || value === "") return "";
+      const n = Number(value);
+      if (!Number.isFinite(n)) return value;
+      return n.toFixed(decimals);
+    }
+
+    function formatScaled100(value, decimals=2) {
+      if (value === null || value === undefined || value === "") return "";
+      const n = Number(value);
+      if (!Number.isFinite(n)) return value;
+      return (n * 100).toFixed(decimals);
+    }
+
+    function formatBidType(value) {
+      const key = String(value || "").trim().toLowerCase();
+      const map = {
+        auto_p4_champion: "Automatic Qualifier (Power 4 Champion)",
+        auto_g6_champion: "Automatic Qualifier (Top Group of 6 Champion)",
+        auto_notre_dame: "Automatic Qualifier (Notre Dame Top-12)",
+        at_large: "At-Large",
+      };
+      return map[key] || String(value || "");
+    }
+
+    function assignMetricRank(rows, metricKey, outKey) {
+      rows.forEach(r => {
+        r[outKey] = null;
+      });
+      const ranked = rows
+        .filter(r => Number.isFinite(Number(r[metricKey])))
+        .slice()
+        .sort((a, b) => Number(b[metricKey]) - Number(a[metricKey]));
+      ranked.forEach((row, idx) => {
+        row[outKey] = idx + 1;
+      });
+    }
+
+    function defaultSortDirForKey(key) {
+      if (["rank", "n_rank", "sor_rank", "team", "conference"].includes(key)) {
+        return "asc";
+      }
+      return "desc";
+    }
+
+    function sortValueCompare(a, b, dir) {
+      const aMissing = a === null || a === undefined || a === "";
+      const bMissing = b === null || b === undefined || b === "";
+      if (aMissing && bMissing) return 0;
+      if (aMissing) return 1;
+      if (bMissing) return -1;
+
+      const na = Number(a);
+      const nb = Number(b);
+      let cmp = 0;
+      if (Number.isFinite(na) && Number.isFinite(nb)) {
+        cmp = na - nb;
+      } else {
+        cmp = String(a).localeCompare(String(b));
+      }
+      return dir === "desc" ? -cmp : cmp;
+    }
+
+    function setCurrentRankingsSort(key) {
+      const curr = state.currentRankingsSort || { key: "rank", dir: "asc" };
+      if (curr.key === key) {
+        state.currentRankingsSort = { key, dir: curr.dir === "asc" ? "desc" : "asc" };
+      } else {
+        state.currentRankingsSort = { key, dir: defaultSortDirForKey(key) };
+      }
+      renderCurrentRankingsTable();
+    }
+
+    function renderCurrentRankingsTable() {
+      const columns = ["rank", "team", "conference", "wins", "losses", "spi", "n_rank", "n_adj", "sor_rank", "sor_adj"];
+      const sortState = state.currentRankingsSort || { key: "rank", dir: "asc" };
+
+      const sortedRows = (state.currentRankingsRows || []).slice().sort((a, b) => {
+        const primary = sortValueCompare(a[sortState.key], b[sortState.key], sortState.dir);
+        if (primary !== 0) return primary;
+        return sortValueCompare(a.rank, b.rank, "asc");
+      });
+
+      const displayRows = sortedRows.map(r => ({
+        ...r,
+        spi: formatMaybeNumber(r.spi, 2),
+        n_adj: formatScaled100(r.n_adj, 2),
+        sor_adj: formatScaled100(r.sor_adj, 2),
+      }));
+
+      setTable(
+        "rankingsTable",
+        displayRows,
+        columns,
+        row => row.is_top_25 ? "top25" : ""
+      );
+
+      const table = document.getElementById("rankingsTable");
+      const headers = table.querySelectorAll("thead th");
+      columns.forEach((col, idx) => {
+        const th = headers[idx];
+        if (!th) return;
+        th.classList.add("sortable-col");
+        const active = sortState.key === col;
+        const arrow = active ? (sortState.dir === "asc" ? " ▲" : " ▼") : "";
+        th.textContent = `${prettyColumnName(col)}${arrow}`;
+        th.addEventListener("click", () => setCurrentRankingsSort(col));
+      });
+    }
+
+    function siteContextLabel(row) {
+      const v = String(row?.neutral_site ?? "").trim().toLowerCase();
+      const isNeutral = ["1", "true", "yes"].includes(v);
+      return isNeutral ? "Neutral site (no HFA)" : "True home game (HFA applied)";
+    }
+
+    function parseRank(value) {
+      if (value === null || value === undefined) return null;
+      const n = parseInt(String(value).trim(), 10);
+      return Number.isFinite(n) && n > 0 ? n : null;
+    }
+
+    function rankForTeam(team, fallbackRank=null) {
+      const key = String(team || "").trim();
+      if (!key) return parseRank(fallbackRank);
+      const fromMap = parseRank(state.spiRankByTeam[key]);
+      if (fromMap !== null) return fromMap;
+      return parseRank(fallbackRank);
+    }
+
+    function buildRankedTeamNode(team, rank) {
+      const wrap = document.createElement("span");
+      wrap.className = "future-team-with-rank";
+
+      const rankVal = parseRank(rank);
+      if (rankVal !== null) {
+        const rankEl = document.createElement("span");
+        rankEl.className = rankVal <= 25 ? "future-rank-tag top25" : "future-rank-tag outside25";
+        rankEl.textContent = String(rankVal);
+        wrap.appendChild(rankEl);
+      }
+
+      const nameEl = document.createElement("span");
+      nameEl.className = "future-team-name";
+      nameEl.textContent = String(team || "");
+      wrap.appendChild(nameEl);
+
+      return wrap;
+    }
+
+    function formatMatchupLine(game, side) {
+      const team = side === 1 ? game.team1 : game.team2;
+      const seed = side === 1 ? game.team1_seed : game.team2_seed;
+      if (!team) return "TBD";
+      return seed ? `#${seed} ${team}` : team;
+    }
+
+    function renderRound(host, title, games) {
+      const section = document.createElement("section");
+      section.className = "bracket-round";
+      section.innerHTML = `<h3>${title}</h3>`;
+
+      (games || []).forEach(game => {
+        const card = document.createElement("article");
+        const cardState = game.winner_source === "actual"
+          ? "actual-card"
+          : (game.winner_source === "projected" ? "projected-card" : "pending-card");
+        card.className = `bracket-card ${cardState}`;
+
+        const winnerLabel = game.winner
+          ? (game.winner_source === "actual" ? `Winner: ${game.winner} (actual)` : `Winner: ${game.winner} (projected)`)
+          : "Winner: TBD";
+
+        const scoreLine = game.score ? `<div class="bracket-score">${game.score}</div>` : "";
+        const notesLine = game.notes ? `<div class="bracket-notes">${game.notes}</div>` : "";
+
+        card.innerHTML = `
+          <div class="bracket-line">${formatMatchupLine(game, 1)}</div>
+          <div class="bracket-vs">vs</div>
+          <div class="bracket-line">${formatMatchupLine(game, 2)}</div>
+          <div class="bracket-winner">${winnerLabel}</div>
+          ${scoreLine}
+          ${notesLine}
+        `;
+        section.appendChild(card);
+      });
+
+      host.appendChild(section);
+    }
+
+    function renderPlayoffBracket(bracketData) {
+      const host = document.getElementById("playoffBracket");
+      const meta = document.getElementById("playoffBracketMeta");
+      host.innerHTML = "";
+      if (!bracketData || !bracketData.rounds) {
+        host.textContent = "No projected field available.";
+        return;
+      }
+
+      const modeUsed = bracketData.mode_used || "live";
+      const simulateRemaining = bracketData.simulate_remaining === "yes";
+      const modeText = modeUsed === "projection"
+        ? "Full SPI projection mode"
+        : (simulateRemaining
+          ? "Selection mode with SPI simulation for unplayed games"
+          : "Selection mode with actual results only (no simulation)");
+      const dataText = bracketData.actual_results_available === "yes"
+        ? "Postseason results detected."
+        : "No playoff results available from data source yet.";
+      const champion = bracketData.champion ? `Projected champion: ${bracketData.champion}` : "Champion pending.";
+      meta.textContent = `${modeText} ${dataText} ${champion}`;
+
+      renderRound(host, "First Round", bracketData.rounds.first_round || []);
+      renderRound(host, "Quarterfinals", bracketData.rounds.quarterfinals || []);
+      renderRound(host, "Semifinals", bracketData.rounds.semifinals || []);
+      renderRound(host, "National Championship", bracketData.rounds.championship || []);
+    }
+
+    function renderFutureByWeek(rows) {
+      const host = document.getElementById("futureByWeek");
+      const projectionMeta = document.getElementById("futureTeamProjectionMeta");
+      const selectedTeam = (document.getElementById("futureTeamFilter")?.value || "").trim();
+      host.innerHTML = "";
+      if (!rows || !rows.length) {
+        projectionMeta.textContent = selectedTeam
+          ? `No upcoming games found for ${selectedTeam}.`
+          : "Choose a team to see team-first orientation and projected W-L.";
+        host.textContent = "No full-future matchup file found yet. Run predict_upcoming_matchups.py --all-pending.";
+        return;
+      }
+
+      function teamPerspective(row) {
+        const home = String(row.home_team || "").trim();
+        const away = String(row.away_team || "").trim();
+        const homeProb = pctToNumber(row.home_win_prob_pct);
+        const awayProb = pctToNumber(row.away_win_prob_pct);
+
+        if (selectedTeam && selectedTeam === home) {
+          return {
+            leftTeam: home,
+            rightTeam: away,
+            matchupLabel: `${home} vs ${away}`,
+            matchupSep: "vs",
+            leftProb: homeProb,
+            rightProb: awayProb,
+            leftRank: rankForTeam(home, row.home_rank),
+            rightRank: rankForTeam(away, row.away_rank),
+          };
+        }
+
+        if (selectedTeam && selectedTeam === away) {
+          return {
+            leftTeam: away,
+            rightTeam: home,
+            matchupLabel: `${away} @ ${home}`,
+            matchupSep: "@",
+            leftProb: awayProb,
+            rightProb: homeProb,
+            leftRank: rankForTeam(away, row.away_rank),
+            rightRank: rankForTeam(home, row.home_rank),
+          };
+        }
+
+        return {
+          leftTeam: home,
+          rightTeam: away,
+          matchupLabel: `${home} vs ${away}`,
+          matchupSep: "vs",
+          leftProb: homeProb,
+          rightProb: awayProb,
+          leftRank: rankForTeam(home, row.home_rank),
+          rightRank: rankForTeam(away, row.away_rank),
+        };
+      }
+
+      function updateProjectionMeta(allRows) {
+        if (!selectedTeam) {
+          projectionMeta.textContent = "Select a team to lock matchup orientation and show projected record.";
+          return;
+        }
+
+        let games = 0;
+        let projectedWins = 0;
+        let expectedWins = 0;
+
+        allRows.forEach(row => {
+          const home = String(row.home_team || "").trim();
+          const away = String(row.away_team || "").trim();
+          if (home !== selectedTeam && away !== selectedTeam) return;
+          games += 1;
+
+          const selectedProb = home === selectedTeam
+            ? pctToNumber(row.home_win_prob_pct)
+            : pctToNumber(row.away_win_prob_pct);
+          if (selectedProb !== null) {
+            expectedWins += selectedProb / 100;
+          }
+
+          if (String(row.predicted_winner || "").trim() === selectedTeam) {
+            projectedWins += 1;
+          }
+        });
+
+        if (!games) {
+          projectionMeta.textContent = `No upcoming games found for ${selectedTeam}.`;
+          return;
+        }
+
+        const projectedLosses = games - projectedWins;
+        const expectedLosses = games - expectedWins;
+        projectionMeta.textContent = `${selectedTeam} projected record from picks: ${projectedWins}-${projectedLosses} | Expected record from probabilities: ${expectedWins.toFixed(1)}-${expectedLosses.toFixed(1)} (${games} games)`;
+      }
+
+      updateProjectionMeta(rows);
+
+      const weekMap = new Map();
+      rows.forEach(row => {
+        const wk = row.week === null || row.week === undefined ? "Unknown" : String(row.week);
+        if (!weekMap.has(wk)) weekMap.set(wk, []);
+        weekMap.get(wk).push(row);
+      });
+
+      const keys = Array.from(weekMap.keys()).sort((a, b) => {
+        const ai = parseInt(a, 10);
+        const bi = parseInt(b, 10);
+        if (Number.isNaN(ai) && Number.isNaN(bi)) return a.localeCompare(b);
+        if (Number.isNaN(ai)) return 1;
+        if (Number.isNaN(bi)) return -1;
+        return ai - bi;
+      });
+
+      keys.forEach(k => {
+        const section = document.createElement("section");
+        section.className = "future-week";
+        const title = document.createElement("h3");
+        title.textContent = `Week ${k}`;
+        section.appendChild(title);
+
+        const weekRows = (weekMap.get(k) || []).slice().sort((a, b) => {
+          const ad = new Date(String(a.start_date || "").replace(" ", "T")).getTime();
+          const bd = new Date(String(b.start_date || "").replace(" ", "T")).getTime();
+          if (Number.isNaN(ad) || Number.isNaN(bd)) {
+            return String(a.start_date || "").localeCompare(String(b.start_date || ""));
+          }
+          return ad - bd;
+        });
+
+        const tableId = `futureWeekTable_${k.replace(/[^a-zA-Z0-9]/g, "_")}`;
+        const wrap = document.createElement("div");
+        wrap.className = "table-wrap future-table-wrap";
+        const table = document.createElement("table");
+        table.className = "future-matchups-table";
+        table.id = tableId;
+        wrap.appendChild(table);
+        section.appendChild(wrap);
+        host.appendChild(section);
+
+        const headers = ["Kickoff", "Matchup", "Win Probability", "Projected Winner"];
+        const thead = document.createElement("thead");
+        const trh = document.createElement("tr");
+        headers.forEach(h => {
+          const th = document.createElement("th");
+          th.textContent = h;
+          trh.appendChild(th);
+        });
+        thead.appendChild(trh);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        weekRows.forEach(row => {
+          const tr = document.createElement("tr");
+          const perspective = teamPerspective(row);
+
+          if (selectedTeam) {
+            const winner = String(row.predicted_winner || "").trim();
+            tr.className = winner === selectedTeam ? "future-selected-win" : "future-selected-loss";
+          } else {
+            tr.className = row.predicted_winner === row.home_team ? "pred-home" : "pred-away";
+          }
+
+          const kickoff = document.createElement("td");
+          kickoff.textContent = formatKickoffEspn(row.start_date);
+
+          const matchup = document.createElement("td");
+          matchup.className = "future-matchup-cell";
+          const line = document.createElement("div");
+          line.className = "future-matchup-line";
+          line.appendChild(buildRankedTeamNode(perspective.leftTeam, perspective.leftRank));
+          const sep = document.createElement("span");
+          sep.className = "future-matchup-sep";
+          sep.textContent = perspective.matchupSep;
+          line.appendChild(sep);
+          line.appendChild(buildRankedTeamNode(perspective.rightTeam, perspective.rightRank));
+          const sub = document.createElement("div");
+          sub.className = "future-matchup-sub";
+          sub.textContent = `Home: ${String(row.home_team || "")} | Visitor: ${String(row.away_team || "")}`;
+          matchup.appendChild(line);
+          matchup.appendChild(sub);
+
+          const probCell = document.createElement("td");
+          probCell.className = "future-prob-cell";
+          const leftProb = perspective.leftProb;
+          const rightProb = perspective.rightProb;
+          const probsAvailable = leftProb !== null || rightProb !== null;
+          if (!probsAvailable) {
+            probCell.textContent = "No probability available";
+          } else {
+            const normalizedLeft = leftProb !== null
+              ? Math.max(0, Math.min(100, leftProb))
+              : Math.max(0, Math.min(100, 100 - (rightProb || 0)));
+            const normalizedRight = rightProb !== null
+              ? Math.max(0, Math.min(100, rightProb))
+              : Math.max(0, Math.min(100, 100 - normalizedLeft));
+
+            const labels = document.createElement("div");
+            labels.className = "future-prob-labels";
+            const [leftDisplay, rightDisplay] = displayWinPctPair(normalizedLeft, normalizedRight);
+            const leftLabel = document.createElement("span");
+            leftLabel.textContent = `${perspective.leftTeam}: ${leftDisplay}`;
+            const rightLabel = document.createElement("span");
+            rightLabel.textContent = `${perspective.rightTeam}: ${rightDisplay}`;
+            labels.appendChild(leftLabel);
+            labels.appendChild(rightLabel);
+
+            const track = document.createElement("div");
+            track.className = "future-prob-track";
+            const fillLeft = document.createElement("div");
+            fillLeft.className = "future-prob-fill-left";
+            fillLeft.style.width = `${normalizedLeft}%`;
+            const fillRight = document.createElement("div");
+            fillRight.className = "future-prob-fill-right";
+            fillRight.style.width = `${normalizedRight}%`;
+            track.appendChild(fillLeft);
+            track.appendChild(fillRight);
+
+            probCell.appendChild(labels);
+            probCell.appendChild(track);
+          }
+
+          const winner = document.createElement("td");
+          winner.className = "future-winner-cell";
+          winner.textContent = String(row.predicted_winner || "");
+
+          [kickoff, matchup, probCell, winner].forEach(cell => tr.appendChild(cell));
+          tbody.appendChild(tr);
+        });
+
+        table.appendChild(tbody);
+      });
+    }
+
+    function renderProjectedRecords(rows) {
+      const meta = document.getElementById("projectedRecordMeta");
+      if (!rows || !rows.length) {
+        meta.textContent = "No all-future matchup data available. Run predict_upcoming_matchups.py --all-pending.";
+        setTable("projectedRecordTable", [], [
+          "team",
+          "current_record",
+          "games_left",
+          "projected_record_prob",
+          "projected_record_picks"
+        ], null);
+        return;
+      }
+
+      const byTeam = new Map();
+
+      function ensureTeam(teamName) {
+        const team = String(teamName || "").trim();
+        if (!team) return null;
+        if (!byTeam.has(team)) {
+          byTeam.set(team, {
+            team,
+            remaining_games: 0,
+            expected_wins_remaining: 0,
+            binary_wins_remaining: 0,
+          });
+        }
+        return byTeam.get(team);
+      }
+
+      function favoredFromRow(row, homeProb, awayProb) {
+        const home = String(row.home_team || "").trim();
+        const away = String(row.away_team || "").trim();
+        const picked = String(row.predicted_winner || "").trim();
+        if (picked && (picked === home || picked === away)) return picked;
+
+        if (homeProb !== null && awayProb !== null) {
+          return homeProb >= awayProb ? home : away;
+        }
+        if (homeProb !== null) {
+          return homeProb >= 50 ? home : away;
+        }
+        if (awayProb !== null) {
+          return awayProb >= 50 ? away : home;
+        }
+        return "";
+      }
+
+      (rows || []).forEach(row => {
+        const home = ensureTeam(row.home_team);
+        const away = ensureTeam(row.away_team);
+        if (!home || !away) return;
+
+        const homeProb = pctToNumber(row.home_win_prob_pct);
+        const awayProb = pctToNumber(row.away_win_prob_pct);
+        const favored = favoredFromRow(row, homeProb, awayProb);
+
+        home.remaining_games += 1;
+        away.remaining_games += 1;
+
+        if (homeProb !== null) {
+          home.expected_wins_remaining += homeProb / 100;
+        } else if (awayProb !== null) {
+          home.expected_wins_remaining += (100 - awayProb) / 100;
+        }
+
+        if (awayProb !== null) {
+          away.expected_wins_remaining += awayProb / 100;
+        } else if (homeProb !== null) {
+          away.expected_wins_remaining += (100 - homeProb) / 100;
+        }
+
+        if (favored && favored === home.team) home.binary_wins_remaining += 1;
+        if (favored && favored === away.team) away.binary_wins_remaining += 1;
+      });
+
+      const tableRows = Array.from(byTeam.values()).map(r => {
+        const current = state.currentRecordByTeam[r.team] || { wins: 0, losses: 0 };
+        const expectedLossesRemaining = Math.max(0, r.remaining_games - r.expected_wins_remaining);
+        const binaryLossesRemaining = Math.max(0, r.remaining_games - r.binary_wins_remaining);
+
+        const expectedFinalWins = current.wins + r.expected_wins_remaining;
+        const expectedFinalLosses = current.losses + expectedLossesRemaining;
+        const binaryFinalWins = current.wins + r.binary_wins_remaining;
+        const binaryFinalLosses = current.losses + binaryLossesRemaining;
+
+        return {
+          team: r.team,
+          current_record: `${current.wins}-${current.losses}`,
+          games_left: r.remaining_games,
+          projected_record_prob: `${expectedFinalWins.toFixed(1)}-${expectedFinalLosses.toFixed(1)}`,
+          projected_record_picks: `${binaryFinalWins}-${binaryFinalLosses}`,
+          _sort_expected_final_wins: expectedFinalWins,
+          _sort_expected_final_losses: expectedFinalLosses,
+          _sort_binary_final_wins: binaryFinalWins,
+        };
+      });
+
+      tableRows.sort((a, b) => {
+        if (b._sort_expected_final_wins !== a._sort_expected_final_wins) {
+          return b._sort_expected_final_wins - a._sort_expected_final_wins;
+        }
+        if (a._sort_expected_final_losses !== b._sort_expected_final_losses) {
+          return a._sort_expected_final_losses - b._sort_expected_final_losses;
+        }
+        if (b._sort_binary_final_wins !== a._sort_binary_final_wins) {
+          return b._sort_binary_final_wins - a._sort_binary_final_wins;
+        }
+        return String(a.team).localeCompare(String(b.team));
+      });
+
+      meta.textContent = `Teams: ${tableRows.length} | Sorted by probabilistic projected final wins`;
+
+      setTable(
+        "projectedRecordTable",
+        tableRows,
+        [
+          "team",
+          "current_record",
+          "games_left",
+          "projected_record_prob",
+          "projected_record_picks"
+        ],
+        null
+      );
+
+      const table = document.getElementById("projectedRecordTable");
+      const headerCells = table.querySelectorAll("thead th");
+      if (headerCells.length >= 5) {
+        headerCells[0].textContent = "Team";
+        headerCells[1].textContent = "Current Record";
+        headerCells[2].textContent = "Games Left";
+        headerCells[3].textContent = "Projected Record (Win Prob)";
+        headerCells[4].textContent = "Projected Record (Game Picks)";
+      }
+    }
+
+    function populateFutureTeamFilter(rows) {
+      const el = document.getElementById("futureTeamFilter");
+      if (!el) return;
+
+      const selected = el.value || "";
+      const teams = Array.from(new Set(
+        (rows || []).flatMap(r => [r.home_team, r.away_team])
+          .map(v => (v === null || v === undefined ? "" : String(v).trim()))
+          .filter(Boolean)
+      )).sort((a, b) => a.localeCompare(b));
+
+      el.innerHTML = "";
+      const allOpt = document.createElement("option");
+      allOpt.value = "";
+      allOpt.textContent = "All Teams";
+      el.appendChild(allOpt);
+
+      teams.forEach(team => {
+        const opt = document.createElement("option");
+        opt.value = team;
+        opt.textContent = team;
+        el.appendChild(opt);
+      });
+
+      if (selected && teams.includes(selected)) {
+        el.value = selected;
+      } else {
+        el.value = "";
+      }
+    }
+
+    function filteredFutureRows() {
+      const el = document.getElementById("futureTeamFilter");
+      const team = (el?.value || "").trim();
+      if (!team) return state.futureRows || [];
+      return (state.futureRows || []).filter(r => r.home_team === team || r.away_team === team);
+    }
+
+    async function loadCurrentTab() {
+      const champMode = (document.getElementById("champProjectionMode")?.value || "spi").trim();
+      const playoffMode = (document.getElementById("playoffBracketMode")?.value || "live").trim();
+      const simulateRemaining = !!document.getElementById("simulateRemainingToggle")?.checked;
+      const params = new URLSearchParams();
+      params.set("champ_mode", champMode);
+      params.set("playoff_mode", playoffMode);
+      params.set("simulate_remaining", simulateRemaining ? "1" : "0");
+      const res = await fetch(`/api/current?${params.toString()}`);
+      const data = await res.json();
+      const current = data.current || {};
+
+      const meta = document.getElementById("currentSnapshotMeta");
+      if (!current.has_rankings) {
+        meta.textContent = current.message || "No current rankings available.";
+        return;
+      }
+
+      meta.textContent = `Source file: ${current.ranking_file}`;
+
+      const rm = current.ranking_method || {};
+      const rankMeta = document.getElementById("currentRankingMethodMeta");
+      const methodUsed = rm.used || "spi";
+      let msg = `Official ranking method in use: ${methodUsed.toUpperCase()} (SPI only)`;
+      rankMeta.textContent = msg;
+
+      const champMeta = document.getElementById("champProjectionMeta");
+      const c = current.champ_projection || {};
+      const modeRequested = c.champ_mode_requested || champMode;
+      const modeUsed = c.champ_mode_used || modeRequested;
+      const usingStandings = modeUsed === "standings";
+      const modeLabel = usingStandings
+        ? "Conference champs projected from standings #1"
+        : "Conference champs projected from highest SPI";
+      const fallbackNote = modeRequested === "standings" && modeUsed !== "standings"
+        ? " (standings file missing/unusable, fell back to SPI)"
+        : "";
+      champMeta.textContent = `${modeLabel}${fallbackNote}`;
+
+      setTable(
+        "projectedFieldTable",
+        (current.projected_field || []).map(r => ({
+          ...r,
+          spi: formatMaybeNumber(r.spi, 2),
+          bid_type: formatBidType(r.bid_type),
+          has_bye: r.has_bye ? "Yes" : "No",
+        })),
+        ["seed", "team", "conference", "wins", "losses", "spi", "bid_type"],
+        null
+      );
+
+      renderPlayoffBracket(current.playoff_bracket || null);
+
+      const rankingsRows = (current.rankings || []).map(r => ({ ...r }));
+      assignMetricRank(rankingsRows, "n_adj", "n_rank");
+      assignMetricRank(rankingsRows, "sor_adj", "sor_rank");
+      state.currentRankingsRows = rankingsRows;
+      renderCurrentRankingsTable();
+
+      const rankMap = {};
+      const currentRecordMap = {};
+      const preseasonMode = isPreseasonRankingFile(current.ranking_file);
+      (current.rankings || []).forEach(r => {
+        const team = String(r.team || "").trim();
+        if (!team) return;
+        const rankVal = parseRank(r.rank);
+        if (rankVal !== null) {
+          rankMap[team] = rankVal;
+        }
+        const winsVal = preseasonMode ? 0 : (parseInt(String(r.wins ?? 0), 10) || 0);
+        const lossesVal = preseasonMode ? 0 : (parseInt(String(r.losses ?? 0), 10) || 0);
+        currentRecordMap[team] = {
+          wins: winsVal,
+          losses: lossesVal,
+        };
+      });
+      state.spiRankByTeam = rankMap;
+      state.currentRecordByTeam = currentRecordMap;
+
+      setTable(
+        "nTable",
+        (current.components?.n_rankings || []).map(r => ({
+          ...r,
+          n_adj: formatScaled100(r.n_adj, 2),
+          spi: formatMaybeNumber(r.spi, 2),
+        })),
+        ["rank", "team", "conference", "n_adj", "spi"],
+        null
+      );
+
+      setTable(
+        "sorTable",
+        (current.components?.sor_rankings || []).map(r => ({
+          ...r,
+          sor_adj: formatScaled100(r.sor_adj, 2),
+          spi: formatMaybeNumber(r.spi, 2),
+        })),
+        ["rank", "team", "conference", "sor_adj", "spi"],
+        null
+      );
+
+      setTable(
+        "upcomingTable",
+        (current.upcoming_matchups || []).map(r => {
+          const [homeDisplay, awayDisplay] = displayWinPctPair(r.home_win_prob_pct, r.away_win_prob_pct);
+          return {
+            ...r,
+            home_spi: formatMaybeNumber(r.home_spi, 2),
+            away_spi: formatMaybeNumber(r.away_spi, 2),
+            home_win_prob_pct: homeDisplay,
+            away_win_prob_pct: awayDisplay,
+            site_context: siteContextLabel(r),
+          };
+        }),
+        [
+          "start_date",
+          "season_type",
+          "week",
+          "home_team",
+          "away_team",
+          "home_rank",
+          "away_rank",
+          "home_spi",
+          "away_spi",
+          "home_win_prob_pct",
+          "away_win_prob_pct",
+          "predicted_winner",
+          "site_context",
+          "notes"
+        ],
+        row => row.predicted_winner === row.home_team ? "pred-home" : "pred-away"
+      );
+
+      const upcomingMeta = document.getElementById("upcomingSourceMeta");
+      const src = current.upcoming_matchups_source || "none";
+      upcomingMeta.textContent = src.startsWith("file:")
+        ? `Source: saved prediction file (${src.slice(5)})`
+        : (src === "api" ? "Source: live API" : "Source: unavailable");
+
+      const futureMeta = document.getElementById("futureSourceMeta");
+      const fsrc = current.future_matchups_source || "none";
+      futureMeta.textContent = fsrc.startsWith("file:")
+        ? `Source: saved all-future file (${fsrc.slice(5)})`
+        : "Source: unavailable (run predict_upcoming_matchups.py --all-pending)";
+
+      state.futureRows = current.future_matchups || [];
+      populateFutureTeamFilter(state.futureRows);
+      renderFutureByWeek(filteredFutureRows());
+      renderProjectedRecords(state.futureRows);
+    }
+
+    function selectedValues(id) {
+      const el = document.getElementById(id);
+      return Array.from(el.selectedOptions).map(o => o.value).filter(Boolean);
+    }
+
+    function fillSelect(id, values, blank=false) {
+      const el = document.getElementById(id);
+      el.innerHTML = "";
+      if (blank) {
+        const b = document.createElement("option");
+        b.value = "";
+        b.textContent = "--";
+        el.appendChild(b);
+      }
+      values.forEach(v => {
+        const opt = document.createElement("option");
+        opt.value = String(v);
+        opt.textContent = String(v);
+        el.appendChild(opt);
+      });
+    }
+
+    function historicalPayload() {
+      const a = document.getElementById("confPairA").value;
+      const b = document.getElementById("confPairB").value;
+
+      return {
+        page: state.page,
+        page_size: parseInt(document.getElementById("pageSize").value || "250", 10),
+        years: selectedValues("years").map(v => parseInt(v, 10)),
+        season_types: selectedValues("seasonTypes"),
+        weeks: selectedValues("weeks").map(v => parseInt(v, 10)),
+        teams: selectedValues("teams"),
+        conference_involved: selectedValues("conferenceInvolved"),
+        conference_play_only: document.getElementById("conferencePlayOnly").checked,
+        conference_play_conferences: selectedValues("conferencePlayConferences"),
+        specific_matchups: selectedValues("specificMatchups"),
+        conference_pair_any: a && b ? [a, b] : [],
+        playoff_only: document.getElementById("playoffOnly").checked,
+        title_only: document.getElementById("titleOnly").checked,
+        prediction_reasons: selectedValues("predictionReasons"),
+        predicted_sides: selectedValues("predictedSides"),
+        min_source_teams: document.getElementById("minSourceTeams").value
+      };
+    }
+
+    function renderMetricCards(metrics) {
+      const keys = [
+        ["overall", "Overall"],
+        ["regular", "Regular"],
+        ["postseason", "Postseason"],
+        ["playoff", "Playoff"],
+        ["national_championship", "National Championship"]
+      ];
+
+      const host = document.getElementById("metricCards");
+      host.innerHTML = "";
+
+      keys.forEach(([k, label]) => {
+        const b = metrics.baseline[k] || {};
+        const f = metrics.filtered[k] || {};
+        const card = document.createElement("article");
+        card.className = "metric-card";
+        card.innerHTML = `
+          <h3>${label}</h3>
+          <div>Filtered: <strong>${fmtPct(f.accuracy)}</strong> (${f.correct || 0}/${f.games || 0})</div>
+          <div>Baseline: <strong>${fmtPct(b.accuracy)}</strong> (${b.correct || 0}/${b.games || 0})</div>
+        `;
+        host.appendChild(card);
+      });
+    }
+
+    function buildSeriesByKey(rows, keyCols, valueCol, labels) {
+      const map = new Map(rows.map(r => [keyCols.map(k => String(r[k])).join("|"), r[valueCol]]));
+      return labels.map(k => map.get(k) ?? null);
+    }
+
+    function renderHistoricalCharts(payload) {
+      const slices = payload.slices || {};
+      const has = payload.home_away_slices || {};
+
+      const baselineOverall = payload.metrics?.baseline?.overall?.accuracy ?? null;
+      const byYear = slices.by_year || [];
+      const yearLabels = byYear.map(r => String(r.year));
+
+      destroyChart("yearChart");
+      state.charts.yearChart = new Chart(document.getElementById("yearChart"), {
+        type: "bar",
+        data: {
+          labels: yearLabels,
+          datasets: [
+            {
+              label: "Yearly Performance",
+              data: byYear.map(r => r.accuracy),
+              backgroundColor: "#16a34a",
+              borderColor: "#15803d",
+              borderWidth: 1,
+            },
+            {
+              type: "line",
+              label: "Baseline Overall",
+              data: yearLabels.map(() => baselineOverall),
+              borderColor: "#f97316",
+              borderDash: [6,4],
+              tension: 0,
+              pointRadius: 0,
+            }
+          ]
+        },
+        options: { responsive: true, scales: { y: { min: 0, max: 1, ticks: { callback: v => (100*v).toFixed(0)+"%" } } } }
+      });
+
+      const regMap = new Map((slices.by_year_regular || []).map(r => [String(r.year), r.accuracy]));
+      const postMap = new Map((slices.by_year_postseason || []).map(r => [String(r.year), r.accuracy]));
+      const plyMap = new Map((slices.by_year_playoff || []).map(r => [String(r.year), r.accuracy]));
+
+      destroyChart("yearSplitChart");
+      state.charts.yearSplitChart = new Chart(document.getElementById("yearSplitChart"), {
+        type: "bar",
+        data: {
+          labels: yearLabels,
+          datasets: [
+            { label: "Regular", data: yearLabels.map(y => regMap.get(y) ?? null), backgroundColor: "#0284c7" },
+            { label: "Postseason", data: yearLabels.map(y => postMap.get(y) ?? null), backgroundColor: "#7c3aed" },
+            { label: "Playoff", data: yearLabels.map(y => plyMap.get(y) ?? null), backgroundColor: "#b91c1c" }
+          ]
+        },
+        options: { responsive: true, scales: { y: { min: 0, max: 1, ticks: { callback: v => (100*v).toFixed(0)+"%" } } } }
+      });
+
+      const weekRows = slices.by_week_all_years || [];
+      const reg = weekRows.filter(r => r.season_type === "regular");
+      const post = weekRows.filter(r => r.season_type === "postseason");
+      const weekLabels = Array.from(new Set(weekRows.map(r => String(r.week)))).sort((a,b) => parseInt(a,10)-parseInt(b,10));
+      const regWeek = new Map(reg.map(r => [String(r.week), r.accuracy]));
+      const postWeek = new Map(post.map(r => [String(r.week), r.accuracy]));
+
+      destroyChart("weekAcrossYearsChart");
+      state.charts.weekAcrossYearsChart = new Chart(document.getElementById("weekAcrossYearsChart"), {
+        type: "line",
+        data: {
+          labels: weekLabels,
+          datasets: [
+            { label: "Regular", data: weekLabels.map(w => regWeek.get(w) ?? null), borderColor: "#0ea5e9", tension: 0.2 },
+            { label: "Postseason", data: weekLabels.map(w => postWeek.get(w) ?? null), borderColor: "#9333ea", tension: 0.2 }
+          ]
+        },
+        options: { responsive: true, scales: { y: { min: 0, max: 1, ticks: { callback: v => (100*v).toFixed(0)+"%" } } } }
+      });
+
+      const within = slices.by_year_week || [];
+      const years = Array.from(new Set(within.map(r => String(r.year)))).sort();
+      if (document.getElementById("focusYear").options.length === 0) {
+        fillSelect("focusYear", years, false);
+      }
+      const focusYear = document.getElementById("focusYear").value || years[0] || "";
+      if (focusYear && document.getElementById("focusYear").value !== focusYear) {
+        document.getElementById("focusYear").value = focusYear;
+      }
+
+      const rowsYear = within.filter(r => String(r.year) === String(focusYear));
+      const labelsYear = rowsYear.map(r => `${(r.season_type || "?")[0].toUpperCase()}${r.week}`);
+      const valsYear = rowsYear.map(r => r.accuracy);
+
+      destroyChart("withinYearWeekChart");
+      state.charts.withinYearWeekChart = new Chart(document.getElementById("withinYearWeekChart"), {
+        type: "bar",
+        data: { labels: labelsYear, datasets: [{ label: `Filtered ${focusYear}`, data: valsYear, backgroundColor: "#0f766e" }] },
+        options: { responsive: true, scales: { y: { min: 0, max: 1, ticks: { callback: v => (100*v).toFixed(0)+"%" } } } }
+      });
+
+      const hay = has.by_year || [];
+      const hayLabels = Array.from(new Set(hay.map(r => String(r.year)))).sort();
+      const homeMap = new Map(hay.filter(r => r.predicted_side === "home_pick").map(r => [String(r.year), r.accuracy]));
+      const awayMap = new Map(hay.filter(r => r.predicted_side === "away_pick").map(r => [String(r.year), r.accuracy]));
+
+      destroyChart("homeAwayYearChart");
+      state.charts.homeAwayYearChart = new Chart(document.getElementById("homeAwayYearChart"), {
+        type: "bar",
+        data: {
+          labels: hayLabels,
+          datasets: [
+            { label: "Home Picks", data: hayLabels.map(y => homeMap.get(y) ?? null), backgroundColor: "#2563eb" },
+            { label: "Away Picks", data: hayLabels.map(y => awayMap.get(y) ?? null), backgroundColor: "#d946ef" }
+          ]
+        },
+        options: { responsive: true, scales: { y: { min: 0, max: 1, ticks: { callback: v => (100*v).toFixed(0)+"%" } } } }
+      });
+
+      const haw = has.by_week_all_years || [];
+      const hawWeeks = Array.from(new Set(haw.map(r => `${r.season_type}|${r.week}`))).sort((a,b) => {
+        const [sa,wa] = a.split("|");
+        const [sb,wb] = b.split("|");
+        if (sa !== sb) return sa.localeCompare(sb);
+        return parseInt(wa,10) - parseInt(wb,10);
+      });
+      const homeWeek = new Map(haw.filter(r => r.predicted_side === "home_pick").map(r => [`${r.season_type}|${r.week}`, r.accuracy]));
+      const awayWeek = new Map(haw.filter(r => r.predicted_side === "away_pick").map(r => [`${r.season_type}|${r.week}`, r.accuracy]));
+
+      destroyChart("homeAwayWeekChart");
+      state.charts.homeAwayWeekChart = new Chart(document.getElementById("homeAwayWeekChart"), {
+        type: "line",
+        data: {
+          labels: hawWeeks,
+          datasets: [
+            { label: "Home Picks", data: hawWeeks.map(k => homeWeek.get(k) ?? null), borderColor: "#1d4ed8", tension: 0.2 },
+            { label: "Away Picks", data: hawWeeks.map(k => awayWeek.get(k) ?? null), borderColor: "#c026d3", tension: 0.2 }
+          ]
+        },
+        options: { responsive: true, scales: { y: { min: 0, max: 1, ticks: { callback: v => (100*v).toFixed(0)+"%" } } } }
+      });
+    }
+
+    function renderRawTable(payload) {
+      const table = payload.table || { columns: [], rows: [] };
+      setTable("rawTable", table.rows, table.columns, null);
+      const s = payload.summary;
+      document.getElementById("tableSummary").textContent = `Filtered rows: ${s.total_rows_filtered} of ${s.total_rows_baseline}`;
+      document.getElementById("pageIndicator").textContent = `Page ${s.page} of ${s.total_pages}`;
+    }
+
+    async function loadHistoricalMetadata() {
+      const res = await fetch("/api/historical/metadata");
+      const data = await res.json();
+      if (!data.ok) {
+        throw new Error(data.error || "No historical metadata available");
+      }
+      state.metadata = data.metadata;
+
+      fillSelect("years", data.metadata.years);
+      fillSelect("seasonTypes", data.metadata.season_types);
+      fillSelect("weeks", data.metadata.weeks);
+      fillSelect("teams", data.metadata.teams);
+      fillSelect("conferenceInvolved", data.metadata.conferences);
+      fillSelect("conferencePlayConferences", data.metadata.conferences);
+      fillSelect("specificMatchups", data.metadata.conference_matchups);
+      fillSelect("confPairA", data.metadata.conferences, true);
+      fillSelect("confPairB", data.metadata.conferences, true);
+      fillSelect("predictionReasons", data.metadata.prediction_reasons);
+      fillSelect("predictedSides", data.metadata.predicted_sides);
+
+      const ds = data.dataset || {};
+      const dsMeta = document.getElementById("historicalDatasetMeta");
+  dsMeta.textContent = `Dataset: ${ds.method_used || "current"} | Source: ${ds.source_file || "n/a"}`;
+    }
+
+    async function queryHistorical() {
+      const res = await fetch("/api/historical/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(historicalPayload())
+      });
+      const data = await res.json();
+      if (!data.ok) {
+        throw new Error(data.error || "Historical query failed");
+      }
+      state.latest = data;
+      state.totalPages = data.summary.total_pages || 1;
+
+      const ds = data.dataset || {};
+      const dsMeta = document.getElementById("historicalDatasetMeta");
+      dsMeta.textContent = `Dataset: ${ds.method_used || "n/a"} | Source: ${ds.source_file || "n/a"}`;
+
+      renderMetricCards(data.metrics);
+      renderHistoricalCharts(data);
+      renderRawTable(data);
+    }
+
+    async function bootstrap() {
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => setTab(btn.dataset.tab));
+      });
+
+      document.getElementById("applyFiltersBtn").addEventListener("click", async () => {
+        state.page = 1;
+        await queryHistorical();
+      });
+
+      document.getElementById("resetFiltersBtn").addEventListener("click", async () => {
+        ["years","seasonTypes","weeks","teams","conferenceInvolved","conferencePlayConferences","specificMatchups","predictionReasons","predictedSides"].forEach(id => {
+          Array.from(document.getElementById(id).options).forEach(o => o.selected = false);
+        });
+        document.getElementById("confPairA").value = "";
+        document.getElementById("confPairB").value = "";
+        document.getElementById("conferencePlayOnly").checked = false;
+        document.getElementById("playoffOnly").checked = false;
+        document.getElementById("titleOnly").checked = false;
+        document.getElementById("minSourceTeams").value = "80";
+        document.getElementById("pageSize").value = "250";
+        state.page = 1;
+        await queryHistorical();
+      });
+
+      document.getElementById("prevPageBtn").addEventListener("click", async () => {
+        if (state.page > 1) {
+          state.page -= 1;
+          await queryHistorical();
+        }
+      });
+
+      document.getElementById("nextPageBtn").addEventListener("click", async () => {
+        if (state.page < state.totalPages) {
+          state.page += 1;
+          await queryHistorical();
+        }
+      });
+
+      document.getElementById("focusYear").addEventListener("change", () => {
+        if (state.latest) {
+          renderHistoricalCharts(state.latest);
+        }
+      });
+
+      document.getElementById("champProjectionMode").addEventListener("change", async () => {
+        await loadCurrentTab();
+      });
+
+      document.getElementById("playoffBracketMode").addEventListener("change", async () => {
+        await loadCurrentTab();
+      });
+
+      document.getElementById("currentRankingMethod").addEventListener("change", async () => {
+        await loadCurrentTab();
+      });
+
+      document.getElementById("simulateRemainingToggle").addEventListener("change", async () => {
+        await loadCurrentTab();
+      });
+
+      document.getElementById("futureTeamFilter").addEventListener("change", () => {
+        renderFutureByWeek(filteredFutureRows());
+      });
+
+      await loadCurrentTab();
+
+      try {
+        await loadHistoricalMetadata();
+        await queryHistorical();
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    bootstrap();
+  </script>
+</body>
+</html>

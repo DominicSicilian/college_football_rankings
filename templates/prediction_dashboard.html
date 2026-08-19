@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPI Winner Prediction Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='prediction_dashboard.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <h1>SPI Winner Prediction Dashboard</h1>
+      <p>Filter game-level predictions and compare subset accuracy against full-history baseline.</p>
+    </header>
+
+    {% if not has_data %}
+      <section class="panel">
+        <h2>No Data Yet</h2>
+        <p>{{ message }}</p>
+      </section>
+    {% else %}
+      <section class="panel filters-panel">
+        <div class="panel-header-row">
+          <h2>Filters</h2>
+          <div class="actions-row">
+            <button id="applyFiltersBtn" class="btn-primary">Apply Filters</button>
+            <button id="resetFiltersBtn" class="btn-secondary">Reset</button>
+          </div>
+        </div>
+
+        <div class="filters-grid">
+          <label>Years
+            <select id="years" multiple></select>
+          </label>
+          <label>Season Types
+            <select id="seasonTypes" multiple></select>
+          </label>
+          <label>Weeks
+            <select id="weeks" multiple></select>
+          </label>
+          <label>Teams
+            <select id="teams" multiple></select>
+          </label>
+          <label>Conference Involved
+            <select id="conferenceInvolved" multiple></select>
+          </label>
+          <label>Conference-Play Conferences
+            <select id="conferencePlayConferences" multiple></select>
+          </label>
+          <label>Specific Conference Matchups
+            <select id="specificMatchups" multiple></select>
+          </label>
+          <label>Conference Pair A
+            <select id="confPairA"></select>
+          </label>
+          <label>Conference Pair B
+            <select id="confPairB"></select>
+          </label>
+          <label>Prediction Reason
+            <select id="predictionReasons" multiple></select>
+          </label>
+          <label>Min Ranked Teams Used
+            <input id="minSourceTeams" type="number" value="80" min="0">
+          </label>
+          <label>Rows Per Page
+            <input id="pageSize" type="number" value="250" min="25" max="2000" step="25">
+          </label>
+        </div>
+
+        <div class="toggle-row">
+          <label><input id="conferencePlayOnly" type="checkbox"> Conference games only</label>
+          <label><input id="playoffOnly" type="checkbox"> Playoff only</label>
+          <label><input id="titleOnly" type="checkbox"> National championship only</label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Accuracy Snapshot</h2>
+        <div id="metricCards" class="metric-grid"></div>
+      </section>
+
+      <section class="panel chart-panel">
+        <h2>Accuracy By Year</h2>
+        <canvas id="yearChart"></canvas>
+      </section>
+
+      <section class="panel chart-grid-2">
+        <div>
+          <h2>Yearly Split Accuracy</h2>
+          <canvas id="yearSplitChart"></canvas>
+        </div>
+        <div>
+          <h2>Week Accuracy Across Years</h2>
+          <canvas id="weekAcrossYearsChart"></canvas>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header-row">
+          <h2>Within-Year Week Accuracy</h2>
+          <label>Focus Year
+            <select id="focusYear"></select>
+          </label>
+        </div>
+        <canvas id="withinYearWeekChart"></canvas>
+      </section>
+
+      <section class="panel">
+        <h2>Raw Predicted vs Actual Games</h2>
+        <p id="tableSummary"></p>
+        <div class="pager-row">
+          <button id="prevPageBtn" class="btn-secondary">Prev</button>
+          <span id="pageIndicator"></span>
+          <button id="nextPageBtn" class="btn-secondary">Next</button>
+        </div>
+        <div class="table-wrap">
+          <table id="rawTable"></table>
+        </div>
+      </section>
+    {% endif %}
+  </main>
+
+  {% if has_data %}
+  <script>
+    let metadata = null;
+    let currentPage = 1;
+    let totalPages = 1;
+    let latestPayload = null;
+
+    let yearChart = null;
+    let yearSplitChart = null;
+    let weekAcrossYearsChart = null;
+    let withinYearWeekChart = null;
+
+    function getSelectedValues(selectEl) {
+      return Array.from(selectEl.selectedOptions).map(opt => opt.value).filter(Boolean);
+    }
+
+    function populateSelect(selectEl, values, includeBlank = false) {
+      selectEl.innerHTML = "";
+      if (includeBlank) {
+        const blank = document.createElement("option");
+        blank.value = "";
+        blank.textContent = "--";
+        selectEl.appendChild(blank);
+      }
+      values.forEach(v => {
+        const opt = document.createElement("option");
+        opt.value = String(v);
+        opt.textContent = String(v);
+        selectEl.appendChild(opt);
+      });
+    }
+
+    function buildPayload() {
+      const pairA = document.getElementById("confPairA").value;
+      const pairB = document.getElementById("confPairB").value;
+
+      return {
+        page: currentPage,
+        page_size: parseInt(document.getElementById("pageSize").value || "250", 10),
+        years: getSelectedValues(document.getElementById("years")).map(v => parseInt(v, 10)),
+        season_types: getSelectedValues(document.getElementById("seasonTypes")),
+        weeks: getSelectedValues(document.getElementById("weeks")).map(v => parseInt(v, 10)),
+        teams: getSelectedValues(document.getElementById("teams")),
+        conference_involved: getSelectedValues(document.getElementById("conferenceInvolved")),
+        conference_play_only: document.getElementById("conferencePlayOnly").checked,
+        conference_play_conferences: getSelectedValues(document.getElementById("conferencePlayConferences")),
+        specific_matchups: getSelectedValues(document.getElementById("specificMatchups")),
+        conference_pair_any: pairA && pairB ? [pairA, pairB] : [],
+        playoff_only: document.getElementById("playoffOnly").checked,
+        title_only: document.getElementById("titleOnly").checked,
+        prediction_reasons: getSelectedValues(document.getElementById("predictionReasons")),
+        min_source_teams: document.getElementById("minSourceTeams").value
+      };
+    }
+
+    function formatPct(v) {
+      if (v === null || v === undefined || Number.isNaN(v)) return "-";
+      return (100 * v).toFixed(1) + "%";
+    }
+
+    function renderMetricCards(metrics) {
+      const container = document.getElementById("metricCards");
+      container.innerHTML = "";
+
+      const metricKeys = [
+        ["overall", "Overall"],
+        ["regular", "Regular"],
+        ["postseason", "Postseason"],
+        ["playoff", "Playoff"],
+        ["national_championship", "National Championship"]
+      ];
+
+      metricKeys.forEach(([key, label]) => {
+        const baseline = metrics.baseline[key] || {};
+        const filtered = metrics.filtered[key] || {};
+        const card = document.createElement("article");
+        card.className = "metric-card";
+        card.innerHTML = `
+          <h3>${label}</h3>
+          <div class="metric-lines">
+            <div><strong>Filtered:</strong> ${formatPct(filtered.accuracy)} (${filtered.correct || 0}/${filtered.games || 0})</div>
+            <div><strong>Baseline:</strong> ${formatPct(baseline.accuracy)} (${baseline.correct || 0}/${baseline.games || 0})</div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function destroyChart(instance) {
+      if (instance) instance.destroy();
+    }
+
+    function renderYearCharts(slices, metrics) {
+      const baselineOverall = metrics.baseline.overall?.accuracy ?? null;
+      const byYear = slices.by_year || [];
+
+      const labels = byYear.map(r => String(r.year));
+      const values = byYear.map(r => r.accuracy);
+      const baselineLine = byYear.map(() => baselineOverall);
+
+      destroyChart(yearChart);
+      yearChart = new Chart(document.getElementById("yearChart"), {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            { label: "Filtered Accuracy", data: values, borderColor: "#0f766e", tension: 0.2 },
+            { label: "Baseline Overall", data: baselineLine, borderColor: "#f97316", borderDash: [6, 4], tension: 0 }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: { y: { min: 0, max: 1, ticks: { callback: v => (v * 100).toFixed(0) + "%" } } }
+        }
+      });
+
+      const byReg = new Map((slices.by_year_regular || []).map(r => [String(r.year), r.accuracy]));
+      const byPost = new Map((slices.by_year_postseason || []).map(r => [String(r.year), r.accuracy]));
+      const byPlay = new Map((slices.by_year_playoff || []).map(r => [String(r.year), r.accuracy]));
+
+      destroyChart(yearSplitChart);
+      yearSplitChart = new Chart(document.getElementById("yearSplitChart"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [
+            { label: "Regular", data: labels.map(y => byReg.get(y) ?? null), backgroundColor: "#0369a1" },
+            { label: "Postseason", data: labels.map(y => byPost.get(y) ?? null), backgroundColor: "#7c3aed" },
+            { label: "Playoff", data: labels.map(y => byPlay.get(y) ?? null), backgroundColor: "#b91c1c" }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: { y: { min: 0, max: 1, ticks: { callback: v => (v * 100).toFixed(0) + "%" } } }
+        }
+      });
+    }
+
+    function renderWeekAcrossYearsChart(slices, metrics) {
+      const rows = slices.by_week_all_years || [];
+      const regular = rows.filter(r => r.season_type === "regular");
+      const post = rows.filter(r => r.season_type === "postseason");
+
+      const regWeeks = regular.map(r => String(r.week));
+      const postWeeks = post.map(r => String(r.week));
+      const allLabels = Array.from(new Set([...regWeeks, ...postWeeks])).sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+
+      const regMap = new Map(regular.map(r => [String(r.week), r.accuracy]));
+      const postMap = new Map(post.map(r => [String(r.week), r.accuracy]));
+
+      const baselineOverall = metrics.baseline.overall?.accuracy ?? null;
+
+      destroyChart(weekAcrossYearsChart);
+      weekAcrossYearsChart = new Chart(document.getElementById("weekAcrossYearsChart"), {
+        type: "line",
+        data: {
+          labels: allLabels,
+          datasets: [
+            { label: "Regular", data: allLabels.map(w => regMap.get(w) ?? null), borderColor: "#0284c7", tension: 0.2 },
+            { label: "Postseason", data: allLabels.map(w => postMap.get(w) ?? null), borderColor: "#9333ea", tension: 0.2 },
+            { label: "Baseline Overall", data: allLabels.map(() => baselineOverall), borderColor: "#f97316", borderDash: [6, 4], tension: 0 }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: { y: { min: 0, max: 1, ticks: { callback: v => (v * 100).toFixed(0) + "%" } } }
+        }
+      });
+    }
+
+    function renderWithinYearWeekChart(slices, metrics) {
+      const focusYearEl = document.getElementById("focusYear");
+      const rows = slices.by_year_week || [];
+      const years = Array.from(new Set(rows.map(r => String(r.year)))).sort();
+
+      if (!focusYearEl.options.length) {
+        populateSelect(focusYearEl, years, false);
+      }
+      if (focusYearEl.value === "" && years.length) {
+        focusYearEl.value = years[0];
+      }
+
+      const year = focusYearEl.value;
+      const selectedRows = rows.filter(r => String(r.year) === year);
+      const labels = selectedRows.map(r => `${(r.season_type || "?")[0].toUpperCase()}${r.week}`);
+      const values = selectedRows.map(r => r.accuracy);
+      const baselineYearRows = (slices.by_year || []).filter(r => String(r.year) === year);
+      const baselineYearAcc = baselineYearRows.length ? baselineYearRows[0].accuracy : (metrics.baseline.overall?.accuracy ?? null);
+
+      destroyChart(withinYearWeekChart);
+      withinYearWeekChart = new Chart(document.getElementById("withinYearWeekChart"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [
+            { label: `Filtered ${year}`, data: values, backgroundColor: "#0f766e" },
+            { label: `Year Baseline ${year}`, data: labels.map(() => baselineYearAcc), type: "line", borderColor: "#f97316", borderDash: [6, 4], pointRadius: 0 }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: { y: { min: 0, max: 1, ticks: { callback: v => (v * 100).toFixed(0) + "%" } } }
+        }
+      });
+    }
+
+    function renderRawTable(table, summary) {
+      const tableEl = document.getElementById("rawTable");
+      tableEl.innerHTML = "";
+
+      const thead = document.createElement("thead");
+      const headRow = document.createElement("tr");
+      (table.columns || []).forEach(col => {
+        const th = document.createElement("th");
+        th.textContent = col;
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+      tableEl.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      (table.rows || []).forEach(row => {
+        const tr = document.createElement("tr");
+        (table.columns || []).forEach(col => {
+          const td = document.createElement("td");
+          const val = row[col];
+          td.textContent = val === null || val === undefined ? "" : String(val);
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      tableEl.appendChild(tbody);
+
+      document.getElementById("tableSummary").textContent =
+        `Filtered rows: ${summary.total_rows_filtered} of ${summary.total_rows_baseline}`;
+      document.getElementById("pageIndicator").textContent =
+        `Page ${summary.page} of ${summary.total_pages}`;
+    }
+
+    async function queryData() {
+      const response = await fetch("/api/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(buildPayload())
+      });
+
+      const data = await response.json();
+      if (!data.ok) {
+        alert(data.error || "Query failed");
+        return;
+      }
+
+      latestPayload = data;
+      totalPages = data.summary.total_pages || 1;
+
+      renderMetricCards(data.metrics);
+      renderYearCharts(data.slices, data.metrics);
+      renderWeekAcrossYearsChart(data.slices, data.metrics);
+      renderWithinYearWeekChart(data.slices, data.metrics);
+      renderRawTable(data.table, data.summary);
+    }
+
+    async function bootstrap() {
+      const response = await fetch("/api/metadata");
+      const data = await response.json();
+      if (!data.ok) {
+        alert(data.error || "Failed to load metadata");
+        return;
+      }
+
+      metadata = data.metadata;
+
+      populateSelect(document.getElementById("years"), metadata.years);
+      populateSelect(document.getElementById("seasonTypes"), metadata.season_types);
+      populateSelect(document.getElementById("weeks"), metadata.weeks);
+      populateSelect(document.getElementById("teams"), metadata.teams);
+      populateSelect(document.getElementById("conferenceInvolved"), metadata.conferences);
+      populateSelect(document.getElementById("conferencePlayConferences"), metadata.conferences);
+      populateSelect(document.getElementById("specificMatchups"), metadata.conference_matchups);
+      populateSelect(document.getElementById("confPairA"), metadata.conferences, true);
+      populateSelect(document.getElementById("confPairB"), metadata.conferences, true);
+      populateSelect(document.getElementById("predictionReasons"), metadata.prediction_reasons);
+
+      await queryData();
+    }
+
+    document.getElementById("applyFiltersBtn").addEventListener("click", async () => {
+      currentPage = 1;
+      await queryData();
+    });
+
+    document.getElementById("resetFiltersBtn").addEventListener("click", async () => {
+      [
+        "years",
+        "seasonTypes",
+        "weeks",
+        "teams",
+        "conferenceInvolved",
+        "conferencePlayConferences",
+        "specificMatchups",
+        "predictionReasons"
+      ].forEach(id => {
+        const el = document.getElementById(id);
+        Array.from(el.options).forEach(opt => {
+          opt.selected = false;
+        });
+      });
+
+      document.getElementById("confPairA").value = "";
+      document.getElementById("confPairB").value = "";
+      document.getElementById("conferencePlayOnly").checked = false;
+      document.getElementById("playoffOnly").checked = false;
+      document.getElementById("titleOnly").checked = false;
+      document.getElementById("minSourceTeams").value = "80";
+      document.getElementById("pageSize").value = "250";
+      currentPage = 1;
+      await queryData();
+    });
+
+    document.getElementById("prevPageBtn").addEventListener("click", async () => {
+      if (currentPage > 1) {
+        currentPage -= 1;
+        await queryData();
+      }
+    });
+
+    document.getElementById("nextPageBtn").addEventListener("click", async () => {
+      if (currentPage < totalPages) {
+        currentPage += 1;
+        await queryData();
+      }
+    });
+
+    document.getElementById("focusYear").addEventListener("change", () => {
+      if (latestPayload) {
+        renderWithinYearWeekChart(latestPayload.slices, latestPayload.metrics);
+      }
+    });
+
+    bootstrap();
+  </script>
+  {% endif %}
+</body>
+</html>
