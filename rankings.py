@@ -11,7 +11,6 @@ from cfbd.rest import ApiException
 import argparse
 
 
-# Parse command line arguments
 def parse_arguments():
     parser = argparse.ArgumentParser(
         description="College Football Rankings with week range support"
@@ -37,28 +36,19 @@ def parse_arguments():
     return parser.parse_args()
 
 
-# Create data exports directory if it doesn't exist
 os.makedirs("data_exports", exist_ok=True)
 
-# ------------------------------------------------------------------------------
-#   CONFIGURATION
-# ------------------------------------------------------------------------------
-
-# API setup
-# Configure API key
 configuration = cfbd.Configuration(
     host="https://api.collegefootballdata.com",
     access_token=os.getenv("CFBD_API_KEY"),
 )
 
-# Initialize API clients
 teams_api = cfbd.TeamsApi(cfbd.ApiClient(configuration))
 games_api = cfbd.GamesApi(cfbd.ApiClient(configuration))
 stats_api = cfbd.StatsApi(cfbd.ApiClient(configuration))
 rankings_api = cfbd.RankingsApi(cfbd.ApiClient(configuration))
 conferences_api = cfbd.ConferencesApi(cfbd.ApiClient(configuration))
 
-# Conference conversion dictionary
 conf_conversion = {
     "american": ["american"],
     "acc": ["acc"],
@@ -76,11 +66,6 @@ conf_conversion = {
     "sun belt": ["sun belt", "sun-belt"],
     "wac": ["wac"],
 }
-
-# ------------------------------------------------------------------------------
-#   UTILITY FUNCTIONS
-# ------------------------------------------------------------------------------
-
 
 def dashes():
     print("-" * 120)
@@ -165,11 +150,6 @@ def SPI_calc(SOR, N_adj):
     return 100.0 * (0.65 * SOR + 0.35 * N_adj)
 
 
-# ------------------------------------------------------------------------------
-#   CLASSES
-# ------------------------------------------------------------------------------
-
-
 class My_Conf:
     def __init__(
         self,
@@ -228,18 +208,11 @@ class My_Team:
         self.SPI = SPI
 
 
-# ------------------------------------------------------------------------------
-#   API CALL FUNCTIONS
-# ------------------------------------------------------------------------------
-
-
 def api_call_with_week_range(api_function, start_week=1, end_week=56, **kwargs):
     """Make API calls with week range support"""
-    # If using default values, don't specify week at all
     if start_week == 1 and end_week == 56:
         return api_function(**kwargs)
 
-    # Otherwise, fetch each week separately and combine results
     all_results = []
     for week in range(start_week, end_week + 1):
         week_kwargs = kwargs.copy()
@@ -254,11 +227,6 @@ def api_call_with_week_range(api_function, start_week=1, end_week=56, **kwargs):
                 print(f"API Exception for week {week}: {e}")
 
     return all_results
-
-
-# ------------------------------------------------------------------------------
-#   CORE FUNCTIONS
-# ------------------------------------------------------------------------------
 
 
 def get_team_record(team_name, year, start_week=1, end_week=56):
@@ -611,14 +579,9 @@ def display_and_save(SPI_final_rankings, conf_rankings, week_suffix=""):
     df_database.to_csv(f"SPI_Rankings_{str(todays_datetime)}{week_suffix}.csv", sep=",")
 
 
-# ------------------------------------------------------------------------------
-#   MAIN EXECUTION
-# ------------------------------------------------------------------------------
 def main():
-    # Parse command line arguments
     args = parse_arguments()
 
-    # Set up date and year
     global todays_datetime, today_year
 
     if args.date:
@@ -635,16 +598,13 @@ def main():
         if todays_datetime < sept1:
             today_year = today_year - 1
 
-    # Set up week range
     start_week = args.start_week
     end_week = args.end_week
 
-    # Create a suffix for filenames based on week range
     week_suffix = (
         f"_w{start_week}-{end_week}" if start_week != 1 or end_week != 56 else ""
     )
 
-    # Welcome message
     dashes()
     skips()
     spaced("Welcome to Dominic Sicilian's college football rankings!")
@@ -663,21 +623,17 @@ def main():
     spaced("AND THAT'S HOW WE RANK 'EM!")
     skips()
 
-    # Create data directory if it doesn't exist
     os.makedirs("data_exports", exist_ok=True)
 
-    # Get conference champions from previous season
     print("Getting last year's conference champs...")
     conf_champions_file = os.path.join(
         "data_exports", f"conference_champions_{today_year-1}{week_suffix}.csv"
     )
 
-    # Get from API
     print("Grabbing from API")
     conf_champions = get_conference_champions(today_year - 1, start_week, end_week)
     print("Successful API pull.")
 
-    # Save to file
     if conf_champions:
         print("Saving conference champions")
         champs_df = pd.DataFrame(
@@ -690,7 +646,6 @@ def main():
     for conf, champ in conf_champions.items():
         print(f"  {conf}: {champ}")
 
-    # Step 1: Calculate Nature statistic
     N_raw_list = []
     team_objects = {}
     team_objects_by_name = {}
