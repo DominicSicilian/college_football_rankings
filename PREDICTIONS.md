@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-09-02 01:04 UTC from the newest prediction exports.
+> Auto-generated 2026-09-02 01:28 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Preseason &nbsp;•&nbsp; **Teams:** 136 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -3045,9 +3045,9 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Season | 2026 |
 | Ranking basis | Preseason |
 | Games covered | 805 (0 played, 805 remaining) |
-| Completed-game source | `data_exports/predictions/spi_game_predictions_2021_2026.csv` |
+| Completed-game source | `data_exports/predictions/spi_game_predictions_2025_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
-| Generated | 2026-09-02 01:04 UTC |
+| Generated | 2026-09-02 01:28 UTC |
 
 Regenerate with:
 
