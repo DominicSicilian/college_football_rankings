@@ -27,7 +27,3 @@ data_exports/cache/
 
 # Pickled CFBD API response cache (rebuilt on demand by api_cache.py)
 data_exports/api_cache/
-
-# Scraped HTML from thepredictiontracker.com, kept locally to avoid re-hitting
-# the site. Only the parsed numbers (benchmarks/*.csv) belong in the repo.
-data_exports/benchmarks/raw/
