@@ -1,4 +1,5 @@
 import argparse
+import csv
 import datetime as dt
 import glob
 import json
@@ -10,6 +11,7 @@ from typing import Dict, List, Optional, Tuple
 
 import pandas as pd
 
+import ranking_index as ri
 from model_config import HOME_FIELD_X_DEFAULT
 
 HOME_FIELD_X_ALL_GAMES = HOME_FIELD_X_DEFAULT
@@ -314,6 +316,38 @@ def list_available_weeks(data_exports_dir: str, year: int, season_type: str) -> 
     return sorted(set(weeks))
 
 
+def list_weeks_with_games(data_exports_dir: str, year: int, season_type: str) -> List[int]:
+    """Weeks of ``year`` that have FBS games on the schedule.
+
+    The evaluation loop used to iterate weeks that had a *ranking snapshot*,
+    which meant a season could not be scored until its weekly snapshots existed.
+    During a live season that is backwards: the games are what arrive first. With
+    point-in-time resolution the ranking for each game is looked up by kickoff,
+    so the loop can be driven by the schedule and log results as they land.
+    """
+    path = os.path.join(data_exports_dir, f"season_games_{year}.csv")
+    if not os.path.exists(path):
+        return []
+
+    weeks = set()
+    with open(path, newline="", encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            if (row.get("season_type") or "regular").strip() != season_type:
+                continue
+            classes = (
+                str(row.get("home_classification") or "").strip().lower(),
+                str(row.get("away_classification") or "").strip().lower(),
+            )
+            if "fbs" not in classes:
+                continue
+            try:
+                weeks.add(int(float(row.get("week") or 0)))
+            except (TypeError, ValueError):
+                continue
+    weeks.discard(0)
+    return sorted(weeks)
+
+
 def previous_week_ranking_source(data_exports_dir: str, year: int, season_type: str, week: int) -> RankingSource:
     if season_type == "regular":
         if week == 1:
@@ -333,6 +367,51 @@ def previous_week_ranking_source(data_exports_dir: str, year: int, season_type: 
 
     file_path = os.path.join(data_exports_dir, f"spi_rankings_{year}_post_w{week - 1}.csv")
     return RankingSource(file_path=file_path, descriptor=f"post_w{week - 1}")
+
+
+class PointInTimeResolver:
+    """Resolve, per game, the newest ranking snapshot effective before kickoff.
+
+    previous_week_ranking_source() resolves by week arithmetic, which cannot
+    distinguish two games in the same week played eight days apart. This reads
+    published_rankings/ranking_index.csv and resolves by kickoff instead, so the
+    ledger records the ranking that genuinely existed when each game started.
+    Falls back to the week-based rule when the index is unavailable.
+    """
+
+    def __init__(self, data_exports_dir: str, min_ranking_teams: int):
+        self.index = ri.read_index()
+        self.min_ranking_teams = min_ranking_teams
+        self.data_exports_dir = data_exports_dir
+        self._maps: Dict[str, Tuple[Dict[str, float], str, int]] = {}
+        self.available = bool(self.index)
+
+    def _load(self, file_path: str) -> Optional[Tuple[Dict[str, float], str, int]]:
+        if file_path in self._maps:
+            return self._maps[file_path]
+        try:
+            selected, count = choose_full_rankings_file(
+                file_path, min_ranking_teams=self.min_ranking_teams
+            )
+        except (FileNotFoundError, ValueError):
+            self._maps[file_path] = None
+            return None
+        entry = (load_rankings_map(selected), selected, count)
+        self._maps[file_path] = entry
+        return entry
+
+    def for_game(self, year: int, kickoff) -> Optional[Tuple[Dict[str, float], str, int, str]]:
+        if not self.available or kickoff is None:
+            return None
+        row = ri.resolve_for_kickoff(self.index, year, kickoff)
+        if not row:
+            return None
+        path = os.path.join(ri.BASE_DIR, row["source_path"])
+        entry = self._load(path)
+        if entry is None:
+            return None
+        ranking_map, selected, count = entry
+        return ranking_map, selected, count, row["snapshot_label"]
 
 
 def load_rankings_map(file_path: str) -> Dict[str, float]:
@@ -484,9 +563,26 @@ def evaluate_years(
     api_disabled = cache_only
     records: List[dict] = []
 
+    resolver = PointInTimeResolver(data_exports_dir, min_ranking_teams)
+    if resolver.available:
+        print(
+            f"Point-in-time resolution enabled ({len(resolver.index)} indexed snapshots); "
+            "each game uses the newest ranking effective before its kickoff."
+        )
+    else:
+        print(
+            "No ranking index found -- falling back to week-based resolution. "
+            "Run scripts/build_ranking_index.py to enable point-in-time resolution."
+        )
+
     for year in range(start_year, end_year + 1):
         for season_type in ("regular", "postseason"):
             weeks = list_available_weeks(data_exports_dir, year, season_type)
+            if resolver.available:
+                # Rankings are resolved per game, so the schedule drives the loop.
+                weeks = sorted(
+                    set(weeks) | set(list_weeks_with_games(data_exports_dir, year, season_type))
+                )
             if not weeks:
                 continue
 
@@ -504,16 +600,22 @@ def evaluate_years(
                         min_ranking_teams=min_ranking_teams,
                     )
                 except (FileNotFoundError, ValueError) as exc:
-                    print(f"Skipping {year} {season_type} week {week}: {exc}")
-                    continue
+                    if not resolver.available:
+                        print(f"Skipping {year} {season_type} week {week}: {exc}")
+                        continue
+                    # No week-level snapshot yet (normal mid-season); the
+                    # per-game resolver still supplies one for each kickoff.
+                    selected_ranking_file, ranked_team_count = "", 0
+                    ranking_map = {}
 
-                if selected_ranking_file != ranking_source.file_path:
+                if selected_ranking_file and selected_ranking_file != ranking_source.file_path:
                     print(
                         f"Using fallback ranking file for {year} {season_type} week {week}: "
                         f"{selected_ranking_file} ({ranked_team_count} teams)"
                     )
 
-                ranking_map = load_rankings_map(selected_ranking_file)
+                if selected_ranking_file:
+                    ranking_map = load_rankings_map(selected_ranking_file)
 
                 games = load_games_from_cache(cache_dir, year, week, season_type)
                 if games is None and games_api is not None and not api_disabled:
@@ -534,7 +636,14 @@ def evaluate_years(
                     print(f"Skipping {year} {season_type} week {week}: no cache and no API access")
                     continue
 
+                week_default = (ranking_map, selected_ranking_file, ranked_team_count, ranking_source.descriptor)
+
                 for game in games:
+                    kickoff = ri.parse_dt(
+                        get_game_field(game, "start_date", "startDate")
+                    )
+                    resolved = resolver.for_game(year, kickoff) or week_default
+                    ranking_map, selected_ranking_file, ranked_team_count, ranking_descriptor = resolved
                     home_team = get_game_field(game, "home_team", "homeTeam")
                     away_team = get_game_field(game, "away_team", "awayTeam")
                     if not home_team or not away_team:
@@ -616,7 +725,7 @@ def evaluate_years(
                             if variant["away_win_prob_home_adj"] is None
                             else round(100.0 * float(variant["away_win_prob_home_adj"]), 3),
                             "home_field_x": variant["home_field_x"],
-                            "ranking_source": ranking_source.descriptor,
+                            "ranking_source": ranking_descriptor,
                             "ranking_source_file": os.path.basename(selected_ranking_file),
                             "ranking_source_team_count": ranked_team_count,
                             "notes": notes,

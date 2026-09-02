@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-09-02 01:35 UTC from the newest prediction exports.
+> Auto-generated 2026-09-02 02:52 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Preseason &nbsp;•&nbsp; **Teams:** 136 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -570,7 +570,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #122 San José State | H | — | — | ✅ **W** 42-26 |
+| 1 | Aug 29 | #122 San José State | H | 88.8% | — | ✅ **W** 42-26 |
 | 1 | Sep 05 | #64 Fresno State | H | 74.7% | 🟢 **W** | _pending_ |
 | 2 | Sep 13 | #99 Louisiana | H | 84.5% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #73 Rutgers | A | 66.6% | 🟢 **W** | _pending_ |
@@ -973,7 +973,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #104 North Carolina | N | — | — | ❌ **L** 10-15 |
+| 1 | Aug 29 | #104 North Carolina | N | 78.4% | — | ❌ **L** 10-15 |
 | 2 | Sep 13 | Grambling | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #97 Arkansas State | H | 81.5% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #89 UCF | A | 66.9% | 🟢 **W** | _pending_ |
@@ -1250,7 +1250,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #37 NC State | H | — | — | ✅ **W** 34-8 |
+| 1 | Aug 29 | #37 NC State | H | 61.3% | — | ✅ **W** 34-8 |
 | 2 | Sep 11 | Norfolk State | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #92 West Virginia | N | 73.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #93 Delaware | H | 79.7% | 🟢 **W** | _pending_ |
@@ -1334,7 +1334,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #26 Virginia | A | — | — | ❌ **L** 8-34 |
+| 1 | Aug 29 | #26 Virginia | A | 38.7% | — | ❌ **L** 8-34 |
 | 2 | Sep 11 | Richmond | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #12 Vanderbilt | A | 31.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #116 App State | H | 82.4% | 🟢 **W** | _pending_ |
@@ -1397,7 +1397,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #126 New Mexico State | H | — | — | ✅ **W** 34-17 |
+| 1 | Aug 29 | #126 New Mexico State | H | 81.8% | — | ✅ **W** 34-17 |
 | 1 | Sep 07 | #31 SMU | H | 47.6% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #15 Alabama | A | 27.1% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Central Arkansas | H | 99.9% | 🟢 **W** | _pending_ |
@@ -1481,7 +1481,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #25 TCU | N | — | — | ✅ **W** 15-10 |
+| 1 | Aug 29 | #25 TCU | N | 21.6% | — | ✅ **W** 15-10 |
 | 2 | Sep 12 | East Tennessee State | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #62 Clemson | A | 27.8% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #8 Notre Dame | H | 16.7% | 🔴 **L** | _pending_ |
@@ -1502,7 +1502,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #61 Hawai'i | H | — | — | ✅ **W** 37-27 |
+| 1 | Aug 29 | #61 Hawai'i | H | 38.9% | — | ✅ **W** 37-27 |
 | 1 | Sep 05 | #5 Miami | H | 15.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #32 Duke | A | 18.4% | 🔴 **L** | _pending_ |
 | 4 | Sep 27 | #35 Georgia Tech | H | 28.9% | 🔴 **L** | _pending_ |
@@ -1695,7 +1695,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 30 | #52 UNLV | A | — | — | ✅ **W** 27-21 |
+| 1 | Aug 30 | #52 UNLV | A | 42.7% | — | ✅ **W** 27-21 |
 | 1 | Sep 05 | #97 Arkansas State | H | 73.1% | 🟢 **W** | _pending_ |
 | 2 | Sep 12 | #43 Boise State | A | 40.5% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | UT Martin | H | 99.9% | 🟢 **W** | _pending_ |
@@ -1951,7 +1951,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | North Dakota State | A | — | — | ❌ **L** 7-33 |
+| 1 | Aug 29 | North Dakota State | A | 99.9% | — | ❌ **L** 7-33 |
 | 1 | Sep 05 | Eastern Kentucky | H | 99.9% | 🟢 **W** | _pending_ |
 | 2 | Sep 12 | #58 Ohio | A | 35.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #85 Georgia Southern | H | 57.9% | 🟢 **W** | _pending_ |
@@ -2056,7 +2056,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #48 Florida State | A | — | — | ❌ **L** 17-34 |
+| 1 | Aug 29 | #48 Florida State | A | 18.2% | — | ❌ **L** 17-34 |
 | 1 | Sep 06 | Mercyhurst | H | 99.9% | 🟢 **W** | _pending_ |
 | 2 | Sep 13 | #61 Hawai'i | A | 20.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #47 New Mexico | H | 27.5% | 🔴 **L** | _pending_ |
@@ -2379,7 +2379,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | Sacramento State | H | — | — | ✅ **W** 28-17 |
+| 1 | Aug 29 | Sacramento State | H | 99.9% | — | ✅ **W** 28-17 |
 | 1 | Sep 04 | #122 San José State | H | 55.3% | 🟢 **W** | _pending_ |
 | 2 | Sep 12 | #84 Michigan State | A | 26.9% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #72 Wisconsin | A | 23.3% | 🔴 **L** | _pending_ |
@@ -2508,7 +2508,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 30 | #53 Memphis | H | — | — | ❌ **L** 21-27 |
+| 1 | Aug 30 | #53 Memphis | H | 57.3% | — | ❌ **L** 21-27 |
 | 1 | Sep 06 | #61 Hawai'i | A | 46.8% | 🔴 **L** | _pending_ |
 | 2 | Sep 12 | #10 North Texas | A | 24.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #120 Akron | A | 69.5% | 🟢 **W** | _pending_ |
@@ -2549,7 +2549,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #106 Stanford | A | — | — | ❌ **L** 27-37 |
+| 1 | Aug 29 | #106 Stanford | A | 61.1% | — | ❌ **L** 27-37 |
 | 1 | Sep 06 | #52 UNLV | H | 53.2% | 🟢 **W** | _pending_ |
 | 2 | Sep 13 | #126 New Mexico State | H | 79.3% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #115 Wyoming | A | 63.3% | 🟢 **W** | _pending_ |
@@ -2652,7 +2652,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Aug 29 | #16 USC | A | — | — | ❌ **L** 26-42 |
+| 1 | Aug 29 | #16 USC | A | 11.2% | — | ❌ **L** 26-42 |
 | 1 | Sep 04 | #125 Eastern Michigan | A | 44.7% | 🔴 **L** | _pending_ |
 | 2 | Sep 13 | Cal Poly | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #64 Fresno State | H | 32.8% | 🔴 **L** | _pending_ |
@@ -3059,10 +3059,10 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Season | 2026 |
 | Ranking basis | Preseason |
 | Games covered | 812 (7 played, 805 remaining) |
-| Completed-game source | `data_exports/predictions/spi_game_predictions_2025_2026.csv` |
+| Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-09-02 01:35 UTC |
+| Generated | 2026-09-02 02:52 UTC |
 
 Regenerate with:
 

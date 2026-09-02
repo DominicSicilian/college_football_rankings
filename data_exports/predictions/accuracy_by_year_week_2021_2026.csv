@@ -81,3 +81,4 @@ year,season_type,week,games,correct,accuracy
 2025,regular,14,67,45.0,0.6716417910447762
 2025,regular,15,9,7.0,0.7777777777777778
 2025,regular,16,1,1.0,1.0
+2026,regular,1,8,4.0,0.5
