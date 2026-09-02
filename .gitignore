@@ -16,3 +16,14 @@ venv/
 
 # Runtime noise
 data_exports/error_log.txt
+
+# Legacy root-level snapshot dumps written by rankings.py.
+# Leading slash anchors this to the repo root -- git is case-insensitive on
+# macOS, so an unanchored pattern would also swallow data_exports/spi_rankings_*.csv.
+/SPI_Rankings_*.csv
+
+# Local CFBD response cache (regenerated on demand, ~1k files)
+data_exports/cache/
+
+# Pickled CFBD API response cache (rebuilt on demand by api_cache.py)
+data_exports/api_cache/

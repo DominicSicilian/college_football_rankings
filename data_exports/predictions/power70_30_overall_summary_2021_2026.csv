@@ -1,0 +1,6 @@
+metric,games,correct,accuracy
+overall,4546,3274,0.7201935767707875
+regular,4332,3151,0.7273776546629732
+postseason,214,123,0.5747663551401869
+playoff,31,20,0.6451612903225806
+national_championship,5,4,0.8

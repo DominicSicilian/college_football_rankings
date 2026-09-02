@@ -1,0 +1,12 @@
+name,p5,cvc_wins,cvc_losses,cvc_perc,mean_games_played
+mountain west,False,9.0,7.0,0.5,1.1221374045801527
+mid-american,False,5.0,7.0,0.0,1.1221374045801527
+sec,True,14.0,1.0,1.0,1.1221374045801527
+sun belt,False,8.0,6.0,0.0,1.1221374045801527
+pac-12,False,9.0,3.0,1.0,1.1221374045801527
+fbs independents,False,3.0,6.0,0.5,1.1221374045801527
+big 12,True,9.0,1.0,0.0,1.1221374045801527
+acc,True,10.0,2.0,1.0,1.1221374045801527
+conference usa,False,4.0,8.0,1.0,1.1221374045801527
+american athletic,False,4.0,7.0,1.0,1.1221374045801527
+big ten,True,10.0,0.0,1.0,1.1221374045801527

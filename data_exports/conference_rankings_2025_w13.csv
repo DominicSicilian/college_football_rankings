@@ -1,0 +1,12 @@
+name,p5,cvc_wins,cvc_losses,cvc_perc,conf_index
+sec,True,54.0,6.0,0.9,
+big ten,True,44.0,10.0,0.8148148148148148,
+big 12,True,37.0,9.0,0.8043478260869565,
+acc,True,39.0,22.0,0.639344262295082,
+fbs independents,False,18.0,5.0,0.782608695652174,
+american athletic,False,34.0,20.0,0.6296296296296297,
+mountain west,False,26.0,22.0,0.5416666666666666,
+sun belt,False,27.0,29.0,0.48214285714285715,
+conference usa,False,19.0,29.0,0.3958333333333333,
+mid-american,False,16.0,36.0,0.3076923076923077,
+pac-12,False,6.0,14.0,0.3,
