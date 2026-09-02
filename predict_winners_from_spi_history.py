@@ -1,4 +1,5 @@
 import argparse
+import datetime as dt
 import glob
 import json
 import math
@@ -141,11 +142,20 @@ def load_games_from_cache(cache_dir: str, year: int, week: int, season_type: str
     return None
 
 
+def _json_safe(value):
+    """Fallback encoder: cfbd's to_dict() returns real datetimes for start_date."""
+    if isinstance(value, (dt.datetime, dt.date)):
+        return value.isoformat()
+    return str(value)
+
+
 def save_games_to_cache(cache_dir: str, year: int, week: int, season_type: str, games: List[dict]) -> None:
     os.makedirs(cache_dir, exist_ok=True)
     out_path = os.path.join(cache_dir, f"games_{year}_{season_type}_w{week}.json")
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(games, f)
+    tmp_path = f"{out_path}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(games, f, default=_json_safe)
+    os.replace(tmp_path, out_path)
 
 
 def init_games_api():
@@ -163,9 +173,15 @@ def init_games_api():
     if not api_key:
         return None
 
-    configuration = cfbd.Configuration()
-    configuration.api_key["Authorization"] = api_key
-    configuration.api_key_prefix["Authorization"] = "Bearer"
+    # Current cfbd releases authenticate via access_token. The older
+    # api_key/api_key_prefix dict form silently 401s, and since
+    # should_disable_api_after_error() treats 401 as "stop calling the API",
+    # that failure was invisible: the backtest just quietly fell back to
+    # whatever was already in data_exports/cache/ and skipped the live season.
+    configuration = cfbd.Configuration(
+        host="https://api.collegefootballdata.com",
+        access_token=api_key,
+    )
     client = cfbd.ApiClient(configuration)
     return cfbd.GamesApi(client)
 
