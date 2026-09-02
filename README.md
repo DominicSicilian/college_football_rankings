@@ -8,7 +8,7 @@ End-to-end college football rankings and prediction workflow using SPI, Nature, 
 |:---|:---|
 | **[📈 Latest Rankings →](RANKINGS.md)** | Current SPI Top 25, the full FBS board, and conference strength |
 | **[🔮 Season Predictions →](PREDICTIONS.md)** | Every team's full-season schedule with win probabilities and projected records |
-| **[🎯 Model Performance →](PERFORMANCE.md)** | Accuracy by season, segment and week, how it stacks up against ESPN FPI and ~50 other rating systems, and the full prediction log |
+| **[🎯 Model Performance →](PERFORMANCE.md)** | Accuracy by season, segment, week and confidence band, plus the full prediction log |
 
 Both files are regenerated automatically every Monday and rendered right here in GitHub — no
 download, no local setup needed.
@@ -71,7 +71,6 @@ _Updated 2026-09-02 02:52 UTC • [Full rankings](RANKINGS.md) • [Season predi
 - `scripts/completed_week.py`: Detects the latest fully completed week
 - `scripts/fetch_season_games.py`: Exports the full season schedule (played + upcoming)
 - `ranking_index.py` / `scripts/build_ranking_index.py`: Point-in-time ranking index
-- `scripts/fetch_prediction_tracker.py`: Scrapes benchmark accuracy for ~50 rating systems
 - `generate_performance_report.py`: Builds `PERFORMANCE.md` and `docs/game_log/`
 - `predict_winners_from_spi_history.py`: Historical prediction backtest + accuracy slices
 - `predict_upcoming_matchups.py`: Upcoming games predictions (next week or all pending)
@@ -276,23 +275,6 @@ past accuracy can be audited rather than taken on faith.
 the newest available ranking (`effective_through_utc`), where it lives, and a SHA-256 of its
 contents. Resolving a prediction means "the snapshot with the greatest `effective_through_utc`
 strictly before this game's kickoff."
-
-### Benchmarking
-
-`scripts/fetch_prediction_tracker.py` scrapes season accuracy for ~50 public rating systems
-(including ESPN FPI and the Vegas line) from
-[ThePredictionTracker.com](https://www.thepredictiontracker.com/ncaaresults.php) into
-`data_exports/benchmarks/`. `generate_performance_report.py` then builds `PERFORMANCE.md`.
-
-One comparability rule matters: the tracker scores **FBS-vs-FBS games only**. This repo's ledger
-also logs FBS-vs-FCS games, which are near-automatic wins and lift the headline accuracy by about
-four points. Every benchmark comparison uses the FBS-vs-FBS subset, whose game counts match the
-tracker's season by season.
-
-```bash
-python scripts/fetch_prediction_tracker.py --year 2026 --refresh
-python generate_performance_report.py
-```
 
 ```bash
 python scripts/build_ranking_index.py            # (re)build the index

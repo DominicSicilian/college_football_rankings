@@ -114,10 +114,6 @@ log "Archiving published snapshot"
 "$PYTHON" publish_weekly_rankings.py --year "$YEAR" --label "weekly_auto_$(date -u +%Y%m%d)" || \
   echo "Snapshot publish skipped."
 
-log "Refreshing benchmark comparison data"
-"$PYTHON" scripts/fetch_prediction_tracker.py --year "$YEAR" --refresh || \
-  echo "Benchmark refresh failed; PERFORMANCE.md will use the cached copy."
-
 log "Regenerating markdown reports"
 "$PYTHON" generate_markdown_reports.py --year "$YEAR"
 
@@ -143,7 +139,6 @@ git add -A data_exports/spi_rankings_*.csv \
            data_exports/conference_rankings_*.csv \
            data_exports/season_games_*.csv \
            published_rankings/ranking_index.csv \
-           data_exports/benchmarks/*.csv \
            data_exports/predictions/*.csv
 shopt -u nullglob
 
