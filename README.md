@@ -15,7 +15,7 @@ download, no local setup needed.
 <!-- BEGIN:TOP25 -->
 
 **2026 SPI Top 25 — Preseason**  
-_Updated 2026-09-02 01:04 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
+_Updated 2026-09-02 01:24 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
 
 > Preseason board — only 12% of teams have played, below the 90% threshold for an in-season ranking.
 

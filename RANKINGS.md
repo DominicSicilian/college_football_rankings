@@ -1,6 +1,6 @@
 # 2026 SPI Rankings — Preseason
 
-> Auto-generated 2026-09-02 01:04 UTC from `data_exports/spi_rankings_preseason_2026.csv`.
+> Auto-generated 2026-09-02 01:24 UTC from `data_exports/spi_rankings_preseason_2026.csv`.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Release:** Preseason &nbsp;•&nbsp; **Teams ranked:** 136 &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -220,7 +220,7 @@ components behind each team's SPI.
 | In-season gate | held back below 90% |
 | Source file | `data_exports/spi_rankings_preseason_2026.csv` |
 | Conference file | `n/a` |
-| Generated | 2026-09-02 01:04 UTC |
+| Generated | 2026-09-02 01:24 UTC |
 
 Regenerate with:
 

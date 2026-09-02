@@ -1,0 +1,139 @@
+team,conference,N_raw,N_adj,ave_margin,points,wins,losses
+Air Force,mountain west,0.0,0.0,0.0,0.0,0,0
+Akron,mid-american,0.0,0.0,0.0,0.0,0,0
+Alabama,sec,0.0,0.0,0.0,0.0,0,0
+App State,sun belt,0.0,0.0,0.0,0.0,0,0
+Arizona,big 12,0.0,0.0,0.0,0.0,0,0
+Arizona State,big 12,0.0,0.0,0.0,0.0,0,0
+Arkansas,sec,0.0,0.0,0.0,0.0,0,0
+Arkansas State,sun belt,0.0,0.0,0.0,0.0,0,0
+Army,american athletic,0.0,0.0,0.0,0.0,0,0
+Auburn,sec,0.0,0.0,0.0,0.0,0,0
+Ball State,mid-american,0.0,0.0,0.0,0.0,0,0
+Baylor,big 12,0.0,0.0,0.0,0.0,0,0
+Boise State,pac-12,0.0,0.0,0.0,0.0,0,0
+Boston College,acc,0.0,0.0,0.0,0.0,0,0
+Bowling Green,mid-american,0.0,0.0,0.0,0.0,0,0
+Buffalo,mid-american,0.0,0.0,0.0,0.0,0,0
+BYU,big 12,0.0,0.0,0.0,0.0,0,0
+California,acc,0.0,0.0,0.0,0.0,0,0
+Central Michigan,mid-american,0.0,0.0,0.0,0.0,0,0
+Charlotte,american athletic,0.0,0.0,0.0,0.0,0,0
+Cincinnati,big 12,0.0,0.0,0.0,0.0,0,0
+Clemson,acc,0.0,0.0,0.0,0.0,0,0
+Coastal Carolina,sun belt,0.0,0.0,0.0,0.0,0,0
+Colorado,big 12,0.0,0.0,0.0,0.0,0,0
+Colorado State,pac-12,0.0,0.0,0.0,0.0,0,0
+Delaware,conference usa,0.0,0.0,0.0,0.0,0,0
+Duke,acc,0.0,0.0,0.0,0.0,0,0
+East Carolina,american athletic,0.0,0.0,0.0,0.0,0,0
+Eastern Michigan,mid-american,10.0,0.5821917808219179,11.0,28.0,1,0
+Florida,sec,0.0,0.0,0.0,0.0,0,0
+Florida Atlantic,american athletic,0.0,0.0,0.0,0.0,0,0
+Florida International,conference usa,0.0,0.0,0.0,0.0,0,0
+Florida State,acc,8.176470588235292,0.47602739726027393,17.0,34.0,1,0
+Fresno State,pac-12,0.0,0.0,0.0,0.0,0,0
+Georgia,sec,0.0,0.0,0.0,0.0,0,0
+Georgia Southern,sun belt,0.0,0.0,0.0,0.0,0,0
+Georgia State,sun belt,0.0,0.0,0.0,0.0,0,0
+Georgia Tech,acc,0.0,0.0,0.0,0.0,0,0
+Hawai'i,mountain west,-9.14814814814815,-0.5325976661593103,-10.0,27.0,0,1
+Houston,big 12,0.0,0.0,0.0,0.0,0,0
+Illinois,big ten,0.0,0.0,0.0,0.0,0,0
+Indiana,big ten,0.0,0.0,0.0,0.0,0,0
+Iowa,big ten,0.0,0.0,0.0,0.0,0,0
+Iowa State,big 12,0.0,0.0,0.0,0.0,0,0
+Jacksonville State,conference usa,-27.0,-1.5719178082191785,-26.0,7.0,0,1
+James Madison,sun belt,0.0,0.0,0.0,0.0,0,0
+Kansas,big 12,0.0,0.0,0.0,0.0,0,0
+Kansas State,big 12,0.0,0.0,0.0,0.0,0,0
+Kennesaw State,conference usa,0.0,0.0,0.0,0.0,0,0
+Kent State,mid-american,0.0,0.0,0.0,0.0,0,0
+Kentucky,sec,0.0,0.0,0.0,0.0,0,0
+Liberty,conference usa,0.0,0.0,0.0,0.0,0,0
+Louisiana,sun belt,0.0,0.0,0.0,0.0,0,0
+Louisiana Tech,sun belt,0.0,0.0,0.0,0.0,0,0
+Louisville,acc,0.0,0.0,0.0,0.0,0,0
+LSU,sec,0.0,0.0,0.0,0.0,0,0
+Marshall,sun belt,0.0,0.0,0.0,0.0,0,0
+Maryland,big ten,0.0,0.0,0.0,0.0,0,0
+Massachusetts,mid-american,0.0,0.0,0.0,0.0,0,0
+Memphis,american athletic,-6.111111111111111,-0.35578386605783874,6.0,27.0,1,0
+Miami,acc,0.0,0.0,0.0,0.0,0,0
+Miami (OH),mid-american,0.0,0.0,0.0,0.0,0,0
+Michigan,big ten,0.0,0.0,0.0,0.0,0,0
+Michigan State,big ten,0.0,0.0,0.0,0.0,0,0
+Middle Tennessee,conference usa,0.0,0.0,0.0,0.0,0,0
+Minnesota,big ten,0.0,0.0,0.0,0.0,0,0
+Mississippi State,sec,0.0,0.0,0.0,0.0,0,0
+Missouri,sec,0.0,0.0,0.0,0.0,0,0
+Missouri State,conference usa,0.0,0.0,0.0,0.0,0,0
+Navy,american athletic,0.0,0.0,0.0,0.0,0,0
+NC State,acc,-32.25,-1.8775684931506853,-26.0,8.0,0,1
+Nebraska,big ten,0.0,0.0,0.0,0.0,0,0
+Nevada,mountain west,0.0,0.0,0.0,0.0,0,0
+New Mexico,mountain west,0.0,0.0,0.0,0.0,0,0
+New Mexico State,conference usa,-25.82352941176471,-1.5034246575342471,-17.0,17.0,0,1
+North Carolina,acc,-22.666666666666668,-1.3196347031963473,5.0,15.0,1,0
+North Dakota State,mountain west,-1.7878787878787854,-0.10408883354088821,26.0,33.0,1,0
+Northern Illinois,mountain west,0.0,0.0,0.0,0.0,0,0
+North Texas,american athletic,0.0,0.0,0.0,0.0,0,0
+Northwestern,big ten,0.0,0.0,0.0,0.0,0,0
+Notre Dame,fbs independents,0.0,0.0,0.0,0.0,0,0
+Ohio,mid-american,0.0,0.0,0.0,0.0,0,0
+Ohio State,big ten,0.0,0.0,0.0,0.0,0,0
+Oklahoma,sec,0.0,0.0,0.0,0.0,0,0
+Oklahoma State,big 12,0.0,0.0,0.0,0.0,0,0
+Old Dominion,sun belt,0.0,0.0,0.0,0.0,0,0
+Ole Miss,sec,0.0,0.0,0.0,0.0,0,0
+Oregon,big ten,0.0,0.0,0.0,0.0,0,0
+Oregon State,pac-12,0.0,0.0,0.0,0.0,0,0
+Penn State,big ten,0.0,0.0,0.0,0.0,0,0
+Pittsburgh,acc,0.0,0.0,0.0,0.0,0,0
+Purdue,big ten,0.0,0.0,0.0,0.0,0,0
+Rice,american athletic,0.0,0.0,0.0,0.0,0,0
+Rutgers,big ten,0.0,0.0,0.0,0.0,0,0
+Sacramento State,mid-american,-39.411764705882355,-2.294520547945206,-11.0,17.0,0,1
+Sam Houston,conference usa,0.0,0.0,0.0,0.0,0,0
+San Diego State,pac-12,0.0,0.0,0.0,0.0,0,0
+San José State,mountain west,-26.615384615384613,-1.5495258166491046,-16.0,26.0,0,1
+SMU,acc,0.0,0.0,0.0,0.0,0,0
+South Alabama,sun belt,0.0,0.0,0.0,0.0,0,0
+South Carolina,sec,0.0,0.0,0.0,0.0,0,0
+Southern Miss,sun belt,0.0,0.0,0.0,0.0,0,0
+South Florida,american athletic,0.0,0.0,0.0,0.0,0,0
+Stanford,acc,-1.1621621621621596,-0.06766012587930383,10.0,37.0,1,0
+Syracuse,acc,0.0,0.0,0.0,0.0,0,0
+TCU,big 12,-19.0,-1.1061643835616441,-5.0,10.0,0,1
+Temple,american athletic,0.0,0.0,0.0,0.0,0,0
+Tennessee,sec,0.0,0.0,0.0,0.0,0,0
+Texas,sec,0.0,0.0,0.0,0.0,0,0
+Texas A&M,sec,0.0,0.0,0.0,0.0,0,0
+Texas State,pac-12,0.0,0.0,0.0,0.0,0,0
+Texas Tech,big 12,0.0,0.0,0.0,0.0,0,0
+Toledo,mid-american,0.0,0.0,0.0,0.0,0,0
+Troy,sun belt,0.0,0.0,0.0,0.0,0,0
+Tulane,american athletic,0.0,0.0,0.0,0.0,0,0
+Tulsa,american athletic,0.0,0.0,0.0,0.0,0,0
+UAB,american athletic,0.0,0.0,0.0,0.0,0,0
+UCF,big 12,0.0,0.0,0.0,0.0,0,0
+UCLA,big ten,0.0,0.0,0.0,0.0,0,0
+UConn,fbs independents,0.0,0.0,0.0,0.0,0,0
+UL Monroe,sun belt,0.0,0.0,0.0,0.0,0,0
+UNLV,mountain west,-5.0,-0.29109589041095896,-6.0,21.0,0,1
+USC,big ten,17.0,0.9897260273972606,16.0,42.0,1,0
+Utah,big 12,0.0,0.0,0.0,0.0,0,0
+Utah State,pac-12,0.0,0.0,0.0,0.0,0,0
+UTEP,mountain west,0.0,0.0,0.0,0.0,0,0
+UTSA,american athletic,0.0,0.0,0.0,0.0,0,0
+Vanderbilt,sec,0.0,0.0,0.0,0.0,0,0
+Virginia,acc,17.17647058823529,1.0,26.0,34.0,1,0
+Virginia Tech,acc,0.0,0.0,0.0,0.0,0,0
+Wake Forest,acc,0.0,0.0,0.0,0.0,0,0
+Washington,big ten,0.0,0.0,0.0,0.0,0,0
+Washington State,pac-12,0.0,0.0,0.0,0.0,0,0
+Western Kentucky,conference usa,0.0,0.0,0.0,0.0,0,0
+Western Michigan,mid-american,0.0,0.0,0.0,0.0,0,0
+West Virginia,big 12,0.0,0.0,0.0,0.0,0,0
+Wisconsin,big ten,0.0,0.0,0.0,0.0,0,0
+Wyoming,mountain west,0.0,0.0,0.0,0.0,0,0
