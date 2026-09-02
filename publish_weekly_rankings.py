@@ -64,16 +64,19 @@ def latest_spi_rankings_file(year: int) -> Optional[str]:
         pre = re.match(r"spi_rankings_preseason_(\d+)\.csv$", base)
         year_only = re.match(r"spi_rankings_(\d+)\.csv$", base)
 
+        # Newest computed release wins: postseason > weekly > season-to-date > preseason.
+        # This ordering must stay in sync with latest_rankings_file() in
+        # generate_markdown_reports.py.
         if post:
             tier = 4
             week = int(post.group(2))
         elif reg:
             tier = 3
             week = int(reg.group(2))
-        elif pre:
+        elif year_only:
             tier = 2
             week = 0
-        elif year_only:
+        elif pre:
             tier = 1
             week = 0
 

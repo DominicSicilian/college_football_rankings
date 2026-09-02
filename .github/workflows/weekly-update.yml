@@ -1,0 +1,93 @@
+name: Weekly Rankings Update
+
+# Refreshes SPI rankings + season projections, regenerates RANKINGS.md and
+# PREDICTIONS.md, and pushes the result to main.
+#
+# Requires repository secret CFBD_API_KEY (Settings > Secrets and variables >
+# Actions > New repository secret).
+
+on:
+  schedule:
+    # 16:00 UTC every Monday = 12:00 PM ET during EDT (11:00 AM ET once EST starts).
+    - cron: "0 16 * * 1"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Season year to refresh (blank = auto-detect)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-rankings-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Restore CFBD API cache
+        uses: actions/cache@v4
+        with:
+          path: data_exports/api_cache
+          # Closed seasons never change, so a stale restore is still a big win;
+          # the run's own TTL re-pulls anything from the active season.
+          key: cfbd-api-cache-${{ github.run_id }}
+          restore-keys: |
+            cfbd-api-cache-
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run weekly update
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+          RETRY_ATTEMPTS: "5"
+          RETRY_DELAY: "120"
+          # Re-pull the active season each weekly run; closed seasons stay cached.
+          CFB_CACHE_TTL_HOURS: "3"
+        run: |
+          if [ -z "$CFBD_API_KEY" ]; then
+            echo "::error::CFBD_API_KEY secret is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          if [ -n "${{ inputs.year }}" ]; then
+            ./scripts/weekly_update.sh --year "${{ inputs.year }}"
+          else
+            ./scripts/weekly_update.sh
+          fi
+
+      - name: Summarize
+        if: always()
+        run: |
+          {
+            echo "### Weekly rankings update"
+            echo
+            echo "Head commit: \`$(git rev-parse --short HEAD)\` — $(git log -1 --pretty=%s)"
+            echo
+            echo "- [RANKINGS.md](../../blob/main/RANKINGS.md)"
+            echo "- [PREDICTIONS.md](../../blob/main/PREDICTIONS.md)"
+          } >> "$GITHUB_STEP_SUMMARY"

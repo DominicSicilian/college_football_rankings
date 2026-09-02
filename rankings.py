@@ -9,6 +9,10 @@ from datetime import datetime
 import cfbd
 from cfbd.rest import ApiException
 import argparse
+import atexit
+
+from api_cache import cached_call
+import api_cache
 
 
 def parse_arguments():
@@ -32,6 +36,28 @@ def parse_arguments():
     )
     parser.add_argument(
         "--date", type=str, help="Specific date to analyze (format: YYYY-MM-DD)"
+    )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="Ignore the on-disk CFBD cache and re-fetch everything.",
+    )
+    parser.add_argument(
+        "--as-of-week",
+        type=int,
+        default=None,
+        help=(
+            "Stamp the output as a weekly snapshot through this completed week, writing "
+            "spi_rankings_<year>_w<N>.csv instead of spi_rankings_<year>.csv. This is the "
+            "naming predict_winners_from_spi_history.py scans for."
+        ),
+    )
+    parser.add_argument(
+        "--season-type",
+        type=str,
+        choices=["regular", "postseason"],
+        default="regular",
+        help="Season type for --as-of-week naming (postseason writes _post_w<N>).",
     )
     return parser.parse_args()
 
@@ -209,20 +235,20 @@ class My_Team:
 
 
 def api_call_with_week_range(api_function, start_week=1, end_week=56, **kwargs):
-    """Make API calls with week range support"""
+    """Make API calls with week range support, served from the on-disk cache."""
     if start_week == 1 and end_week == 56:
-        return api_function(**kwargs)
+        return cached_call(api_function, **kwargs)
 
     all_results = []
     for week in range(start_week, end_week + 1):
         week_kwargs = kwargs.copy()
         week_kwargs["week"] = week
         try:
-            results = api_function(**week_kwargs)
+            results = cached_call(api_function, **week_kwargs)
             all_results.extend(results)
         except:
             try:
-                results = api_function(**kwargs)
+                results = cached_call(api_function, **kwargs)
             except ApiException as e:
                 print(f"API Exception for week {week}: {e}")
 
@@ -307,13 +333,13 @@ def get_conference_champions(year, start_week=1, end_week=56):
     champions = {}
     conferences = [
         conf.name.lower()
-        for conf in conferences_api.get_conferences()
+        for conf in cached_call(conferences_api.get_conferences)
         if hasattr(conf, "classification") and conf.classification == "fbs"
     ]
 
     # First try to get conference championship games
     print("Making API call...")
-    postseason_games = games_api.get_games(year=year, classification="fbs")
+    postseason_games = cached_call(games_api.get_games, year=year, classification="fbs")
     print("Processing API response")
 
     # Filter for conference championship games
@@ -353,7 +379,7 @@ def conference_rankings(year, start_week=1, end_week=56):
     conf_objects = {}
     games_played = []
 
-    teams = teams_api.get_fbs_teams(year=year)
+    teams = cached_call(teams_api.get_fbs_teams, year=year)
 
     power5 = ["acc", "big ten", "big 12", "pac 12", "sec"]
     if int(year) < 2005:
@@ -598,12 +624,23 @@ def main():
         if todays_datetime < sept1:
             today_year = today_year - 1
 
+    if args.no_cache:
+        os.environ["CFB_NO_CACHE"] = "1"
+    atexit.register(lambda: print(api_cache.summary()))
+
     start_week = args.start_week
     end_week = args.end_week
 
-    week_suffix = (
-        f"_w{start_week}-{end_week}" if start_week != 1 or end_week != 56 else ""
-    )
+    if args.as_of_week is not None:
+        # Weekly snapshot naming: spi_rankings_<year>_w<N>.csv (or _post_w<N>).
+        # The ranking itself still uses every game played so far; only the label
+        # records which week the snapshot represents.
+        prefix = "_post_w" if args.season_type == "postseason" else "_w"
+        week_suffix = f"{prefix}{args.as_of_week}"
+    else:
+        week_suffix = (
+            f"_w{start_week}-{end_week}" if start_week != 1 or end_week != 56 else ""
+        )
 
     dashes()
     skips()
@@ -655,7 +692,7 @@ def main():
     dashes()
     spaced('COMPUTING "NATURE" STATISTIC...')
 
-    teams = teams_api.get_fbs_teams(year=today_year)
+    teams = cached_call(teams_api.get_fbs_teams, year=today_year)
 
     # Save teams data
     teams_file = os.path.join("data_exports", f"teams_{today_year}{week_suffix}.csv")
@@ -1028,7 +1065,7 @@ def main():
     spaced("COMPUTING STRENGTH OF RECORD...")
 
     SOR_raw_list = []
-    teams = teams_api.get_fbs_teams(year=today_year)
+    teams = cached_call(teams_api.get_fbs_teams, year=today_year)
 
     for i_it, team in enumerate(teams):
         if hasattr(team, "school"):
