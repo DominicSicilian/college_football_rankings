@@ -200,13 +200,16 @@ def by_week_table(rows: List[Dict]) -> str:
     return "\n".join(lines)
 
 
-def calibration_table(rows: List[Dict]) -> str:
-    """Does a stated confidence actually deliver that hit rate?"""
+def calibration_rows(rows: List[Dict]) -> List[Dict]:
+    """Reliability bands: mean predicted probability vs what actually happened.
+
+    Compared against the mean prediction inside each band, not the band's
+    midpoint. Predictions are not spread evenly across a band -- the 90-100%
+    bucket clusters near 99.9% because of FBS-vs-FCS games -- so a midpoint
+    reference understates the error at exactly the place it matters most.
+    """
     bands = [(50, 60), (60, 70), (70, 80), (80, 90), (90, 100.01)]
-    lines = [
-        "| Model Confidence | Games | Correct | Actual Hit Rate | Gap |",
-        "|:---|---:|---:|---:|---:|",
-    ]
+    out = []
     for low, high in bands:
         bucket = []
         for row in rows:
@@ -214,15 +217,96 @@ def calibration_table(rows: List[Dict]) -> str:
                 continue
             conf = confidence_for(row)
             if conf is not None and low <= conf < high:
-                bucket.append(row)
-        n, c, a = accuracy(bucket)
-        if n == 0:
+                bucket.append((conf / 100.0, row["correct"]))
+        if not bucket:
             continue
-        midpoint = (low + min(high, 100.0)) / 2.0 / 100.0
-        gap = None if a is None else a - midpoint
-        gap_text = "—" if gap is None else f"{gap * 100:+.1f} pts"
-        upper = min(high, 100.0)
-        lines.append(f"| {low:.0f}–{upper:.0f}% | {n} | {c} | {pct(a, 1)} | {gap_text} |")
+        mean_pred = sum(c for c, _ in bucket) / len(bucket)
+        actual = sum(w for _, w in bucket) / len(bucket)
+        out.append(
+            {
+                "low": low,
+                "high": min(high, 100.0),
+                "n": len(bucket),
+                "mean_pred": mean_pred,
+                "actual": actual,
+                "gap": actual - mean_pred,
+            }
+        )
+    return out
+
+
+def calibration_table(rows: List[Dict]) -> str:
+    bands = calibration_rows(rows)
+    lines = [
+        "| Stated Confidence | Games | Mean Predicted | Actual Hit Rate | Gap |",
+        "|:---|---:|---:|---:|---:|",
+    ]
+    for b in bands:
+        lines.append(
+            f"| {b['low']:.0f}–{b['high']:.0f}% | {b['n']} | {b['mean_pred'] * 100:.2f}% | "
+            f"{b['actual'] * 100:.2f}% | {b['gap'] * 100:+.2f} pts |"
+        )
+    return "\n".join(lines)
+
+
+def calibration_scores(rows: List[Dict]) -> Optional[Dict]:
+    """Brier score, skill vs the base rate, and expected calibration error."""
+    pairs = []
+    for row in rows:
+        if not row["scored"]:
+            continue
+        conf = confidence_for(row)
+        if conf is not None:
+            pairs.append((conf / 100.0, row["correct"]))
+    if not pairs:
+        return None
+
+    brier = sum((c - w) ** 2 for c, w in pairs) / len(pairs)
+    base = sum(w for _, w in pairs) / len(pairs)
+    baseline = sum((base - w) ** 2 for _, w in pairs) / len(pairs)
+    # Gaps are fractions; report ECE in percentage points to match the table.
+    ece = 100.0 * sum(
+        b["n"] / len(pairs) * abs(b["gap"]) for b in calibration_rows(rows)
+    )
+    return {
+        "n": len(pairs),
+        "brier": brier,
+        "baseline": baseline,
+        "skill": 1 - brier / baseline if baseline else None,
+        "ece": ece,
+    }
+
+
+def calibration_scores_table(rows: List[Dict]) -> str:
+    everything = calibration_scores(rows)
+    competitive = calibration_scores([r for r in rows if r["fbs_vs_fbs"]])
+    if not everything:
+        return ""
+    lines = [
+        "| Metric | All Games | FBS vs FBS |",
+        "|:---|---:|---:|",
+    ]
+
+    def cell(stats, key, fmt):
+        if not stats or stats.get(key) is None:
+            return "—"
+        return fmt.format(stats[key])
+
+    lines.append(
+        f"| Games | {everything['n']} | {competitive['n'] if competitive else '—'} |"
+    )
+    lines.append(
+        f"| Expected calibration error | {cell(everything, 'ece', '{:.2f} pts')} "
+        f"| {cell(competitive, 'ece', '{:.2f} pts')} |"
+    )
+    lines.append(
+        f"| Brier score _(lower is better)_ | {cell(everything, 'brier', '{:.4f}')} "
+        f"| {cell(competitive, 'brier', '{:.4f}')} |"
+    )
+    lines.append(
+        f"| Brier skill vs base rate | {cell(everything, 'skill', '{:+.4f}')} "
+        f"| {cell(competitive, 'skill', '{:+.4f}')} |"
+    )
     return "\n".join(lines)
 
 
@@ -368,11 +452,22 @@ def build(rows: List[Dict], ledger_path: str, include_log: bool) -> str:
         "",
         "## Calibration",
         "",
-        "Does an 80%-confidence pick actually win 80% of the time? `Gap` is the hit rate minus the",
-        "midpoint of the band — positive means the model is underconfident, negative means it",
-        "overstates its edge.",
+        "Does an 80%-confidence pick actually win 80% of the time? `Gap` is the actual hit rate",
+        "minus the **mean predicted probability** in that band — positive means the model is",
+        "underconfident, negative means it overstates its edge.",
         "",
         calibration_table(rows),
+        "",
+        calibration_scores_table(rows),
+        "",
+        "Expected calibration error is the average gap, weighted by how many games fall in each",
+        "band. Brier skill compares the model's probabilities to always predicting the overall",
+        "base rate; positive means the probabilities carry real information.",
+        "",
+        "The top band is worth reading carefully. Nearly all of it is FBS-vs-FCS games, which the",
+        "model calls at a clamped 99.9% but which actually go the favourite's way about 94% of the",
+        "time — the single place the model is meaningfully overconfident. Restricted to FBS-vs-FBS",
+        "games the same band lands within a point, which is why the two columns above differ.",
         "",
         "## Accuracy by Week (regular season, all years)",
         "",
