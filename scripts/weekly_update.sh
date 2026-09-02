@@ -91,6 +91,9 @@ else
   retry "$PYTHON" rankings.py --year "$YEAR"
 fi
 
+log "Exporting full season schedule ($YEAR)"
+retry "$PYTHON" scripts/fetch_season_games.py --year "$YEAR"
+
 log "Refreshing upcoming predictions ($YEAR, all pending)"
 retry "$PYTHON" predict_upcoming_matchups.py --year "$YEAR" --all-pending
 
@@ -124,6 +127,7 @@ git add -A RANKINGS.md PREDICTIONS.md README.md published_rankings
 shopt -s nullglob
 git add -A data_exports/spi_rankings_*.csv \
            data_exports/conference_rankings_*.csv \
+           data_exports/season_games_*.csv \
            data_exports/predictions/*.csv
 shopt -u nullglob
 
