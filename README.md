@@ -15,7 +15,7 @@ download, no local setup needed.
 <!-- BEGIN:TOP25 -->
 
 **2026 SPI Top 25 — Preseason**  
-_Updated 2026-09-02 01:35 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
+_Updated 2026-09-02 02:52 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
 
 > Preseason board — only 12% of teams have played, below the 90% threshold for an in-season ranking.
 
@@ -68,6 +68,8 @@ _Updated 2026-09-02 01:35 UTC • [Full rankings](RANKINGS.md) • [Season predi
 - `generate_markdown_reports.py`: Builds `RANKINGS.md` / `PREDICTIONS.md` / README Top 25
 - `scripts/weekly_update.sh`: One-shot weekly refresh + publish + push
 - `scripts/completed_week.py`: Detects the latest fully completed week
+- `scripts/fetch_season_games.py`: Exports the full season schedule (played + upcoming)
+- `ranking_index.py` / `scripts/build_ranking_index.py`: Point-in-time ranking index
 - `predict_winners_from_spi_history.py`: Historical prediction backtest + accuracy slices
 - `predict_upcoming_matchups.py`: Upcoming games predictions (next week or all pending)
 - `spi_dashboard_app.py`: Main dashboard backend
@@ -261,6 +263,39 @@ score it:
 ```bash
 python rankings.py --year 2026 --as-of-week 4    # writes spi_rankings_2026_w4.csv
 ```
+
+## Prediction Ledger (Point-In-Time)
+
+Every prediction is logged against the ranking snapshot that actually existed before kickoff, so
+past accuracy can be audited rather than taken on faith.
+
+`published_rankings/ranking_index.csv` holds one row per ranking snapshot: the instant it became
+the newest available ranking (`effective_through_utc`), where it lives, and a SHA-256 of its
+contents. Resolving a prediction means "the snapshot with the greatest `effective_through_utc`
+strictly before this game's kickoff."
+
+```bash
+python scripts/build_ranking_index.py            # (re)build the index
+python scripts/build_ranking_index.py --year 2026
+python scripts/build_ranking_index.py --verify   # detect drift; exits 1 if any
+```
+
+Why by kickoff rather than by week number:
+
+- A week can straddle two weekends. In 2026 USC plays San José State on Aug 29 and Fresno State
+  on Sep 5, both filed as week 1. A week number cannot say which rankings existed at each
+  kickoff; a timestamp can.
+- `rankings.py` writes weekly snapshots to fixed paths, so re-running it overwrites them. The
+  stored hash turns that from a silent rewrite of history into a reported drift.
+
+The ledger itself is `data_exports/predictions/spi_game_predictions_<start>_<end>.csv`. Each row
+records `ranking_source`, `ranking_source_file`, and `ranking_source_team_count` alongside the
+prediction and the eventual result, so any row can be traced back to the exact board it came from.
+
+Because the schedule drives the evaluation loop, predictions for games that have not happened yet
+are logged with empty result fields and filled in once played. Re-running before kickoff refreshes
+a pending prediction to the newest pre-game board; once a game is played its resolution is frozen,
+since no later snapshot can precede its kickoff.
 
 ## Automated Weekly Updates
 

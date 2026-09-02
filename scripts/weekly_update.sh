@@ -97,6 +97,13 @@ retry "$PYTHON" scripts/fetch_season_games.py --year "$YEAR"
 log "Refreshing upcoming predictions ($YEAR, all pending)"
 retry "$PYTHON" predict_upcoming_matchups.py --year "$YEAR" --all-pending
 
+log "Rebuilding point-in-time ranking index"
+retry "$PYTHON" scripts/build_ranking_index.py
+
+log "Verifying no indexed snapshot changed underneath us"
+"$PYTHON" scripts/build_ranking_index.py --verify || \
+  echo "WARNING: ranking snapshots drifted from the index; past predictions may have shifted."
+
 log "Refreshing historical backtest through $YEAR"
 retry "$PYTHON" predict_winners_from_spi_history.py --start-year 2021 --end-year "$YEAR" || \
   echo "Backtest refresh failed; continuing with existing history files."
@@ -128,6 +135,7 @@ shopt -s nullglob
 git add -A data_exports/spi_rankings_*.csv \
            data_exports/conference_rankings_*.csv \
            data_exports/season_games_*.csv \
+           published_rankings/ranking_index.csv \
            data_exports/predictions/*.csv
 shopt -u nullglob
 
