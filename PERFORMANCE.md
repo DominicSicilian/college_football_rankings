@@ -1,6 +1,6 @@
 # Model Performance
 
-> Auto-generated 2026-09-02 04:05 UTC from `data_exports/predictions/spi_game_predictions_2021_2026.csv`.
+> Auto-generated 2026-09-02 04:21 UTC from `data_exports/predictions/spi_game_predictions_2021_2026.csv`.
 > Do not edit by hand — run `python generate_performance_report.py` instead.
 
 [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -44,17 +44,33 @@ hindsight.
 
 ## Calibration
 
-Does an 80%-confidence pick actually win 80% of the time? `Gap` is the hit rate minus the
-midpoint of the band — positive means the model is underconfident, negative means it
-overstates its edge.
+Does an 80%-confidence pick actually win 80% of the time? `Gap` is the actual hit rate
+minus the **mean predicted probability** in that band — positive means the model is
+underconfident, negative means it overstates its edge.
 
-| Model Confidence | Games | Correct | Actual Hit Rate | Gap |
+| Stated Confidence | Games | Mean Predicted | Actual Hit Rate | Gap |
 |:---|---:|---:|---:|---:|
-| 50–60% | 1289 | 722 | 56.0% | +1.0 pts |
-| 60–70% | 1035 | 688 | 66.5% | +1.5 pts |
-| 70–80% | 861 | 645 | 74.9% | -0.1 pts |
-| 80–90% | 615 | 522 | 84.9% | -0.1 pts |
-| 90–100% | 754 | 708 | 93.9% | -1.1 pts |
+| 50–60% | 1289 | 54.98% | 56.01% | +1.03 pts |
+| 60–70% | 1035 | 64.80% | 66.47% | +1.67 pts |
+| 70–80% | 861 | 74.91% | 74.91% | +0.00 pts |
+| 80–90% | 615 | 84.73% | 84.88% | +0.15 pts |
+| 90–100% | 754 | 98.49% | 93.90% | -4.59 pts |
+
+| Metric | All Games | FBS vs FBS |
+|:---|---:|---:|
+| Games | 4554 | 3952 |
+| Expected calibration error | 1.45 pts | 0.83 pts |
+| Brier score _(lower is better)_ | 0.1830 | 0.2023 |
+| Brier skill vs base rate | +0.0894 | +0.0583 |
+
+Expected calibration error is the average gap, weighted by how many games fall in each
+band. Brier skill compares the model's probabilities to always predicting the overall
+base rate; positive means the probabilities carry real information.
+
+The top band is worth reading carefully. Nearly all of it is FBS-vs-FCS games, which the
+model calls at a clamped 99.9% but which actually go the favourite's way about 94% of the
+time — the single place the model is meaningfully overconfident. Restricted to FBS-vs-FBS
+games the same band lands within a point, which is why the two columns above differ.
 
 ## Accuracy by Week (regular season, all years)
 
@@ -102,7 +118,7 @@ where GitHub renders a markdown file reliably.
 | Seasons | 2021–2026 |
 | Scored games | 4554 |
 | FBS-vs-FBS accuracy | 68.75% |
-| Generated | 2026-09-02 04:05 UTC |
+| Generated | 2026-09-02 04:21 UTC |
 
 ```bash
 python generate_performance_report.py
