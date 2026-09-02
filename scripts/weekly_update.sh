@@ -114,8 +114,15 @@ log "Archiving published snapshot"
 "$PYTHON" publish_weekly_rankings.py --year "$YEAR" --label "weekly_auto_$(date -u +%Y%m%d)" || \
   echo "Snapshot publish skipped."
 
+log "Refreshing benchmark comparison data"
+"$PYTHON" scripts/fetch_prediction_tracker.py --year "$YEAR" --refresh || \
+  echo "Benchmark refresh failed; PERFORMANCE.md will use the cached copy."
+
 log "Regenerating markdown reports"
 "$PYTHON" generate_markdown_reports.py --year "$YEAR"
+
+log "Regenerating performance report"
+"$PYTHON" generate_performance_report.py
 
 # --- Commit and push ---------------------------------------------------------
 
@@ -130,12 +137,13 @@ log "Committing"
 # their conference companions, and prediction outputs. Intermediates
 # (nature_stats_*, sor_stats_*, teams_*, team_standings_*) are regenerated on
 # every run, so they stay out of git.
-git add -A RANKINGS.md PREDICTIONS.md README.md published_rankings
+git add -A RANKINGS.md PREDICTIONS.md PERFORMANCE.md README.md docs published_rankings
 shopt -s nullglob
 git add -A data_exports/spi_rankings_*.csv \
            data_exports/conference_rankings_*.csv \
            data_exports/season_games_*.csv \
            published_rankings/ranking_index.csv \
+           data_exports/benchmarks/*.csv \
            data_exports/predictions/*.csv
 shopt -u nullglob
 
