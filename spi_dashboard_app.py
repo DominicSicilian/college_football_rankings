@@ -8,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 import pandas as pd
 from flask import Flask, jsonify, render_template, request
 
-from model_config import HOME_FIELD_X_DEFAULT
+from model_config import HOME_FIELD_X_DEFAULT, clamp_win_prob_fraction
 
 try:
     import cfbd
@@ -108,9 +108,14 @@ def format_conference_name(value) -> str:
 
 
 def clamp_probability(value: Optional[float]) -> Optional[float]:
+    """Clamp to [0.001, 0.999] so no matchup displays as a certainty.
+
+    Shared with generate_markdown_reports.py via model_config so the dashboard
+    and the published markdown reports never show different numbers.
+    """
     if value is None:
         return None
-    return max(0.0, min(1.0, float(value)))
+    return clamp_win_prob_fraction(float(value))
 
 
 def apply_home_field_adjustment(

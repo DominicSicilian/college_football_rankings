@@ -19,6 +19,8 @@ import re
 import unicodedata
 from typing import Dict, List, Optional, Tuple
 
+from model_config import clamp_win_prob_pct
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_EXPORTS_DIR = os.path.join(BASE_DIR, "data_exports")
 PREDICTIONS_DIR = os.path.join(DATA_EXPORTS_DIR, "predictions")
@@ -282,11 +284,15 @@ def load_completed_games(year: int) -> Tuple[List[Dict], Optional[str]]:
                 "away_points": away_points,
                 "actual_winner": (row.get("actual_winner") or "").strip(),
                 "predicted_winner": (row.get("predicted_winner") or "").strip(),
-                "home_win_prob": to_float(
-                    row.get("home_win_prob_home_adj_pct") or row.get("home_win_prob_pure_pct")
+                "home_win_prob": clamp_win_prob_pct(
+                    to_float(
+                        row.get("home_win_prob_home_adj_pct") or row.get("home_win_prob_pure_pct")
+                    )
                 ),
-                "away_win_prob": to_float(
-                    row.get("away_win_prob_home_adj_pct") or row.get("away_win_prob_pure_pct")
+                "away_win_prob": clamp_win_prob_pct(
+                    to_float(
+                        row.get("away_win_prob_home_adj_pct") or row.get("away_win_prob_pure_pct")
+                    )
                 ),
                 "neutral_site": False,
                 "notes": (row.get("notes") or "").strip(),
@@ -311,8 +317,60 @@ def load_pending_games(year: int) -> Tuple[List[Dict], Optional[str]]:
                 "away_points": None,
                 "actual_winner": "",
                 "predicted_winner": (row.get("predicted_winner") or "").strip(),
-                "home_win_prob": to_float(row.get("home_win_prob_pct")),
-                "away_win_prob": to_float(row.get("away_win_prob_pct")),
+                # Same precedence the dashboard uses in prepare_upcoming_frame().
+                "home_win_prob": clamp_win_prob_pct(
+                    to_float(row.get("home_win_prob_home_adj_pct"))
+                    if to_float(row.get("home_win_prob_home_adj_pct")) is not None
+                    else to_float(row.get("home_win_prob_pct"))
+                ),
+                "away_win_prob": clamp_win_prob_pct(
+                    to_float(row.get("away_win_prob_home_adj_pct"))
+                    if to_float(row.get("away_win_prob_home_adj_pct")) is not None
+                    else to_float(row.get("away_win_prob_pct"))
+                ),
+                "neutral_site": str(row.get("neutral_site", "")).strip().lower() == "true",
+                "notes": (row.get("notes") or "").strip(),
+            }
+        )
+    return games, path
+
+
+def season_games_file(year: int) -> Optional[str]:
+    path = os.path.join(DATA_EXPORTS_DIR, f"season_games_{year}.csv")
+    return path if os.path.exists(path) else None
+
+
+def load_season_games(year: int) -> Tuple[List[Dict], Optional[str]]:
+    """Every game on the season schedule, played or not.
+
+    This is the authoritative game list. The prediction exports cannot serve
+    that role: upcoming_spi_predictions drops games once they are played, and
+    spi_game_predictions only contains games the backtest has scored (which
+    needs a completed-week snapshot). A game that has been played while its
+    week is still in progress is in neither file -- USC beating San Jose State
+    in week 1 while the week 1 Fresno State game is still upcoming is exactly
+    that case -- so building schedules from those two sources silently drops it.
+    """
+    path = season_games_file(year)
+    games = []
+    for row in read_csv(path):
+        home_points = to_float(row.get("home_points"))
+        away_points = to_float(row.get("away_points"))
+        final = home_points is not None and away_points is not None
+        games.append(
+            {
+                "status": "final" if final else "projected",
+                "week": to_int(row.get("week"), 0),
+                "season_type": (row.get("season_type") or "regular").strip(),
+                "start_date": row.get("start_date", ""),
+                "home_team": (row.get("home_team") or "").strip(),
+                "away_team": (row.get("away_team") or "").strip(),
+                "home_points": home_points,
+                "away_points": away_points,
+                "actual_winner": "",
+                "predicted_winner": "",
+                "home_win_prob": None,
+                "away_win_prob": None,
                 "neutral_site": str(row.get("neutral_site", "")).strip().lower() == "true",
                 "notes": (row.get("notes") or "").strip(),
             }
@@ -323,13 +381,32 @@ def load_pending_games(year: int) -> Tuple[List[Dict], Optional[str]]:
 def build_team_schedules(year: int) -> Tuple[Dict[str, List[Dict]], Dict[str, Optional[str]]]:
     completed, completed_path = load_completed_games(year)
     pending, pending_path = load_pending_games(year)
+    season, season_path = load_season_games(year)
 
-    # Played games win over projections for the same matchup.
     merged: Dict[Tuple, Dict] = {}
-    for game in pending:
-        merged[game_key(game["week"], game["home_team"], game["away_team"])] = game
-    for game in completed:
-        merged[game_key(game["week"], game["home_team"], game["away_team"])] = game
+
+    if season:
+        # Start from the full schedule, then layer prediction data onto it.
+        for game in season:
+            merged[game_key(game["week"], game["home_team"], game["away_team"])] = game
+
+        for source in (pending, completed):
+            for game in source:
+                key = game_key(game["week"], game["home_team"], game["away_team"])
+                target = merged.get(key)
+                if target is None:
+                    merged[key] = game
+                    continue
+                # Keep the schedule's own result; borrow the model's numbers.
+                for field in ("home_win_prob", "away_win_prob", "predicted_winner"):
+                    if target.get(field) in (None, "") and game.get(field) not in (None, ""):
+                        target[field] = game[field]
+    else:
+        # No schedule export available -- fall back to the prediction artifacts.
+        for game in pending:
+            merged[game_key(game["week"], game["home_team"], game["away_team"])] = game
+        for game in completed:
+            merged[game_key(game["week"], game["home_team"], game["away_team"])] = game
 
     schedules: Dict[str, List[Dict]] = {}
     for game in merged.values():
@@ -350,8 +427,15 @@ def build_team_schedules(year: int) -> Tuple[Dict[str, List[Dict]], Dict[str, Op
                 else:
                     result = "T"
                 score = f"{team_points:.0f}-{opp_points:.0f}"
+            elif (game["predicted_winner"] or "").strip():
+                result = "W" if game["predicted_winner"].strip() == team else "L"
+                score = ""
+            elif win_prob is not None:
+                result = "W" if win_prob >= 50.0 else "L"
+                score = ""
             else:
-                result = "W" if (game["predicted_winner"] or "").strip() == team else "L"
+                # Scheduled, but the model has no projection for it yet.
+                result = ""
                 score = ""
 
             schedules.setdefault(team, []).append(
@@ -373,7 +457,7 @@ def build_team_schedules(year: int) -> Tuple[Dict[str, List[Dict]], Dict[str, Op
     for games in schedules.values():
         games.sort(key=lambda g: (0 if g["season_type"] == "regular" else 1, g["week"], g["start_date"]))
 
-    sources = {"completed": completed_path, "pending": pending_path}
+    sources = {"completed": completed_path, "pending": pending_path, "season": season_path}
     return schedules, sources
 
 
@@ -382,6 +466,7 @@ def summarize_record(games: List[Dict]) -> Dict[str, float]:
     actual_l = sum(1 for g in games if g["status"] == "final" and g["result"] == "L")
     proj_w = sum(1 for g in games if g["status"] == "projected" and g["result"] == "W")
     proj_l = sum(1 for g in games if g["status"] == "projected" and g["result"] == "L")
+    unprojected = sum(1 for g in games if g["status"] == "projected" and not g["result"])
     expected_wins = float(actual_w)
     for g in games:
         if g["status"] == "projected" and g["win_prob"] is not None:
@@ -390,7 +475,8 @@ def summarize_record(games: List[Dict]) -> Dict[str, float]:
         "actual_w": actual_w,
         "actual_l": actual_l,
         "played": actual_w + actual_l,
-        "remaining": proj_w + proj_l,
+        "remaining": proj_w + proj_l + unprojected,
+        "unprojected": unprojected,
         "proj_w": actual_w + proj_w,
         "proj_l": actual_l + proj_l,
         "expected_wins": expected_wins,
@@ -601,8 +687,14 @@ def render_team_schedule_table(games: List[Dict], rank_lookup: Dict[str, int]) -
             projection = "—"
             outcome = "✅ **W**" if game["result"] == "W" else ("❌ **L**" if game["result"] == "L" else "T")
             result = f"{outcome} {game['score']}".strip()
+        elif game["result"] == "W":
+            projection = "🟢 **W**"
+            result = "_pending_"
+        elif game["result"] == "L":
+            projection = "🔴 **L**"
+            result = "_pending_"
         else:
-            projection = "🟢 **W**" if game["result"] == "W" else "🔴 **L**"
+            projection = "—"
             result = "_pending_"
 
         lines.append(
@@ -742,6 +834,9 @@ def write_predictions_md(
         ),
         "| Pending-game source | `{}` |".format(
             os.path.relpath(sources["pending"], BASE_DIR) if sources["pending"] else "n/a"
+        ),
+        "| Schedule source | `{}` |".format(
+            os.path.relpath(sources["season"], BASE_DIR) if sources.get("season") else "n/a (derived from predictions)"
         ),
         f"| Generated | {generated_stamp()} |",
         "",
