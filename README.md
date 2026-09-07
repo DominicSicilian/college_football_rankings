@@ -15,38 +15,37 @@ download, no local setup needed.
 
 <!-- BEGIN:TOP25 -->
 
-**2026 SPI Top 25 — Preseason**  
-_Updated 2026-09-02 02:52 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
+**2026 SPI Top 25 — Season To Date**  
+_Updated 2026-09-07 19:51 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
 
-> Preseason board — only 12% of teams have played, below the 90% threshold for an in-season ranking.
 
 | # | Team | Conf | Record | SPI | Nature | SOR |
 |---:|:---|:---|:---:|---:|---:|---:|
-| 1 | **Indiana** | Big Ten | 16-0 | 100.00 | 1.000 | 1.000 |
-| 2 | **Oregon** | Big Ten | 13-2 | 85.99 | 0.812 | 0.886 |
-| 3 | **Ohio State** | Big Ten | 12-2 | 85.82 | 0.926 | 0.822 |
-| 4 | **Texas Tech** | Big 12 | 12-2 | 84.05 | 0.924 | 0.796 |
-| 5 | **Miami** | ACC | 13-3 | 81.44 | 0.782 | 0.832 |
-| 6 | **Georgia** | SEC | 12-2 | 80.61 | 0.769 | 0.826 |
-| 7 | **Utah** | Big 12 | 11-2 | 79.91 | 0.892 | 0.749 |
-| 8 | **Notre Dame** | FBS Independents | 10-2 | 79.41 | 0.910 | 0.731 |
-| 9 | **Ole Miss** | SEC | 13-2 | 77.35 | 0.753 | 0.785 |
-| 10 | **North Texas** | American | 12-2 | 74.47 | 0.882 | 0.671 |
-| 11 | **BYU** | Big 12 | 12-2 | 74.20 | 0.637 | 0.798 |
-| 12 | **Vanderbilt** | SEC | 10-3 | 72.65 | 0.824 | 0.674 |
-| 13 | **Texas A&M** | SEC | 11-2 | 72.41 | 0.752 | 0.709 |
-| 14 | **James Madison** | Sun Belt | 12-2 | 72.19 | 0.825 | 0.667 |
-| 15 | **Alabama** | SEC | 11-4 | 72.09 | 0.673 | 0.746 |
-| 16 | **USC** | Big Ten | 9-4 | 70.13 | 0.707 | 0.698 |
-| 17 | **Texas** | SEC | 10-3 | 69.78 | 0.637 | 0.730 |
-| 18 | **Oklahoma** | SEC | 10-3 | 69.44 | 0.592 | 0.750 |
-| 19 | **Washington** | Big Ten | 9-4 | 69.28 | 0.788 | 0.641 |
-| 20 | **Iowa** | Big Ten | 9-4 | 67.83 | 0.637 | 0.701 |
-| 21 | **Navy** | American | 11-2 | 67.74 | 0.671 | 0.681 |
-| 22 | **Michigan** | Big Ten | 9-4 | 66.03 | 0.640 | 0.671 |
-| 23 | **Arizona** | Big 12 | 9-4 | 65.69 | 0.696 | 0.636 |
-| 24 | **Tulane** | American | 11-3 | 65.61 | 0.535 | 0.721 |
-| 25 | **TCU** | Big 12 | 9-4 | 65.57 | 0.635 | 0.667 |
+| 1 | **Memphis** | American | 2-0 | 66.61 | 0.046 | 1.000 |
+| 2 | **USC** | Big Ten | 2-0 | 39.72 | 0.184 | 0.512 |
+| 3 | **Colorado** | Big 12 | 1-0 | 37.08 | 0.015 | 0.562 |
+| 4 | **Iowa** | Big Ten | 1-0 | 36.55 | 0.569 | 0.256 |
+| 5 | **Georgia Southern** | Sun Belt | 1-0 | 35.00 | 1.000 | 0.000 |
+| 6 | **Oklahoma** | SEC | 1-0 | 33.71 | 0.646 | 0.171 |
+| 7 | **Penn State** | Big Ten | 1-0 | 30.35 | 0.686 | 0.098 |
+| 8 | **Ole Miss** | SEC | 1-0 | 30.20 | -0.032 | 0.482 |
+| 9 | **South Carolina** | SEC | 1-0 | 29.24 | 0.787 | 0.026 |
+| 10 | **Cincinnati** | Big 12 | 1-0 | 28.78 | 0.076 | 0.402 |
+| 11 | **Texas A&M** | SEC | 1-0 | 27.95 | 0.704 | 0.051 |
+| 12 | **Colorado State** | Pac-12 | 1-0 | 27.43 | 0.150 | 0.341 |
+| 13 | **Maryland** | Big Ten | 1-0 | 27.29 | 0.780 | 0.000 |
+| 14 | **Kennesaw State** | Conference USA | 1-0 | 26.49 | 0.757 | 0.000 |
+| 15 | **UCLA** | Big Ten | 1-0 | 25.52 | 0.132 | 0.321 |
+| 16 | **Florida State** | ACC | 1-0 | 25.45 | 0.061 | 0.359 |
+| 17 | **Duke** | ACC | 1-0 | 25.14 | 0.039 | 0.366 |
+| 18 | **LSU** | SEC | 1-0 | 24.10 | 0.241 | 0.241 |
+| 19 | **North Dakota State** | Mountain West | 2-0 | 22.88 | 0.083 | 0.307 |
+| 20 | **Indiana** | Big Ten | 1-0 | 22.68 | 0.240 | 0.220 |
+| 21 | **Illinois** | Big Ten | 1-0 | 21.56 | 0.072 | 0.293 |
+| 22 | **Oregon** | Big Ten | 1-0 | 21.46 | -0.021 | 0.341 |
+| 23 | **Miami** | ACC | 1-0 | 19.79 | 0.267 | 0.161 |
+| 24 | **Air Force** | Mountain West | 1-0 | 19.17 | 0.548 | 0.000 |
+| 25 | **Louisiana Tech** | Sun Belt | 1-0 | 17.49 | 0.500 | 0.000 |
 
 <!-- END:TOP25 -->
 
