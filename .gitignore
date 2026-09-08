@@ -23,7 +23,13 @@ data_exports/error_log.txt
 /SPI_Rankings_*.csv
 
 # Local CFBD response cache (regenerated on demand, ~1k files)
-data_exports/cache/
+# Backtest game cache. Closed-season slates (games_2021..2025_*.json) are
+# immutable and ARE committed so CI can score history without re-fetching five
+# seasons and rate-limiting. The active season and derived stats stay ignored;
+# reconcile_cache.py refreshes the active-season files each run.
+data_exports/cache/games_2026_*.json
+data_exports/cache/team_stats_*.csv
+data_exports/cache/dashboard_cache/
 
 # Pickled CFBD API response cache (rebuilt on demand by api_cache.py)
 data_exports/api_cache/
