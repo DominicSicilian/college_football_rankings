@@ -1,6 +1,6 @@
 # Model Performance
 
-> Auto-generated 2026-09-02 04:21 UTC from `data_exports/predictions/spi_game_predictions_2021_2026.csv`.
+> Auto-generated 2026-09-08 22:10 UTC from `data_exports/predictions/spi_game_predictions_2021_2026.csv`.
 > Do not edit by hand — run `python generate_performance_report.py` instead.
 
 [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -13,9 +13,11 @@ hindsight.
 
 | Scope | Games | Correct | Accuracy |
 |:---|---:|---:|---:|
-| **All logged games** | 4554 | 3285 | **72.13%** |
-| FBS vs FBS _(competitive games)_ | 3952 | 2717 | **68.75%** |
-| FBS vs FCS _(near-automatic wins)_ | 602 | 568 | 94.35% |
+| **All logged games** | 4643 | 3363 | **72.43%** |
+| FBS vs FBS _(competitive games)_ | 3995 | 2752 | **68.89%** |
+| FBS vs FCS _(near-automatic wins)_ | 648 | 611 | 94.29% |
+| _Baseline: home team always wins_ | 4643 | 2949 | 63.51% |
+| _Baseline: home team always wins (FBS vs FBS)_ | 3995 | 2339 | 58.55% |
 
 > [!NOTE]
 > The headline number includes FBS-vs-FCS games, which are near-automatic wins and lift
@@ -31,13 +33,13 @@ hindsight.
 | 2023 | 910 | 660 | 72.53% | 792 | **68.94%** |
 | 2024 | 919 | 658 | 71.60% | 798 | **68.05%** |
 | 2025 | 934 | 673 | 72.06% | 808 | **68.19%** |
-| 2026 | 8 | 4 | 50.00% | 8 | **50.00%** |
+| 2026 | 97 | 82 | 84.54% | 51 | **76.47%** |
 
 ## Accuracy by Segment
 
 | Segment | Games | Correct | Accuracy |
 |:---|---:|---:|---:|
-| Regular season | 4340 | 3157 | 72.74% |
+| Regular season | 4429 | 3235 | 73.04% |
 | Postseason (all bowls) | 214 | 128 | 59.81% |
 | CFP playoff games | 31 | 20 | 64.52% |
 | National championship | 5 | 3 | 60.00% |
@@ -50,18 +52,18 @@ underconfident, negative means it overstates its edge.
 
 | Stated Confidence | Games | Mean Predicted | Actual Hit Rate | Gap |
 |:---|---:|---:|---:|---:|
-| 50–60% | 1289 | 54.98% | 56.01% | +1.03 pts |
-| 60–70% | 1035 | 64.80% | 66.47% | +1.67 pts |
-| 70–80% | 861 | 74.91% | 74.91% | +0.00 pts |
-| 80–90% | 615 | 84.73% | 84.88% | +0.15 pts |
-| 90–100% | 754 | 98.49% | 93.90% | -4.59 pts |
+| 50–60% | 1299 | 54.97% | 56.04% | +1.07 pts |
+| 60–70% | 1039 | 64.81% | 66.51% | +1.70 pts |
+| 70–80% | 878 | 74.91% | 75.17% | +0.26 pts |
+| 80–90% | 624 | 84.72% | 85.10% | +0.37 pts |
+| 90–100% | 803 | 98.54% | 93.77% | -4.77 pts |
 
 | Metric | All Games | FBS vs FBS |
 |:---|---:|---:|
-| Games | 4554 | 3952 |
-| Expected calibration error | 1.45 pts | 0.83 pts |
-| Brier score _(lower is better)_ | 0.1830 | 0.2023 |
-| Brier skill vs base rate | +0.0894 | +0.0583 |
+| Games | 4643 | 3995 |
+| Expected calibration error | 1.61 pts | 0.96 pts |
+| Brier score _(lower is better)_ | 0.1815 | 0.2017 |
+| Brier skill vs base rate | +0.0911 | +0.0590 |
 
 Expected calibration error is the average gap, weighted by how many games fall in each
 band. Brier skill compares the model's probabilities to always predicting the overall
@@ -76,7 +78,7 @@ games the same band lands within a point, which is why the two columns above dif
 
 | Week | Games | Correct | Accuracy |
 |---:|---:|---:|---:|
-| 1 | 481 | 394 | 81.91% |
+| 1 | 570 | 472 | 82.81% |
 | 2 | 410 | 308 | 75.12% |
 | 3 | 353 | 279 | 79.04% |
 | 4 | 326 | 235 | 72.09% |
@@ -101,7 +103,7 @@ where GitHub renders a markdown file reliably.
 
 | Season | Games | Correct | Accuracy | Log |
 |:---|---:|---:|---:|:---|
-| 2026 | 8 | 4 | 50.00% | [2026 log →](docs/game_log/2026.md) |
+| 2026 | 97 | 82 | 84.54% | [2026 log →](docs/game_log/2026.md) |
 | 2025 | 934 | 673 | 72.06% | [2025 log →](docs/game_log/2025.md) |
 | 2024 | 919 | 658 | 71.60% | [2024 log →](docs/game_log/2024.md) |
 | 2023 | 910 | 660 | 72.53% | [2023 log →](docs/game_log/2023.md) |
@@ -116,9 +118,9 @@ where GitHub renders a markdown file reliably.
 |:---|:---|
 | Ledger | `data_exports/predictions/spi_game_predictions_2021_2026.csv` |
 | Seasons | 2021–2026 |
-| Scored games | 4554 |
-| FBS-vs-FBS accuracy | 68.75% |
-| Generated | 2026-09-02 04:21 UTC |
+| Scored games | 4643 |
+| FBS-vs-FBS accuracy | 68.89% |
+| Generated | 2026-09-08 22:10 UTC |
 
 ```bash
 python generate_performance_report.py

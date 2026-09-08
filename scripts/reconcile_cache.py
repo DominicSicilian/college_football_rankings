@@ -34,6 +34,10 @@ import cfbd  # noqa: E402
 
 import api_cache  # noqa: E402
 
+JSON_CACHE_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data_exports", "cache"
+)
+
 
 def game_key(home, away, week):
     return (str(week), str(home or "").strip().lower(), str(away or "").strip().lower())
@@ -71,12 +75,19 @@ def fetch_truth(year, api):
     return final_keys
 
 
+def _load(path):
+    try:
+        if path.endswith(".json"):
+            import json
+            return json.load(open(path, encoding="utf-8"))
+        return pickle.load(open(path, "rb"))
+    except Exception:
+        return None
+
+
 def entry_is_stale(path, final_keys):
     """True if this cached game list holds a now-final game as not-yet-final."""
-    try:
-        obj = pickle.load(open(path, "rb"))
-    except Exception:
-        return False
+    obj = _load(path)
     if not isinstance(obj, list):
         return False
     for g in obj:
@@ -102,6 +113,9 @@ def main():
 
     year_dir = os.path.join(api_cache.CACHE_DIR, str(args.year))
     entries = glob.glob(os.path.join(year_dir, "*.pkl"))
+    # The backtest keeps its own JSON game cache keyed by week; those go stale the
+    # same way. Only the active season's files can change, so scope to this year.
+    entries += glob.glob(os.path.join(JSON_CACHE_DIR, f"games_{args.year}_*.json"))
     if not entries:
         print(f"reconcile: no cache entries for {args.year}; nothing to do.")
         return
