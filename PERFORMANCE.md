@@ -1,6 +1,6 @@
 # Model Performance
 
-> Auto-generated 2026-09-07 19:51 UTC from `data_exports/predictions/spi_game_predictions_2020_2026.csv`.
+> Auto-generated 2026-09-08 22:05 UTC from `data_exports/predictions/spi_game_predictions_2020_2026.csv`.
 > Do not edit by hand — run `python generate_performance_report.py` instead.
 
 [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -106,7 +106,7 @@ where GitHub renders a markdown file reliably.
 | Seasons | 2021–2025 |
 | Scored games | 4546 |
 | FBS-vs-FBS accuracy | 67.11% |
-| Generated | 2026-09-07 19:51 UTC |
+| Generated | 2026-09-08 22:05 UTC |
 
 ```bash
 python generate_performance_report.py
