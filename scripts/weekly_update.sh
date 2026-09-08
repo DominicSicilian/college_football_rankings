@@ -74,6 +74,12 @@ echo "Season: $YEAR"
 
 # --- Refresh data ------------------------------------------------------------
 
+log "Reconciling API cache against live results"
+# Purge active-season game-cache entries that finished games have made stale, so
+# the run cannot serve a frozen pre-game snapshot (see scripts/reconcile_cache.py).
+"$PYTHON" scripts/reconcile_cache.py --year "$YEAR" || \
+  echo "Cache reconcile skipped; continuing with existing cache."
+
 log "Detecting latest completed week"
 COMPLETED_WEEK="$("$PYTHON" scripts/completed_week.py --year "$YEAR" 2>/dev/null | tail -1)"
 if ! [[ "$COMPLETED_WEEK" =~ ^[0-9]+$ ]]; then
