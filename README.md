@@ -68,6 +68,7 @@ _Updated 2026-09-07 19:51 UTC • [Full rankings](RANKINGS.md) • [Season predi
 - `generate_markdown_reports.py`: Builds `RANKINGS.md` / `PREDICTIONS.md` / README Top 25
 - `scripts/weekly_update.sh`: One-shot weekly refresh + publish + push
 - `scripts/completed_week.py`: Detects the latest fully completed week
+- `scripts/reconcile_cache.py`: Purges active-season game caches stale vs live results
 - `scripts/fetch_season_games.py`: Exports the full season schedule (played + upcoming)
 - `ranking_index.py` / `scripts/build_ranking_index.py`: Point-in-time ranking index
 - `generate_performance_report.py`: Builds `PERFORMANCE.md` and `docs/game_log/`
@@ -125,6 +126,11 @@ Nature pass, one more per team for SOR). `api_cache.py` memoizes those responses
 - The SOR pass reuses the Nature pass's per-team game queries, so roughly half the calls are
   cache hits even on a cold run.
 - A retry after an API error replays from disk instead of starting over.
+- **Staleness guard:** before each weekly run, `scripts/reconcile_cache.py` makes one
+  cheap pass over the live slate and deletes any active-season game-cache entry that holds
+  a now-final game as unfinished. This is what keeps a game that goes final *after* the
+  cache was built (e.g. a Sunday-night result) from being missed on the next run — a
+  failure mtime-based freshness alone can miss across a CI cache restore.
 
 Responses are pickled, so cfbd's model objects round-trip exactly. Each run prints a hit/miss
 summary on exit. To bypass the cache:
