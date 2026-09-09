@@ -1,6 +1,6 @@
 # 2026 SPI Rankings — Week 1
 
-> Auto-generated 2026-09-08 22:05 UTC from `data_exports/spi_rankings_2026_w1.csv`.
+> Auto-generated 2026-09-09 12:51 UTC from `data_exports/spi_rankings_2026_w1.csv`.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Release:** Week 1 &nbsp;•&nbsp; **Teams ranked:** 138 &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -194,17 +194,17 @@ components behind each team's SPI.
 
 | # | Conference | Teams | Avg SPI | Top-25 Teams | Best Rank | Cross-Conf W-L |
 |---:|:---|---:|---:|---:|---:|:---:|
-| 1 | SEC | 16 | 20.32 | 5 | 5 | 52-13 |
-| 2 | FBS Independents | 2 | 13.90 | 0 | 40 | 16-5 |
-| 3 | Big Ten | 18 | 6.14 | 8 | 3 | 48-12 |
-| 4 | Big 12 | 16 | -3.65 | 3 | 2 | 37-11 |
-| 5 | Sun Belt | 14 | -12.87 | 2 | 17 | 27-29 |
-| 6 | American | 14 | -23.69 | 1 | 1 | 34-21 |
-| 7 | ACC | 17 | -26.57 | 2 | 16 | 44-26 |
-| 8 | Mountain West | 10 | -47.60 | 2 | 19 | 25-24 |
-| 9 | Conference USA | 10 | -58.89 | 1 | 12 | 20-28 |
-| 10 | Pac-12 | 8 | -61.35 | 1 | 15 | 6-12 |
-| 11 | Mid-American | 13 | -72.51 | 0 | 49 | 15-35 |
+| 1 | SEC | 16 | 20.32 | 5 | 5 | - |
+| 2 | FBS Independents | 2 | 13.90 | 0 | 40 | - |
+| 3 | Big Ten | 18 | 6.14 | 8 | 3 | - |
+| 4 | Big 12 | 16 | -3.65 | 3 | 2 | - |
+| 5 | Sun Belt | 14 | -12.87 | 2 | 17 | - |
+| 6 | American | 14 | -23.69 | 1 | 1 | - |
+| 7 | ACC | 17 | -26.57 | 2 | 16 | - |
+| 8 | Mountain West | 10 | -47.60 | 2 | 19 | - |
+| 9 | Conference USA | 10 | -58.89 | 1 | 12 | - |
+| 10 | Pac-12 | 8 | -61.35 | 1 | 15 | - |
+| 11 | Mid-American | 13 | -72.51 | 0 | 49 | - |
 
 ---
 
@@ -217,8 +217,8 @@ components behind each team's SPI.
 | Teams that have played | 100% |
 | In-season gate | passed (90% threshold) |
 | Source file | `data_exports/spi_rankings_2026_w1.csv` |
-| Conference file | `data_exports/conference_rankings_2026_w1.csv` |
-| Generated | 2026-09-08 22:05 UTC |
+| Conference file | `n/a` |
+| Generated | 2026-09-09 12:51 UTC |
 
 Regenerate with:
 

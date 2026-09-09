@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-09-08 22:05 UTC from the newest prediction exports.
+> Auto-generated 2026-09-09 12:51 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Week 1 &nbsp;•&nbsp; **Teams:** 138 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -16,144 +16,144 @@ probabilities for a smoother expected-wins estimate.
 
 | # | Team | Conference | Current | Proj. Record | xWins | Played | Remaining |
 |---:|:---|:---|:---:|:---:|---:|---:|---:|
-| 1 | [Memphis](#memphis-schedule) | American | 2-0 | **12-0** | 11.7 | 2 | 10 |
-| 2 | [Colorado](#colorado-schedule) | Big 12 | 1-0 | **12-0** | 10.0 | 1 | 11 |
-| 3 | [Iowa](#iowa-schedule) | Big Ten | 1-0 | **12-0** | 10.0 | 1 | 11 |
-| 4 | [USC](#usc-schedule) | Big Ten | 2-0 | **11-1** | 9.4 | 2 | 10 |
-| 5 | [Oklahoma](#oklahoma-schedule) | SEC | 1-0 | **12-0** | 8.6 | 1 | 11 |
-| 6 | [Penn State](#penn-state-schedule) | Big Ten | 1-0 | **11-1** | 9.4 | 1 | 11 |
-| 7 | [South Carolina](#south-carolina-schedule) | SEC | 1-0 | **11-1** | 9.0 | 1 | 11 |
-| 8 | [Ole Miss](#ole-miss-schedule) | SEC | 1-0 | **11-1** | 9.0 | 1 | 11 |
-| 9 | [Cincinnati](#cincinnati-schedule) | Big 12 | 1-0 | **11-1** | 9.1 | 1 | 11 |
-| 10 | [Maryland](#maryland-schedule) | Big Ten | 1-0 | **11-1** | 8.5 | 1 | 11 |
-| 11 | [Texas A&M](#texas-a-m-schedule) | SEC | 1-0 | **9-3** | 8.3 | 1 | 11 |
-| 12 | [Kennesaw State](#kennesaw-state-schedule) | Conference USA | 1-0 | **12-0** | 10.8 | 1 | 11 |
-| 13 | [UCLA](#ucla-schedule) | Big Ten | 1-0 | **10-2** | 8.5 | 1 | 11 |
-| 14 | [LSU](#lsu-schedule) | SEC | 1-0 | **11-1** | 8.3 | 1 | 11 |
-| 15 | [Colorado State](#colorado-state-schedule) | Pac-12 | 1-0 | **11-0** | 10.0 | 1 | 10 |
-| 16 | [Duke](#duke-schedule) | ACC | 1-0 | **10-2** | 9.8 | 1 | 11 |
-| 17 | [Georgia Southern](#georgia-southern-schedule) | Sun Belt | 1-0 | **12-0** | 9.3 | 1 | 11 |
-| 18 | [Indiana](#indiana-schedule) | Big Ten | 1-0 | **11-1** | 9.0 | 1 | 11 |
-| 19 | [Air Force](#air-force-schedule) | Mountain West | 1-0 | **11-1** | 9.4 | 1 | 11 |
-| 20 | [North Dakota State](#north-dakota-state-schedule) | Mountain West | 2-0 | **11-1** | 10.5 | 2 | 10 |
-| 21 | [Miami](#miami-schedule) | ACC | 1-0 | **12-0** | 9.4 | 1 | 11 |
-| 22 | [Illinois](#illinois-schedule) | Big Ten | 1-0 | **8-4** | 7.3 | 1 | 11 |
-| 23 | [Louisiana Tech](#louisiana-tech-schedule) | Sun Belt | 1-0 | **10-2** | 8.5 | 1 | 11 |
-| 24 | [Oregon](#oregon-schedule) | Big Ten | 1-0 | **8-4** | 7.9 | 1 | 11 |
-| 25 | [Kansas State](#kansas-state-schedule) | Big 12 | 1-0 | **9-3** | 8.4 | 1 | 11 |
-| 26 | [Arizona State](#arizona-state-schedule) | Big 12 | 1-0 | **8-4** | 7.9 | 1 | 11 |
-| 27 | [UCF](#ucf-schedule) | Big 12 | 1-0 | **9-3** | 8.2 | 1 | 11 |
-| 28 | [Ohio State](#ohio-state-schedule) | Big Ten | 1-0 | **6-6** | 6.7 | 1 | 11 |
-| 29 | [Virginia Tech](#virginia-tech-schedule) | ACC | 1-0 | **10-2** | 9.1 | 1 | 11 |
-| 30 | [Georgia](#georgia-schedule) | SEC | 1-0 | **8-4** | 7.5 | 1 | 11 |
-| 31 | [Nevada](#nevada-schedule) | Mountain West | 1-0 | **10-2** | 9.3 | 1 | 11 |
-| 32 | [Florida](#florida-schedule) | SEC | 1-0 | **6-6** | 7.2 | 1 | 11 |
-| 33 | [Syracuse](#syracuse-schedule) | ACC | 1-0 | **10-2** | 9.2 | 1 | 11 |
-| 34 | [Texas](#texas-schedule) | SEC | 1-0 | **7-5** | 6.3 | 1 | 11 |
-| 35 | [Mississippi State](#mississippi-state-schedule) | SEC | 1-0 | **6-6** | 6.6 | 1 | 11 |
-| 36 | [Army](#army-schedule) | American | 1-0 | **9-3** | 7.9 | 1 | 11 |
-| 37 | [Pittsburgh](#pittsburgh-schedule) | ACC | 1-0 | **10-2** | 9.4 | 1 | 11 |
-| 38 | [Auburn](#auburn-schedule) | SEC | 1-0 | **6-6** | 7.0 | 1 | 11 |
-| 39 | [Alabama](#alabama-schedule) | SEC | 1-0 | **7-5** | 7.0 | 1 | 11 |
-| 40 | [UConn](#uconn-schedule) | FBS Independents | 1-0 | **9-3** | 7.9 | 1 | 11 |
-| 41 | [Utah](#utah-schedule) | Big 12 | 1-0 | **10-2** | 7.5 | 1 | 11 |
-| 42 | [BYU](#byu-schedule) | Big 12 | 1-0 | **7-5** | 7.4 | 1 | 11 |
-| 43 | [Georgia State](#georgia-state-schedule) | Sun Belt | 1-0 | **7-5** | 8.2 | 1 | 11 |
-| 44 | [Troy](#troy-schedule) | Sun Belt | 1-0 | **7-5** | 8.5 | 1 | 11 |
-| 45 | [Tennessee](#tennessee-schedule) | SEC | 1-0 | **8-4** | 6.6 | 1 | 11 |
-| 46 | [Southern Miss](#southern-miss-schedule) | Sun Belt | 1-0 | **9-3** | 8.1 | 1 | 11 |
-| 47 | [App State](#app-state-schedule) | Sun Belt | 1-0 | **11-1** | 9.5 | 1 | 11 |
-| 48 | [Kansas](#kansas-schedule) | Big 12 | 1-0 | **8-4** | 7.9 | 1 | 11 |
-| 49 | [Massachusetts](#massachusetts-schedule) | Mid-American | 1-0 | **11-1** | 10.9 | 1 | 11 |
-| 50 | [Nebraska](#nebraska-schedule) | Big Ten | 1-0 | **7-5** | 7.4 | 1 | 11 |
-| 51 | [West Virginia](#west-virginia-schedule) | Big 12 | 1-0 | **9-3** | 8.1 | 1 | 11 |
-| 52 | [SMU](#smu-schedule) | ACC | 1-0 | **9-3** | 9.3 | 1 | 11 |
-| 53 | [Houston](#houston-schedule) | Big 12 | 1-0 | **5-7** | 7.0 | 1 | 11 |
-| 54 | [Minnesota](#minnesota-schedule) | Big Ten | 1-0 | **7-5** | 6.9 | 1 | 11 |
-| 55 | [Delaware](#delaware-schedule) | Conference USA | 1-0 | **10-2** | 9.7 | 1 | 11 |
-| 56 | [Missouri](#missouri-schedule) | SEC | 1-0 | **4-8** | 5.6 | 1 | 11 |
+| 1 | [Memphis](#memphis-schedule) | American | 1-0 | **11-0** | 10.7 | 1 | 11 |
+| 2 | [Colorado](#colorado-schedule) | Big 12 | 0-0 | **11-0** | 9.0 | 0 | 12 |
+| 3 | [Iowa](#iowa-schedule) | Big Ten | 0-0 | **11-0** | 9.0 | 0 | 12 |
+| 4 | [USC](#usc-schedule) | Big Ten | 1-0 | **10-1** | 8.4 | 1 | 11 |
+| 5 | [Oklahoma](#oklahoma-schedule) | SEC | 0-0 | **11-0** | 7.6 | 0 | 12 |
+| 6 | [Penn State](#penn-state-schedule) | Big Ten | 0-0 | **10-1** | 8.4 | 0 | 12 |
+| 7 | [South Carolina](#south-carolina-schedule) | SEC | 0-0 | **10-1** | 8.0 | 0 | 12 |
+| 8 | [Ole Miss](#ole-miss-schedule) | SEC | 0-0 | **10-1** | 8.0 | 0 | 12 |
+| 9 | [Cincinnati](#cincinnati-schedule) | Big 12 | 0-0 | **10-1** | 8.1 | 0 | 12 |
+| 10 | [Maryland](#maryland-schedule) | Big Ten | 0-0 | **10-1** | 7.5 | 0 | 12 |
+| 11 | [Texas A&M](#texas-a-m-schedule) | SEC | 0-0 | **8-3** | 7.3 | 0 | 12 |
+| 12 | [Kennesaw State](#kennesaw-state-schedule) | Conference USA | 0-0 | **11-0** | 9.8 | 0 | 12 |
+| 13 | [UCLA](#ucla-schedule) | Big Ten | 0-0 | **9-2** | 7.5 | 0 | 12 |
+| 14 | [LSU](#lsu-schedule) | SEC | 0-0 | **10-1** | 7.3 | 0 | 12 |
+| 15 | [Colorado State](#colorado-state-schedule) | Pac-12 | 0-0 | **10-0** | 9.0 | 0 | 11 |
+| 16 | [Duke](#duke-schedule) | ACC | 0-0 | **9-2** | 8.8 | 0 | 12 |
+| 17 | [Georgia Southern](#georgia-southern-schedule) | Sun Belt | 0-0 | **11-0** | 8.3 | 0 | 12 |
+| 18 | [Indiana](#indiana-schedule) | Big Ten | 0-0 | **10-1** | 8.0 | 0 | 12 |
+| 19 | [Air Force](#air-force-schedule) | Mountain West | 0-0 | **10-1** | 8.4 | 0 | 12 |
+| 20 | [North Dakota State](#north-dakota-state-schedule) | Mountain West | 1-0 | **10-1** | 9.5 | 1 | 11 |
+| 21 | [Miami](#miami-schedule) | ACC | 0-0 | **11-0** | 8.4 | 0 | 12 |
+| 22 | [Illinois](#illinois-schedule) | Big Ten | 0-0 | **7-4** | 6.3 | 0 | 12 |
+| 23 | [Louisiana Tech](#louisiana-tech-schedule) | Sun Belt | 0-0 | **9-2** | 7.5 | 0 | 12 |
+| 24 | [Oregon](#oregon-schedule) | Big Ten | 0-0 | **7-4** | 6.9 | 0 | 12 |
+| 25 | [Kansas State](#kansas-state-schedule) | Big 12 | 0-0 | **8-3** | 7.4 | 0 | 12 |
+| 26 | [Arizona State](#arizona-state-schedule) | Big 12 | 0-0 | **7-4** | 6.9 | 0 | 12 |
+| 27 | [UCF](#ucf-schedule) | Big 12 | 0-0 | **8-3** | 7.2 | 0 | 12 |
+| 28 | [Ohio State](#ohio-state-schedule) | Big Ten | 0-0 | **5-6** | 5.7 | 0 | 12 |
+| 29 | [Virginia Tech](#virginia-tech-schedule) | ACC | 0-0 | **9-2** | 8.1 | 0 | 12 |
+| 30 | [Georgia](#georgia-schedule) | SEC | 0-0 | **7-4** | 6.5 | 0 | 12 |
+| 31 | [Nevada](#nevada-schedule) | Mountain West | 0-0 | **9-2** | 8.3 | 0 | 12 |
+| 32 | [Florida](#florida-schedule) | SEC | 0-0 | **5-6** | 6.2 | 0 | 12 |
+| 33 | [Syracuse](#syracuse-schedule) | ACC | 0-0 | **9-2** | 8.2 | 0 | 12 |
+| 34 | [Texas](#texas-schedule) | SEC | 0-0 | **6-5** | 5.3 | 0 | 12 |
+| 35 | [Mississippi State](#mississippi-state-schedule) | SEC | 0-0 | **5-6** | 5.6 | 0 | 12 |
+| 36 | [Army](#army-schedule) | American | 0-0 | **8-3** | 6.9 | 0 | 12 |
+| 37 | [Pittsburgh](#pittsburgh-schedule) | ACC | 0-0 | **9-2** | 8.4 | 0 | 12 |
+| 38 | [Auburn](#auburn-schedule) | SEC | 0-0 | **5-6** | 6.0 | 0 | 12 |
+| 39 | [Alabama](#alabama-schedule) | SEC | 0-0 | **6-5** | 6.0 | 0 | 12 |
+| 40 | [UConn](#uconn-schedule) | FBS Independents | 0-0 | **8-3** | 6.9 | 0 | 12 |
+| 41 | [Utah](#utah-schedule) | Big 12 | 0-0 | **9-2** | 6.5 | 0 | 12 |
+| 42 | [BYU](#byu-schedule) | Big 12 | 0-0 | **6-5** | 6.4 | 0 | 12 |
+| 43 | [Georgia State](#georgia-state-schedule) | Sun Belt | 0-0 | **6-5** | 7.2 | 0 | 12 |
+| 44 | [Troy](#troy-schedule) | Sun Belt | 0-0 | **6-5** | 7.5 | 0 | 12 |
+| 45 | [Tennessee](#tennessee-schedule) | SEC | 0-0 | **7-4** | 5.6 | 0 | 12 |
+| 46 | [Southern Miss](#southern-miss-schedule) | Sun Belt | 0-0 | **8-3** | 7.1 | 0 | 12 |
+| 47 | [App State](#app-state-schedule) | Sun Belt | 0-0 | **10-1** | 8.5 | 0 | 12 |
+| 48 | [Kansas](#kansas-schedule) | Big 12 | 0-0 | **7-4** | 6.9 | 0 | 12 |
+| 49 | [Massachusetts](#massachusetts-schedule) | Mid-American | 0-0 | **10-1** | 9.9 | 0 | 12 |
+| 50 | [Nebraska](#nebraska-schedule) | Big Ten | 0-0 | **6-5** | 6.4 | 0 | 12 |
+| 51 | [West Virginia](#west-virginia-schedule) | Big 12 | 0-0 | **8-3** | 7.1 | 0 | 12 |
+| 52 | [SMU](#smu-schedule) | ACC | 0-0 | **8-3** | 8.3 | 0 | 12 |
+| 53 | [Houston](#houston-schedule) | Big 12 | 0-0 | **4-7** | 6.0 | 0 | 12 |
+| 54 | [Minnesota](#minnesota-schedule) | Big Ten | 0-0 | **6-5** | 5.9 | 0 | 12 |
+| 55 | [Delaware](#delaware-schedule) | Conference USA | 0-0 | **9-2** | 8.7 | 0 | 12 |
+| 56 | [Missouri](#missouri-schedule) | SEC | 0-0 | **3-8** | 4.6 | 0 | 12 |
 | 57 | [Virginia](#virginia-schedule) | ACC | 1-0 | **6-6** | 7.5 | 1 | 11 |
-| 58 | [Notre Dame](#notre-dame-schedule) | FBS Independents | 1-0 | **8-4** | 7.5 | 1 | 11 |
-| 59 | [James Madison](#james-madison-schedule) | Sun Belt | 1-0 | **6-6** | 7.4 | 1 | 11 |
-| 60 | [Washington](#washington-schedule) | Big Ten | 1-0 | **6-6** | 6.5 | 1 | 11 |
-| 61 | [New Mexico](#new-mexico-schedule) | Mountain West | 1-0 | **8-4** | 9.2 | 1 | 11 |
-| 62 | [Kentucky](#kentucky-schedule) | SEC | 1-0 | **4-8** | 6.0 | 1 | 11 |
-| 63 | [Michigan](#michigan-schedule) | Big Ten | 1-0 | **4-8** | 6.2 | 1 | 11 |
-| 64 | [Louisiana](#louisiana-schedule) | Sun Belt | 1-0 | **8-4** | 8.3 | 1 | 11 |
-| 65 | [Wake Forest](#wake-forest-schedule) | ACC | 1-0 | **9-3** | 9.1 | 1 | 11 |
-| 66 | [Tulsa](#tulsa-schedule) | American | 1-0 | **7-5** | 9.0 | 1 | 11 |
-| 67 | [Navy](#navy-schedule) | American | 1-0 | **7-5** | 7.7 | 1 | 11 |
-| 68 | [Arizona](#arizona-schedule) | Big 12 | 1-0 | **6-6** | 7.3 | 1 | 11 |
-| 69 | [Iowa State](#iowa-state-schedule) | Big 12 | 1-0 | **5-7** | 6.9 | 1 | 11 |
-| 70 | [Rice](#rice-schedule) | American | 1-0 | **10-2** | 9.1 | 1 | 11 |
-| 71 | [San Diego State](#san-diego-state-schedule) | Pac-12 | 1-0 | **9-2** | 8.8 | 1 | 10 |
-| 72 | [Old Dominion](#old-dominion-schedule) | Sun Belt | 1-0 | **5-7** | 6.9 | 1 | 11 |
-| 73 | [UTSA](#utsa-schedule) | American | 1-0 | **9-3** | 8.2 | 1 | 11 |
+| 58 | [Notre Dame](#notre-dame-schedule) | FBS Independents | 0-0 | **7-4** | 6.5 | 0 | 12 |
+| 59 | [James Madison](#james-madison-schedule) | Sun Belt | 0-0 | **5-6** | 6.4 | 0 | 12 |
+| 60 | [Washington](#washington-schedule) | Big Ten | 0-0 | **5-6** | 5.5 | 0 | 12 |
+| 61 | [New Mexico](#new-mexico-schedule) | Mountain West | 0-0 | **7-4** | 8.2 | 0 | 12 |
+| 62 | [Kentucky](#kentucky-schedule) | SEC | 0-0 | **3-8** | 5.0 | 0 | 12 |
+| 63 | [Michigan](#michigan-schedule) | Big Ten | 0-0 | **3-8** | 5.2 | 0 | 12 |
+| 64 | [Louisiana](#louisiana-schedule) | Sun Belt | 0-0 | **7-4** | 7.3 | 0 | 12 |
+| 65 | [Wake Forest](#wake-forest-schedule) | ACC | 0-0 | **8-3** | 8.1 | 0 | 12 |
+| 66 | [Tulsa](#tulsa-schedule) | American | 0-0 | **6-5** | 8.0 | 0 | 12 |
+| 67 | [Navy](#navy-schedule) | American | 0-0 | **6-5** | 6.7 | 0 | 12 |
+| 68 | [Arizona](#arizona-schedule) | Big 12 | 0-0 | **5-6** | 6.3 | 0 | 12 |
+| 69 | [Iowa State](#iowa-state-schedule) | Big 12 | 0-0 | **4-7** | 5.9 | 0 | 12 |
+| 70 | [Rice](#rice-schedule) | American | 0-0 | **9-2** | 8.1 | 0 | 12 |
+| 71 | [San Diego State](#san-diego-state-schedule) | Pac-12 | 0-0 | **8-2** | 7.8 | 0 | 11 |
+| 72 | [Old Dominion](#old-dominion-schedule) | Sun Belt | 0-0 | **4-7** | 5.9 | 0 | 12 |
+| 73 | [UTSA](#utsa-schedule) | American | 0-0 | **8-3** | 7.2 | 0 | 12 |
 | 74 | [North Carolina](#north-carolina-schedule) | ACC | 1-0 | **6-6** | 7.5 | 1 | 11 |
-| 75 | [Arkansas](#arkansas-schedule) | SEC | 1-0 | **2-10** | 5.0 | 1 | 11 |
-| 76 | [Middle Tennessee](#middle-tennessee-schedule) | Conference USA | 1-0 | **8-4** | 9.3 | 1 | 11 |
-| 77 | [South Alabama](#south-alabama-schedule) | Sun Belt | 1-0 | **6-6** | 8.0 | 1 | 11 |
-| 78 | [South Florida](#south-florida-schedule) | American | 1-0 | **9-3** | 9.1 | 1 | 11 |
-| 79 | [Northwestern](#northwestern-schedule) | Big Ten | 1-0 | **3-9** | 5.4 | 1 | 11 |
-| 80 | [Purdue](#purdue-schedule) | Big Ten | 1-0 | **2-10** | 5.0 | 1 | 11 |
-| 81 | [Texas Tech](#texas-tech-schedule) | Big 12 | 1-0 | **6-6** | 7.9 | 1 | 11 |
-| 82 | [Michigan State](#michigan-state-schedule) | Big Ten | 1-0 | **5-7** | 7.0 | 1 | 11 |
-| 83 | [Buffalo](#buffalo-schedule) | Mid-American | 1-0 | **10-2** | 10.3 | 1 | 11 |
-| 84 | [Temple](#temple-schedule) | American | 1-0 | **5-7** | 7.2 | 1 | 11 |
-| 85 | [Vanderbilt](#vanderbilt-schedule) | SEC | 1-0 | **3-9** | 5.1 | 1 | 11 |
-| 86 | [North Texas](#north-texas-schedule) | American | 0-1 | **7-5** | 7.0 | 1 | 11 |
-| 87 | [Florida State](#florida-state-schedule) | ACC | 1-1 | **6-6** | 6.3 | 2 | 10 |
-| 88 | [San José State](#san-jose-state-schedule) | Mountain West | 1-1 | **8-5** | 7.4 | 2 | 11 |
-| 89 | [Texas State](#texas-state-schedule) | Pac-12 | 0-1 | **6-5** | 6.1 | 1 | 10 |
-| 90 | [Stanford](#stanford-schedule) | ACC | 1-1 | **6-6** | 5.6 | 2 | 10 |
-| 91 | [Ball State](#ball-state-schedule) | Mid-American | 0-1 | **7-5** | 6.8 | 1 | 11 |
-| 92 | [Kent State](#kent-state-schedule) | Mid-American | 0-1 | **9-3** | 7.4 | 1 | 11 |
+| 75 | [Arkansas](#arkansas-schedule) | SEC | 0-0 | **1-10** | 4.0 | 0 | 12 |
+| 76 | [Middle Tennessee](#middle-tennessee-schedule) | Conference USA | 0-0 | **7-4** | 8.3 | 0 | 12 |
+| 77 | [South Alabama](#south-alabama-schedule) | Sun Belt | 0-0 | **5-6** | 7.0 | 0 | 12 |
+| 78 | [South Florida](#south-florida-schedule) | American | 0-0 | **8-3** | 8.1 | 0 | 12 |
+| 79 | [Northwestern](#northwestern-schedule) | Big Ten | 0-0 | **2-9** | 4.4 | 0 | 12 |
+| 80 | [Purdue](#purdue-schedule) | Big Ten | 0-0 | **1-10** | 4.0 | 0 | 12 |
+| 81 | [Texas Tech](#texas-tech-schedule) | Big 12 | 0-0 | **5-6** | 6.9 | 0 | 12 |
+| 82 | [Michigan State](#michigan-state-schedule) | Big Ten | 0-0 | **4-7** | 6.0 | 0 | 12 |
+| 83 | [Buffalo](#buffalo-schedule) | Mid-American | 0-0 | **9-2** | 9.3 | 0 | 12 |
+| 84 | [Temple](#temple-schedule) | American | 0-0 | **4-7** | 6.2 | 0 | 12 |
+| 85 | [Vanderbilt](#vanderbilt-schedule) | SEC | 0-0 | **2-9** | 4.1 | 0 | 12 |
+| 86 | [North Texas](#north-texas-schedule) | American | 0-0 | **7-4** | 7.0 | 0 | 12 |
+| 87 | [Florida State](#florida-state-schedule) | ACC | 1-0 | **6-5** | 6.3 | 1 | 11 |
+| 88 | [San José State](#san-jose-state-schedule) | Mountain West | 0-1 | **7-5** | 6.4 | 1 | 12 |
+| 89 | [Texas State](#texas-state-schedule) | Pac-12 | 0-0 | **6-4** | 6.1 | 0 | 11 |
+| 90 | [Stanford](#stanford-schedule) | ACC | 1-0 | **6-5** | 5.6 | 1 | 11 |
+| 91 | [Ball State](#ball-state-schedule) | Mid-American | 0-0 | **7-4** | 6.8 | 0 | 12 |
+| 92 | [Kent State](#kent-state-schedule) | Mid-American | 0-0 | **9-2** | 7.4 | 0 | 12 |
 | 93 | [NC State](#nc-state-schedule) | ACC | 0-1 | **3-9** | 3.5 | 1 | 11 |
-| 94 | [Tulane](#tulane-schedule) | American | 0-1 | **1-11** | 1.7 | 1 | 11 |
-| 95 | [Ohio](#ohio-schedule) | Mid-American | 0-1 | **8-4** | 7.6 | 1 | 11 |
-| 96 | [Marshall](#marshall-schedule) | Sun Belt | 0-1 | **4-8** | 3.4 | 1 | 11 |
-| 97 | [Northern Illinois](#northern-illinois-schedule) | Mountain West | 0-1 | **5-7** | 4.4 | 1 | 11 |
-| 98 | [UTEP](#utep-schedule) | Mountain West | 0-1 | **4-8** | 4.6 | 1 | 11 |
-| 99 | [UL Monroe](#ul-monroe-schedule) | Sun Belt | 0-1 | **4-8** | 3.4 | 1 | 11 |
-| 100 | [California](#california-schedule) | ACC | 0-1 | **3-9** | 3.0 | 1 | 11 |
-| 101 | [Missouri State](#missouri-state-schedule) | Conference USA | 0-1 | **7-5** | 5.7 | 1 | 11 |
-| 102 | [Florida Atlantic](#florida-atlantic-schedule) | American | 0-1 | **3-9** | 3.1 | 1 | 11 |
-| 103 | [Fresno State](#fresno-state-schedule) | Pac-12 | 0-1 | **5-6** | 4.1 | 1 | 10 |
-| 104 | [UNLV](#unlv-schedule) | Mountain West | 1-1 | **2-10** | 3.6 | 2 | 10 |
-| 105 | [Miami (OH)](#miami-oh-schedule) | Mid-American | 0-1 | **5-7** | 4.5 | 1 | 11 |
-| 106 | [Akron](#akron-schedule) | Mid-American | 0-1 | **5-7** | 4.8 | 1 | 11 |
-| 107 | [UAB](#uab-schedule) | American | 0-1 | **3-9** | 3.3 | 1 | 11 |
+| 94 | [Tulane](#tulane-schedule) | American | 0-0 | **1-10** | 1.7 | 0 | 12 |
+| 95 | [Ohio](#ohio-schedule) | Mid-American | 0-0 | **8-3** | 7.6 | 0 | 12 |
+| 96 | [Marshall](#marshall-schedule) | Sun Belt | 0-0 | **4-7** | 3.4 | 0 | 12 |
+| 97 | [Northern Illinois](#northern-illinois-schedule) | Mountain West | 0-0 | **5-6** | 4.4 | 0 | 12 |
+| 98 | [UTEP](#utep-schedule) | Mountain West | 0-0 | **4-7** | 4.6 | 0 | 12 |
+| 99 | [UL Monroe](#ul-monroe-schedule) | Sun Belt | 0-0 | **4-7** | 3.4 | 0 | 12 |
+| 100 | [California](#california-schedule) | ACC | 0-0 | **3-8** | 3.0 | 0 | 12 |
+| 101 | [Missouri State](#missouri-state-schedule) | Conference USA | 0-0 | **7-4** | 5.7 | 0 | 12 |
+| 102 | [Florida Atlantic](#florida-atlantic-schedule) | American | 0-0 | **3-8** | 3.1 | 0 | 12 |
+| 103 | [Fresno State](#fresno-state-schedule) | Pac-12 | 0-0 | **5-5** | 4.1 | 0 | 11 |
+| 104 | [UNLV](#unlv-schedule) | Mountain West | 0-1 | **1-10** | 2.6 | 1 | 11 |
+| 105 | [Miami (OH)](#miami-oh-schedule) | Mid-American | 0-0 | **5-6** | 4.5 | 0 | 12 |
+| 106 | [Akron](#akron-schedule) | Mid-American | 0-0 | **5-6** | 4.8 | 0 | 12 |
+| 107 | [UAB](#uab-schedule) | American | 0-0 | **3-8** | 3.3 | 0 | 12 |
 | 108 | [TCU](#tcu-schedule) | Big 12 | 0-1 | **3-9** | 2.6 | 1 | 11 |
-| 109 | [Jacksonville State](#jacksonville-state-schedule) | Conference USA | 1-1 | **4-8** | 4.3 | 2 | 10 |
-| 110 | [Western Kentucky](#western-kentucky-schedule) | Conference USA | 0-1 | **4-8** | 3.8 | 1 | 11 |
-| 111 | [Clemson](#clemson-schedule) | ACC | 0-1 | **2-10** | 2.3 | 1 | 11 |
-| 112 | [Boston College](#boston-college-schedule) | ACC | 0-1 | **3-9** | 2.7 | 1 | 11 |
-| 113 | [Liberty](#liberty-schedule) | Conference USA | 0-1 | **6-6** | 4.6 | 1 | 11 |
-| 114 | [Oregon State](#oregon-state-schedule) | Pac-12 | 0-1 | **4-7** | 3.8 | 1 | 10 |
-| 115 | [Oklahoma State](#oklahoma-state-schedule) | Big 12 | 0-1 | **1-11** | 1.1 | 1 | 11 |
-| 116 | [Toledo](#toledo-schedule) | Mid-American | 0-1 | **4-8** | 4.1 | 1 | 11 |
-| 117 | [Washington State](#washington-state-schedule) | Pac-12 | 0-1 | **3-8** | 3.4 | 1 | 10 |
-| 118 | [Arkansas State](#arkansas-state-schedule) | Sun Belt | 0-1 | **1-11** | 2.2 | 1 | 11 |
-| 119 | [Eastern Michigan](#eastern-michigan-schedule) | Mid-American | 1-1 | **5-7** | 4.8 | 2 | 10 |
-| 120 | [Florida International](#florida-international-schedule) | Conference USA | 0-1 | **3-9** | 3.7 | 1 | 11 |
-| 121 | [Coastal Carolina](#coastal-carolina-schedule) | Sun Belt | 0-1 | **2-10** | 2.2 | 1 | 11 |
-| 122 | [East Carolina](#east-carolina-schedule) | American | 0-1 | **2-10** | 2.4 | 1 | 11 |
-| 123 | [Central Michigan](#central-michigan-schedule) | Mid-American | 0-1 | **4-8** | 4.5 | 1 | 11 |
-| 124 | [Wisconsin](#wisconsin-schedule) | Big Ten | 0-1 | **3-9** | 2.3 | 1 | 11 |
-| 125 | [Boise State](#boise-state-schedule) | Pac-12 | 0-1 | **3-8** | 3.5 | 1 | 10 |
-| 126 | [Sam Houston](#sam-houston-schedule) | Conference USA | 0-1 | **2-10** | 2.9 | 1 | 11 |
-| 127 | [Sacramento State](#sacramento-state-schedule) | Mid-American | 1-1 | **3-9** | 3.9 | 2 | 10 |
-| 128 | [New Mexico State](#new-mexico-state-schedule) | Conference USA | 1-1 | **2-10** | 3.9 | 2 | 10 |
-| 129 | [Louisville](#louisville-schedule) | ACC | 0-1 | **1-11** | 1.6 | 1 | 11 |
-| 130 | [Georgia Tech](#georgia-tech-schedule) | ACC | 0-1 | **2-10** | 2.1 | 1 | 11 |
-| 131 | [Rutgers](#rutgers-schedule) | Big Ten | 0-1 | **1-11** | 1.5 | 1 | 11 |
-| 132 | [Western Michigan](#western-michigan-schedule) | Mid-American | 0-1 | **2-10** | 3.3 | 1 | 11 |
-| 133 | [Baylor](#baylor-schedule) | Big 12 | 0-1 | **1-11** | 1.2 | 1 | 11 |
-| 134 | [Wyoming](#wyoming-schedule) | Mountain West | 0-1 | **2-10** | 2.5 | 1 | 11 |
-| 135 | [Charlotte](#charlotte-schedule) | American | 0-1 | **0-12** | 0.5 | 1 | 11 |
-| 136 | [Utah State](#utah-state-schedule) | Pac-12 | 0-1 | **0-11** | 0.7 | 1 | 10 |
-| 137 | [Bowling Green](#bowling-green-schedule) | Mid-American | 0-1 | **0-12** | 0.9 | 1 | 11 |
-| 138 | [Hawai'i](#hawai-i-schedule) | Mountain West | 0-2 | **0-12** | 0.2 | 2 | 10 |
+| 109 | [Jacksonville State](#jacksonville-state-schedule) | Conference USA | 0-1 | **3-8** | 3.3 | 1 | 11 |
+| 110 | [Western Kentucky](#western-kentucky-schedule) | Conference USA | 0-0 | **4-7** | 3.8 | 0 | 12 |
+| 111 | [Clemson](#clemson-schedule) | ACC | 0-0 | **2-9** | 2.3 | 0 | 12 |
+| 112 | [Boston College](#boston-college-schedule) | ACC | 0-0 | **3-8** | 2.7 | 0 | 12 |
+| 113 | [Liberty](#liberty-schedule) | Conference USA | 0-0 | **6-5** | 4.6 | 0 | 12 |
+| 114 | [Oregon State](#oregon-state-schedule) | Pac-12 | 0-0 | **4-6** | 3.8 | 0 | 11 |
+| 115 | [Oklahoma State](#oklahoma-state-schedule) | Big 12 | 0-0 | **1-10** | 1.1 | 0 | 12 |
+| 116 | [Toledo](#toledo-schedule) | Mid-American | 0-0 | **4-7** | 4.1 | 0 | 12 |
+| 117 | [Washington State](#washington-state-schedule) | Pac-12 | 0-0 | **3-7** | 3.4 | 0 | 11 |
+| 118 | [Arkansas State](#arkansas-state-schedule) | Sun Belt | 0-0 | **1-10** | 2.2 | 0 | 12 |
+| 119 | [Eastern Michigan](#eastern-michigan-schedule) | Mid-American | 1-0 | **5-6** | 4.8 | 1 | 11 |
+| 120 | [Florida International](#florida-international-schedule) | Conference USA | 0-0 | **3-8** | 3.7 | 0 | 12 |
+| 121 | [Coastal Carolina](#coastal-carolina-schedule) | Sun Belt | 0-0 | **2-9** | 2.2 | 0 | 12 |
+| 122 | [East Carolina](#east-carolina-schedule) | American | 0-0 | **2-9** | 2.4 | 0 | 12 |
+| 123 | [Central Michigan](#central-michigan-schedule) | Mid-American | 0-0 | **4-7** | 4.5 | 0 | 12 |
+| 124 | [Wisconsin](#wisconsin-schedule) | Big Ten | 0-0 | **3-8** | 2.3 | 0 | 12 |
+| 125 | [Boise State](#boise-state-schedule) | Pac-12 | 0-0 | **3-7** | 3.5 | 0 | 11 |
+| 126 | [Sam Houston](#sam-houston-schedule) | Conference USA | 0-0 | **2-9** | 2.9 | 0 | 12 |
+| 127 | [Sacramento State](#sacramento-state-schedule) | Mid-American | 0-1 | **2-9** | 2.9 | 1 | 11 |
+| 128 | [New Mexico State](#new-mexico-state-schedule) | Conference USA | 0-1 | **1-10** | 2.9 | 1 | 11 |
+| 129 | [Louisville](#louisville-schedule) | ACC | 0-0 | **1-10** | 1.6 | 0 | 12 |
+| 130 | [Georgia Tech](#georgia-tech-schedule) | ACC | 0-0 | **2-9** | 2.1 | 0 | 12 |
+| 131 | [Rutgers](#rutgers-schedule) | Big Ten | 0-0 | **1-10** | 1.5 | 0 | 12 |
+| 132 | [Western Michigan](#western-michigan-schedule) | Mid-American | 0-0 | **2-9** | 3.3 | 0 | 12 |
+| 133 | [Baylor](#baylor-schedule) | Big 12 | 0-0 | **1-10** | 1.2 | 0 | 12 |
+| 134 | [Wyoming](#wyoming-schedule) | Mountain West | 0-0 | **2-9** | 2.5 | 0 | 12 |
+| 135 | [Charlotte](#charlotte-schedule) | American | 0-0 | **0-11** | 0.5 | 0 | 12 |
+| 136 | [Utah State](#utah-state-schedule) | Pac-12 | 0-0 | **0-10** | 0.7 | 0 | 11 |
+| 137 | [Bowling Green](#bowling-green-schedule) | Mid-American | 0-0 | **0-11** | 0.9 | 0 | 12 |
+| 138 | [Hawai'i](#hawai-i-schedule) | Mountain West | 0-1 | **0-11** | 0.2 | 1 | 11 |
 
 ## Team-by-Team Schedules
 
@@ -165,11 +165,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="oklahoma-schedule"></a>
 <details>
-<summary><b>#5 Oklahoma — proj. 12-0 (8.6 xWins)</b></summary>
+<summary><b>#5 Oklahoma — proj. 11-0 (7.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #98 UTEP | H | — | — | ✅ **W** 51-0 |
+| 1 | Sep 05 | #98 UTEP | H | — | — | _pending_ |
 | 2 | Sep 12 | #63 Michigan | A | 73.2% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #61 New Mexico | H | 82.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #30 Georgia | A | 64.0% | 🟢 **W** | _pending_ |
@@ -186,11 +186,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="south-carolina-schedule"></a>
 <details>
-<summary><b>#7 South Carolina — proj. 11-1 (9.0 xWins)</b></summary>
+<summary><b>#7 South Carolina — proj. 10-1 (8.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #92 Kent State | H | — | — | ✅ **W** 57-0 |
+| 1 | Sep 05 | #92 Kent State | H | — | — | _pending_ |
 | 2 | Sep 12 | Towson | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #35 Mississippi State | H | 74.5% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #39 Alabama | A | 63.8% | 🟢 **W** | _pending_ |
@@ -207,11 +207,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ole-miss-schedule"></a>
 <details>
-<summary><b>#8 Ole Miss — proj. 11-1 (9.0 xWins)</b></summary>
+<summary><b>#8 Ole Miss — proj. 10-1 (8.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #129 Louisville | N | — | — | ✅ **W** 41-38 |
+| 1 | Sep 06 | #129 Louisville | N | — | — | _pending_ |
 | 2 | Sep 12 | #135 Charlotte | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #14 LSU | H | 60.3% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #32 Florida | A | 60.3% | 🟢 **W** | _pending_ |
@@ -228,11 +228,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="texas-a-m-schedule"></a>
 <details>
-<summary><b>#11 Texas A&M — proj. 9-3 (8.3 xWins)</b></summary>
+<summary><b>#11 Texas A&M — proj. 8-3 (7.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #101 Missouri State | H | — | — | ✅ **W** 50-0 |
+| 1 | Sep 05 | #101 Missouri State | H | — | — | _pending_ |
 | 2 | Sep 12 | #26 Arizona State | H | 70.4% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #62 Kentucky | H | 78.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #14 LSU | A | 46.5% | 🔴 **L** | _pending_ |
@@ -249,11 +249,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="lsu-schedule"></a>
 <details>
-<summary><b>#14 LSU — proj. 11-1 (8.3 xWins)</b></summary>
+<summary><b>#14 LSU — proj. 10-1 (7.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #111 Clemson | H | — | — | ✅ **W** 51-10 |
+| 1 | Sep 05 | #111 Clemson | H | — | — | _pending_ |
 | 2 | Sep 12 | #23 Louisiana Tech | H | 66.1% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #8 Ole Miss | A | 39.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #11 Texas A&M | H | 53.5% | 🟢 **W** | _pending_ |
@@ -270,11 +270,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="georgia-schedule"></a>
 <details>
-<summary><b>#30 Georgia — proj. 8-4 (7.5 xWins)</b></summary>
+<summary><b>#30 Georgia — proj. 7-4 (6.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Tennessee State | H | — | — | ✅ **W** 63-3 |
+| 1 | Sep 05 | Tennessee State | H | — | — | _pending_ |
 | 2 | Sep 12 | #110 Western Kentucky | H | 99.1% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #75 Arkansas | A | 60.0% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #5 Oklahoma | H | 36.0% | 🔴 **L** | _pending_ |
@@ -291,11 +291,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="florida-schedule"></a>
 <details>
-<summary><b>#32 Florida — proj. 6-6 (7.2 xWins)</b></summary>
+<summary><b>#32 Florida — proj. 5-6 (6.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #102 Florida Atlantic | H | — | — | ✅ **W** 66-21 |
+| 1 | Sep 05 | #102 Florida Atlantic | H | — | — | _pending_ |
 | 2 | Sep 12 | Campbell | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #38 Auburn | A | 45.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #8 Ole Miss | H | 39.7% | 🔴 **L** | _pending_ |
@@ -312,11 +312,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="texas-schedule"></a>
 <details>
-<summary><b>#34 Texas — proj. 7-5 (6.3 xWins)</b></summary>
+<summary><b>#34 Texas — proj. 6-5 (5.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #89 Texas State | H | — | — | ✅ **W** 59-7 |
+| 1 | Sep 05 | #89 Texas State | H | — | — | _pending_ |
 | 2 | Sep 12 | #28 Ohio State | H | 54.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #73 UTSA | H | 69.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #45 Tennessee | A | 46.4% | 🔴 **L** | _pending_ |
@@ -333,11 +333,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="mississippi-state-schedule"></a>
 <details>
-<summary><b>#35 Mississippi State — proj. 6-6 (6.6 xWins)</b></summary>
+<summary><b>#35 Mississippi State — proj. 5-6 (5.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #99 UL Monroe | H | — | — | ✅ **W** 62-13 |
+| 1 | Sep 05 | #99 UL Monroe | H | — | — | _pending_ |
 | 2 | Sep 12 | #54 Minnesota | A | 49.3% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #7 South Carolina | A | 25.5% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #56 Missouri | H | 63.3% | 🟢 **W** | _pending_ |
@@ -354,11 +354,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="auburn-schedule"></a>
 <details>
-<summary><b>#38 Auburn — proj. 6-6 (7.0 xWins)</b></summary>
+<summary><b>#38 Auburn — proj. 5-6 (6.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #133 Baylor | N | — | — | ✅ **W** 17-16 |
+| 1 | Sep 05 | #133 Baylor | N | — | — | _pending_ |
 | 2 | Sep 12 | #46 Southern Miss | H | 59.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #32 Florida | H | 54.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #85 Vanderbilt | H | 74.7% | 🟢 **W** | _pending_ |
@@ -375,11 +375,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="alabama-schedule"></a>
 <details>
-<summary><b>#39 Alabama — proj. 7-5 (7.0 xWins)</b></summary>
+<summary><b>#39 Alabama — proj. 6-5 (6.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #122 East Carolina | H | — | — | ✅ **W** 48-10 |
+| 1 | Sep 05 | #122 East Carolina | H | — | — | _pending_ |
 | 2 | Sep 12 | #62 Kentucky | A | 50.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #87 Florida State | H | 89.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #7 South Carolina | H | 36.2% | 🔴 **L** | _pending_ |
@@ -396,11 +396,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="tennessee-schedule"></a>
 <details>
-<summary><b>#45 Tennessee — proj. 8-4 (6.6 xWins)</b></summary>
+<summary><b>#45 Tennessee — proj. 7-4 (5.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Furman | H | — | — | ✅ **W** 56-9 |
+| 1 | Sep 05 | Furman | H | — | — | _pending_ |
 | 2 | Sep 12 | #130 Georgia Tech | A | 99.5% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #12 Kennesaw State | H | 37.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #34 Texas | H | 53.6% | 🟢 **W** | _pending_ |
@@ -417,11 +417,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="missouri-schedule"></a>
 <details>
-<summary><b>#56 Missouri — proj. 4-8 (5.6 xWins)</b></summary>
+<summary><b>#56 Missouri — proj. 3-8 (4.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | Arkansas-Pine Bluff | H | — | — | ✅ **W** 54-14 |
+| 1 | Sep 04 | Arkansas-Pine Bluff | H | — | — | _pending_ |
 | 2 | Sep 12 | #48 Kansas | A | 40.3% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #44 Troy | H | 52.7% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #35 Mississippi State | A | 36.7% | 🔴 **L** | _pending_ |
@@ -438,11 +438,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="kentucky-schedule"></a>
 <details>
-<summary><b>#62 Kentucky — proj. 4-8 (6.0 xWins)</b></summary>
+<summary><b>#62 Kentucky — proj. 3-8 (5.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Youngstown State | H | — | — | ✅ **W** 45-13 |
+| 1 | Sep 05 | Youngstown State | H | — | — | _pending_ |
 | 2 | Sep 12 | #39 Alabama | H | 49.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #11 Texas A&M | A | 21.1% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #77 South Alabama | H | 63.7% | 🟢 **W** | _pending_ |
@@ -459,11 +459,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="arkansas-schedule"></a>
 <details>
-<summary><b>#75 Arkansas — proj. 2-10 (5.0 xWins)</b></summary>
+<summary><b>#75 Arkansas — proj. 1-10 (4.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | North Alabama | H | — | — | ✅ **W** 31-14 |
+| 1 | Sep 05 | North Alabama | H | — | — | _pending_ |
 | 2 | Sep 13 | #41 Utah | A | 31.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #30 Georgia | H | 40.0% | 🔴 **L** | _pending_ |
 | 4 | Sep 27 | #66 Tulsa | H | 51.3% | 🟢 **W** | _pending_ |
@@ -480,11 +480,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="vanderbilt-schedule"></a>
 <details>
-<summary><b>#85 Vanderbilt — proj. 3-9 (5.1 xWins)</b></summary>
+<summary><b>#85 Vanderbilt — proj. 2-9 (4.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Austin Peay | H | — | — | ✅ **W** 28-9 |
+| 1 | Sep 05 | Austin Peay | H | — | — | _pending_ |
 | 2 | Sep 12 | #55 Delaware | H | 42.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #93 NC State | H | 92.4% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #38 Auburn | A | 25.3% | 🔴 **L** | _pending_ |
@@ -505,11 +505,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="iowa-schedule"></a>
 <details>
-<summary><b>#3 Iowa — proj. 12-0 (10.0 xWins)</b></summary>
+<summary><b>#3 Iowa — proj. 11-0 (9.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #97 Northern Illinois | H | — | — | ✅ **W** 40-0 |
+| 1 | Sep 05 | #97 Northern Illinois | H | — | — | _pending_ |
 | 2 | Sep 12 | #69 Iowa State | H | 84.7% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | Northern Iowa | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #63 Michigan | A | 74.9% | 🟢 **W** | _pending_ |
@@ -526,12 +526,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="usc-schedule"></a>
 <details>
-<summary><b>#4 USC — proj. 11-1 (9.4 xWins)</b></summary>
+<summary><b>#4 USC — proj. 10-1 (8.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #88 San José State | H | 88.8% | — | ✅ **W** 42-26 |
-| 1 | Sep 05 | #103 Fresno State | H | — | — | ✅ **W** 39-0 |
+| 1 | Sep 05 | #103 Fresno State | H | — | — | _pending_ |
 | 2 | Sep 13 | #64 Louisiana | H | 83.7% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #131 Rutgers | A | 99.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #24 Oregon | H | 75.6% | 🟢 **W** | _pending_ |
@@ -547,11 +547,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="penn-state-schedule"></a>
 <details>
-<summary><b>#6 Penn State — proj. 11-1 (9.4 xWins)</b></summary>
+<summary><b>#6 Penn State — proj. 10-1 (8.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #96 Marshall | H | — | — | ✅ **W** 45-0 |
+| 1 | Sep 05 | #96 Marshall | H | — | — | _pending_ |
 | 2 | Sep 12 | #84 Temple | A | 78.6% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #83 Buffalo | H | 85.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #124 Wisconsin | H | 99.8% | 🟢 **W** | _pending_ |
@@ -568,11 +568,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="maryland-schedule"></a>
 <details>
-<summary><b>#10 Maryland — proj. 11-1 (8.5 xWins)</b></summary>
+<summary><b>#10 Maryland — proj. 10-1 (7.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | Hampton | H | — | — | ✅ **W** 62-0 |
+| 1 | Sep 06 | Hampton | H | — | — | _pending_ |
 | 2 | Sep 12 | #40 UConn | A | 61.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #29 Virginia Tech | H | 70.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #13 UCLA | H | 59.5% | 🟢 **W** | _pending_ |
@@ -589,11 +589,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ucla-schedule"></a>
 <details>
-<summary><b>#13 UCLA — proj. 10-2 (8.5 xWins)</b></summary>
+<summary><b>#13 UCLA — proj. 9-2 (7.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #100 California | A | — | — | ✅ **W** 45-24 |
+| 1 | Sep 06 | #100 California | A | — | — | _pending_ |
 | 2 | Sep 12 | #71 San Diego State | H | 79.2% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #80 Purdue | H | 82.5% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #10 Maryland | A | 40.5% | 🔴 **L** | _pending_ |
@@ -610,11 +610,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="indiana-schedule"></a>
 <details>
-<summary><b>#18 Indiana — proj. 11-1 (9.0 xWins)</b></summary>
+<summary><b>#18 Indiana — proj. 10-1 (8.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #86 North Texas | H | — | — | ✅ **W** 52-16 |
+| 1 | Sep 05 | #86 North Texas | H | — | — | _pending_ |
 | 2 | Sep 12 | Howard | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #110 Western Kentucky | H | 99.3% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #79 Northwestern | H | 77.6% | 🟢 **W** | _pending_ |
@@ -631,11 +631,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="illinois-schedule"></a>
 <details>
-<summary><b>#22 Illinois — proj. 8-4 (7.3 xWins)</b></summary>
+<summary><b>#22 Illinois — proj. 7-4 (6.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | #107 UAB | H | — | — | ✅ **W** 42-23 |
+| 1 | Sep 04 | #107 UAB | H | — | — | _pending_ |
 | 2 | Sep 12 | #16 Duke | H | 53.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | Southern Illinois | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #28 Ohio State | A | 45.4% | 🔴 **L** | _pending_ |
@@ -652,11 +652,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="oregon-schedule"></a>
 <details>
-<summary><b>#24 Oregon — proj. 8-4 (7.9 xWins)</b></summary>
+<summary><b>#24 Oregon — proj. 7-4 (6.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #125 Boise State | H | — | — | ✅ **W** 34-27 |
+| 1 | Sep 05 | #125 Boise State | H | — | — | _pending_ |
 | 2 | Sep 12 | #115 Oklahoma State | A | 98.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | Portland State | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #4 USC | A | 24.4% | 🔴 **L** | _pending_ |
@@ -673,11 +673,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ohio-state-schedule"></a>
 <details>
-<summary><b>#28 Ohio State — proj. 6-6 (6.7 xWins)</b></summary>
+<summary><b>#28 Ohio State — proj. 5-6 (5.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #91 Ball State | H | — | — | ✅ **W** 56-3 |
+| 1 | Sep 05 | #91 Ball State | H | — | — | _pending_ |
 | 2 | Sep 12 | #34 Texas | A | 45.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #92 Kent State | H | 96.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #22 Illinois | H | 54.6% | 🟢 **W** | _pending_ |
@@ -694,11 +694,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="nebraska-schedule"></a>
 <details>
-<summary><b>#50 Nebraska — proj. 7-5 (7.4 xWins)</b></summary>
+<summary><b>#50 Nebraska — proj. 6-5 (6.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #95 Ohio | H | — | — | ✅ **W** 49-21 |
+| 1 | Sep 05 | #95 Ohio | H | — | — | _pending_ |
 | 2 | Sep 12 | #137 Bowling Green | H | 99.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | North Dakota | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #82 Michigan State | A | 57.2% | 🟢 **W** | _pending_ |
@@ -715,11 +715,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="minnesota-schedule"></a>
 <details>
-<summary><b>#54 Minnesota — proj. 7-5 (6.9 xWins)</b></summary>
+<summary><b>#54 Minnesota — proj. 6-5 (5.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | Eastern Illinois | H | — | — | ✅ **W** 59-7 |
+| 1 | Sep 04 | Eastern Illinois | H | — | — | _pending_ |
 | 2 | Sep 12 | #35 Mississippi State | H | 50.7% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #106 Akron | H | 98.5% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #60 Washington | A | 45.0% | 🔴 **L** | _pending_ |
@@ -736,11 +736,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="washington-schedule"></a>
 <details>
-<summary><b>#60 Washington — proj. 6-6 (6.5 xWins)</b></summary>
+<summary><b>#60 Washington — proj. 5-6 (5.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #117 Washington State | H | — | — | ✅ **W** 24-10 |
+| 1 | Sep 06 | #117 Washington State | H | — | — | _pending_ |
 | 2 | Sep 12 | #136 Utah State | H | 99.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | Eastern Washington | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #54 Minnesota | H | 55.0% | 🟢 **W** | _pending_ |
@@ -757,11 +757,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="michigan-schedule"></a>
 <details>
-<summary><b>#63 Michigan — proj. 4-8 (6.2 xWins)</b></summary>
+<summary><b>#63 Michigan — proj. 3-8 (5.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #132 Western Michigan | H | — | — | ✅ **W** 13-12 |
+| 1 | Sep 05 | #132 Western Michigan | H | — | — | _pending_ |
 | 2 | Sep 12 | #5 Oklahoma | H | 26.8% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #98 UTEP | H | 97.0% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #3 Iowa | H | 25.1% | 🔴 **L** | _pending_ |
@@ -778,11 +778,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="northwestern-schedule"></a>
 <details>
-<summary><b>#79 Northwestern — proj. 3-9 (5.4 xWins)</b></summary>
+<summary><b>#79 Northwestern — proj. 2-9 (4.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | South Dakota State | H | — | — | ✅ **W** 34-18 |
+| 1 | Sep 06 | South Dakota State | H | — | — | _pending_ |
 | 3 | Sep 19 | #2 Colorado | H | 19.1% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #18 Indiana | A | 22.4% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #6 Penn State | H | 23.0% | 🔴 **L** | _pending_ |
@@ -799,11 +799,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="purdue-schedule"></a>
 <details>
-<summary><b>#80 Purdue — proj. 2-10 (5.0 xWins)</b></summary>
+<summary><b>#80 Purdue — proj. 1-10 (4.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | Indiana State | H | — | — | ✅ **W** 44-19 |
+| 1 | Sep 04 | Indiana State | H | — | — | _pending_ |
 | 2 | Sep 12 | #65 Wake Forest | H | 49.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #13 UCLA | A | 17.5% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #58 Notre Dame | H | 47.3% | 🔴 **L** | _pending_ |
@@ -820,11 +820,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="michigan-state-schedule"></a>
 <details>
-<summary><b>#82 Michigan State — proj. 5-7 (7.0 xWins)</b></summary>
+<summary><b>#82 Michigan State — proj. 4-7 (6.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #116 Toledo | H | — | — | ✅ **W** 30-20 |
+| 1 | Sep 05 | #116 Toledo | H | — | — | _pending_ |
 | 2 | Sep 12 | #119 Eastern Michigan | H | 98.7% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #58 Notre Dame | A | 33.4% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #50 Nebraska | H | 42.8% | 🔴 **L** | _pending_ |
@@ -841,11 +841,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="wisconsin-schedule"></a>
 <details>
-<summary><b>#124 Wisconsin — proj. 3-9 (2.3 xWins)</b></summary>
+<summary><b>#124 Wisconsin — proj. 3-8 (2.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #58 Notre Dame | N | — | — | ❌ **L** 13-41 |
+| 1 | Sep 06 | #58 Notre Dame | N | — | — | _pending_ |
 | 2 | Sep 12 | Western Illinois | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #119 Eastern Michigan | H | 51.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #6 Penn State | A | 0.2% | 🔴 **L** | _pending_ |
@@ -862,11 +862,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="rutgers-schedule"></a>
 <details>
-<summary><b>#131 Rutgers — proj. 1-11 (1.5 xWins)</b></summary>
+<summary><b>#131 Rutgers — proj. 1-10 (1.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | #49 Massachusetts | H | — | — | ❌ **L** 21-37 |
+| 1 | Sep 03 | #49 Massachusetts | H | — | — | _pending_ |
 | 2 | Sep 11 | #112 Boston College | A | 17.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #4 USC | H | 0.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 25 | Howard | H | 99.9% | 🟢 **W** | _pending_ |
@@ -887,11 +887,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="colorado-schedule"></a>
 <details>
-<summary><b>#2 Colorado — proj. 12-0 (10.0 xWins)</b></summary>
+<summary><b>#2 Colorado — proj. 11-0 (9.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | #130 Georgia Tech | A | — | — | ✅ **W** 14-13 |
+| 1 | Sep 04 | #130 Georgia Tech | A | — | — | _pending_ |
 | 2 | Sep 12 | Weber State | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #79 Northwestern | A | 80.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #133 Baylor | A | 99.9% | 🟢 **W** | _pending_ |
@@ -908,11 +908,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="cincinnati-schedule"></a>
 <details>
-<summary><b>#9 Cincinnati — proj. 11-1 (9.1 xWins)</b></summary>
+<summary><b>#9 Cincinnati — proj. 10-1 (8.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #112 Boston College | H | — | — | ✅ **W** 34-15 |
+| 1 | Sep 05 | #112 Boston College | H | — | — | _pending_ |
 | 2 | Sep 12 | Western Carolina | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #105 Miami (OH) | H | 99.4% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #25 Kansas State | H | 70.3% | 🟢 **W** | _pending_ |
@@ -929,11 +929,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="kansas-state-schedule"></a>
 <details>
-<summary><b>#25 Kansas State — proj. 9-3 (8.4 xWins)</b></summary>
+<summary><b>#25 Kansas State — proj. 8-3 (7.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Nicholls | H | — | — | ✅ **W** 71-3 |
+| 1 | Sep 05 | Nicholls | H | — | — | _pending_ |
 | 2 | Sep 12 | #117 Washington State | H | 99.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #94 Tulane | H | 97.0% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #9 Cincinnati | A | 29.7% | 🔴 **L** | _pending_ |
@@ -950,11 +950,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="arizona-state-schedule"></a>
 <details>
-<summary><b>#26 Arizona State — proj. 8-4 (7.9 xWins)</b></summary>
+<summary><b>#26 Arizona State — proj. 7-4 (6.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | Morgan State | H | — | — | ✅ **W** 70-7 |
+| 1 | Sep 06 | Morgan State | H | — | — | _pending_ |
 | 2 | Sep 12 | #11 Texas A&M | A | 29.6% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #48 Kansas | N | 56.7% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #133 Baylor | H | 99.8% | 🟢 **W** | _pending_ |
@@ -971,11 +971,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ucf-schedule"></a>
 <details>
-<summary><b>#27 UCF — proj. 9-3 (8.2 xWins)</b></summary>
+<summary><b>#27 UCF — proj. 8-3 (7.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | Bethune-Cookman | H | — | — | ✅ **W** 73-6 |
+| 1 | Sep 03 | Bethune-Cookman | H | — | — | _pending_ |
 | 2 | Sep 12 | #37 Pittsburgh | A | 46.6% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #43 Georgia State | H | 61.7% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #108 TCU | H | 99.0% | 🟢 **W** | _pending_ |
@@ -992,11 +992,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="utah-schedule"></a>
 <details>
-<summary><b>#41 Utah — proj. 10-2 (7.5 xWins)</b></summary>
+<summary><b>#41 Utah — proj. 9-2 (6.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | Idaho | H | — | — | ✅ **W** 66-14 |
+| 1 | Sep 04 | Idaho | H | — | — | _pending_ |
 | 2 | Sep 13 | #75 Arkansas | H | 69.0% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #136 Utah State | H | 99.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #69 Iowa State | A | 52.3% | 🟢 **W** | _pending_ |
@@ -1013,11 +1013,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="byu-schedule"></a>
 <details>
-<summary><b>#42 BYU — proj. 7-5 (7.4 xWins)</b></summary>
+<summary><b>#42 BYU — proj. 6-5 (6.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | Utah Tech | H | — | — | ✅ **W** 63-7 |
+| 1 | Sep 06 | Utah Tech | H | — | — | _pending_ |
 | 2 | Sep 12 | #68 Arizona | H | 64.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #15 Colorado State | A | 30.8% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #108 TCU | A | 98.0% | 🟢 **W** | _pending_ |
@@ -1034,11 +1034,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="kansas-schedule"></a>
 <details>
-<summary><b>#48 Kansas — proj. 8-4 (7.9 xWins)</b></summary>
+<summary><b>#48 Kansas — proj. 7-4 (6.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Long Island University | H | — | — | ✅ **W** 51-6 |
+| 1 | Sep 05 | Long Island University | H | — | — | _pending_ |
 | 2 | Sep 12 | #56 Missouri | H | 59.7% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #26 Arizona State | N | 43.3% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #76 Middle Tennessee | H | 67.1% | 🟢 **W** | _pending_ |
@@ -1055,11 +1055,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="west-virginia-schedule"></a>
 <details>
-<summary><b>#51 West Virginia — proj. 9-3 (8.1 xWins)</b></summary>
+<summary><b>#51 West Virginia — proj. 8-3 (7.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #121 Coastal Carolina | H | — | — | ✅ **W** 31-24 |
+| 1 | Sep 05 | #121 Coastal Carolina | H | — | — | _pending_ |
 | 2 | Sep 12 | UT Martin | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #57 Virginia | N | 53.0% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #115 Oklahoma State | H | 99.1% | 🟢 **W** | _pending_ |
@@ -1076,11 +1076,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="houston-schedule"></a>
 <details>
-<summary><b>#53 Houston — proj. 5-7 (7.0 xWins)</b></summary>
+<summary><b>#53 Houston — proj. 4-7 (6.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #114 Oregon State | H | — | — | ✅ **W** 33-20 |
+| 1 | Sep 05 | #114 Oregon State | H | — | — | _pending_ |
 | 2 | Sep 12 | Southern | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #81 Texas Tech | A | 55.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #17 Georgia Southern | A | 31.3% | 🔴 **L** | _pending_ |
@@ -1097,11 +1097,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="arizona-schedule"></a>
 <details>
-<summary><b>#68 Arizona — proj. 6-6 (7.3 xWins)</b></summary>
+<summary><b>#68 Arizona — proj. 5-6 (6.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | Northern Arizona | H | — | — | ✅ **W** 35-7 |
+| 1 | Sep 06 | Northern Arizona | H | — | — | _pending_ |
 | 2 | Sep 12 | #42 BYU | A | 35.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #97 Northern Illinois | H | 96.7% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #117 Washington State | A | 98.1% | 🟢 **W** | _pending_ |
@@ -1118,11 +1118,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="iowa-state-schedule"></a>
 <details>
-<summary><b>#69 Iowa State — proj. 5-7 (6.9 xWins)</b></summary>
+<summary><b>#69 Iowa State — proj. 4-7 (5.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Southeast Missouri State | H | — | — | ✅ **W** 38-10 |
+| 1 | Sep 05 | Southeast Missouri State | H | — | — | _pending_ |
 | 2 | Sep 12 | #3 Iowa | A | 15.3% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #137 Bowling Green | H | 99.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #41 Utah | H | 47.7% | 🔴 **L** | _pending_ |
@@ -1139,11 +1139,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="texas-tech-schedule"></a>
 <details>
-<summary><b>#81 Texas Tech — proj. 6-6 (7.9 xWins)</b></summary>
+<summary><b>#81 Texas Tech — proj. 5-6 (6.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Abilene Christian | H | — | — | ✅ **W** 33-10 |
+| 1 | Sep 05 | Abilene Christian | H | — | — | _pending_ |
 | 2 | Sep 12 | #114 Oregon State | A | 97.2% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #53 Houston | H | 44.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #126 Sam Houston | H | 99.2% | 🟢 **W** | _pending_ |
@@ -1181,11 +1181,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="oklahoma-state-schedule"></a>
 <details>
-<summary><b>#115 Oklahoma State — proj. 1-11 (1.1 xWins)</b></summary>
+<summary><b>#115 Oklahoma State — proj. 1-10 (1.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #66 Tulsa | A | — | — | ❌ **L** 10-24 |
+| 1 | Sep 05 | #66 Tulsa | A | — | — | _pending_ |
 | 2 | Sep 12 | #24 Oregon | H | 1.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | Murray State | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #51 West Virginia | A | 0.9% | 🔴 **L** | _pending_ |
@@ -1202,11 +1202,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="baylor-schedule"></a>
 <details>
-<summary><b>#133 Baylor — proj. 1-11 (1.2 xWins)</b></summary>
+<summary><b>#133 Baylor — proj. 1-10 (1.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #38 Auburn | N | — | — | ❌ **L** 16-17 |
+| 1 | Sep 05 | #38 Auburn | N | — | — | _pending_ |
 | 2 | Sep 13 | Prairie View A&M | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #23 Louisiana Tech | H | 0.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #2 Colorado | H | 0.1% | 🔴 **L** | _pending_ |
@@ -1227,11 +1227,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="duke-schedule"></a>
 <details>
-<summary><b>#16 Duke — proj. 10-2 (9.8 xWins)</b></summary>
+<summary><b>#16 Duke — proj. 9-2 (8.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #94 Tulane | H | — | — | ✅ **W** 17-3 |
+| 1 | Sep 05 | #94 Tulane | H | — | — | _pending_ |
 | 2 | Sep 12 | #22 Illinois | A | 46.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #90 Stanford | H | 96.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | William & Mary | H | 99.9% | 🟢 **W** | _pending_ |
@@ -1248,11 +1248,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="miami-schedule"></a>
 <details>
-<summary><b>#21 Miami — proj. 12-0 (9.4 xWins)</b></summary>
+<summary><b>#21 Miami — proj. 11-0 (8.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #90 Stanford | A | — | — | ✅ **W** 45-6 |
+| 1 | Sep 05 | #90 Stanford | A | — | — | _pending_ |
 | 2 | Sep 11 | Florida A&M | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 18 | #65 Wake Forest | A | 57.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #123 Central Michigan | H | 99.6% | 🟢 **W** | _pending_ |
@@ -1269,11 +1269,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="virginia-tech-schedule"></a>
 <details>
-<summary><b>#29 Virginia Tech — proj. 10-2 (9.1 xWins)</b></summary>
+<summary><b>#29 Virginia Tech — proj. 9-2 (8.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | VMI | H | — | — | ✅ **W** 73-3 |
+| 1 | Sep 05 | VMI | H | — | — | _pending_ |
 | 2 | Sep 12 | #72 Old Dominion | H | 70.6% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #10 Maryland | A | 29.1% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #112 Boston College | A | 98.6% | 🟢 **W** | _pending_ |
@@ -1290,11 +1290,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="syracuse-schedule"></a>
 <details>
-<summary><b>#33 Syracuse — proj. 10-2 (9.2 xWins)</b></summary>
+<summary><b>#33 Syracuse — proj. 9-2 (8.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | New Hampshire | H | — | — | ✅ **W** 66-3 |
+| 1 | Sep 05 | New Hampshire | H | — | — | _pending_ |
 | 2 | Sep 12 | #100 California | H | 98.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 17 | #37 Pittsburgh | A | 44.9% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #40 UConn | A | 45.2% | 🔴 **L** | _pending_ |
@@ -1311,11 +1311,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="pittsburgh-schedule"></a>
 <details>
-<summary><b>#37 Pittsburgh — proj. 10-2 (9.4 xWins)</b></summary>
+<summary><b>#37 Pittsburgh — proj. 9-2 (8.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #105 Miami (OH) | H | — | — | ✅ **W** 59-14 |
+| 1 | Sep 05 | #105 Miami (OH) | H | — | — | _pending_ |
 | 2 | Sep 12 | #27 UCF | H | 53.4% | 🟢 **W** | _pending_ |
 | 3 | Sep 17 | #33 Syracuse | H | 55.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | Bucknell | H | 99.9% | 🟢 **W** | _pending_ |
@@ -1332,11 +1332,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="smu-schedule"></a>
 <details>
-<summary><b>#52 SMU — proj. 9-3 (9.3 xWins)</b></summary>
+<summary><b>#52 SMU — proj. 8-3 (8.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 07 | #87 Florida State | A | — | — | ✅ **W** 27-24 |
+| 1 | Sep 07 | #87 Florida State | A | — | — | _pending_ |
 | 2 | Sep 12 | UC Davis | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #129 Louisville | A | 99.4% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #101 Missouri State | H | 98.0% | 🟢 **W** | _pending_ |
@@ -1374,11 +1374,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="wake-forest-schedule"></a>
 <details>
-<summary><b>#65 Wake Forest — proj. 9-3 (9.1 xWins)</b></summary>
+<summary><b>#65 Wake Forest — proj. 8-3 (8.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | #106 Akron | H | — | — | ✅ **W** 38-16 |
+| 1 | Sep 03 | #106 Akron | H | — | — | _pending_ |
 | 2 | Sep 12 | #80 Purdue | A | 51.0% | 🟢 **W** | _pending_ |
 | 3 | Sep 18 | #21 Miami | H | 42.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #129 Louisville | A | 99.3% | 🟢 **W** | _pending_ |
@@ -1416,12 +1416,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="florida-state-schedule"></a>
 <details>
-<summary><b>#87 Florida State — proj. 6-6 (6.3 xWins)</b></summary>
+<summary><b>#87 Florida State — proj. 6-5 (6.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #128 New Mexico State | H | 81.8% | — | ✅ **W** 34-17 |
-| 1 | Sep 07 | #52 SMU | H | — | — | ❌ **L** 24-27 |
+| 1 | Sep 07 | #52 SMU | H | — | — | _pending_ |
 | 3 | Sep 19 | #39 Alabama | A | 10.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Central Arkansas | H | 99.9% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #57 Virginia | H | 21.1% | 🔴 **L** | _pending_ |
@@ -1437,12 +1437,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="stanford-schedule"></a>
 <details>
-<summary><b>#90 Stanford — proj. 6-6 (5.6 xWins)</b></summary>
+<summary><b>#90 Stanford — proj. 6-5 (5.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #138 Hawai'i | H | 38.9% | — | ✅ **W** 37-27 |
-| 1 | Sep 05 | #21 Miami | H | — | — | ❌ **L** 6-45 |
+| 1 | Sep 05 | #21 Miami | H | — | — | _pending_ |
 | 3 | Sep 19 | #16 Duke | A | 3.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 27 | #130 Georgia Tech | H | 96.4% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #65 Wake Forest | A | 7.5% | 🔴 **L** | _pending_ |
@@ -1479,11 +1479,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="california-schedule"></a>
 <details>
-<summary><b>#100 California — proj. 3-9 (3.0 xWins)</b></summary>
+<summary><b>#100 California — proj. 3-8 (3.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #13 UCLA | H | — | — | ❌ **L** 24-45 |
+| 1 | Sep 06 | #13 UCLA | H | — | — | _pending_ |
 | 2 | Sep 12 | #33 Syracuse | A | 1.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | Wagner | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #111 Clemson | H | 71.4% | 🟢 **W** | _pending_ |
@@ -1500,11 +1500,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="clemson-schedule"></a>
 <details>
-<summary><b>#111 Clemson — proj. 2-10 (2.3 xWins)</b></summary>
+<summary><b>#111 Clemson — proj. 2-9 (2.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #14 LSU | A | — | — | ❌ **L** 10-51 |
+| 1 | Sep 05 | #14 LSU | A | — | — | _pending_ |
 | 2 | Sep 12 | #17 Georgia Southern | H | 1.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #74 North Carolina | H | 2.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #100 California | A | 28.6% | 🔴 **L** | _pending_ |
@@ -1521,11 +1521,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="boston-college-schedule"></a>
 <details>
-<summary><b>#112 Boston College — proj. 3-9 (2.7 xWins)</b></summary>
+<summary><b>#112 Boston College — proj. 3-8 (2.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #9 Cincinnati | A | — | — | ❌ **L** 15-34 |
+| 1 | Sep 05 | #9 Cincinnati | A | — | — | _pending_ |
 | 2 | Sep 11 | #131 Rutgers | H | 82.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | Maine | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #29 Virginia Tech | H | 1.4% | 🔴 **L** | _pending_ |
@@ -1542,11 +1542,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="louisville-schedule"></a>
 <details>
-<summary><b>#129 Louisville — proj. 1-11 (1.6 xWins)</b></summary>
+<summary><b>#129 Louisville — proj. 1-10 (1.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #8 Ole Miss | N | — | — | ❌ **L** 38-41 |
+| 1 | Sep 06 | #8 Ole Miss | N | — | — | _pending_ |
 | 2 | Sep 11 | Villanova | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #52 SMU | H | 0.6% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #65 Wake Forest | H | 0.7% | 🔴 **L** | _pending_ |
@@ -1563,11 +1563,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="georgia-tech-schedule"></a>
 <details>
-<summary><b>#130 Georgia Tech — proj. 2-10 (2.1 xWins)</b></summary>
+<summary><b>#130 Georgia Tech — proj. 2-9 (2.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | #2 Colorado | H | — | — | ❌ **L** 13-14 |
+| 1 | Sep 04 | #2 Colorado | H | — | — | _pending_ |
 | 2 | Sep 12 | #45 Tennessee | H | 0.5% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | Mercer | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 27 | #90 Stanford | A | 3.6% | 🔴 **L** | _pending_ |
@@ -1588,12 +1588,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="memphis-schedule"></a>
 <details>
-<summary><b>#1 Memphis — proj. 12-0 (11.7 xWins)</b></summary>
+<summary><b>#1 Memphis — proj. 11-0 (10.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 30 | #104 UNLV | A | 42.7% | — | ✅ **W** 27-21 |
-| 1 | Sep 05 | #118 Arkansas State | H | — | — | ✅ **W** 42-24 |
+| 1 | Sep 05 | #118 Arkansas State | H | — | — | _pending_ |
 | 2 | Sep 12 | #125 Boise State | A | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | UT Martin | H | 99.9% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #135 Charlotte | A | 99.9% | 🟢 **W** | _pending_ |
@@ -1609,11 +1609,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="army-schedule"></a>
 <details>
-<summary><b>#36 Army — proj. 9-3 (7.9 xWins)</b></summary>
+<summary><b>#36 Army — proj. 8-3 (6.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Bryant | H | — | — | ✅ **W** 59-3 |
+| 1 | Sep 05 | Bryant | H | — | — | _pending_ |
 | 2 | Sep 12 | #78 South Florida | H | 71.5% | 🟢 **W** | _pending_ |
 | 4 | Sep 25 | #84 Temple | A | 62.1% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #23 Louisiana Tech | A | 38.7% | 🔴 **L** | _pending_ |
@@ -1630,11 +1630,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="tulsa-schedule"></a>
 <details>
-<summary><b>#66 Tulsa — proj. 7-5 (9.0 xWins)</b></summary>
+<summary><b>#66 Tulsa — proj. 6-5 (8.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #115 Oklahoma State | H | — | — | ✅ **W** 24-10 |
+| 1 | Sep 05 | #115 Oklahoma State | H | — | — | _pending_ |
 | 2 | Sep 12 | #126 Sam Houston | A | 99.1% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | East Texas A&M | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 27 | #75 Arkansas | A | 48.7% | 🔴 **L** | _pending_ |
@@ -1651,11 +1651,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="navy-schedule"></a>
 <details>
-<summary><b>#67 Navy — proj. 7-5 (7.7 xWins)</b></summary>
+<summary><b>#67 Navy — proj. 6-5 (6.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Towson | H | — | — | ✅ **W** 42-15 |
+| 1 | Sep 05 | Towson | H | — | — | _pending_ |
 | 2 | Sep 12 | #102 Florida Atlantic | A | 96.4% | 🟢 **W** | _pending_ |
 | 4 | Sep 25 | #107 UAB | A | 97.1% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #19 Air Force | A | 28.4% | 🔴 **L** | _pending_ |
@@ -1672,11 +1672,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="rice-schedule"></a>
 <details>
-<summary><b>#70 Rice — proj. 10-2 (9.1 xWins)</b></summary>
+<summary><b>#70 Rice — proj. 9-2 (8.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Houston Christian | H | — | — | ✅ **W** 31-3 |
+| 1 | Sep 05 | Houston Christian | H | — | — | _pending_ |
 | 2 | Sep 12 | #58 Notre Dame | A | 39.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #132 Western Michigan | H | 99.6% | 🟢 **W** | _pending_ |
 | 4 | Sep 27 | #103 Fresno State | A | 96.4% | 🟢 **W** | _pending_ |
@@ -1693,11 +1693,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="utsa-schedule"></a>
 <details>
-<summary><b>#73 UTSA — proj. 9-3 (8.2 xWins)</b></summary>
+<summary><b>#73 UTSA — proj. 8-3 (7.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | UT Rio Grande Valley | H | — | — | ✅ **W** 45-16 |
+| 1 | Sep 05 | UT Rio Grande Valley | H | — | — | _pending_ |
 | 2 | Sep 12 | #89 Texas State | A | 85.6% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #34 Texas | A | 30.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #15 Colorado State | H | 32.5% | 🔴 **L** | _pending_ |
@@ -1714,11 +1714,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="south-florida-schedule"></a>
 <details>
-<summary><b>#78 South Florida — proj. 9-3 (9.1 xWins)</b></summary>
+<summary><b>#78 South Florida — proj. 8-3 (8.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #120 Florida International | H | — | — | ✅ **W** 19-9 |
+| 1 | Sep 05 | #120 Florida International | H | — | — | _pending_ |
 | 2 | Sep 12 | #36 Army | A | 28.5% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | Delaware State | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #137 Bowling Green | A | 99.6% | 🟢 **W** | _pending_ |
@@ -1735,11 +1735,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="temple-schedule"></a>
 <details>
-<summary><b>#84 Temple — proj. 5-7 (7.2 xWins)</b></summary>
+<summary><b>#84 Temple — proj. 4-7 (6.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Rhode Island | H | — | — | ✅ **W** 38-14 |
+| 1 | Sep 05 | Rhode Island | H | — | — | _pending_ |
 | 2 | Sep 12 | #6 Penn State | H | 21.4% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #116 Toledo | A | 97.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 25 | #36 Army | H | 37.9% | 🔴 **L** | _pending_ |
@@ -1756,11 +1756,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="north-texas-schedule"></a>
 <details>
-<summary><b>#86 North Texas — proj. 7-5 (7.0 xWins)</b></summary>
+<summary><b>#86 North Texas — proj. 7-4 (7.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #18 Indiana | A | — | — | ❌ **L** 16-52 |
+| 1 | Sep 05 | #18 Indiana | A | — | — | _pending_ |
 | 2 | Sep 12 | #104 UNLV | H | 93.4% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #89 Texas State | A | 66.0% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | Houston Christian | H | 99.9% | 🟢 **W** | _pending_ |
@@ -1777,11 +1777,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="tulane-schedule"></a>
 <details>
-<summary><b>#94 Tulane — proj. 1-11 (1.7 xWins)</b></summary>
+<summary><b>#94 Tulane — proj. 1-10 (1.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #16 Duke | A | — | — | ❌ **L** 3-17 |
+| 1 | Sep 05 | #16 Duke | A | — | — | _pending_ |
 | 2 | Sep 12 | #77 South Alabama | H | 10.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #25 Kansas State | A | 3.0% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #46 Southern Miss | H | 6.5% | 🔴 **L** | _pending_ |
@@ -1798,11 +1798,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="florida-atlantic-schedule"></a>
 <details>
-<summary><b>#102 Florida Atlantic — proj. 3-9 (3.1 xWins)</b></summary>
+<summary><b>#102 Florida Atlantic — proj. 3-8 (3.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #32 Florida | A | — | — | ❌ **L** 21-66 |
+| 1 | Sep 05 | #32 Florida | A | — | — | _pending_ |
 | 2 | Sep 12 | #67 Navy | H | 3.6% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #120 Florida International | H | 76.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #99 UL Monroe | A | 38.3% | 🔴 **L** | _pending_ |
@@ -1819,11 +1819,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="uab-schedule"></a>
 <details>
-<summary><b>#107 UAB — proj. 3-9 (3.3 xWins)</b></summary>
+<summary><b>#107 UAB — proj. 3-8 (3.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | #22 Illinois | A | — | — | ❌ **L** 23-42 |
+| 1 | Sep 04 | #22 Illinois | A | — | — | _pending_ |
 | 2 | Sep 12 | #99 UL Monroe | H | 45.5% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #64 Louisiana | A | 1.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 25 | #67 Navy | H | 2.9% | 🔴 **L** | _pending_ |
@@ -1840,11 +1840,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="east-carolina-schedule"></a>
 <details>
-<summary><b>#122 East Carolina — proj. 2-10 (2.4 xWins)</b></summary>
+<summary><b>#122 East Carolina — proj. 2-9 (2.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #39 Alabama | A | — | — | ❌ **L** 10-48 |
+| 1 | Sep 05 | #39 Alabama | A | — | — | _pending_ |
 | 2 | Sep 12 | #47 App State | H | 1.1% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #72 Old Dominion | A | 0.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | North Carolina Central | H | 99.9% | 🟢 **W** | _pending_ |
@@ -1861,11 +1861,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="charlotte-schedule"></a>
 <details>
-<summary><b>#135 Charlotte — proj. 0-12 (0.5 xWins)</b></summary>
+<summary><b>#135 Charlotte — proj. 0-11 (0.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | The Citadel | H | — | — | ❌ **L** 41-43 |
+| 1 | Sep 05 | The Citadel | H | — | — | _pending_ |
 | 2 | Sep 12 | #8 Ole Miss | A | 0.1% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #47 App State | A | 0.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #64 Louisiana | H | 0.5% | 🔴 **L** | _pending_ |
@@ -1886,11 +1886,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="kennesaw-state-schedule"></a>
 <details>
-<summary><b>#12 Kennesaw State — proj. 12-0 (10.8 xWins)</b></summary>
+<summary><b>#12 Kennesaw State — proj. 11-0 (9.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | West Georgia | H | — | — | ✅ **W** 47-0 |
+| 1 | Sep 03 | West Georgia | H | — | — | _pending_ |
 | 2 | Sep 12 | #43 Georgia State | H | 74.0% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #45 Tennessee | A | 62.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #118 Arkansas State | A | 99.4% | 🟢 **W** | _pending_ |
@@ -1907,11 +1907,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="delaware-schedule"></a>
 <details>
-<summary><b>#55 Delaware — proj. 10-2 (9.7 xWins)</b></summary>
+<summary><b>#55 Delaware — proj. 9-2 (8.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | Merrimack | H | — | — | ✅ **W** 42-7 |
+| 1 | Sep 03 | Merrimack | H | — | — | _pending_ |
 | 2 | Sep 12 | #85 Vanderbilt | A | 58.0% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #121 Coastal Carolina | H | 99.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #57 Virginia | A | 44.4% | 🔴 **L** | _pending_ |
@@ -1928,11 +1928,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="middle-tennessee-schedule"></a>
 <details>
-<summary><b>#76 Middle Tennessee — proj. 8-4 (9.3 xWins)</b></summary>
+<summary><b>#76 Middle Tennessee — proj. 7-4 (8.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Murray State | H | — | — | ✅ **W** 38-14 |
+| 1 | Sep 05 | Murray State | H | — | — | _pending_ |
 | 2 | Sep 12 | #96 Marshall | A | 91.6% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #31 Nevada | H | 40.5% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #109 Jacksonville State | A | 96.8% | 🟢 **W** | _pending_ |
@@ -1949,11 +1949,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="missouri-state-schedule"></a>
 <details>
-<summary><b>#101 Missouri State — proj. 7-5 (5.7 xWins)</b></summary>
+<summary><b>#101 Missouri State — proj. 7-4 (5.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #11 Texas A&M | A | — | — | ❌ **L** 0-50 |
+| 1 | Sep 05 | #11 Texas A&M | A | — | — | _pending_ |
 | 2 | Sep 12 | Lindenwood | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #96 Marshall | H | 41.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #52 SMU | A | 2.0% | 🔴 **L** | _pending_ |
@@ -1970,12 +1970,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="jacksonville-state-schedule"></a>
 <details>
-<summary><b>#109 Jacksonville State — proj. 4-8 (4.3 xWins)</b></summary>
+<summary><b>#109 Jacksonville State — proj. 3-8 (3.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #20 North Dakota State | A | 99.9% | — | ❌ **L** 7-33 |
-| 1 | Sep 05 | Eastern Kentucky | H | — | — | ✅ **W** 49-7 |
+| 1 | Sep 05 | Eastern Kentucky | H | — | — | _pending_ |
 | 2 | Sep 12 | #95 Ohio | A | 19.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #17 Georgia Southern | H | 1.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #76 Middle Tennessee | H | 3.2% | 🔴 **L** | _pending_ |
@@ -1991,11 +1991,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="western-kentucky-schedule"></a>
 <details>
-<summary><b>#110 Western Kentucky — proj. 4-8 (3.8 xWins)</b></summary>
+<summary><b>#110 Western Kentucky — proj. 4-7 (3.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #31 Nevada | A | — | — | ❌ **L** 14-49 |
+| 1 | Sep 06 | #31 Nevada | A | — | — | _pending_ |
 | 2 | Sep 12 | #30 Georgia | A | 0.9% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #18 Indiana | A | 0.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Mercyhurst | H | 99.9% | 🟢 **W** | _pending_ |
@@ -2012,11 +2012,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="liberty-schedule"></a>
 <details>
-<summary><b>#113 Liberty — proj. 6-6 (4.6 xWins)</b></summary>
+<summary><b>#113 Liberty — proj. 6-5 (4.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #59 James Madison | A | — | — | ❌ **L** 13-20 |
+| 1 | Sep 05 | #59 James Madison | A | — | — | _pending_ |
 | 2 | Sep 12 | Gardner-Webb | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #91 Ball State | H | 19.4% | 🔴 **L** | _pending_ |
 | 4 | Sep 24 | #121 Coastal Carolina | A | 52.0% | 🟢 **W** | _pending_ |
@@ -2033,11 +2033,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="florida-international-schedule"></a>
 <details>
-<summary><b>#120 Florida International — proj. 3-9 (3.7 xWins)</b></summary>
+<summary><b>#120 Florida International — proj. 3-8 (3.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #78 South Florida | A | — | — | ❌ **L** 9-19 |
+| 1 | Sep 05 | #78 South Florida | A | — | — | _pending_ |
 | 2 | Sep 12 | #83 Buffalo | H | 2.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #102 Florida Atlantic | A | 23.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Long Island University | H | 99.9% | 🟢 **W** | _pending_ |
@@ -2054,11 +2054,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="sam-houston-schedule"></a>
 <details>
-<summary><b>#126 Sam Houston — proj. 2-10 (2.9 xWins)</b></summary>
+<summary><b>#126 Sam Houston — proj. 2-9 (2.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #44 Troy | A | — | — | ❌ **L** 21-24 |
+| 1 | Sep 05 | #44 Troy | A | — | — | _pending_ |
 | 2 | Sep 12 | #66 Tulsa | H | 0.9% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | Nicholls | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #81 Texas Tech | A | 0.8% | 🔴 **L** | _pending_ |
@@ -2075,12 +2075,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="new-mexico-state-schedule"></a>
 <details>
-<summary><b>#128 New Mexico State — proj. 2-10 (3.9 xWins)</b></summary>
+<summary><b>#128 New Mexico State — proj. 1-10 (2.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #87 Florida State | A | 18.2% | — | ❌ **L** 17-34 |
-| 1 | Sep 06 | Mercyhurst | H | — | — | ✅ **W** 51-14 |
+| 1 | Sep 06 | Mercyhurst | H | — | — | _pending_ |
 | 2 | Sep 13 | #138 Hawai'i | A | 95.3% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #61 New Mexico | H | 0.9% | 🔴 **L** | _pending_ |
 | 5 | Oct 02 | #110 Western Kentucky | H | 32.9% | 🔴 **L** | _pending_ |
@@ -2100,11 +2100,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="uconn-schedule"></a>
 <details>
-<summary><b>#40 UConn — proj. 9-3 (7.9 xWins)</b></summary>
+<summary><b>#40 UConn — proj. 8-3 (6.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Lafayette | H | — | — | ✅ **W** 56-7 |
+| 1 | Sep 05 | Lafayette | H | — | — | _pending_ |
 | 2 | Sep 12 | #10 Maryland | H | 38.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #46 Southern Miss | A | 45.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #105 Miami (OH) | A | 97.9% | 🟢 **W** | _pending_ |
@@ -2121,11 +2121,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="notre-dame-schedule"></a>
 <details>
-<summary><b>#58 Notre Dame — proj. 8-4 (7.5 xWins)</b></summary>
+<summary><b>#58 Notre Dame — proj. 7-4 (6.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #124 Wisconsin | N | — | — | ✅ **W** 41-13 |
+| 1 | Sep 06 | #124 Wisconsin | N | — | — | _pending_ |
 | 2 | Sep 12 | #70 Rice | H | 60.3% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #82 Michigan State | H | 66.6% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #80 Purdue | A | 52.7% | 🟢 **W** | _pending_ |
@@ -2146,11 +2146,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="massachusetts-schedule"></a>
 <details>
-<summary><b>#49 Massachusetts — proj. 11-1 (10.9 xWins)</b></summary>
+<summary><b>#49 Massachusetts — proj. 10-1 (9.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | #131 Rutgers | A | — | — | ✅ **W** 37-21 |
+| 1 | Sep 03 | #131 Rutgers | A | — | — | _pending_ |
 | 2 | Sep 12 | Sacred Heart | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | Stonehill | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #127 Sacramento State | A | 99.2% | 🟢 **W** | _pending_ |
@@ -2167,11 +2167,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="buffalo-schedule"></a>
 <details>
-<summary><b>#83 Buffalo — proj. 10-2 (10.3 xWins)</b></summary>
+<summary><b>#83 Buffalo — proj. 9-2 (9.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | UAlbany | H | — | — | ✅ **W** 21-17 |
+| 1 | Sep 03 | UAlbany | H | — | — | _pending_ |
 | 2 | Sep 12 | #120 Florida International | A | 97.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #6 Penn State | A | 14.1% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Robert Morris | H | 99.9% | 🟢 **W** | _pending_ |
@@ -2188,11 +2188,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ball-state-schedule"></a>
 <details>
-<summary><b>#91 Ball State — proj. 7-5 (6.8 xWins)</b></summary>
+<summary><b>#91 Ball State — proj. 7-4 (6.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #28 Ohio State | A | — | — | ❌ **L** 3-56 |
+| 1 | Sep 05 | #28 Ohio State | A | — | — | _pending_ |
 | 2 | Sep 12 | Stony Brook | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #113 Liberty | A | 80.6% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #92 Kent State | A | 49.1% | 🔴 **L** | _pending_ |
@@ -2209,11 +2209,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="kent-state-schedule"></a>
 <details>
-<summary><b>#92 Kent State — proj. 9-3 (7.4 xWins)</b></summary>
+<summary><b>#92 Kent State — proj. 9-2 (7.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #7 South Carolina | A | — | — | ❌ **L** 0-57 |
+| 1 | Sep 05 | #7 South Carolina | A | — | — | _pending_ |
 | 2 | Sep 12 | Wofford | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #28 Ohio State | A | 3.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #91 Ball State | H | 50.9% | 🟢 **W** | _pending_ |
@@ -2230,11 +2230,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ohio-schedule"></a>
 <details>
-<summary><b>#95 Ohio — proj. 8-4 (7.6 xWins)</b></summary>
+<summary><b>#95 Ohio — proj. 8-3 (7.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #50 Nebraska | A | — | — | ❌ **L** 21-49 |
+| 1 | Sep 05 | #50 Nebraska | A | — | — | _pending_ |
 | 2 | Sep 12 | #109 Jacksonville State | H | 81.0% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #77 South Alabama | A | 6.0% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Stonehill | H | 99.9% | 🟢 **W** | _pending_ |
@@ -2251,11 +2251,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="miami-oh-schedule"></a>
 <details>
-<summary><b>#105 Miami (OH) — proj. 5-7 (4.5 xWins)</b></summary>
+<summary><b>#105 Miami (OH) — proj. 5-6 (4.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #37 Pittsburgh | A | — | — | ❌ **L** 14-59 |
+| 1 | Sep 05 | #37 Pittsburgh | A | — | — | _pending_ |
 | 2 | Sep 12 | Holy Cross | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #9 Cincinnati | A | 0.6% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #40 UConn | H | 2.1% | 🔴 **L** | _pending_ |
@@ -2272,11 +2272,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="akron-schedule"></a>
 <details>
-<summary><b>#106 Akron — proj. 5-7 (4.8 xWins)</b></summary>
+<summary><b>#106 Akron — proj. 5-6 (4.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 03 | #65 Wake Forest | A | — | — | ❌ **L** 16-38 |
+| 1 | Sep 03 | #65 Wake Forest | A | — | — | _pending_ |
 | 2 | Sep 12 | Robert Morris | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #54 Minnesota | A | 1.5% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #104 UNLV | H | 54.0% | 🟢 **W** | _pending_ |
@@ -2293,11 +2293,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="toledo-schedule"></a>
 <details>
-<summary><b>#116 Toledo — proj. 4-8 (4.1 xWins)</b></summary>
+<summary><b>#116 Toledo — proj. 4-7 (4.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #82 Michigan State | A | — | — | ❌ **L** 20-30 |
+| 1 | Sep 05 | #82 Michigan State | A | — | — | _pending_ |
 | 2 | Sep 12 | Central Connecticut | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #84 Temple | H | 2.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #71 San Diego State | H | 2.1% | 🔴 **L** | _pending_ |
@@ -2314,12 +2314,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="eastern-michigan-schedule"></a>
 <details>
-<summary><b>#119 Eastern Michigan — proj. 5-7 (4.8 xWins)</b></summary>
+<summary><b>#119 Eastern Michigan — proj. 5-6 (4.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #127 Sacramento State | H | 99.9% | — | ✅ **W** 28-17 |
-| 1 | Sep 04 | #88 San José State | H | — | — | ❌ **L** 21-27 |
+| 1 | Sep 04 | #88 San José State | H | — | — | _pending_ |
 | 2 | Sep 12 | #82 Michigan State | A | 1.3% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #124 Wisconsin | A | 48.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Lindenwood | H | 99.9% | 🟢 **W** | _pending_ |
@@ -2335,11 +2335,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="central-michigan-schedule"></a>
 <details>
-<summary><b>#123 Central Michigan — proj. 4-8 (4.5 xWins)</b></summary>
+<summary><b>#123 Central Michigan — proj. 4-7 (4.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #61 New Mexico | A | — | — | ❌ **L** 7-38 |
+| 1 | Sep 06 | #61 New Mexico | A | — | — | _pending_ |
 | 2 | Sep 12 | Colgate | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #134 Wyoming | H | 75.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #21 Miami | A | 0.4% | 🔴 **L** | _pending_ |
@@ -2356,12 +2356,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="sacramento-state-schedule"></a>
 <details>
-<summary><b>#127 Sacramento State — proj. 3-9 (3.9 xWins)</b></summary>
+<summary><b>#127 Sacramento State — proj. 2-9 (2.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #119 Eastern Michigan | A | 0.1% | — | ❌ **L** 17-28 |
-| 1 | Sep 06 | Mississippi Valley State | H | — | — | ✅ **W** 52-0 |
+| 1 | Sep 06 | Mississippi Valley State | H | — | — | _pending_ |
 | 2 | Sep 13 | #103 Fresno State | A | 17.3% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #20 North Dakota State | H | 0.5% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #49 Massachusetts | H | 0.8% | 🔴 **L** | _pending_ |
@@ -2377,11 +2377,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="western-michigan-schedule"></a>
 <details>
-<summary><b>#132 Western Michigan — proj. 2-10 (3.3 xWins)</b></summary>
+<summary><b>#132 Western Michigan — proj. 2-9 (3.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #63 Michigan | A | — | — | ❌ **L** 12-13 |
+| 1 | Sep 05 | #63 Michigan | A | — | — | _pending_ |
 | 2 | Sep 12 | Monmouth | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #70 Rice | A | 0.4% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #125 Boise State | H | 38.1% | 🔴 **L** | _pending_ |
@@ -2398,11 +2398,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="bowling-green-schedule"></a>
 <details>
-<summary><b>#137 Bowling Green — proj. 0-12 (0.9 xWins)</b></summary>
+<summary><b>#137 Bowling Green — proj. 0-11 (0.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Tarleton State | H | — | — | ❌ **L** 13-20 |
+| 1 | Sep 05 | Tarleton State | H | — | — | _pending_ |
 | 2 | Sep 12 | #50 Nebraska | A | 0.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #69 Iowa State | A | 0.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #78 South Florida | H | 0.4% | 🔴 **L** | _pending_ |
@@ -2423,11 +2423,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="air-force-schedule"></a>
 <details>
-<summary><b>#19 Air Force — proj. 11-1 (9.4 xWins)</b></summary>
+<summary><b>#19 Air Force — proj. 10-1 (8.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Duquesne | H | — | — | ✅ **W** 34-0 |
+| 1 | Sep 05 | Duquesne | H | — | — | _pending_ |
 | 2 | Sep 13 | #20 North Dakota State | H | 57.4% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #31 Nevada | A | 48.6% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #67 Navy | H | 71.6% | 🟢 **W** | _pending_ |
@@ -2444,12 +2444,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="north-dakota-state-schedule"></a>
 <details>
-<summary><b>#20 North Dakota State — proj. 11-1 (10.5 xWins)</b></summary>
+<summary><b>#20 North Dakota State — proj. 10-1 (9.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #109 Jacksonville State | H | 0.1% | — | ✅ **W** 33-7 |
-| 1 | Sep 05 | Fordham | H | — | — | ✅ **W** 38-0 |
+| 1 | Sep 05 | Fordham | H | — | — | _pending_ |
 | 2 | Sep 13 | #19 Air Force | A | 42.6% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #127 Sacramento State | A | 99.5% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #134 Wyoming | H | 99.8% | 🟢 **W** | _pending_ |
@@ -2465,11 +2465,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="nevada-schedule"></a>
 <details>
-<summary><b>#31 Nevada — proj. 10-2 (9.3 xWins)</b></summary>
+<summary><b>#31 Nevada — proj. 9-2 (8.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #110 Western Kentucky | H | — | — | ✅ **W** 49-14 |
+| 1 | Sep 06 | #110 Western Kentucky | H | — | — | _pending_ |
 | 2 | Sep 13 | Montana State | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #76 Middle Tennessee | A | 59.5% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #19 Air Force | H | 51.4% | 🟢 **W** | _pending_ |
@@ -2486,11 +2486,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="new-mexico-schedule"></a>
 <details>
-<summary><b>#61 New Mexico — proj. 8-4 (9.2 xWins)</b></summary>
+<summary><b>#61 New Mexico — proj. 7-4 (8.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #123 Central Michigan | H | — | — | ✅ **W** 38-7 |
+| 1 | Sep 06 | #123 Central Michigan | H | — | — | _pending_ |
 | 2 | Sep 12 | Mercyhurst | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #5 Oklahoma | A | 17.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #128 New Mexico State | A | 99.1% | 🟢 **W** | _pending_ |
@@ -2507,12 +2507,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="san-jose-state-schedule"></a>
 <details>
-<summary><b>#88 San José State — proj. 8-5 (7.4 xWins)</b></summary>
+<summary><b>#88 San José State — proj. 7-5 (6.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #4 USC | A | 11.2% | — | ❌ **L** 26-42 |
-| 1 | Sep 04 | #119 Eastern Michigan | A | — | — | ✅ **W** 27-21 |
+| 1 | Sep 04 | #119 Eastern Michigan | A | — | — | _pending_ |
 | 2 | Sep 13 | Cal Poly | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #103 Fresno State | H | 85.1% | 🟢 **W** | _pending_ |
 | 5 | Oct 04 | #138 Hawai'i | A | 99.7% | 🟢 **W** | _pending_ |
@@ -2529,11 +2529,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="northern-illinois-schedule"></a>
 <details>
-<summary><b>#97 Northern Illinois — proj. 5-7 (4.4 xWins)</b></summary>
+<summary><b>#97 Northern Illinois — proj. 5-6 (4.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #3 Iowa | A | — | — | ❌ **L** 0-40 |
+| 1 | Sep 05 | #3 Iowa | A | — | — | _pending_ |
 | 2 | Sep 12 | Illinois State | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #68 Arizona | A | 3.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #43 Georgia State | A | 2.5% | 🔴 **L** | _pending_ |
@@ -2550,11 +2550,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="utep-schedule"></a>
 <details>
-<summary><b>#98 UTEP — proj. 4-8 (4.6 xWins)</b></summary>
+<summary><b>#98 UTEP — proj. 4-7 (4.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #5 Oklahoma | A | — | — | ❌ **L** 0-51 |
+| 1 | Sep 05 | #5 Oklahoma | A | — | — | _pending_ |
 | 2 | Sep 13 | Texas Southern | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #63 Michigan | A | 3.0% | 🔴 **L** | _pending_ |
 | 4 | Sep 27 | #114 Oregon State | H | 77.1% | 🟢 **W** | _pending_ |
@@ -2571,12 +2571,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="unlv-schedule"></a>
 <details>
-<summary><b>#104 UNLV — proj. 2-10 (3.6 xWins)</b></summary>
+<summary><b>#104 UNLV — proj. 1-10 (2.6 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 30 | #1 Memphis | H | 57.3% | — | ❌ **L** 21-27 |
-| 1 | Sep 06 | #138 Hawai'i | A | — | — | ✅ **W** 21-6 |
+| 1 | Sep 06 | #138 Hawai'i | A | — | — | _pending_ |
 | 2 | Sep 12 | #86 North Texas | A | 6.6% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #106 Akron | A | 46.0% | 🔴 **L** | _pending_ |
 | 5 | Oct 03 | #100 California | H | 49.4% | 🔴 **L** | _pending_ |
@@ -2592,11 +2592,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="wyoming-schedule"></a>
 <details>
-<summary><b>#134 Wyoming — proj. 2-10 (2.5 xWins)</b></summary>
+<summary><b>#134 Wyoming — proj. 2-9 (2.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #15 Colorado State | A | — | — | ❌ **L** 13-35 |
+| 1 | Sep 05 | #15 Colorado State | A | — | — | _pending_ |
 | 2 | Sep 12 | Northern Colorado | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #123 Central Michigan | A | 24.1% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #138 Hawai'i | H | 95.4% | 🟢 **W** | _pending_ |
@@ -2613,12 +2613,12 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="hawai-i-schedule"></a>
 <details>
-<summary><b>#138 Hawai'i — proj. 0-12 (0.2 xWins)</b></summary>
+<summary><b>#138 Hawai'i — proj. 0-11 (0.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
 | 1 | Aug 29 | #90 Stanford | A | 61.1% | — | ❌ **L** 27-37 |
-| 1 | Sep 06 | #104 UNLV | H | — | — | ❌ **L** 6-21 |
+| 1 | Sep 06 | #104 UNLV | H | — | — | _pending_ |
 | 2 | Sep 13 | #128 New Mexico State | H | 4.7% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #134 Wyoming | A | 4.6% | 🔴 **L** | _pending_ |
 | 5 | Oct 04 | #88 San José State | H | 0.3% | 🔴 **L** | _pending_ |
@@ -2638,11 +2638,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="colorado-state-schedule"></a>
 <details>
-<summary><b>#15 Colorado State — proj. 11-0 (10.0 xWins)</b></summary>
+<summary><b>#15 Colorado State — proj. 10-0 (9.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #134 Wyoming | H | — | — | ✅ **W** 35-13 |
+| 1 | Sep 05 | #134 Wyoming | H | — | — | _pending_ |
 | 2 | Sep 12 | Southern Utah | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #42 BYU | H | 69.2% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #73 UTSA | A | 67.5% | 🟢 **W** | _pending_ |
@@ -2658,11 +2658,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="san-diego-state-schedule"></a>
 <details>
-<summary><b>#71 San Diego State — proj. 9-2 (8.8 xWins)</b></summary>
+<summary><b>#71 San Diego State — proj. 8-2 (7.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | Portland State | H | — | — | ✅ **W** 53-20 |
+| 1 | Sep 06 | Portland State | H | — | — | _pending_ |
 | 2 | Sep 12 | #13 UCLA | A | 20.8% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #59 James Madison | H | 52.7% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #116 Toledo | A | 97.9% | 🟢 **W** | _pending_ |
@@ -2678,11 +2678,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="texas-state-schedule"></a>
 <details>
-<summary><b>#89 Texas State — proj. 6-5 (6.1 xWins)</b></summary>
+<summary><b>#89 Texas State — proj. 6-4 (6.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #34 Texas | A | — | — | ❌ **L** 7-59 |
+| 1 | Sep 05 | #34 Texas | A | — | — | _pending_ |
 | 2 | Sep 12 | #73 UTSA | H | 14.4% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #86 North Texas | H | 34.0% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | Incarnate Word | H | 99.9% | 🟢 **W** | _pending_ |
@@ -2698,11 +2698,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="fresno-state-schedule"></a>
 <details>
-<summary><b>#103 Fresno State — proj. 5-6 (4.1 xWins)</b></summary>
+<summary><b>#103 Fresno State — proj. 5-5 (4.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #4 USC | A | — | — | ❌ **L** 0-39 |
+| 1 | Sep 05 | #4 USC | A | — | — | _pending_ |
 | 2 | Sep 13 | #127 Sacramento State | H | 82.7% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #88 San José State | A | 14.9% | 🔴 **L** | _pending_ |
 | 4 | Sep 27 | #70 Rice | H | 3.6% | 🔴 **L** | _pending_ |
@@ -2718,11 +2718,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="oregon-state-schedule"></a>
 <details>
-<summary><b>#114 Oregon State — proj. 4-7 (3.8 xWins)</b></summary>
+<summary><b>#114 Oregon State — proj. 4-6 (3.8 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #53 Houston | A | — | — | ❌ **L** 20-33 |
+| 1 | Sep 05 | #53 Houston | A | — | — | _pending_ |
 | 2 | Sep 12 | #81 Texas Tech | H | 2.8% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | Montana | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 27 | #98 UTEP | A | 22.9% | 🔴 **L** | _pending_ |
@@ -2738,11 +2738,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="washington-state-schedule"></a>
 <details>
-<summary><b>#117 Washington State — proj. 3-8 (3.4 xWins)</b></summary>
+<summary><b>#117 Washington State — proj. 3-7 (3.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | #60 Washington | A | — | — | ❌ **L** 10-24 |
+| 1 | Sep 06 | #60 Washington | A | — | — | _pending_ |
 | 2 | Sep 12 | #25 Kansas State | A | 0.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | Duquesne | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #68 Arizona | H | 1.9% | 🔴 **L** | _pending_ |
@@ -2758,11 +2758,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="boise-state-schedule"></a>
 <details>
-<summary><b>#125 Boise State — proj. 3-8 (3.5 xWins)</b></summary>
+<summary><b>#125 Boise State — proj. 3-7 (3.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #24 Oregon | A | — | — | ❌ **L** 27-34 |
+| 1 | Sep 05 | #24 Oregon | A | — | — | _pending_ |
 | 2 | Sep 12 | #1 Memphis | H | 0.1% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | South Dakota | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #132 Western Michigan | A | 61.9% | 🟢 **W** | _pending_ |
@@ -2778,11 +2778,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="utah-state-schedule"></a>
 <details>
-<summary><b>#136 Utah State — proj. 0-11 (0.7 xWins)</b></summary>
+<summary><b>#136 Utah State — proj. 0-10 (0.7 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Idaho State | H | — | — | ❌ **L** 17-29 |
+| 1 | Sep 05 | Idaho State | H | — | — | _pending_ |
 | 2 | Sep 12 | #60 Washington | A | 0.2% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #41 Utah | A | 0.2% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #44 Troy | H | 0.3% | 🔴 **L** | _pending_ |
@@ -2802,11 +2802,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="georgia-southern-schedule"></a>
 <details>
-<summary><b>#17 Georgia Southern — proj. 12-0 (9.3 xWins)</b></summary>
+<summary><b>#17 Georgia Southern — proj. 11-0 (8.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Charleston Southern | H | — | — | ✅ **W** 31-0 |
+| 1 | Sep 05 | Charleston Southern | H | — | — | _pending_ |
 | 2 | Sep 12 | #111 Clemson | A | 98.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #109 Jacksonville State | A | 98.7% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #53 Houston | H | 68.7% | 🟢 **W** | _pending_ |
@@ -2823,11 +2823,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="louisiana-tech-schedule"></a>
 <details>
-<summary><b>#23 Louisiana Tech — proj. 10-2 (8.5 xWins)</b></summary>
+<summary><b>#23 Louisiana Tech — proj. 9-2 (7.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Northwestern State | H | — | — | ✅ **W** 80-6 |
+| 1 | Sep 05 | Northwestern State | H | — | — | _pending_ |
 | 2 | Sep 12 | #14 LSU | A | 33.9% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #133 Baylor | A | 99.7% | 🟢 **W** | _pending_ |
 | 5 | Oct 03 | #36 Army | H | 61.3% | 🟢 **W** | _pending_ |
@@ -2844,11 +2844,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="georgia-state-schedule"></a>
 <details>
-<summary><b>#43 Georgia State — proj. 7-5 (8.2 xWins)</b></summary>
+<summary><b>#43 Georgia State — proj. 6-5 (7.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 04 | North Carolina A&T | H | — | — | ✅ **W** 59-10 |
+| 1 | Sep 04 | North Carolina A&T | H | — | — | _pending_ |
 | 2 | Sep 12 | #12 Kennesaw State | A | 26.0% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #27 UCF | A | 38.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #97 Northern Illinois | H | 97.5% | 🟢 **W** | _pending_ |
@@ -2865,11 +2865,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="troy-schedule"></a>
 <details>
-<summary><b>#44 Troy — proj. 7-5 (8.5 xWins)</b></summary>
+<summary><b>#44 Troy — proj. 6-5 (7.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #126 Sam Houston | H | — | — | ✅ **W** 24-21 |
+| 1 | Sep 05 | #126 Sam Houston | H | — | — | _pending_ |
 | 2 | Sep 12 | Alabama State | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #56 Missouri | A | 47.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #136 Utah State | A | 99.7% | 🟢 **W** | _pending_ |
@@ -2886,11 +2886,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="southern-miss-schedule"></a>
 <details>
-<summary><b>#46 Southern Miss — proj. 9-3 (8.1 xWins)</b></summary>
+<summary><b>#46 Southern Miss — proj. 8-3 (7.1 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Alcorn State | H | — | — | ✅ **W** 49-3 |
+| 1 | Sep 05 | Alcorn State | H | — | — | _pending_ |
 | 2 | Sep 12 | #38 Auburn | A | 40.7% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #40 UConn | H | 54.3% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #94 Tulane | A | 93.5% | 🟢 **W** | _pending_ |
@@ -2907,11 +2907,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="app-state-schedule"></a>
 <details>
-<summary><b>#47 App State — proj. 11-1 (9.5 xWins)</b></summary>
+<summary><b>#47 App State — proj. 10-1 (8.5 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Maine | H | — | — | ✅ **W** 55-3 |
+| 1 | Sep 05 | Maine | H | — | — | _pending_ |
 | 2 | Sep 12 | #122 East Carolina | A | 98.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #135 Charlotte | H | 99.8% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #93 NC State | A | 93.5% | 🟢 **W** | _pending_ |
@@ -2928,11 +2928,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="james-madison-schedule"></a>
 <details>
-<summary><b>#59 James Madison — proj. 6-6 (7.4 xWins)</b></summary>
+<summary><b>#59 James Madison — proj. 5-6 (6.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #113 Liberty | H | — | — | ✅ **W** 20-13 |
+| 1 | Sep 05 | #113 Liberty | H | — | — | _pending_ |
 | 2 | Sep 12 | Wagner | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #71 San Diego State | A | 47.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #72 Old Dominion | A | 48.5% | 🔴 **L** | _pending_ |
@@ -2949,11 +2949,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="louisiana-schedule"></a>
 <details>
-<summary><b>#64 Louisiana — proj. 8-4 (8.3 xWins)</b></summary>
+<summary><b>#64 Louisiana — proj. 7-4 (7.3 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 06 | Lamar | H | — | — | ✅ **W** 38-7 |
+| 1 | Sep 06 | Lamar | H | — | — | _pending_ |
 | 2 | Sep 13 | #4 USC | A | 16.3% | 🔴 **L** | _pending_ |
 | 3 | Sep 20 | #107 UAB | H | 98.3% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #135 Charlotte | A | 99.5% | 🟢 **W** | _pending_ |
@@ -2970,11 +2970,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="old-dominion-schedule"></a>
 <details>
-<summary><b>#72 Old Dominion — proj. 5-7 (6.9 xWins)</b></summary>
+<summary><b>#72 Old Dominion — proj. 4-7 (5.9 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | Norfolk State | H | — | — | ✅ **W** 31-10 |
+| 1 | Sep 05 | Norfolk State | H | — | — | _pending_ |
 | 2 | Sep 12 | #29 Virginia Tech | A | 29.4% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #122 East Carolina | H | 99.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #59 James Madison | H | 51.5% | 🟢 **W** | _pending_ |
@@ -2991,11 +2991,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="south-alabama-schedule"></a>
 <details>
-<summary><b>#77 South Alabama — proj. 6-6 (8.0 xWins)</b></summary>
+<summary><b>#77 South Alabama — proj. 5-6 (7.0 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | SE Louisiana | H | — | — | ✅ **W** 39-14 |
+| 1 | Sep 05 | SE Louisiana | H | — | — | _pending_ |
 | 2 | Sep 12 | #94 Tulane | A | 89.8% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #95 Ohio | H | 94.0% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #62 Kentucky | A | 36.3% | 🔴 **L** | _pending_ |
@@ -3012,11 +3012,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="marshall-schedule"></a>
 <details>
-<summary><b>#96 Marshall — proj. 4-8 (3.4 xWins)</b></summary>
+<summary><b>#96 Marshall — proj. 4-7 (3.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #6 Penn State | A | — | — | ❌ **L** 0-45 |
+| 1 | Sep 05 | #6 Penn State | A | — | — | _pending_ |
 | 2 | Sep 12 | #76 Middle Tennessee | H | 8.4% | 🔴 **L** | _pending_ |
 | 3 | Sep 19 | #101 Missouri State | A | 58.1% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | Gardner-Webb | H | 99.9% | 🟢 **W** | _pending_ |
@@ -3033,11 +3033,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="ul-monroe-schedule"></a>
 <details>
-<summary><b>#99 UL Monroe — proj. 4-8 (3.4 xWins)</b></summary>
+<summary><b>#99 UL Monroe — proj. 4-7 (3.4 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #35 Mississippi State | A | — | — | ❌ **L** 13-62 |
+| 1 | Sep 05 | #35 Mississippi State | A | — | — | _pending_ |
 | 2 | Sep 12 | #107 UAB | A | 54.5% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | SE Louisiana | H | 99.9% | 🟢 **W** | _pending_ |
 | 4 | Sep 26 | #102 Florida Atlantic | H | 61.7% | 🟢 **W** | _pending_ |
@@ -3054,11 +3054,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="arkansas-state-schedule"></a>
 <details>
-<summary><b>#118 Arkansas State — proj. 1-11 (2.2 xWins)</b></summary>
+<summary><b>#118 Arkansas State — proj. 1-10 (2.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #1 Memphis | A | — | — | ❌ **L** 24-42 |
+| 1 | Sep 05 | #1 Memphis | A | — | — | _pending_ |
 | 2 | Sep 12 | West Georgia | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 20 | #108 TCU | A | 33.3% | 🔴 **L** | _pending_ |
 | 4 | Sep 26 | #12 Kennesaw State | H | 0.6% | 🔴 **L** | _pending_ |
@@ -3075,11 +3075,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 
 <a id="coastal-carolina-schedule"></a>
 <details>
-<summary><b>#121 Coastal Carolina — proj. 2-10 (2.2 xWins)</b></summary>
+<summary><b>#121 Coastal Carolina — proj. 2-9 (2.2 xWins)</b></summary>
 
 | Wk | Date | Opponent | Site | Win Prob | Projection | Result |
 |---:|:---|:---|:---:|---:|:---:|:---|
-| 1 | Sep 05 | #51 West Virginia | A | — | — | ❌ **L** 24-31 |
+| 1 | Sep 05 | #51 West Virginia | A | — | — | _pending_ |
 | 2 | Sep 12 | Fordham | H | 99.9% | 🟢 **W** | _pending_ |
 | 3 | Sep 19 | #55 Delaware | A | 0.8% | 🔴 **L** | _pending_ |
 | 4 | Sep 24 | #113 Liberty | H | 48.0% | 🔴 **L** | _pending_ |
@@ -3102,11 +3102,11 @@ Grouped by conference. Click a team to expand its full-season outlook.
 |:---|:---|
 | Season | 2026 |
 | Ranking basis | Week 1 |
-| Games covered | 824 (75 played, 749 remaining) |
+| Games covered | 824 (8 played, 816 remaining) |
 | Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-09-08 22:05 UTC |
+| Generated | 2026-09-09 12:51 UTC |
 
 Regenerate with:
 

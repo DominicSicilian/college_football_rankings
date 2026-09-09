@@ -6,6 +6,7 @@ End-to-end college football rankings and prediction workflow using SPI, Nature, 
 
 | Report | What's In It |
 |:---|:---|
+| **[🗓️ This Week's Picks →](UPCOMING.md)** | Every game on the upcoming week's slate with the model's pick and win probability |
 | **[📈 Latest Rankings →](RANKINGS.md)** | Current SPI Top 25, the full FBS board, and conference strength |
 | **[🔮 Season Predictions →](PREDICTIONS.md)** | Every team's full-season schedule with win probabilities and projected records |
 | **[🎯 Model Performance →](PERFORMANCE.md)** | Accuracy by season, segment, week and confidence band, plus the full prediction log |
@@ -16,7 +17,7 @@ download, no local setup needed.
 <!-- BEGIN:TOP25 -->
 
 **2026 SPI Top 25 — Week 1**  
-_Updated 2026-09-08 22:05 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
+_Updated 2026-09-09 12:51 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
 
 
 | # | Team | Conf | Record | SPI | Nature | SOR |
@@ -65,7 +66,7 @@ _Updated 2026-09-08 22:05 UTC • [Full rankings](RANKINGS.md) • [Season predi
 
 - `rankings.py`: Core ranking generation pipeline
 - `api_cache.py`: On-disk cache for CFBD API responses
-- `generate_markdown_reports.py`: Builds `RANKINGS.md` / `PREDICTIONS.md` / README Top 25
+- `generate_markdown_reports.py`: Builds `UPCOMING.md` / `RANKINGS.md` / `PREDICTIONS.md` / README Top 25
 - `scripts/weekly_update.sh`: One-shot weekly refresh + publish + push
 - `scripts/completed_week.py`: Detects the latest fully completed week
 - `scripts/reconcile_cache.py`: Purges active-season game caches stale vs live results

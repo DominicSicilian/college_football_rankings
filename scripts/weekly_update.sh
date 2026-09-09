@@ -139,7 +139,7 @@ log "Committing"
 # their conference companions, and prediction outputs. Intermediates
 # (nature_stats_*, sor_stats_*, teams_*, team_standings_*) are regenerated on
 # every run, so they stay out of git.
-git add -A RANKINGS.md PREDICTIONS.md PERFORMANCE.md README.md docs published_rankings
+git add -A UPCOMING.md RANKINGS.md PREDICTIONS.md PERFORMANCE.md README.md docs published_rankings
 shopt -s nullglob
 git add -A data_exports/spi_rankings_*.csv \
            data_exports/conference_rankings_*.csv \
