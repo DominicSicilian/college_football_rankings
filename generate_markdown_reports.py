@@ -27,6 +27,7 @@ PREDICTIONS_DIR = os.path.join(DATA_EXPORTS_DIR, "predictions")
 
 RANKINGS_MD = os.path.join(BASE_DIR, "RANKINGS.md")
 PREDICTIONS_MD = os.path.join(BASE_DIR, "PREDICTIONS.md")
+UPCOMING_MD = os.path.join(BASE_DIR, "UPCOMING.md")
 README_MD = os.path.join(BASE_DIR, "README.md")
 
 README_TOP25_START = "<!-- BEGIN:TOP25 -->"
@@ -853,6 +854,133 @@ def write_predictions_md(
         f.write("\n".join(parts))
 
 
+def upcoming_week(pending: List[Dict]) -> Optional[int]:
+    """The soonest week that still has unplayed games.
+
+    The pending export is regenerated each run with only not-yet-played games,
+    so the smallest week number in it is the next slate to preview. A game
+    played late in its week keeps that week 'upcoming' until it actually kicks
+    off, which is the behavior we want.
+    """
+    weeks = [g["week"] for g in pending if g.get("week")]
+    return min(weeks) if weeks else None
+
+
+def confidence_of(game: Dict) -> Optional[float]:
+    """Win probability the model assigns to the side it picked (50-99.9)."""
+    pick = (game.get("predicted_winner") or "").strip()
+    if pick and pick == game.get("home_team"):
+        return game.get("home_win_prob")
+    if pick and pick == game.get("away_team"):
+        return game.get("away_win_prob")
+    hp, ap = game.get("home_win_prob"), game.get("away_win_prob")
+    if hp is None or ap is None:
+        return hp if ap is None else ap
+    return max(hp, ap)
+
+
+def write_upcoming_md(year: int, rows: List[Dict], pending: List[Dict], pending_path: Optional[str]) -> Optional[int]:
+    rank_lookup = {r["team"]: r["rank"] for r in rows}
+    target = upcoming_week(pending)
+    week_games = [g for g in pending if g.get("week") == target] if target is not None else []
+    week_games.sort(key=lambda g: (g.get("start_date") or "", -(confidence_of(g) or 0)))
+
+    def team_cell(team: str) -> str:
+        rk = rank_lookup.get(team)
+        return f"#{rk} {md_escape(team)}" if rk else md_escape(team)
+
+    parts = [
+        f"# {year} Upcoming Game Predictions",
+        "",
+        f"> Auto-generated {generated_stamp()} from the newest prediction export.",
+        "> Do not edit by hand — run `python generate_markdown_reports.py` instead.",
+        "",
+        f"**Week {target if target is not None else '?'}** &nbsp;•&nbsp; "
+        f"{len(week_games)} games &nbsp;•&nbsp; "
+        "[Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Full-Season Predictions →](PREDICTIONS.md)"
+        " &nbsp;•&nbsp; [Model Performance →](PERFORMANCE.md) &nbsp;•&nbsp; [Back to README →](README.md)",
+        "",
+        "Every pending game for the upcoming week, with the model's pick and its win probability.",
+        "Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.",
+        "",
+    ]
+
+    if not week_games:
+        pretty = os.path.relpath(pending_path, BASE_DIR) if pending_path else "n/a"
+        parts += [
+            "> [!NOTE]",
+            "> No pending games found — either the season is between slates or the prediction",
+            f"> export (`{pretty}`) has no remaining games. This page will fill in on the next run.",
+            "",
+        ]
+    else:
+        parts += [
+            "| Date | Matchup | Site | Prediction | Win Prob |",
+            "|:---|:---|:---:|:---|---:|",
+        ]
+        for g in week_games:
+            home, away = g["home_team"], g["away_team"]
+            if g["neutral_site"]:
+                site, matchup = "N", f"{team_cell(away)} vs {team_cell(home)}"
+            else:
+                site, matchup = "@", f"{team_cell(away)} @ {team_cell(home)}"
+            conf = confidence_of(g)
+            pick = (g.get("predicted_winner") or "").strip() or "—"
+            note = f" · _{md_escape(g['notes'])}_" if g.get("notes") else ""
+            parts.append(
+                "| {date} | {matchup}{note} | {site} | **{pick}** | {conf} |".format(
+                    date=format_date(g["start_date"]),
+                    matchup=matchup,
+                    note=note,
+                    site=site,
+                    pick=md_escape(pick),
+                    conf=f"{conf:.1f}%" if conf is not None else "—",
+                )
+            )
+        parts.append("")
+        upsets = [g for g in week_games
+                  if (rank_lookup.get(g["predicted_winner"], 999) or 999)
+                  > (rank_lookup.get(g["away_team"] if g["predicted_winner"] == g["home_team"] else g["home_team"], 999) or 999)]
+        if upsets:
+            parts += [
+                f"**Model disagrees with the ranking in {len(upsets)} game(s)** "
+                "(picks the lower-ranked team):",
+                "",
+            ]
+            for g in sorted(upsets, key=lambda x: x.get("start_date") or ""):
+                conf = confidence_of(g)
+                parts.append(
+                    f"- {format_date(g['start_date'])}: **{md_escape(g['predicted_winner'])}** over "
+                    f"{team_cell(g['away_team'] if g['predicted_winner']==g['home_team'] else g['home_team'])}"
+                    f" ({conf:.1f}%)" if conf is not None else ""
+                )
+            parts.append("")
+
+    parts += [
+        "---",
+        "",
+        "| Field | Value |",
+        "|:---|:---|",
+        f"| Season | {year} |",
+        f"| Week previewed | {target if target is not None else 'n/a'} |",
+        f"| Games | {len(week_games)} |",
+        "| Source | `{}` |".format(os.path.relpath(pending_path, BASE_DIR) if pending_path else "n/a"),
+        f"| Generated | {generated_stamp()} |",
+        "",
+        "Regenerate with:",
+        "",
+        "```bash",
+        f"python predict_upcoming_matchups.py --year {year} --all-pending",
+        "python generate_markdown_reports.py",
+        "```",
+        "",
+    ]
+
+    with open(UPCOMING_MD, "w", encoding="utf-8") as f:
+        f.write("\n".join(parts))
+    return target
+
+
 def update_readme(year: int, rows: List[Dict], label: str, gate: Dict) -> bool:
     if not os.path.exists(README_MD):
         return False
@@ -921,6 +1049,8 @@ def main() -> None:
 
     write_rankings_md(args.year, rankings_path, rows, label, gate)
     write_predictions_md(args.year, rows, schedules, sources, label)
+    pending, pending_path = load_pending_games(args.year)
+    upcoming_target = write_upcoming_md(args.year, rows, pending, pending_path)
     readme_updated = update_readme(args.year, rows, label, gate)
 
     print(f"Season:           {args.year} ({release_title(label, args.year)})")
@@ -936,6 +1066,8 @@ def main() -> None:
     print(f"Teams scheduled:  {sum(1 for r in rows if schedules.get(r['team']))}")
     print(f"Wrote:            {os.path.relpath(RANKINGS_MD, BASE_DIR)}")
     print(f"Wrote:            {os.path.relpath(PREDICTIONS_MD, BASE_DIR)}")
+    print(f"Wrote:            {os.path.relpath(UPCOMING_MD, BASE_DIR)} "
+          f"(week {upcoming_target if upcoming_target is not None else 'n/a'})")
     print(f"README Top 25:    {'updated' if readme_updated else 'markers not found — skipped'}")
 
 
