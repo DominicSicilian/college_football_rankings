@@ -1,6 +1,6 @@
 # 2026 SPI Rankings — Week 2
 
-> Auto-generated 2026-09-13 23:00 UTC from `data_exports/spi_rankings_2026_w2.csv`.
+> Auto-generated 2026-09-13 23:06 UTC from `data_exports/spi_rankings_2026_w2.csv`.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Release:** Week 2 &nbsp;•&nbsp; **Teams ranked:** 138 &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -218,7 +218,7 @@ components behind each team's SPI.
 | In-season gate | passed (90% threshold) |
 | Source file | `data_exports/spi_rankings_2026_w2.csv` |
 | Conference file | `data_exports/conference_rankings_2026_w2.csv` |
-| Generated | 2026-09-13 23:00 UTC |
+| Generated | 2026-09-13 23:06 UTC |
 
 Regenerate with:
 
