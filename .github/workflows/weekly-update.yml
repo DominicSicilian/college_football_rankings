@@ -10,6 +10,14 @@ on:
   schedule:
     # 16:00 UTC every Monday = 12:00 PM ET during EDT (11:00 AM ET once EST starts).
     - cron: "0 16 * * 1"
+  push:
+    # The cloud "Monday Update Supervisor" routine cannot dispatch a workflow
+    # (its GitHub integration lacks actions:write), but it CAN push a branch.
+    # It pushes an empty commit to `refresh-please` to trigger a fresh refresh.
+    # The job checks out and pushes to `main`, never to refresh-please, so there
+    # is no trigger loop.
+    branches:
+      - refresh-please
   workflow_dispatch:
     inputs:
       year:
