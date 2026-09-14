@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-09-13 23:06 UTC from the newest prediction exports.
+> Auto-generated 2026-09-14 20:17 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Week 2 &nbsp;•&nbsp; **Teams:** 138 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -3106,7 +3106,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-09-13 23:06 UTC |
+| Generated | 2026-09-14 20:17 UTC |
 
 Regenerate with:
 
