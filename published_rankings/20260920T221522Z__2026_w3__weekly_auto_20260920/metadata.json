@@ -1,0 +1,14 @@
+{
+  "published_at_utc": "20260920T221522Z",
+  "season_year": 2026,
+  "release_label": "weekly_auto_20260920",
+  "snapshot_label": "2026_w3",
+  "source_spi_file": "spi_rankings_2026_w3.csv",
+  "files": [
+    "spi_rankings_2026_w3.csv",
+    "conference_rankings_2026_w3.csv",
+    "nature_stats_2026_w3.csv",
+    "sor_stats_2026_w3.csv",
+    "team_standings_2026_w3.csv"
+  ]
+}
