@@ -17,7 +17,7 @@ download, no local setup needed.
 <!-- BEGIN:TOP25 -->
 
 **2026 SPI Top 25 — Week 3**  
-_Updated 2026-09-20 22:15 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
+_Updated 2026-09-21 20:24 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
 
 
 | # | Team | Conf | Record | SPI | Nature | SOR |
