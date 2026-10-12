@@ -1,6 +1,6 @@
 # 2026 Upcoming Game Predictions
 
-> Auto-generated 2026-10-11 19:20 UTC from the newest prediction export.
+> Auto-generated 2026-10-12 16:24 UTC from the newest prediction export.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Week 7** &nbsp;•&nbsp; 62 games &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Full-Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Model Performance →](PERFORMANCE.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -20,8 +20,6 @@ Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.
 | Oct 16 | #29 Memphis @ #87 Tulane | @ | **Memphis** | 88.1% |
 | Oct 17 | #84 App State @ #125 Coastal Carolina | @ | **App State** | 93.2% |
 | Oct 17 | #81 Washington @ #60 Purdue | @ | **Purdue** | 72.6% |
-| Oct 17 | #43 Wisconsin @ #6 UCLA | @ | **UCLA** | 92.7% |
-| Oct 17 | #21 Nebraska @ #22 Oregon | @ | **Oregon** | 56.5% |
 | Oct 17 | Charleston Southern @ #70 Clemson | @ | **Clemson** | 99.9% |
 | Oct 17 | #31 Northwestern @ #102 Michigan State | @ | **Northwestern** | 94.8% |
 | Oct 17 | #26 Pittsburgh @ #98 Boston College | @ | **Pittsburgh** | 94.4% |
@@ -60,6 +58,7 @@ Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.
 | Oct 17 | #95 Arkansas @ #89 Vanderbilt | @ | **Vanderbilt** | 63.4% |
 | Oct 17 | #112 Arkansas State @ #120 Southern Miss | @ | **Arkansas State** | 60.5% |
 | Oct 17 | Elon @ #107 Stanford | @ | **Stanford** | 99.9% |
+| Oct 17 | #43 Wisconsin @ #6 UCLA | @ | **UCLA** | 92.7% |
 | Oct 17 | #41 Oklahoma State @ #11 Houston | @ | **Houston** | 88.9% |
 | Oct 17 | #18 Kentucky @ #53 Oklahoma | @ | **Kentucky** | 79.4% |
 | Oct 17 | #2 Notre Dame @ #9 BYU | @ | **Notre Dame** | 69.0% |
@@ -72,12 +71,13 @@ Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.
 | Oct 18 | #30 New Mexico @ #132 Hawai'i | @ | **New Mexico** | 99.6% |
 | Oct 18 | #17 Wake Forest @ #90 California | @ | **Wake Forest** | 94.5% |
 | Oct 18 | #69 Fresno State @ #122 San Diego State | @ | **Fresno State** | 93.2% |
+| Oct 18 | #21 Nebraska @ #22 Oregon | @ | **Oregon** | 56.5% |
 
 **Model disagrees with the ranking in 3 game(s)** (picks the lower-ranked team):
 
 - Oct 15: **Sam Houston** over #110 Western Kentucky (51.0%)
 - Oct 16: **Texas State** over #85 Colorado State (52.5%)
-- Oct 17: **Oregon** over #21 Nebraska (56.5%)
+- Oct 18: **Oregon** over #21 Nebraska (56.5%)
 
 ---
 
@@ -87,7 +87,7 @@ Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.
 | Week previewed | 7 |
 | Games | 62 |
 | Source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
-| Generated | 2026-10-11 19:20 UTC |
+| Generated | 2026-10-12 16:24 UTC |
 
 Regenerate with:
 

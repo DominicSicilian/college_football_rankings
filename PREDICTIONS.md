@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-10-11 19:20 UTC from the newest prediction exports.
+> Auto-generated 2026-10-12 16:24 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Week 6 &nbsp;•&nbsp; **Teams:** 138 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -599,7 +599,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 4 | Sep 26 | #102 Michigan State | A | — | — | ✅ **W** 31-13 |
 | 5 | Oct 03 | #96 Maryland | H | — | — | ✅ **W** 48-23 |
 | 6 | Oct 10 | #3 Indiana | H | — | — | ❌ **L** 17-20 |
-| 7 | Oct 17 | #22 Oregon | A | 43.5% | 🔴 **L** | _pending_ |
+| 7 | Oct 18 | #22 Oregon | A | 43.5% | 🔴 **L** | _pending_ |
 | 9 | Oct 31 | #81 Washington | H | 93.1% | 🟢 **W** | _pending_ |
 | 10 | Nov 07 | #72 Illinois | A | 85.0% | 🟢 **W** | _pending_ |
 | 11 | Nov 14 | #109 Rutgers | A | 97.3% | 🟢 **W** | _pending_ |
@@ -619,7 +619,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 3 | Sep 19 | Portland State | H | — | — | ✅ **W** 84-0 |
 | 4 | Sep 26 | #25 USC | A | — | — | ✅ **W** 41-27 |
 | 6 | Oct 10 | #6 UCLA | H | — | — | ❌ **L** 15-17 |
-| 7 | Oct 17 | #21 Nebraska | H | 56.5% | 🟢 **W** | _pending_ |
+| 7 | Oct 18 | #21 Nebraska | H | 56.5% | 🟢 **W** | _pending_ |
 | 8 | Oct 24 | #72 Illinois | A | 84.9% | 🟢 **W** | _pending_ |
 | 9 | Oct 31 | #31 Northwestern | H | 64.9% | 🟢 **W** | _pending_ |
 | 10 | Nov 07 | #12 Ohio State | A | 27.4% | 🔴 **L** | _pending_ |
@@ -3106,7 +3106,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-10-11 19:20 UTC |
+| Generated | 2026-10-12 16:24 UTC |
 
 Regenerate with:
 
