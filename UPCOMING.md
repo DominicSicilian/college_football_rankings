@@ -1,93 +1,86 @@
 # 2026 Upcoming Game Predictions
 
-> Auto-generated 2026-10-12 16:24 UTC from the newest prediction export.
+> Auto-generated 2026-10-18 16:12 UTC from the newest prediction export.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
-**Week 7** &nbsp;•&nbsp; 62 games &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Full-Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Model Performance →](PERFORMANCE.md) &nbsp;•&nbsp; [Back to README →](README.md)
+**Week 8** &nbsp;•&nbsp; 56 games &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Full-Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Model Performance →](PERFORMANCE.md) &nbsp;•&nbsp; [Back to README →](README.md)
 
 Every pending game for the upcoming week, with the model's pick and its win probability.
 Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.
 
 | Date | Matchup | Site | Prediction | Win Prob |
 |:---|:---|:---:|:---|---:|
-| Oct 13 | #103 Delaware @ #119 Middle Tennessee | @ | **Delaware** | 69.6% |
-| Oct 14 | #91 Florida International @ #86 Jacksonville State | @ | **Jacksonville State** | 60.2% |
-| Oct 14 | #115 Kennesaw State @ #126 Missouri State | @ | **Kennesaw State** | 71.7% |
-| Oct 15 | #110 Western Kentucky @ #113 Sam Houston | @ | **Sam Houston** | 51.0% |
-| Oct 15 | #73 East Carolina @ #106 UAB | @ | **East Carolina** | 79.6% |
-| Oct 15 | #104 Georgia Southern @ #123 Old Dominion | @ | **Georgia Southern** | 73.9% |
-| Oct 16 | #85 Colorado State @ #92 Texas State | @ | **Texas State** | 52.5% |
-| Oct 16 | #29 Memphis @ #87 Tulane | @ | **Memphis** | 88.1% |
-| Oct 17 | #84 App State @ #125 Coastal Carolina | @ | **App State** | 93.2% |
-| Oct 17 | #81 Washington @ #60 Purdue | @ | **Purdue** | 72.6% |
-| Oct 17 | Charleston Southern @ #70 Clemson | @ | **Clemson** | 99.9% |
-| Oct 17 | #31 Northwestern @ #102 Michigan State | @ | **Northwestern** | 94.8% |
-| Oct 17 | #26 Pittsburgh @ #98 Boston College | @ | **Pittsburgh** | 94.4% |
-| Oct 17 | #28 Florida @ #7 Texas | @ | **Texas** | 85.5% |
-| Oct 17 | #12 Ohio State @ #3 Indiana | @ | **Indiana** | 84.4% |
-| Oct 17 | #78 Virginia @ #42 SMU | @ | **SMU** | 84.4% |
-| Oct 17 | #35 Georgia State @ #13 James Madison | @ | **James Madison** | 79.4% |
-| Oct 17 | #134 Ball State @ #124 Bowling Green | @ | **Bowling Green** | 76.5% |
-| Oct 17 | #67 Kansas @ #48 Kansas State | @ | **Kansas State** | 70.7% |
-| Oct 17 | #36 Cincinnati @ #61 West Virginia | @ | **Cincinnati** | 68.4% |
-| Oct 17 | #8 Mississippi State @ #16 LSU | @ | **Mississippi State** | 60.9% |
-| Oct 17 | #45 Florida Atlantic @ #63 Army | @ | **Florida Atlantic** | 60.0% |
-| Oct 17 | #109 Rutgers @ #96 Maryland | @ | **Maryland** | 75.8% |
-| Oct 17 | The Citadel @ #62 Texas A&M | @ | **Texas A&M** | 99.9% |
-| Oct 17 | #138 Charlotte @ #121 Temple | @ | **Temple** | 93.1% |
-| Oct 17 | #94 Massachusetts @ #118 Buffalo | @ | **Massachusetts** | 81.3% |
-| Oct 17 | #82 Western Michigan @ #100 Central Michigan | @ | **Western Michigan** | 70.0% |
-| Oct 17 | #38 Auburn @ #4 Georgia | @ | **Georgia** | 95.6% |
-| Oct 17 | #76 Arizona State @ #14 Texas Tech | @ | **Texas Tech** | 95.1% |
-| Oct 17 | #129 Akron @ #99 Miami (OH) | @ | **Miami (OH)** | 92.9% |
-| Oct 17 | #1 Alabama @ #23 Tennessee | @ | **Alabama** | 89.4% |
-| Oct 17 | #133 Northern Illinois @ #117 Wyoming | @ | **Wyoming** | 86.0% |
-| Oct 17 | #93 Georgia Tech @ #50 Virginia Tech | @ | **Virginia Tech** | 85.3% |
-| Oct 17 | #83 Toledo @ #108 Eastern Michigan | @ | **Toledo** | 76.8% |
-| Oct 17 | #47 North Carolina @ #32 Duke | @ | **Duke** | 74.6% |
-| Oct 17 | #55 UNLV @ #44 Air Force | @ | **Air Force** | 70.4% |
-| Oct 17 | #66 Penn State @ #56 Michigan | @ | **Michigan** | 64.6% |
-| Oct 17 | #15 Missouri @ #27 Ole Miss | @ | **Missouri** | 61.9% |
-| Oct 17 | #88 Tulsa @ #127 Rice | @ | **Tulsa** | 92.0% |
-| Oct 17 | #74 Troy @ #57 Louisiana | @ | **Louisiana** | 69.1% |
-| Oct 17 | #136 Washington State @ #33 Oregon State | @ | **Oregon State** | 99.8% |
-| Oct 17 | #128 Kent State @ #58 South Florida | @ | **South Florida** | 98.5% |
-| Oct 17 | #54 Florida State @ #5 Miami | @ | **Miami** | 97.6% |
-| Oct 17 | #111 Nevada @ #37 North Dakota State | @ | **North Dakota State** | 97.3% |
-| Oct 17 | #80 TCU @ #24 Baylor | @ | **Baylor** | 92.5% |
-| Oct 17 | #95 Arkansas @ #89 Vanderbilt | @ | **Vanderbilt** | 63.4% |
-| Oct 17 | #112 Arkansas State @ #120 Southern Miss | @ | **Arkansas State** | 60.5% |
-| Oct 17 | Elon @ #107 Stanford | @ | **Stanford** | 99.9% |
-| Oct 17 | #43 Wisconsin @ #6 UCLA | @ | **UCLA** | 92.7% |
-| Oct 17 | #41 Oklahoma State @ #11 Houston | @ | **Houston** | 88.9% |
-| Oct 17 | #18 Kentucky @ #53 Oklahoma | @ | **Kentucky** | 79.4% |
-| Oct 17 | #2 Notre Dame @ #9 BYU | @ | **Notre Dame** | 69.0% |
-| Oct 17 | #59 Louisville @ #71 Syracuse | @ | **Louisville** | 53.6% |
-| Oct 18 | #46 Louisiana Tech @ #131 UL Monroe | @ | **Louisiana Tech** | 99.0% |
-| Oct 18 | #97 Navy @ #49 UTSA | @ | **UTSA** | 90.2% |
-| Oct 18 | #105 San José State @ #135 UTEP | @ | **San José State** | 91.2% |
-| Oct 18 | #75 Ohio @ #137 Sacramento State | @ | **Ohio** | 99.1% |
-| Oct 18 | #10 Utah @ #77 Colorado | @ | **Utah** | 95.1% |
-| Oct 18 | #30 New Mexico @ #132 Hawai'i | @ | **New Mexico** | 99.6% |
-| Oct 18 | #17 Wake Forest @ #90 California | @ | **Wake Forest** | 94.5% |
-| Oct 18 | #69 Fresno State @ #122 San Diego State | @ | **Fresno State** | 93.2% |
-| Oct 18 | #21 Nebraska @ #22 Oregon | @ | **Oregon** | 56.5% |
+| Oct 20 | #113 Middle Tennessee @ #104 Florida International | @ | **Florida International** | 76.1% |
+| Oct 20 | #117 Missouri State @ #118 Delaware | @ | **Delaware** | 54.2% |
+| Oct 20 | #62 South Alabama @ #109 Marshall | @ | **South Alabama** | 93.4% |
+| Oct 22 | #124 New Mexico State @ #121 Sam Houston | @ | **Sam Houston** | 66.3% |
+| Oct 22 | #39 Liberty @ #120 Kennesaw State | @ | **Liberty** | 98.9% |
+| Oct 22 | #11 James Madison @ #71 App State | @ | **James Madison** | 96.8% |
+| Oct 22 | #88 East Carolina @ #45 Memphis | @ | **Memphis** | 91.8% |
+| Oct 23 | #50 Duke @ #84 Virginia | @ | **Duke** | 80.4% |
+| Oct 23 | #107 Massachusetts @ #101 UConn | @ | **UConn** | 67.2% |
+| Oct 24 | #43 Army @ #85 Tulsa | @ | **Army** | 84.9% |
+| Oct 24 | #38 Air Force @ #108 Wyoming | @ | **Air Force** | 96.8% |
+| Oct 24 | #73 NC State @ #93 Stanford | @ | **NC State** | 72.2% |
+| Oct 24 | #111 Michigan State @ #4 UCLA | @ | **UCLA** | 99.9% |
+| Oct 24 | #1 BYU @ #53 UCF | @ | **BYU** | 97.4% |
+| Oct 24 | #22 Iowa @ #69 Minnesota | @ | **Iowa** | 89.7% |
+| Oct 24 | #61 Iowa State @ #24 Arizona | @ | **Arizona** | 89.4% |
+| Oct 24 | #21 Oregon @ #67 Illinois | @ | **Oregon** | 89.3% |
+| Oct 24 | #75 Colorado @ #37 Oklahoma State | @ | **Oklahoma State** | 87.9% |
+| Oct 24 | #41 Baylor @ #87 Kansas | @ | **Baylor** | 87.6% |
+| Oct 24 | #15 Texas Tech @ #44 Cincinnati | @ | **Texas Tech** | 87.2% |
+| Oct 24 | #46 Kansas State @ #79 Arizona State | @ | **Kansas State** | 78.3% |
+| Oct 24 | #2 Houston @ #14 Utah | @ | **Houston** | 73.7% |
+| Oct 24 | #54 Virginia Tech @ #51 Clemson | @ | **Clemson** | 60.7% |
+| Oct 24 | #130 Rice @ #66 Florida Atlantic | @ | **Florida Atlantic** | 99.5% |
+| Oct 24 | #100 Rutgers @ #30 Northwestern | @ | **Northwestern** | 97.8% |
+| Oct 24 | #42 Pittsburgh @ #3 Miami | @ | **Miami** | 97.5% |
+| Oct 24 | #90 California @ #29 SMU | @ | **SMU** | 97.5% |
+| Oct 24 | #5 Indiana @ #57 Michigan | @ | **Indiana** | 96.3% |
+| Oct 24 | #8 LSU @ #19 Auburn | @ | **LSU** | 71.9% |
+| Oct 24 | #63 West Virginia @ #52 TCU | @ | **TCU** | 66.3% |
+| Oct 24 | #74 Western Michigan @ #76 Toledo | @ | **Toledo** | 56.0% |
+| Oct 24 | #135 Akron @ #129 Kent State | @ | **Kent State** | 67.2% |
+| Oct 24 | #99 Miami (OH) @ #112 Central Michigan | @ | **Miami (OH)** | 64.4% |
+| Oct 24 | #55 Texas A&M @ #6 Alabama · _FLEX: 3:30 - 4:30pm OR 6 - 8pm ET start_ | @ | **Alabama** | 97.4% |
+| Oct 24 | #138 Sacramento State @ #126 Ball State | @ | **Ball State** | 96.2% |
+| Oct 24 | #131 Bowling Green @ #115 Buffalo | @ | **Buffalo** | 92.3% |
+| Oct 24 | #48 North Texas @ #96 Navy | @ | **North Texas** | 91.0% |
+| Oct 24 | #59 Oklahoma @ #26 Mississippi State · _FLEX: 3:30 - 4:30pm OR 6 - 8pm ET start_ | @ | **Mississippi State** | 85.4% |
+| Oct 24 | #16 Tennessee @ #40 South Carolina · _AFTERNOON: 3:30 - 4:30pm ET start_ | @ | **Tennessee** | 85.3% |
+| Oct 24 | #78 Boston College @ #97 Georgia Tech | @ | **Boston College** | 70.8% |
+| Oct 24 | #137 Hawai'i @ #134 Northern Illinois | @ | **Northern Illinois** | 69.6% |
+| Oct 24 | #133 UL Monroe @ #94 Troy | @ | **Troy** | 98.5% |
+| Oct 24 | #119 Eastern Michigan @ #70 Ohio | @ | **Ohio** | 97.6% |
+| Oct 24 | #123 Old Dominion @ #34 Louisiana Tech | @ | **Louisiana Tech** | 99.7% |
+| Oct 24 | #36 Louisiana @ #122 Southern Miss | @ | **Louisiana** | 99.3% |
+| Oct 24 | #95 San José State @ #116 Nevada | @ | **San José State** | 74.7% |
+| Oct 24 | #31 Boise State @ #132 Washington State | @ | **Boise State** | 99.9% |
+| Oct 24 | #114 San Diego State @ #102 Colorado State | @ | **Colorado State** | 79.1% |
+| Oct 24 | #58 Georgia State @ #103 Arkansas State | @ | **Georgia State** | 90.5% |
+| Oct 24 | #89 Vanderbilt @ #18 Kentucky · _NIGHT: 6 - 8pm ET start_ | @ | **Kentucky** | 98.9% |
+| Oct 24 | #91 Syracuse @ #28 North Carolina | @ | **North Carolina** | 97.6% |
+| Oct 24 | #110 Utah State @ #77 Texas State | @ | **Texas State** | 92.2% |
+| Oct 24 | #23 USC @ #56 Wisconsin | @ | **USC** | 80.3% |
+| Oct 24 | #10 Ole Miss @ #17 Texas · _FLEX: 3:30 - 4:30pm OR 6 - 8pm ET start_ | @ | **Ole Miss** | 56.6% |
+| Oct 25 | #49 UTSA @ #65 Tulane | @ | **UTSA** | 62.2% |
+| Oct 25 | #33 North Dakota State @ #32 New Mexico | @ | **New Mexico** | 57.7% |
 
-**Model disagrees with the ranking in 3 game(s)** (picks the lower-ranked team):
+**Model disagrees with the ranking in 2 game(s)** (picks the lower-ranked team):
 
-- Oct 15: **Sam Houston** over #110 Western Kentucky (51.0%)
-- Oct 16: **Texas State** over #85 Colorado State (52.5%)
-- Oct 18: **Oregon** over #21 Nebraska (56.5%)
+- Oct 20: **Delaware** over #117 Missouri State (54.2%)
+- Oct 24: **Toledo** over #74 Western Michigan (56.0%)
 
 ---
 
 | Field | Value |
 |:---|:---|
 | Season | 2026 |
-| Week previewed | 7 |
-| Games | 62 |
+| Week previewed | 8 |
+| Games | 56 |
 | Source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
-| Generated | 2026-10-12 16:24 UTC |
+| Generated | 2026-10-18 16:12 UTC |
 
 Regenerate with:
 
