@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-10-18 16:12 UTC from the newest prediction exports.
+> Auto-generated 2026-10-19 16:53 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Week 7 &nbsp;•&nbsp; **Teams:** 138 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -919,7 +919,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 5 | Oct 03 | #53 UCF | H | — | — | ✅ **W** 27-17 |
 | 6 | Oct 10 | #46 Kansas State | A | — | — | ✅ **W** 35-16 |
 | 7 | Oct 17 | #37 Oklahoma State | H | — | — | ✅ **W** 35-32 |
-| 8 | Oct 24 | #14 Utah | A | 73.7% | 🟢 **W** | _pending_ |
+| 8 | Oct 25 | #14 Utah | A | 73.7% | 🟢 **W** | _pending_ |
 | 10 | Nov 07 | #44 Cincinnati | H | 97.7% | 🟢 **W** | _pending_ |
 | 11 | Nov 14 | #75 Colorado | A | 98.9% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #63 West Virginia | A | 97.9% | 🟢 **W** | _pending_ |
@@ -939,7 +939,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 4 | Sep 26 | #61 Iowa State | A | — | — | ✅ **W** 31-17 |
 | 6 | Oct 11 | #87 Kansas | H | — | — | ✅ **W** 41-24 |
 | 7 | Oct 18 | #75 Colorado | A | — | — | ✅ **W** 27-24 |
-| 8 | Oct 24 | #2 Houston | H | 26.3% | 🔴 **L** | _pending_ |
+| 8 | Oct 25 | #2 Houston | H | 26.3% | 🔴 **L** | _pending_ |
 | 9 | Oct 31 | #44 Cincinnati | A | 87.4% | 🟢 **W** | _pending_ |
 | 10 | Nov 07 | #1 BYU | H | 23.8% | 🔴 **L** | _pending_ |
 | 11 | Nov 14 | #24 Arizona | A | 65.1% | 🟢 **W** | _pending_ |
@@ -3106,7 +3106,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-10-18 16:12 UTC |
+| Generated | 2026-10-19 16:53 UTC |
 
 Regenerate with:
 
