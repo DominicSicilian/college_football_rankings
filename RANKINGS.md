@@ -1,6 +1,6 @@
 # 2026 SPI Rankings — Week 8
 
-> Auto-generated 2026-10-25 18:35 UTC from `data_exports/spi_rankings_2026_w8.csv`.
+> Auto-generated 2026-10-26 16:25 UTC from `data_exports/spi_rankings_2026_w8.csv`.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Release:** Week 8 &nbsp;•&nbsp; **Teams ranked:** 138 &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -218,7 +218,7 @@ components behind each team's SPI.
 | In-season gate | passed (90% threshold) |
 | Source file | `data_exports/spi_rankings_2026_w8.csv` |
 | Conference file | `data_exports/conference_rankings_2026_w8.csv` |
-| Generated | 2026-10-25 18:35 UTC |
+| Generated | 2026-10-26 16:25 UTC |
 
 Regenerate with:
 
