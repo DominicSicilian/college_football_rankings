@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-11-01 18:32 UTC from the newest prediction exports.
+> Auto-generated 2026-11-02 16:21 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Week 9 &nbsp;•&nbsp; **Teams:** 138 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -622,7 +622,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 6 | Oct 10 | #58 Washington | A | — | — | ✅ **W** 41-24 |
 | 8 | Oct 24 | #62 Minnesota | A | — | — | ❌ **L** 10-13 |
 | 9 | Oct 31 | #42 Wisconsin | H | — | — | ✅ **W** 30-0 |
-| 10 | Nov 07 | #35 Northwestern | A | 64.9% | 🟢 **W** | _pending_ |
+| 10 | Nov 08 | #35 Northwestern | A | 64.9% | 🟢 **W** | _pending_ |
 | 11 | Nov 14 | #90 Purdue | H | 98.6% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #56 Illinois | A | 82.8% | 🟢 **W** | _pending_ |
 | 13 | Nov 27 | #46 Nebraska | H | 85.7% | 🟢 **W** | _pending_ |
@@ -643,7 +643,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 7 | Oct 17 | #102 Michigan State | A | — | — | ✅ **W** 24-21 |
 | 8 | Oct 24 | #108 Rutgers | H | — | — | ✅ **W** 42-14 |
 | 9 | Oct 31 | #22 Oregon | A | — | — | ❌ **L** 26-34 |
-| 10 | Nov 07 | #25 Iowa | H | 35.1% | 🔴 **L** | _pending_ |
+| 10 | Nov 08 | #25 Iowa | H | 35.1% | 🔴 **L** | _pending_ |
 | 11 | Nov 14 | #8 Ohio State | A | 5.1% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #62 Minnesota | A | 74.3% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #56 Illinois | H | 77.2% | 🟢 **W** | _pending_ |
@@ -706,7 +706,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 7 | Oct 17 | #67 Penn State | H | — | — | ✅ **W** 21-18 |
 | 8 | Oct 24 | #2 Indiana | H | — | — | ❌ **L** 6-13 |
 | 9 | Oct 31 | #108 Rutgers | A | — | — | ✅ **W** 28-21 |
-| 10 | Nov 07 | #102 Michigan State | H | 97.7% | 🟢 **W** | _pending_ |
+| 10 | Nov 08 | #102 Michigan State | H | 97.7% | 🟢 **W** | _pending_ |
 | 11 | Nov 14 | #22 Oregon | A | 13.3% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #4 UCLA | H | 3.0% | 🔴 **L** | _pending_ |
 | 13 | Nov 28 | #8 Ohio State | A | 2.7% | 🔴 **L** | _pending_ |
@@ -832,7 +832,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 6 | Oct 10 | #56 Illinois | H | — | — | ❌ **L** 37-38 |
 | 7 | Oct 17 | #35 Northwestern | H | — | — | ❌ **L** 21-24 |
 | 8 | Oct 24 | #4 UCLA | A | — | — | ❌ **L** 10-28 |
-| 10 | Nov 07 | #49 Michigan | A | 2.3% | 🔴 **L** | _pending_ |
+| 10 | Nov 08 | #49 Michigan | A | 2.3% | 🔴 **L** | _pending_ |
 | 11 | Nov 14 | #58 Washington | H | 5.6% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #22 Oregon | H | 0.8% | 🔴 **L** | _pending_ |
 | 13 | Nov 28 | #108 Rutgers | A | 59.4% | 🟢 **W** | _pending_ |
@@ -3106,7 +3106,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-11-01 18:32 UTC |
+| Generated | 2026-11-02 16:21 UTC |
 
 Regenerate with:
 
