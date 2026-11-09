@@ -1,6 +1,6 @@
 # 2026 Season Predictions — Every Team's Projected Schedule
 
-> Auto-generated 2026-11-08 20:44 UTC from the newest prediction exports.
+> Auto-generated 2026-11-09 16:18 UTC from the newest prediction exports.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Ranking basis:** Week 10 &nbsp;•&nbsp; **Teams:** 138 &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -220,7 +220,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 8 | Oct 24 | #21 Ole Miss | H | — | — | ✅ **W** 34-27 |
 | 9 | Oct 31 | #56 Mississippi State | H | — | — | ✅ **W** 31-3 |
 | 10 | Nov 07 | #48 Missouri | A | — | — | ✅ **W** 34-20 |
-| 11 | Nov 14 | #13 LSU | A | 53.2% | 🟢 **W** | _pending_ |
+| 11 | Nov 15 | #13 LSU | A | 53.2% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #98 Arkansas | H | 99.7% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #63 Texas A&M | A | 96.4% | 🟢 **W** | _pending_ |
 
@@ -262,7 +262,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 7 | Oct 17 | #56 Mississippi State | H | — | — | ✅ **W** 31-0 |
 | 8 | Oct 24 | #46 Auburn | A | — | — | ✅ **W** 38-17 |
 | 10 | Nov 07 | #2 Alabama | H | — | — | ❌ **L** 13-31 |
-| 11 | Nov 14 | #10 Texas | H | 46.8% | 🔴 **L** | _pending_ |
+| 11 | Nov 15 | #10 Texas | H | 46.8% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #11 Tennessee | A | 38.8% | 🔴 **L** | _pending_ |
 | 13 | Nov 28 | #98 Arkansas | A | 99.3% | 🟢 **W** | _pending_ |
 
@@ -900,7 +900,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 8 | Oct 25 | #8 Houston | H | — | — | ✅ **W** 21-13 |
 | 9 | Oct 31 | #42 Cincinnati | A | — | — | ✅ **W** 49-25 |
 | 10 | Nov 07 | #12 BYU | H | — | — | ✅ **W** 28-20 |
-| 11 | Nov 14 | #19 Arizona | A | 83.1% | 🟢 **W** | _pending_ |
+| 11 | Nov 15 | #19 Arizona | A | 83.1% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #68 TCU | A | 98.7% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #43 West Virginia | H | 97.4% | 🟢 **W** | _pending_ |
 
@@ -963,7 +963,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 8 | Oct 24 | #42 Cincinnati | A | — | — | ❌ **L** 24-37 |
 | 9 | Oct 31 | #19 Arizona | H | — | — | ✅ **W** 34-26 |
 | 10 | Nov 08 | #43 West Virginia | H | — | — | ✅ **W** 53-48 |
-| 11 | Nov 14 | #34 Oklahoma State | A | 73.3% | 🟢 **W** | _pending_ |
+| 11 | Nov 15 | #34 Oklahoma State | A | 73.3% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #35 Baylor | A | 77.0% | 🟢 **W** | _pending_ |
 | 13 | Nov 27 | #68 TCU | H | 96.3% | 🟢 **W** | _pending_ |
 
@@ -984,7 +984,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 8 | Oct 24 | #54 Iowa State | H | — | — | ✅ **W** 39-3 |
 | 9 | Oct 31 | #16 Texas Tech | A | — | — | ❌ **L** 26-34 |
 | 10 | Nov 07 | #68 TCU | H | — | — | ✅ **W** 29-28 |
-| 11 | Nov 14 | #3 Utah | H | 16.9% | 🔴 **L** | _pending_ |
+| 11 | Nov 15 | #3 Utah | H | 16.9% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #85 Kansas State | A | 96.7% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #71 Arizona State | H | 95.8% | 🟢 **W** | _pending_ |
 
@@ -1005,7 +1005,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 8 | Oct 24 | #84 Colorado | H | — | — | ✅ **W** 57-24 |
 | 9 | Oct 31 | #54 Iowa State | A | — | — | ❌ **L** 49-51 |
 | 10 | Nov 07 | #85 Kansas State | A | — | — | ✅ **W** 66-28 |
-| 11 | Nov 14 | #16 Texas Tech | H | 26.7% | 🔴 **L** | _pending_ |
+| 11 | Nov 15 | #16 Texas Tech | H | 26.7% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #71 Arizona State | A | 82.6% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #86 Kansas | H | 95.3% | 🟢 **W** | _pending_ |
 
@@ -1324,7 +1324,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 7 | Oct 17 | #74 Syracuse | A | — | — | ✅ **W** 34-26 |
 | 9 | Oct 31 | #90 Stanford | H | — | — | ✅ **W** 52-24 |
 | 10 | Nov 08 | #116 Georgia Tech | A | — | — | ✅ **W** 44-17 |
-| 11 | Nov 14 | #47 North Carolina | A | 61.5% | 🟢 **W** | _pending_ |
+| 11 | Nov 15 | #47 North Carolina | A | 61.5% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #41 Pittsburgh | H | 67.6% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #18 Kentucky | A | 22.3% | 🔴 **L** | _pending_ |
 
@@ -1366,7 +1366,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 8 | Oct 24 | #74 Syracuse | H | — | — | ❌ **L** 30-31 |
 | 9 | Oct 31 | #1 Miami | H | — | — | ❌ **L** 35-38 |
 | 10 | Nov 07 | #97 UConn | A | — | — | ✅ **W** 38-21 |
-| 11 | Nov 14 | #33 Louisville | H | 38.5% | 🔴 **L** | _pending_ |
+| 11 | Nov 15 | #33 Louisville | H | 38.5% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #81 Virginia | A | 81.7% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #77 NC State | H | 87.2% | 🟢 **W** | _pending_ |
 
@@ -1387,7 +1387,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 7 | Oct 17 | #116 Georgia Tech | H | — | — | ✅ **W** 34-24 |
 | 8 | Oct 24 | #69 Clemson | A | — | — | ✅ **W** 20-16 |
 | 10 | Nov 07 | #27 SMU | A | — | — | ❌ **L** 28-51 |
-| 11 | Nov 14 | #90 Stanford | H | 92.3% | 🟢 **W** | _pending_ |
+| 11 | Nov 15 | #90 Stanford | H | 92.3% | 🟢 **W** | _pending_ |
 | 12 | Nov 21 | #1 Miami | A | 1.2% | 🔴 **L** | _pending_ |
 | 13 | Nov 28 | #81 Virginia | H | 86.1% | 🟢 **W** | _pending_ |
 
@@ -1534,7 +1534,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | 7 | Oct 17 | Elon | H | — | — | ✅ **W** 34-7 |
 | 8 | Oct 24 | #77 NC State | H | — | — | ✅ **W** 31-28 |
 | 9 | Oct 31 | #33 Louisville | A | — | — | ❌ **L** 24-52 |
-| 11 | Nov 14 | #52 Virginia Tech | A | 7.7% | 🔴 **L** | _pending_ |
+| 11 | Nov 15 | #52 Virginia Tech | A | 7.7% | 🔴 **L** | _pending_ |
 | 12 | Nov 21 | #107 California | A | 63.8% | 🟢 **W** | _pending_ |
 | 13 | Nov 28 | #27 SMU | H | 3.2% | 🔴 **L** | _pending_ |
 
@@ -3106,7 +3106,7 @@ Grouped by conference. Click a team to expand its full-season outlook.
 | Completed-game source | `data_exports/predictions/spi_game_predictions_2026_2026.csv` |
 | Pending-game source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
 | Schedule source | `data_exports/season_games_2026.csv` |
-| Generated | 2026-11-08 20:44 UTC |
+| Generated | 2026-11-09 16:18 UTC |
 
 Regenerate with:
 
