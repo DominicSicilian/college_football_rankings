@@ -16,37 +16,37 @@ download, no local setup needed.
 
 <!-- BEGIN:TOP25 -->
 
-**2026 SPI Top 25 — Week 11**  
-_Updated 2026-11-16 21:17 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
+**2026 SPI Top 25 — Week 12**  
+_Updated 2026-11-23 16:17 UTC • [Full rankings](RANKINGS.md) • [Season predictions](PREDICTIONS.md)_
 
 
 | # | Team | Conf | Record | SPI | Nature | SOR |
 |---:|:---|:---|:---:|---:|---:|---:|
-| 1 | **Utah** | Big 12 | 10-0 | 86.38 | 0.611 | 1.000 |
-| 2 | **Miami** | ACC | 9-1 | 84.62 | 0.879 | 0.829 |
-| 3 | **Georgia** | SEC | 9-1 | 81.46 | 0.877 | 0.781 |
-| 4 | **Wake Forest** | ACC | 9-1 | 68.62 | 1.000 | 0.517 |
-| 5 | **Notre Dame** | FBS Independents | 9-1 | 66.83 | 0.776 | 0.610 |
-| 6 | **UCLA** | Big Ten | 10-0 | 65.09 | 0.383 | 0.795 |
-| 7 | **Alabama** | SEC | 8-2 | 58.90 | 0.281 | 0.755 |
-| 8 | **BYU** | Big 12 | 8-2 | 57.22 | 0.316 | 0.710 |
-| 9 | **Indiana** | Big Ten | 9-1 | 55.66 | 0.456 | 0.611 |
-| 10 | **Texas** | SEC | 8-2 | 54.13 | 0.020 | 0.822 |
-| 11 | **Ohio State** | Big Ten | 7-3 | 47.88 | 0.516 | 0.459 |
-| 12 | **Tennessee** | SEC | 8-2 | 47.14 | 0.247 | 0.592 |
-| 13 | **Texas Tech** | Big 12 | 9-1 | 42.34 | 0.040 | 0.630 |
-| 14 | **Oregon** | Big Ten | 7-3 | 35.13 | 0.199 | 0.433 |
-| 15 | **LSU** | SEC | 6-4 | 32.05 | 0.526 | 0.210 |
-| 16 | **Boise State** | Pac-12 | 9-1 | 27.86 | 0.224 | 0.308 |
-| 17 | **Iowa** | Big Ten | 8-2 | 27.22 | 0.221 | 0.300 |
-| 18 | **Arizona** | Big 12 | 7-3 | 26.25 | 0.276 | 0.255 |
-| 19 | **Houston** | Big 12 | 7-3 | 24.43 | 0.312 | 0.208 |
-| 20 | **Florida** | SEC | 6-4 | 22.64 | -0.113 | 0.409 |
-| 21 | **Memphis** | American | 8-2 | 21.09 | 0.415 | 0.101 |
-| 22 | **Louisiana Tech** | Sun Belt | 8-2 | 18.09 | 0.320 | 0.106 |
-| 23 | **Liberty** | Conference USA | 9-1 | 17.92 | 0.494 | 0.009 |
-| 24 | **New Mexico** | Mountain West | 8-2 | 16.45 | 0.556 | -0.046 |
-| 25 | **USC** | Big Ten | 7-3 | 15.89 | -0.145 | 0.322 |
+| 1 | **Georgia** | SEC | 10-1 | 90.79 | 0.871 | 0.928 |
+| 2 | **Utah** | Big 12 | 11-0 | 86.55 | 0.616 | 1.000 |
+| 3 | **Miami** | ACC | 10-1 | 79.82 | 0.798 | 0.798 |
+| 4 | **Notre Dame** | FBS Independents | 10-1 | 78.04 | 0.757 | 0.793 |
+| 5 | **Wake Forest** | ACC | 10-1 | 74.00 | 1.000 | 0.600 |
+| 6 | **Texas** | SEC | 9-2 | 65.23 | 0.137 | 0.930 |
+| 7 | **Alabama** | SEC | 9-2 | 53.70 | 0.430 | 0.595 |
+| 8 | **BYU** | Big 12 | 9-2 | 53.56 | 0.213 | 0.709 |
+| 9 | **Texas Tech** | Big 12 | 10-1 | 49.86 | 0.025 | 0.754 |
+| 10 | **UCLA** | Big Ten | 10-1 | 45.18 | 0.263 | 0.554 |
+| 11 | **Tennessee** | SEC | 9-2 | 42.45 | 0.244 | 0.522 |
+| 12 | **Indiana** | Big Ten | 9-2 | 40.16 | 0.371 | 0.418 |
+| 13 | **Oregon** | Big Ten | 8-3 | 34.69 | 0.327 | 0.358 |
+| 14 | **Ohio State** | Big Ten | 7-4 | 33.66 | 0.452 | 0.275 |
+| 15 | **Iowa** | Big Ten | 9-2 | 31.04 | 0.173 | 0.385 |
+| 16 | **Houston** | Big 12 | 8-3 | 28.17 | 0.260 | 0.293 |
+| 17 | **New Mexico** | Mountain West | 9-2 | 26.21 | 0.497 | 0.135 |
+| 18 | **Arizona** | Big 12 | 8-3 | 24.38 | 0.226 | 0.253 |
+| 19 | **Ole Miss** | SEC | 7-4 | 23.89 | 0.098 | 0.315 |
+| 20 | **Louisville** | ACC | 8-3 | 20.97 | 0.411 | 0.101 |
+| 21 | **LSU** | SEC | 6-5 | 20.81 | 0.363 | 0.125 |
+| 22 | **Louisiana Tech** | Sun Belt | 9-2 | 19.42 | 0.486 | 0.037 |
+| 23 | **Florida** | SEC | 7-4 | 19.06 | -0.155 | 0.377 |
+| 24 | **USC** | Big Ten | 8-3 | 19.01 | -0.127 | 0.361 |
+| 25 | **Liberty** | Conference USA | 10-1 | 18.26 | 0.557 | -0.019 |
 
 <!-- END:TOP25 -->
 
