@@ -1,6 +1,6 @@
 # 2026 Upcoming Game Predictions
 
-> Auto-generated 2026-11-23 16:17 UTC from the newest prediction export.
+> Auto-generated 2026-11-23 21:59 UTC from the newest prediction export.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Week 13** &nbsp;•&nbsp; 69 games &nbsp;•&nbsp; [Latest Rankings →](RANKINGS.md) &nbsp;•&nbsp; [Full-Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Model Performance →](PERFORMANCE.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -92,7 +92,7 @@ Ranks are current SPI ranks. Win probabilities are capped at 0.1–99.9%.
 | Week previewed | 13 |
 | Games | 69 |
 | Source | `data_exports/predictions/upcoming_spi_predictions_2026_all_pending.csv` |
-| Generated | 2026-11-23 16:17 UTC |
+| Generated | 2026-11-23 21:59 UTC |
 
 Regenerate with:
 

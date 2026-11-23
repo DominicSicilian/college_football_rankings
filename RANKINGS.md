@@ -1,6 +1,6 @@
 # 2026 SPI Rankings — Week 12
 
-> Auto-generated 2026-11-23 16:17 UTC from `data_exports/spi_rankings_2026_w12.csv`.
+> Auto-generated 2026-11-23 21:59 UTC from `data_exports/spi_rankings_2026_w12.csv`.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Release:** Week 12 &nbsp;•&nbsp; **Teams ranked:** 138 &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -218,7 +218,7 @@ components behind each team's SPI.
 | In-season gate | passed (90% threshold) |
 | Source file | `data_exports/spi_rankings_2026_w12.csv` |
 | Conference file | `data_exports/conference_rankings_2026_w12.csv` |
-| Generated | 2026-11-23 16:17 UTC |
+| Generated | 2026-11-23 21:59 UTC |
 
 Regenerate with:
 
