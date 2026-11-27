@@ -992,10 +992,15 @@ def main():
     # Compute Team in-Conference Index for each team
     for conference in team_objects:
         conf_team_list = team_objects[conference]
+        # Order by the CURRENT season's conference performance only. The
+        # prior-year champion flag (conf_champ) used to be the leading key,
+        # which pinned last season's champion to the top of this season's
+        # standing (e.g. a 4-4 defending champ above an 8-0 team) and, because
+        # standing_index feeds overall_index -> SOR, distorted every opponent's
+        # strength. Dropped so opponent strength tracks the live standings.
         conf_sorted_teams = multisort(
             conf_team_list,
             (
-                ("conf_champ", True),
                 ("conf_wins", True),
                 ("conf_losses", False),
                 ("ave_margin", True),
