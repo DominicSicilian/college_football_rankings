@@ -1,6 +1,6 @@
 # 2026 SPI Rankings — Week 12
 
-> Auto-generated 2026-11-27 20:48 UTC from `data_exports/spi_rankings_2026_w12.csv`.
+> Auto-generated 2026-11-27 20:56 UTC from `data_exports/spi_rankings_2026_w12.csv`.
 > Do not edit by hand — run `python generate_markdown_reports.py` instead.
 
 **Release:** Week 12 &nbsp;•&nbsp; **Teams ranked:** 138 &nbsp;•&nbsp; [Season Predictions →](PREDICTIONS.md) &nbsp;•&nbsp; [Back to README →](README.md)
@@ -19,29 +19,29 @@ components behind each team's SPI. Full-FBS breakdowns of each component — plu
 |---:|:---|:---|:---:|---:|---:|---:|
 | 1 | **Georgia** | SEC | 10-1 | 91.91 | 0.871 | 0.945 |
 | 2 | **Utah** | Big 12 | 11-0 | 86.55 | 0.616 | 1.000 |
-| 3 | **Miami** | ACC | 10-1 | 78.75 | 0.798 | 0.782 |
-| 4 | **Notre Dame** | FBS Independents | 10-1 | 77.21 | 0.757 | 0.780 |
-| 5 | **Wake Forest** | ACC | 10-1 | 73.37 | 1.000 | 0.590 |
+| 3 | **Notre Dame** | FBS Independents | 10-1 | 78.65 | 0.757 | 0.802 |
+| 4 | **Miami** | ACC | 10-1 | 76.59 | 0.798 | 0.748 |
+| 5 | **Wake Forest** | ACC | 10-1 | 75.52 | 1.000 | 0.623 |
 | 6 | **Texas** | SEC | 9-2 | 65.30 | 0.137 | 0.931 |
 | 7 | **Texas Tech** | Big 12 | 11-1 | 55.78 | 0.053 | 0.829 |
-| 8 | **BYU** | Big 12 | 9-2 | 51.86 | 0.213 | 0.683 |
+| 8 | **BYU** | Big 12 | 9-2 | 52.82 | 0.213 | 0.698 |
 | 9 | **Alabama** | SEC | 9-2 | 50.98 | 0.430 | 0.553 |
 | 10 | **UCLA** | Big Ten | 10-1 | 46.12 | 0.263 | 0.568 |
 | 11 | **Iowa** | Big Ten | 10-2 | 42.05 | 0.232 | 0.522 |
-| 12 | **Tennessee** | SEC | 9-2 | 41.90 | 0.244 | 0.513 |
+| 12 | **Tennessee** | SEC | 9-2 | 41.44 | 0.244 | 0.506 |
 | 13 | **Indiana** | Big Ten | 9-2 | 38.96 | 0.371 | 0.400 |
-| 14 | **Oregon** | Big Ten | 8-3 | 32.79 | 0.327 | 0.328 |
-| 15 | **Ohio State** | Big Ten | 7-4 | 31.84 | 0.452 | 0.247 |
-| 16 | **Houston** | Big 12 | 8-3 | 28.82 | 0.260 | 0.303 |
-| 17 | **Ole Miss** | SEC | 8-4 | 27.42 | 0.148 | 0.342 |
+| 14 | **Oregon** | Big Ten | 8-3 | 33.55 | 0.327 | 0.340 |
+| 15 | **Ohio State** | Big Ten | 7-4 | 31.08 | 0.452 | 0.235 |
+| 16 | **Houston** | Big 12 | 8-3 | 29.25 | 0.260 | 0.310 |
+| 17 | **Ole Miss** | SEC | 8-4 | 28.14 | 0.148 | 0.353 |
 | 18 | **New Mexico** | Mountain West | 9-2 | 25.83 | 0.497 | 0.130 |
-| 19 | **Arizona** | Big 12 | 8-3 | 24.11 | 0.226 | 0.249 |
-| 20 | **Louisville** | ACC | 8-3 | 22.96 | 0.411 | 0.132 |
-| 21 | **LSU** | SEC | 6-5 | 20.68 | 0.363 | 0.123 |
+| 19 | **Louisville** | ACC | 8-3 | 24.39 | 0.411 | 0.154 |
+| 20 | **Arizona** | Big 12 | 8-3 | 24.11 | 0.226 | 0.249 |
+| 21 | **LSU** | SEC | 6-5 | 21.83 | 0.363 | 0.141 |
 | 22 | **Florida** | SEC | 7-4 | 20.37 | -0.155 | 0.397 |
 | 23 | **Louisiana Tech** | Sun Belt | 9-2 | 20.04 | 0.486 | 0.046 |
-| 24 | **USC** | Big Ten | 8-3 | 19.39 | -0.127 | 0.367 |
-| 25 | **Liberty** | Conference USA | 10-1 | 18.28 | 0.557 | -0.019 |
+| 24 | **USC** | Big Ten | 8-3 | 17.87 | -0.127 | 0.344 |
+| 25 | **Air Force** | Mountain West | 9-2 | 17.54 | 0.265 | 0.127 |
 
 ## Full FBS Rankings
 
@@ -52,141 +52,141 @@ components behind each team's SPI. Full-FBS breakdowns of each component — plu
 |---:|:---|:---|:---:|---:|---:|---:|
 | 1 | Georgia | SEC | 10-1 | 91.91 | 0.871 | 0.945 |
 | 2 | Utah | Big 12 | 11-0 | 86.55 | 0.616 | 1.000 |
-| 3 | Miami | ACC | 10-1 | 78.75 | 0.798 | 0.782 |
-| 4 | Notre Dame | FBS Independents | 10-1 | 77.21 | 0.757 | 0.780 |
-| 5 | Wake Forest | ACC | 10-1 | 73.37 | 1.000 | 0.590 |
+| 3 | Notre Dame | FBS Independents | 10-1 | 78.65 | 0.757 | 0.802 |
+| 4 | Miami | ACC | 10-1 | 76.59 | 0.798 | 0.748 |
+| 5 | Wake Forest | ACC | 10-1 | 75.52 | 1.000 | 0.623 |
 | 6 | Texas | SEC | 9-2 | 65.30 | 0.137 | 0.931 |
 | 7 | Texas Tech | Big 12 | 11-1 | 55.78 | 0.053 | 0.829 |
-| 8 | BYU | Big 12 | 9-2 | 51.86 | 0.213 | 0.683 |
+| 8 | BYU | Big 12 | 9-2 | 52.82 | 0.213 | 0.698 |
 | 9 | Alabama | SEC | 9-2 | 50.98 | 0.430 | 0.553 |
 | 10 | UCLA | Big Ten | 10-1 | 46.12 | 0.263 | 0.568 |
 | 11 | Iowa | Big Ten | 10-2 | 42.05 | 0.232 | 0.522 |
-| 12 | Tennessee | SEC | 9-2 | 41.90 | 0.244 | 0.513 |
+| 12 | Tennessee | SEC | 9-2 | 41.44 | 0.244 | 0.506 |
 | 13 | Indiana | Big Ten | 9-2 | 38.96 | 0.371 | 0.400 |
-| 14 | Oregon | Big Ten | 8-3 | 32.79 | 0.327 | 0.328 |
-| 15 | Ohio State | Big Ten | 7-4 | 31.84 | 0.452 | 0.247 |
-| 16 | Houston | Big 12 | 8-3 | 28.82 | 0.260 | 0.303 |
-| 17 | Ole Miss | SEC | 8-4 | 27.42 | 0.148 | 0.342 |
+| 14 | Oregon | Big Ten | 8-3 | 33.55 | 0.327 | 0.340 |
+| 15 | Ohio State | Big Ten | 7-4 | 31.08 | 0.452 | 0.235 |
+| 16 | Houston | Big 12 | 8-3 | 29.25 | 0.260 | 0.310 |
+| 17 | Ole Miss | SEC | 8-4 | 28.14 | 0.148 | 0.353 |
 | 18 | New Mexico | Mountain West | 9-2 | 25.83 | 0.497 | 0.130 |
-| 19 | Arizona | Big 12 | 8-3 | 24.11 | 0.226 | 0.249 |
-| 20 | Louisville | ACC | 8-3 | 22.96 | 0.411 | 0.132 |
-| 21 | LSU | SEC | 6-5 | 20.68 | 0.363 | 0.123 |
+| 19 | Louisville | ACC | 8-3 | 24.39 | 0.411 | 0.154 |
+| 20 | Arizona | Big 12 | 8-3 | 24.11 | 0.226 | 0.249 |
+| 21 | LSU | SEC | 6-5 | 21.83 | 0.363 | 0.141 |
 | 22 | Florida | SEC | 7-4 | 20.37 | -0.155 | 0.397 |
 | 23 | Louisiana Tech | Sun Belt | 9-2 | 20.04 | 0.486 | 0.046 |
-| 24 | USC | Big Ten | 8-3 | 19.39 | -0.127 | 0.367 |
-| 25 | Liberty | Conference USA | 10-1 | 18.28 | 0.557 | -0.019 |
-| 26 | Air Force | Mountain West | 9-2 | 17.54 | 0.265 | 0.127 |
+| 24 | USC | Big Ten | 8-3 | 17.87 | -0.127 | 0.344 |
+| 25 | Air Force | Mountain West | 9-2 | 17.54 | 0.265 | 0.127 |
+| 26 | Liberty | Conference USA | 10-1 | 17.10 | 0.557 | -0.037 |
 | 27 | UTSA | American | 10-2 | 10.76 | -0.244 | 0.297 |
 | 28 | Boise State | Pac-12 | 9-2 | 10.22 | 0.150 | 0.077 |
-| 29 | Missouri | SEC | 7-4 | 5.88 | -0.111 | 0.150 |
-| 30 | Auburn | SEC | 7-4 | 5.80 | -0.132 | 0.160 |
-| 31 | Oklahoma State | Big 12 | 7-4 | 5.25 | 0.103 | 0.025 |
-| 32 | Duke | ACC | 7-4 | 4.75 | 0.290 | -0.083 |
+| 29 | Duke | ACC | 7-4 | 6.19 | 0.290 | -0.061 |
+| 30 | Missouri | SEC | 7-4 | 5.88 | -0.111 | 0.150 |
+| 31 | Auburn | SEC | 7-4 | 5.80 | -0.132 | 0.160 |
+| 32 | Oklahoma State | Big 12 | 7-4 | 4.30 | 0.103 | 0.010 |
 | 33 | Memphis | American | 8-3 | 2.50 | 0.327 | -0.137 |
-| 34 | North Dakota State | Mountain West | 9-2 | 0.92 | 0.028 | -0.001 |
+| 34 | North Dakota State | Mountain West | 9-2 | 1.07 | 0.028 | 0.001 |
 | 35 | Oklahoma | SEC | 7-4 | -0.40 | -0.540 | 0.284 |
-| 36 | Nebraska | Big Ten | 7-5 | -0.84 | 0.283 | -0.165 |
-| 37 | South Carolina | SEC | 6-5 | -1.09 | -0.201 | 0.091 |
+| 36 | South Carolina | SEC | 6-5 | -1.09 | -0.201 | 0.091 |
+| 37 | Nebraska | Big Ten | 7-5 | -1.60 | 0.283 | -0.177 |
 | 38 | Kentucky | SEC | 7-4 | -3.31 | -0.476 | 0.205 |
-| 39 | SMU | ACC | 7-4 | -6.89 | 0.040 | -0.128 |
-| 40 | James Madison | Sun Belt | 8-3 | -7.25 | 0.393 | -0.323 |
-| 41 | Baylor | Big 12 | 6-5 | -8.46 | 0.040 | -0.152 |
+| 39 | SMU | ACC | 7-4 | -5.46 | 0.040 | -0.106 |
+| 40 | James Madison | Sun Belt | 8-3 | -6.66 | 0.393 | -0.314 |
+| 41 | Baylor | Big 12 | 6-5 | -8.98 | 0.040 | -0.160 |
 | 42 | Toledo | Mid-American | 10-2 | -10.13 | 0.111 | -0.216 |
-| 43 | UCF | Big 12 | 6-5 | -11.30 | -0.071 | -0.135 |
-| 44 | Wisconsin | Big Ten | 7-4 | -11.86 | -0.131 | -0.112 |
-| 45 | North Texas | American | 7-4 | -12.86 | 0.091 | -0.247 |
-| 46 | Louisiana | Sun Belt | 8-3 | -13.53 | 0.099 | -0.261 |
+| 43 | Wisconsin | Big Ten | 7-4 | -10.34 | -0.131 | -0.088 |
+| 44 | UCF | Big 12 | 6-5 | -11.30 | -0.071 | -0.135 |
+| 45 | Louisiana | Sun Belt | 8-3 | -13.10 | 0.099 | -0.255 |
+| 46 | North Texas | American | 7-4 | -14.38 | 0.091 | -0.270 |
 | 47 | Texas State | Pac-12 | 7-4 | -15.34 | 0.130 | -0.306 |
 | 48 | Cincinnati | Big 12 | 6-5 | -16.09 | -0.133 | -0.176 |
-| 49 | Washington | Big Ten | 7-4 | -16.38 | -0.245 | -0.120 |
-| 50 | Illinois | Big Ten | 6-5 | -17.54 | -0.302 | -0.107 |
-| 51 | Tulsa | American | 7-5 | -17.73 | 0.318 | -0.444 |
-| 52 | Michigan | Big Ten | 6-5 | -18.42 | -0.437 | -0.048 |
+| 49 | Washington | Big Ten | 7-4 | -17.14 | -0.245 | -0.132 |
+| 50 | Tulsa | American | 7-5 | -17.73 | 0.318 | -0.444 |
+| 51 | Michigan | Big Ten | 6-5 | -18.42 | -0.437 | -0.048 |
+| 52 | Illinois | Big Ten | 6-5 | -19.60 | -0.302 | -0.139 |
 | 53 | Georgia Southern | Sun Belt | 7-4 | -20.28 | 0.110 | -0.371 |
-| 54 | Northwestern | Big Ten | 6-5 | -21.63 | -0.089 | -0.285 |
-| 55 | Iowa State | Big 12 | 5-6 | -22.04 | -0.403 | -0.122 |
+| 54 | Iowa State | Big 12 | 5-6 | -20.33 | -0.403 | -0.096 |
+| 55 | Northwestern | Big Ten | 6-5 | -22.40 | -0.089 | -0.296 |
 | 56 | Penn State | Big Ten | 6-5 | -25.07 | 0.128 | -0.454 |
-| 57 | West Virginia | Big 12 | 5-6 | -25.77 | -0.201 | -0.288 |
-| 58 | Florida Atlantic | American | 7-4 | -27.72 | -0.190 | -0.324 |
-| 59 | UNLV | Mountain West | 7-4 | -28.09 | -0.323 | -0.258 |
-| 60 | Arizona State | Big 12 | 6-5 | -28.17 | -0.386 | -0.226 |
-| 61 | Florida State | ACC | 5-6 | -28.36 | -0.218 | -0.319 |
-| 62 | North Carolina | ACC | 5-6 | -30.52 | -0.271 | -0.323 |
-| 63 | Oregon State | Pac-12 | 6-5 | -30.91 | 0.250 | -0.610 |
-| 64 | Virginia Tech | ACC | 6-5 | -32.40 | -0.110 | -0.439 |
-| 65 | Pittsburgh | ACC | 6-5 | -34.32 | -0.120 | -0.463 |
-| 66 | Army | American | 5-5 | -36.62 | 0.046 | -0.588 |
+| 57 | Florida State | ACC | 5-6 | -25.49 | -0.218 | -0.275 |
+| 58 | West Virginia | Big 12 | 5-6 | -26.72 | -0.201 | -0.303 |
+| 59 | Florida Atlantic | American | 7-4 | -27.72 | -0.190 | -0.324 |
+| 60 | UNLV | Mountain West | 7-4 | -28.09 | -0.323 | -0.258 |
+| 61 | Arizona State | Big 12 | 6-5 | -29.13 | -0.386 | -0.240 |
+| 62 | Virginia Tech | ACC | 6-5 | -30.25 | -0.110 | -0.406 |
+| 63 | Oregon State | Pac-12 | 6-5 | -31.86 | 0.250 | -0.625 |
+| 64 | North Carolina | ACC | 5-6 | -31.96 | -0.271 | -0.346 |
+| 65 | Pittsburgh | ACC | 6-5 | -32.89 | -0.120 | -0.441 |
+| 66 | Army | American | 5-5 | -36.18 | 0.046 | -0.581 |
 | 67 | East Carolina | American | 7-4 | -37.56 | -0.533 | -0.291 |
-| 68 | Jacksonville State | Conference USA | 8-3 | -38.14 | -0.199 | -0.479 |
-| 69 | Virginia | ACC | 6-5 | -40.26 | -0.178 | -0.523 |
-| 70 | Minnesota | Big Ten | 6-5 | -41.58 | -0.703 | -0.261 |
-| 71 | Buffalo | Mid-American | 9-3 | -41.97 | -0.309 | -0.479 |
+| 68 | Jacksonville State | Conference USA | 8-3 | -38.16 | -0.199 | -0.480 |
+| 69 | Minnesota | Big Ten | 6-5 | -41.58 | -0.703 | -0.261 |
+| 70 | Buffalo | Mid-American | 9-3 | -41.97 | -0.309 | -0.479 |
+| 71 | Virginia | ACC | 6-5 | -42.26 | -0.178 | -0.554 |
 | 72 | TCU | Big 12 | 5-7 | -43.76 | -0.334 | -0.493 |
-| 73 | Stanford | ACC | 6-5 | -44.31 | -0.839 | -0.230 |
-| 74 | NC State | ACC | 5-6 | -44.42 | -0.127 | -0.615 |
-| 75 | Western Michigan | Mid-American | 8-4 | -44.63 | -0.037 | -0.667 |
-| 76 | App State | Sun Belt | 7-4 | -45.15 | -0.355 | -0.504 |
-| 77 | Wyoming | Mountain West | 7-4 | -46.04 | -0.377 | -0.506 |
+| 73 | Western Michigan | Mid-American | 8-4 | -44.63 | -0.037 | -0.667 |
+| 74 | App State | Sun Belt | 7-4 | -45.59 | -0.355 | -0.510 |
+| 75 | Stanford | ACC | 6-5 | -45.74 | -0.839 | -0.252 |
+| 76 | Wyoming | Mountain West | 7-4 | -46.04 | -0.377 | -0.506 |
+| 77 | NC State | ACC | 5-6 | -46.57 | -0.127 | -0.648 |
 | 78 | South Florida | American | 6-5 | -46.61 | -0.279 | -0.567 |
 | 79 | Mississippi State | SEC | 5-7 | -46.62 | -0.522 | -0.436 |
 | 80 | Texas A&M | SEC | 4-7 | -47.71 | -0.435 | -0.500 |
 | 81 | Miami (OH) | Mid-American | 8-4 | -49.30 | -0.374 | -0.557 |
-| 82 | Colorado | Big 12 | 4-7 | -50.05 | -0.425 | -0.541 |
-| 83 | Navy | American | 4-6 | -50.27 | -0.232 | -0.649 |
-| 84 | Kansas | Big 12 | 4-7 | -51.29 | -0.146 | -0.710 |
-| 85 | Syracuse | ACC | 5-6 | -51.92 | -0.339 | -0.616 |
-| 86 | Clemson | ACC | 7-4 | -52.91 | -1.022 | -0.264 |
-| 87 | Ohio | Mid-American | 8-4 | -53.07 | -0.236 | -0.690 |
-| 88 | UConn | FBS Independents | 6-5 | -53.56 | 0.096 | -0.876 |
+| 82 | Syracuse | ACC | 5-6 | -49.77 | -0.339 | -0.583 |
+| 83 | Colorado | Big 12 | 4-7 | -50.05 | -0.425 | -0.541 |
+| 84 | Navy | American | 4-6 | -50.27 | -0.232 | -0.649 |
+| 85 | Kansas | Big 12 | 4-7 | -50.33 | -0.146 | -0.696 |
+| 86 | Ohio | Mid-American | 8-4 | -52.92 | -0.236 | -0.687 |
+| 87 | UConn | FBS Independents | 6-5 | -54.43 | 0.096 | -0.889 |
+| 88 | Clemson | ACC | 7-4 | -55.35 | -1.022 | -0.301 |
 | 89 | Fresno State | Pac-12 | 6-5 | -57.64 | -0.166 | -0.797 |
-| 90 | Tulane | American | 6-5 | -57.82 | -0.852 | -0.431 |
-| 91 | South Alabama | Sun Belt | 6-5 | -60.24 | -0.327 | -0.750 |
-| 92 | Maryland | Big Ten | 4-7 | -61.11 | -0.408 | -0.720 |
-| 93 | Kansas State | Big 12 | 4-7 | -63.25 | -0.304 | -0.809 |
-| 94 | Arkansas | SEC | 4-7 | -63.47 | -0.986 | -0.446 |
-| 95 | Boston College | ACC | 5-6 | -63.82 | -0.635 | -0.640 |
-| 96 | UAB | American | 6-5 | -64.33 | -0.761 | -0.580 |
-| 97 | Georgia State | Sun Belt | 5-6 | -67.89 | -0.131 | -0.974 |
-| 98 | Delaware | Conference USA | 6-5 | -69.71 | -0.120 | -1.008 |
-| 99 | Vanderbilt | SEC | 4-7 | -70.68 | -1.065 | -0.514 |
-| 100 | Nevada | Mountain West | 5-6 | -71.22 | -0.358 | -0.903 |
-| 101 | San Diego State | Pac-12 | 6-5 | -73.15 | -0.815 | -0.686 |
-| 102 | Central Michigan | Mid-American | 5-6 | -74.69 | -0.334 | -0.969 |
-| 103 | Georgia Tech | ACC | 3-8 | -78.96 | -0.782 | -0.794 |
-| 104 | Purdue | Big Ten | 3-8 | -79.85 | -0.955 | -0.714 |
-| 105 | Marshall | Sun Belt | 6-5 | -80.80 | -0.885 | -0.767 |
-| 106 | Michigan State | Big Ten | 3-8 | -84.41 | -0.875 | -0.827 |
-| 107 | Kennesaw State | Conference USA | 5-6 | -87.79 | -0.359 | -1.157 |
-| 108 | Middle Tennessee | Conference USA | 6-5 | -91.36 | -0.702 | -1.028 |
-| 109 | Rutgers | Big Ten | 3-8 | -92.04 | -0.604 | -1.091 |
-| 110 | Utah State | Pac-12 | 4-7 | -92.39 | -0.522 | -1.140 |
-| 111 | California | ACC | 3-8 | -93.81 | -0.946 | -0.934 |
+| 90 | South Alabama | Sun Belt | 6-5 | -59.80 | -0.327 | -0.744 |
+| 91 | Maryland | Big Ten | 4-7 | -60.35 | -0.408 | -0.709 |
+| 92 | Tulane | American | 6-5 | -61.41 | -0.852 | -0.486 |
+| 93 | Arkansas | SEC | 4-7 | -62.51 | -0.986 | -0.431 |
+| 94 | Kansas State | Big 12 | 4-7 | -63.25 | -0.304 | -0.809 |
+| 95 | UAB | American | 6-5 | -64.33 | -0.761 | -0.580 |
+| 96 | Boston College | ACC | 5-6 | -66.69 | -0.635 | -0.684 |
+| 97 | Georgia State | Sun Belt | 5-6 | -68.79 | -0.131 | -0.988 |
+| 98 | Delaware | Conference USA | 6-5 | -70.02 | -0.120 | -1.012 |
+| 99 | Nevada | Mountain West | 5-6 | -70.46 | -0.358 | -0.891 |
+| 100 | Vanderbilt | SEC | 4-7 | -70.53 | -1.065 | -0.512 |
+| 101 | San Diego State | Pac-12 | 6-5 | -73.26 | -0.815 | -0.688 |
+| 102 | Central Michigan | Mid-American | 5-6 | -73.97 | -0.334 | -0.958 |
+| 103 | Purdue | Big Ten | 3-8 | -77.61 | -0.955 | -0.680 |
+| 104 | Georgia Tech | ACC | 3-8 | -80.40 | -0.782 | -0.816 |
+| 105 | Marshall | Sun Belt | 6-5 | -81.24 | -0.885 | -0.774 |
+| 106 | Michigan State | Big Ten | 3-8 | -83.65 | -0.875 | -0.816 |
+| 107 | Kennesaw State | Conference USA | 5-6 | -87.33 | -0.359 | -1.150 |
+| 108 | California | ACC | 3-8 | -90.89 | -0.946 | -0.889 |
+| 109 | Middle Tennessee | Conference USA | 6-5 | -91.36 | -0.702 | -1.028 |
+| 110 | Utah State | Pac-12 | 4-7 | -91.44 | -0.522 | -1.126 |
+| 111 | Rutgers | Big Ten | 3-8 | -93.56 | -0.604 | -1.114 |
 | 112 | Massachusetts | Mid-American | 5-6 | -96.73 | -0.413 | -1.266 |
-| 113 | Arkansas State | Sun Belt | 4-7 | -100.67 | -0.566 | -1.244 |
-| 114 | Coastal Carolina | Sun Belt | 4-7 | -103.15 | -0.416 | -1.363 |
-| 115 | Western Kentucky | Conference USA | 4-7 | -103.50 | -0.748 | -1.189 |
-| 116 | San José State | Mountain West | 5-7 | -103.51 | -0.898 | -1.109 |
+| 113 | Arkansas State | Sun Belt | 4-7 | -100.69 | -0.566 | -1.244 |
+| 114 | Coastal Carolina | Sun Belt | 4-7 | -102.41 | -0.416 | -1.352 |
+| 115 | San José State | Mountain West | 5-7 | -103.51 | -0.898 | -1.109 |
+| 116 | Western Kentucky | Conference USA | 4-7 | -104.57 | -0.748 | -1.206 |
 | 117 | Hawai'i | Mountain West | 3-8 | -106.38 | -0.617 | -1.304 |
 | 118 | Troy | Sun Belt | 4-7 | -106.90 | -0.764 | -1.233 |
-| 119 | Southern Miss | Sun Belt | 3-8 | -113.02 | -0.598 | -1.417 |
+| 119 | Southern Miss | Sun Belt | 3-8 | -113.46 | -0.598 | -1.424 |
 | 120 | Colorado State | Pac-12 | 3-8 | -114.86 | -0.836 | -1.317 |
 | 121 | Eastern Michigan | Mid-American | 5-7 | -115.09 | -0.674 | -1.408 |
 | 122 | Florida International | Conference USA | 4-7 | -121.44 | -0.643 | -1.522 |
 | 123 | Rice | American | 2-9 | -122.31 | -0.783 | -1.460 |
 | 124 | Old Dominion | Sun Belt | 3-8 | -123.68 | -1.072 | -1.325 |
-| 125 | Missouri State | Conference USA | 4-7 | -128.31 | -0.877 | -1.502 |
+| 125 | Missouri State | Conference USA | 4-7 | -127.75 | -0.877 | -1.493 |
 | 126 | Washington State | Pac-12 | 2-9 | -133.85 | -0.687 | -1.689 |
-| 127 | Ball State | Mid-American | 3-8 | -134.81 | -0.828 | -1.628 |
+| 127 | Ball State | Mid-American | 3-8 | -134.66 | -0.828 | -1.626 |
 | 128 | Temple | American | 2-9 | -138.74 | -0.808 | -1.699 |
 | 129 | Bowling Green | Mid-American | 3-8 | -141.18 | -0.967 | -1.651 |
-| 130 | New Mexico State | Conference USA | 3-8 | -142.02 | -0.770 | -1.770 |
-| 131 | UL Monroe | Sun Belt | 2-9 | -147.71 | -0.987 | -1.741 |
+| 130 | New Mexico State | Conference USA | 3-8 | -141.56 | -0.770 | -1.763 |
+| 131 | UL Monroe | Sun Belt | 2-9 | -147.28 | -0.987 | -1.735 |
 | 132 | Charlotte | American | 1-10 | -152.96 | -1.289 | -1.659 |
 | 133 | UTEP | Mountain West | 1-10 | -154.16 | -1.164 | -1.745 |
 | 134 | Kent State | Mid-American | 3-9 | -156.00 | -1.045 | -1.837 |
-| 135 | Akron | Mid-American | 2-10 | -164.98 | -0.991 | -2.004 |
-| 136 | Sam Houston | Conference USA | 1-10 | -165.89 | -0.736 | -2.156 |
-| 137 | Northern Illinois | Mountain West | 0-11 | -167.53 | -1.207 | -1.928 |
+| 135 | Akron | Mid-American | 2-10 | -164.26 | -0.991 | -1.993 |
+| 136 | Northern Illinois | Mountain West | 0-11 | -166.77 | -1.207 | -1.916 |
+| 137 | Sam Houston | Conference USA | 1-10 | -167.00 | -0.736 | -2.173 |
 | 138 | Sacramento State | Mid-American | 2-9 | -171.83 | -1.233 | -1.980 |
 
 </details>
@@ -195,17 +195,17 @@ components behind each team's SPI. Full-FBS breakdowns of each component — plu
 
 | # | Conference | Teams | Avg SPI | Top-25 Teams | Best Rank | Cross-Conf W-L |
 |---:|:---|---:|---:|---:|---:|:---:|
-| 1 | FBS Independents | 2 | 11.83 | 1 | 4 | 16-6 |
-| 2 | SEC | 16 | 6.06 | 7 | 1 | 42-2 |
-| 3 | Big 12 | 16 | -4.24 | 5 | 2 | 40-8 |
-| 4 | Big Ten | 18 | -14.42 | 6 | 10 | 43-11 |
-| 5 | ACC | 17 | -24.89 | 3 | 3 | 36-15 |
-| 6 | American | 14 | -53.73 | 0 | 27 | 28-26 |
-| 7 | Mountain West | 10 | -63.26 | 1 | 18 | 18-19 |
-| 8 | Pac-12 | 8 | -63.49 | 0 | 28 | 15-17 |
-| 9 | Sun Belt | 14 | -69.30 | 1 | 23 | 27-29 |
-| 10 | Conference USA | 10 | -92.99 | 1 | 25 | 16-24 |
-| 11 | Mid-American | 13 | -96.50 | 0 | 42 | 21-30 |
+| 1 | FBS Independents | 2 | 12.11 | 1 | 3 | 16-6 |
+| 2 | SEC | 16 | 6.22 | 7 | 1 | 42-2 |
+| 3 | Big 12 | 16 | -4.20 | 5 | 2 | 40-8 |
+| 4 | Big Ten | 18 | -14.54 | 6 | 10 | 43-11 |
+| 5 | ACC | 17 | -24.77 | 3 | 4 | 36-15 |
+| 6 | American | 14 | -54.07 | 0 | 27 | 28-26 |
+| 7 | Mountain West | 10 | -63.10 | 2 | 18 | 18-19 |
+| 8 | Pac-12 | 8 | -63.50 | 0 | 28 | 15-17 |
+| 9 | Sun Belt | 14 | -69.27 | 1 | 23 | 27-29 |
+| 10 | Conference USA | 10 | -93.21 | 0 | 26 | 16-24 |
+| 11 | Mid-American | 13 | -96.36 | 0 | 42 | 21-30 |
 
 ## Strength of Record (SOR) — Full FBS
 
@@ -221,140 +221,140 @@ A win adds the opponent's strength rating; a loss subtracts (1 − that rating),
 | 2 | Georgia | SEC | 10-1 | 0.945 | Alabama (+0.938) | Auburn (-0.562) |
 | 3 | Texas | SEC | 9-2 | 0.931 | Tennessee (+0.875) | Florida (-0.375) |
 | 4 | Texas Tech | Big 12 | 11-1 | 0.829 | Arizona (+0.739) | Cincinnati (-0.602) |
-| 5 | Miami | ACC | 10-1 | 0.782 | Duke (+0.727) | Notre Dame (-0.364) |
-| 6 | Notre Dame | FBS Independents | 10-1 | 0.780 | Miami (+0.684) | BYU (-0.205) |
-| 7 | BYU | Big 12 | 9-2 | 0.683 | Arizona (+0.739) | UCF (-0.489) |
-| 8 | Wake Forest | ACC | 10-1 | 0.590 | Louisville (+0.599) | Miami (-0.316) |
+| 5 | Notre Dame | FBS Independents | 10-1 | 0.802 | Miami (+0.727) | BYU (-0.205) |
+| 6 | Miami | ACC | 10-1 | 0.748 | Wake Forest (+0.684) | Notre Dame (-0.364) |
+| 7 | BYU | Big 12 | 9-2 | 0.698 | Arizona (+0.739) | UCF (-0.489) |
+| 8 | Wake Forest | ACC | 10-1 | 0.623 | Louisville (+0.642) | Miami (-0.273) |
 | 9 | UCLA | Big Ten | 10-1 | 0.568 | Oregon (+0.682) | Michigan (-0.773) |
 | 10 | Alabama | SEC | 9-2 | 0.553 | Kentucky (+0.562) | Tennessee (-0.125) |
 | 11 | Iowa | Big Ten | 10-2 | 0.522 | Wisconsin (+0.591) | Minnesota (-0.591) |
-| 12 | Tennessee | SEC | 9-2 | 0.513 | Alabama (+0.938) | South Carolina (-0.625) |
+| 12 | Tennessee | SEC | 9-2 | 0.506 | Alabama (+0.938) | South Carolina (-0.625) |
 | 13 | Indiana | Big Ten | 9-2 | 0.400 | USC (+0.545) | Washington (-0.500) |
 | 14 | Florida | SEC | 7-4 | 0.397 | Texas (+0.812) | South Carolina (-0.625) |
-| 15 | USC | Big Ten | 8-3 | 0.367 | Ohio State (+0.636) | Wisconsin (-0.409) |
-| 16 | Ole Miss | SEC | 8-4 | 0.342 | Louisville (+0.599) | Florida (-0.375) |
-| 17 | Oregon | Big Ten | 8-3 | 0.328 | Ohio State (+0.636) | Illinois (-0.545) |
-| 18 | Houston | Big 12 | 8-3 | 0.303 | Oklahoma State (+0.682) | Colorado (-0.886) |
+| 15 | Ole Miss | SEC | 8-4 | 0.353 | Louisville (+0.642) | Florida (-0.375) |
+| 16 | USC | Big Ten | 8-3 | 0.344 | Ohio State (+0.636) | Wisconsin (-0.409) |
+| 17 | Oregon | Big Ten | 8-3 | 0.340 | Ohio State (+0.636) | Illinois (-0.545) |
+| 18 | Houston | Big 12 | 8-3 | 0.310 | Oklahoma State (+0.682) | Colorado (-0.886) |
 | 19 | UTSA | American | 10-2 | 0.297 | North Texas (+0.468) | Florida Atlantic (-0.649) |
 | 20 | Oklahoma | SEC | 7-4 | 0.284 | Texas (+0.812) | Michigan (-0.773) |
 | 21 | Arizona | Big 12 | 8-3 | 0.249 | Cincinnati (+0.398) | BYU (-0.205) |
-| 22 | Ohio State | Big Ten | 7-4 | 0.247 | Indiana (+0.818) | Nebraska (-0.636) |
+| 22 | Ohio State | Big Ten | 7-4 | 0.235 | Iowa (+0.773) | Nebraska (-0.636) |
 | 23 | Kentucky | SEC | 7-4 | 0.205 | Oklahoma (+0.750) | Missouri (-0.500) |
 | 24 | Auburn | SEC | 7-4 | 0.160 | Georgia (+1.000) | LSU (-0.688) |
-| 25 | Missouri | SEC | 7-4 | 0.150 | Florida (+0.625) | Mississippi State (-0.812) |
-| 26 | Louisville | ACC | 8-3 | 0.132 | SMU (+0.556) | NC State (-0.743) |
-| 27 | New Mexico | Mountain West | 9-2 | 0.130 | North Dakota State (+0.409) | UNLV (-0.727) |
-| 28 | Air Force | Mountain West | 9-2 | 0.127 | Army (+0.390) | Wyoming (-0.636) |
-| 29 | LSU | SEC | 6-5 | 0.123 | Clemson (+0.513) | Kentucky (-0.438) |
+| 25 | Louisville | ACC | 8-3 | 0.154 | SMU (+0.599) | NC State (-0.743) |
+| 26 | Missouri | SEC | 7-4 | 0.150 | Florida (+0.625) | Mississippi State (-0.812) |
+| 27 | LSU | SEC | 6-5 | 0.141 | Clemson (+0.556) | Kentucky (-0.438) |
+| 28 | New Mexico | Mountain West | 9-2 | 0.130 | North Dakota State (+0.409) | UNLV (-0.727) |
+| 29 | Air Force | Mountain West | 9-2 | 0.127 | Army (+0.390) | Wyoming (-0.636) |
 | 30 | South Carolina | SEC | 6-5 | 0.091 | Tennessee (+0.875) | Mississippi State (-0.812) |
 | 31 | Boise State | Pac-12 | 9-2 | 0.077 | Memphis (+0.506) | San Diego State (-0.795) |
 | 32 | Louisiana Tech | Sun Belt | 9-2 | 0.046 | Army (+0.390) | LSU (-0.688) |
-| 33 | Oklahoma State | Big 12 | 7-4 | 0.025 | Oregon (+0.682) | Tulsa (-0.766) |
-| 34 | North Dakota State | Mountain West | 9-2 | -0.001 | Wyoming (+0.364) | UNLV (-0.727) |
-| 35 | Liberty | Conference USA | 10-1 | -0.019 | Coastal Carolina (+0.208) | James Madison (-0.636) |
-| 36 | Michigan | Big Ten | 6-5 | -0.048 | UCLA (+0.773) | Michigan State (-0.955) |
-| 37 | Duke | ACC | 7-4 | -0.083 | Virginia (+0.471) | Georgia Tech (-0.914) |
-| 38 | Illinois | Big Ten | 6-5 | -0.107 | Oregon (+0.682) | Purdue (-0.864) |
-| 39 | Wisconsin | Big Ten | 7-4 | -0.112 | USC (+0.545) | Maryland (-0.818) |
-| 40 | Washington | Big Ten | 7-4 | -0.120 | Indiana (+0.818) | Penn State (-0.682) |
-| 41 | Iowa State | Big 12 | 5-6 | -0.122 | Oklahoma State (+0.682) | UCF (-0.489) |
-| 42 | SMU | ACC | 7-4 | -0.128 | Virginia (+0.471) | Syracuse (-0.829) |
-| 43 | UCF | Big 12 | 6-5 | -0.135 | BYU (+0.795) | Pittsburgh (-0.658) |
-| 44 | Memphis | American | 8-3 | -0.137 | East Carolina (+0.429) | Navy (-0.805) |
-| 45 | Baylor | Big 12 | 6-5 | -0.152 | UCF (+0.511) | Kansas (-0.773) |
-| 46 | Nebraska | Big Ten | 7-5 | -0.165 | Ohio State (+0.636) | Illinois (-0.545) |
-| 47 | Cincinnati | Big 12 | 6-5 | -0.176 | Texas Tech (+0.909) | West Virginia (-0.830) |
+| 33 | Oklahoma State | Big 12 | 7-4 | 0.010 | Oregon (+0.682) | Tulsa (-0.766) |
+| 34 | North Dakota State | Mountain West | 9-2 | 0.001 | Wyoming (+0.364) | UNLV (-0.727) |
+| 35 | Liberty | Conference USA | 10-1 | -0.037 | Coastal Carolina (+0.208) | James Madison (-0.688) |
+| 36 | Michigan | Big Ten | 6-5 | -0.048 | UCLA (+0.818) | Michigan State (-0.955) |
+| 37 | Duke | ACC | 7-4 | -0.061 | Virginia (+0.471) | Georgia Tech (-0.914) |
+| 38 | Wisconsin | Big Ten | 7-4 | -0.088 | USC (+0.545) | Maryland (-0.818) |
+| 39 | Iowa State | Big 12 | 5-6 | -0.096 | Oklahoma State (+0.682) | UCF (-0.489) |
+| 40 | SMU | ACC | 7-4 | -0.106 | Virginia (+0.471) | Syracuse (-0.829) |
+| 41 | Washington | Big Ten | 7-4 | -0.132 | Indiana (+0.727) | Penn State (-0.682) |
+| 42 | UCF | Big 12 | 6-5 | -0.135 | BYU (+0.795) | Pittsburgh (-0.658) |
+| 43 | Memphis | American | 8-3 | -0.137 | East Carolina (+0.429) | Navy (-0.805) |
+| 44 | Illinois | Big Ten | 6-5 | -0.139 | Oregon (+0.682) | Purdue (-0.864) |
+| 45 | Baylor | Big 12 | 6-5 | -0.160 | UCF (+0.511) | Kansas (-0.773) |
+| 46 | Cincinnati | Big 12 | 6-5 | -0.176 | Texas Tech (+0.852) | West Virginia (-0.830) |
+| 47 | Nebraska | Big Ten | 7-5 | -0.177 | Ohio State (+0.636) | Illinois (-0.545) |
 | 48 | Toledo | Mid-American | 10-2 | -0.216 | San Diego State (+0.205) | Michigan State (-0.955) |
-| 49 | Arizona State | Big 12 | 6-5 | -0.226 | UCF (+0.511) | Texas A&M (-0.875) |
-| 50 | Stanford | ACC | 6-5 | -0.230 | Virginia Tech (+0.299) | Louisville (-0.401) |
-| 51 | North Texas | American | 7-4 | -0.247 | Florida Atlantic (+0.351) | Texas State (-0.761) |
+| 49 | Arizona State | Big 12 | 6-5 | -0.240 | UCF (+0.511) | Texas A&M (-0.875) |
+| 50 | Stanford | ACC | 6-5 | -0.252 | Virginia Tech (+0.299) | Duke (-0.487) |
+| 51 | Louisiana | Sun Belt | 8-3 | -0.255 | UAB (+0.312) | Southern Miss (-0.948) |
 | 52 | UNLV | Mountain West | 7-4 | -0.258 | New Mexico (+0.455) | Air Force (-0.682) |
-| 53 | Minnesota | Big Ten | 6-5 | -0.261 | Iowa (+0.727) | Purdue (-0.864) |
-| 54 | Louisiana | Sun Belt | 8-3 | -0.261 | UAB (+0.312) | Southern Miss (-0.948) |
-| 55 | Clemson | ACC | 7-4 | -0.264 | Duke (+0.727) | Georgia Tech (-0.914) |
-| 56 | Northwestern | Big Ten | 6-5 | -0.285 | Penn State (+0.318) | Minnesota (-0.591) |
-| 57 | West Virginia | Big 12 | 5-6 | -0.288 | Virginia (+0.471) | Kansas (-0.773) |
-| 58 | East Carolina | American | 7-4 | -0.291 | Army (+0.390) | App State (-0.740) |
-| 59 | Texas State | Pac-12 | 7-4 | -0.306 | North Texas (+0.468) | San Diego State (-0.795) |
-| 60 | Florida State | ACC | 5-6 | -0.319 | Virginia (+0.471) | NC State (-0.743) |
-| 61 | James Madison | Sun Belt | 8-3 | -0.323 | Georgia Southern (+0.312) | Troy (-0.896) |
-| 62 | North Carolina | ACC | 5-6 | -0.323 | Duke (+0.727) | Syracuse (-0.829) |
-| 63 | Florida Atlantic | American | 7-4 | -0.324 | UTSA (+0.545) | Tulsa (-0.766) |
-| 64 | Georgia Southern | Sun Belt | 7-4 | -0.371 | App State (+0.260) | Jacksonville State (-0.927) |
-| 65 | Tulane | American | 6-5 | -0.431 | Memphis (+0.506) | Kansas State (-0.943) |
-| 66 | Mississippi State | SEC | 5-7 | -0.436 | Missouri (+0.500) | Vanderbilt (-0.938) |
-| 67 | Virginia Tech | ACC | 6-5 | -0.439 | Clemson (+0.513) | California (-0.957) |
-| 68 | Tulsa | American | 7-5 | -0.444 | Oklahoma State (+0.682) | Navy (-0.805) |
-| 69 | Arkansas | SEC | 4-7 | -0.446 | South Carolina (+0.375) | Texas A&M (-0.875) |
+| 53 | Minnesota | Big Ten | 6-5 | -0.261 | Iowa (+0.773) | Purdue (-0.864) |
+| 54 | North Texas | American | 7-4 | -0.270 | Florida Atlantic (+0.351) | Texas State (-0.761) |
+| 55 | Florida State | ACC | 5-6 | -0.275 | Virginia (+0.471) | NC State (-0.743) |
+| 56 | East Carolina | American | 7-4 | -0.291 | Army (+0.390) | App State (-0.740) |
+| 57 | Northwestern | Big Ten | 6-5 | -0.296 | Penn State (+0.318) | Minnesota (-0.591) |
+| 58 | Clemson | ACC | 7-4 | -0.301 | Duke (+0.513) | Georgia Tech (-0.914) |
+| 59 | West Virginia | Big 12 | 5-6 | -0.303 | Virginia (+0.471) | Kansas (-0.773) |
+| 60 | Texas State | Pac-12 | 7-4 | -0.306 | North Texas (+0.468) | San Diego State (-0.795) |
+| 61 | James Madison | Sun Belt | 8-3 | -0.314 | Georgia Southern (+0.338) | Troy (-0.896) |
+| 62 | Florida Atlantic | American | 7-4 | -0.324 | UTSA (+0.545) | Tulsa (-0.766) |
+| 63 | North Carolina | ACC | 5-6 | -0.346 | Duke (+0.513) | Syracuse (-0.829) |
+| 64 | Georgia Southern | Sun Belt | 7-4 | -0.371 | App State (+0.260) | Jacksonville State (-0.918) |
+| 65 | Virginia Tech | ACC | 6-5 | -0.406 | Clemson (+0.556) | California (-0.957) |
+| 66 | Arkansas | SEC | 4-7 | -0.431 | South Carolina (+0.375) | Texas A&M (-0.875) |
+| 67 | Mississippi State | SEC | 5-7 | -0.436 | Missouri (+0.500) | Vanderbilt (-0.938) |
+| 68 | Pittsburgh | ACC | 6-5 | -0.441 | UCF (+0.511) | North Carolina (-0.872) |
+| 69 | Tulsa | American | 7-5 | -0.444 | Oklahoma State (+0.682) | Navy (-0.805) |
 | 70 | Penn State | Big Ten | 6-5 | -0.454 | Washington (+0.500) | Rutgers (-0.909) |
-| 71 | Pittsburgh | ACC | 6-5 | -0.463 | UCF (+0.511) | North Carolina (-0.872) |
-| 72 | Buffalo | Mid-American | 9-3 | -0.479 | Toledo (+0.182) | Florida International (-0.973) |
-| 73 | Jacksonville State | Conference USA | 8-3 | -0.479 | Georgia Southern (+0.312) | Western Kentucky (-0.964) |
+| 71 | Buffalo | Mid-American | 9-3 | -0.479 | Toledo (+0.182) | Florida International (-0.973) |
+| 72 | Jacksonville State | Conference USA | 8-3 | -0.480 | Georgia Southern (+0.338) | Western Kentucky (-0.964) |
+| 73 | Tulane | American | 6-5 | -0.486 | Memphis (+0.506) | Kansas State (-0.943) |
 | 74 | TCU | Big 12 | 5-7 | -0.493 | Baylor (+0.568) | North Carolina (-0.872) |
 | 75 | Texas A&M | SEC | 4-7 | -0.500 | Arizona State (+0.455) | LSU (-0.688) |
-| 76 | App State | Sun Belt | 7-4 | -0.504 | East Carolina (+0.429) | Old Dominion (-0.922) |
-| 77 | Wyoming | Mountain West | 7-4 | -0.506 | Air Force (+0.318) | Colorado State (-0.966) |
-| 78 | Vanderbilt | SEC | 4-7 | -0.514 | NC State (+0.257) | Arkansas (-0.750) |
-| 79 | Virginia | ACC | 6-5 | -0.523 | NC State (+0.257) | West Virginia (-0.830) |
-| 80 | Colorado | Big 12 | 4-7 | -0.541 | Houston (+0.625) | Northwestern (-0.727) |
+| 76 | Wyoming | Mountain West | 7-4 | -0.506 | Air Force (+0.318) | Colorado State (-0.966) |
+| 77 | App State | Sun Belt | 7-4 | -0.510 | East Carolina (+0.429) | Old Dominion (-0.922) |
+| 78 | Vanderbilt | SEC | 4-7 | -0.512 | NC State (+0.257) | Arkansas (-0.750) |
+| 79 | Colorado | Big 12 | 4-7 | -0.541 | Houston (+0.625) | Northwestern (-0.727) |
+| 80 | Virginia | ACC | 6-5 | -0.554 | NC State (+0.257) | West Virginia (-0.830) |
 | 81 | Miami (OH) | Mid-American | 8-4 | -0.557 | UConn (+0.318) | Bowling Green (-0.916) |
 | 82 | South Florida | American | 6-5 | -0.567 | Army (+0.390) | Temple (-0.883) |
 | 83 | UAB | American | 6-5 | -0.580 | East Carolina (+0.429) | South Florida (-0.844) |
-| 84 | Army | American | 5-5 | -0.588 | Florida Atlantic (+0.351) | South Florida (-0.844) |
-| 85 | Oregon State | Pac-12 | 6-5 | -0.610 | San Diego State (+0.205) | Fresno State (-0.864) |
-| 86 | NC State | ACC | 5-6 | -0.615 | Louisville (+0.599) | Vanderbilt (-0.938) |
-| 87 | Syracuse | ACC | 5-6 | -0.616 | SMU (+0.556) | California (-0.957) |
-| 88 | Boston College | ACC | 5-6 | -0.640 | Pittsburgh (+0.342) | Florida State (-0.786) |
-| 89 | Navy | American | 4-6 | -0.649 | Memphis (+0.506) | UAB (-0.688) |
-| 90 | Western Michigan | Mid-American | 8-4 | -0.667 | Buffalo (+0.168) | Toledo (-0.818) |
-| 91 | San Diego State | Pac-12 | 6-5 | -0.686 | Boise State (+0.273) | Colorado State (-0.966) |
-| 92 | Ohio | Mid-American | 8-4 | -0.690 | Eastern Michigan (+0.112) | Miami (OH) (-0.874) |
-| 93 | Kansas | Big 12 | 4-7 | -0.710 | Baylor (+0.568) | Kansas State (-0.943) |
-| 94 | Purdue | Big Ten | 3-8 | -0.714 | Illinois (+0.455) | Maryland (-0.818) |
-| 95 | Maryland | Big Ten | 4-7 | -0.720 | Wisconsin (+0.591) | Rutgers (-0.909) |
-| 96 | South Alabama | Sun Belt | 6-5 | -0.750 | Ohio (+0.140) | Marshall (-0.818) |
-| 97 | Marshall | Sun Belt | 6-5 | -0.767 | South Alabama (+0.234) | Coastal Carolina (-0.792) |
-| 98 | Georgia Tech | ACC | 3-8 | -0.794 | Duke (+0.727) | Colorado (-0.886) |
-| 99 | Fresno State | Pac-12 | 6-5 | -0.797 | San José State (+0.182) | Utah State (-0.898) |
-| 100 | Kansas State | Big 12 | 4-7 | -0.809 | Tulane (+0.273) | Colorado (-0.886) |
-| 101 | Michigan State | Big Ten | 3-8 | -0.827 | Michigan (+0.227) | Northwestern (-0.727) |
-| 102 | UConn | FBS Independents | 6-5 | -0.876 | James Madison (+0.364) | Miami (OH) (-0.874) |
-| 103 | Nevada | Mountain West | 5-6 | -0.903 | San José State (+0.182) | Montana State (-1.000) |
-| 104 | California | ACC | 3-8 | -0.934 | Virginia Tech (+0.299) | NC State (-0.743) |
-| 105 | Central Michigan | Mid-American | 5-6 | -0.969 | Wyoming (+0.364) | Miami (OH) (-0.874) |
-| 106 | Georgia State | Sun Belt | 5-6 | -0.974 | App State (+0.260) | Arkansas State (-0.870) |
-| 107 | Delaware | Conference USA | 6-5 | -1.008 | Coastal Carolina (+0.208) | Middle Tennessee (-0.945) |
-| 108 | Middle Tennessee | Conference USA | 6-5 | -1.028 | Nevada (+0.227) | Jacksonville State (-0.927) |
-| 109 | Rutgers | Big Ten | 3-8 | -1.091 | Penn State (+0.318) | Massachusetts (-0.930) |
-| 110 | San José State | Mountain West | 5-7 | -1.109 | Hawai'i (+0.136) | Fresno State (-0.864) |
-| 111 | Utah State | Pac-12 | 4-7 | -1.140 | Fresno State (+0.136) | Idaho State (-1.000) |
-| 112 | Kennesaw State | Conference USA | 5-6 | -1.157 | Delaware (+0.064) | Missouri State (-0.955) |
-| 113 | Western Kentucky | Conference USA | 4-7 | -1.189 | Jacksonville State (+0.073) | New Mexico State (-0.982) |
-| 114 | Troy | Sun Belt | 4-7 | -1.233 | James Madison (+0.364) | UL Monroe (-0.974) |
+| 84 | Army | American | 5-5 | -0.581 | Florida Atlantic (+0.351) | South Florida (-0.844) |
+| 85 | Syracuse | ACC | 5-6 | -0.583 | SMU (+0.599) | California (-0.957) |
+| 86 | Oregon State | Pac-12 | 6-5 | -0.625 | San Diego State (+0.205) | Fresno State (-0.864) |
+| 87 | NC State | ACC | 5-6 | -0.648 | Louisville (+0.642) | Vanderbilt (-0.938) |
+| 88 | Navy | American | 4-6 | -0.649 | Memphis (+0.506) | UAB (-0.688) |
+| 89 | Western Michigan | Mid-American | 8-4 | -0.667 | Buffalo (+0.168) | Toledo (-0.818) |
+| 90 | Purdue | Big Ten | 3-8 | -0.680 | Illinois (+0.455) | Maryland (-0.818) |
+| 91 | Boston College | ACC | 5-6 | -0.684 | Pittsburgh (+0.342) | Florida State (-0.786) |
+| 92 | Ohio | Mid-American | 8-4 | -0.687 | Eastern Michigan (+0.112) | Miami (OH) (-0.874) |
+| 93 | San Diego State | Pac-12 | 6-5 | -0.688 | Boise State (+0.273) | Colorado State (-0.966) |
+| 94 | Kansas | Big 12 | 4-7 | -0.696 | Baylor (+0.568) | Kansas State (-0.943) |
+| 95 | Maryland | Big Ten | 4-7 | -0.709 | Wisconsin (+0.591) | Rutgers (-0.909) |
+| 96 | South Alabama | Sun Belt | 6-5 | -0.744 | Ohio (+0.140) | Marshall (-0.818) |
+| 97 | Marshall | Sun Belt | 6-5 | -0.774 | South Alabama (+0.234) | Coastal Carolina (-0.792) |
+| 98 | Fresno State | Pac-12 | 6-5 | -0.797 | San José State (+0.182) | Utah State (-0.898) |
+| 99 | Kansas State | Big 12 | 4-7 | -0.809 | Tulane (+0.273) | Colorado (-0.886) |
+| 100 | Michigan State | Big Ten | 3-8 | -0.816 | Michigan (+0.227) | Northwestern (-0.727) |
+| 101 | Georgia Tech | ACC | 3-8 | -0.816 | Clemson (+0.556) | Colorado (-0.886) |
+| 102 | California | ACC | 3-8 | -0.889 | Virginia Tech (+0.299) | NC State (-0.743) |
+| 103 | UConn | FBS Independents | 6-5 | -0.889 | James Madison (+0.312) | Miami (OH) (-0.874) |
+| 104 | Nevada | Mountain West | 5-6 | -0.891 | San José State (+0.182) | Montana State (-1.000) |
+| 105 | Central Michigan | Mid-American | 5-6 | -0.958 | Wyoming (+0.364) | Miami (OH) (-0.874) |
+| 106 | Georgia State | Sun Belt | 5-6 | -0.988 | App State (+0.260) | Arkansas State (-0.870) |
+| 107 | Delaware | Conference USA | 6-5 | -1.012 | Coastal Carolina (+0.208) | Middle Tennessee (-0.945) |
+| 108 | Middle Tennessee | Conference USA | 6-5 | -1.028 | Nevada (+0.227) | Kennesaw State (-0.936) |
+| 109 | San José State | Mountain West | 5-7 | -1.109 | Hawai'i (+0.136) | Fresno State (-0.864) |
+| 110 | Rutgers | Big Ten | 3-8 | -1.114 | Penn State (+0.318) | Massachusetts (-0.930) |
+| 111 | Utah State | Pac-12 | 4-7 | -1.126 | Fresno State (+0.136) | Idaho State (-1.000) |
+| 112 | Kennesaw State | Conference USA | 5-6 | -1.150 | Delaware (+0.073) | Missouri State (-0.955) |
+| 113 | Western Kentucky | Conference USA | 4-7 | -1.206 | Jacksonville State (+0.082) | New Mexico State (-0.982) |
+| 114 | Troy | Sun Belt | 4-7 | -1.233 | James Madison (+0.312) | UL Monroe (-0.974) |
 | 115 | Arkansas State | Sun Belt | 4-7 | -1.244 | Georgia State (+0.156) | UL Monroe (-0.974) |
 | 116 | Massachusetts | Mid-American | 5-6 | -1.266 | Rutgers (+0.091) | Akron (-0.972) |
 | 117 | Hawai'i | Mountain West | 3-8 | -1.304 | Northern Illinois (+0.091) | San José State (-0.818) |
 | 118 | Colorado State | Pac-12 | 3-8 | -1.317 | Wyoming (+0.364) | Washington State (-0.932) |
 | 119 | Old Dominion | Sun Belt | 3-8 | -1.325 | App State (+0.260) | Georgia State (-0.844) |
-| 120 | Coastal Carolina | Sun Belt | 4-7 | -1.363 | Marshall (+0.182) | Delaware (-0.936) |
+| 120 | Coastal Carolina | Sun Belt | 4-7 | -1.352 | Marshall (+0.182) | Delaware (-0.927) |
 | 121 | Eastern Michigan | Mid-American | 5-7 | -1.408 | Massachusetts (+0.070) | Michigan State (-0.955) |
-| 122 | Southern Miss | Sun Belt | 3-8 | -1.417 | Louisiana (+0.286) | Troy (-0.896) |
+| 122 | Southern Miss | Sun Belt | 3-8 | -1.424 | Louisiana (+0.286) | Troy (-0.896) |
 | 123 | Rice | American | 2-9 | -1.460 | Temple (+0.117) | Fresno State (-0.864) |
-| 124 | Missouri State | Conference USA | 4-7 | -1.502 | Kennesaw State (+0.091) | Florida International (-0.973) |
+| 124 | Missouri State | Conference USA | 4-7 | -1.493 | Kennesaw State (+0.064) | Florida International (-0.973) |
 | 125 | Florida International | Conference USA | 4-7 | -1.522 | Buffalo (+0.168) | Middle Tennessee (-0.945) |
-| 126 | Ball State | Mid-American | 3-8 | -1.628 | Bowling Green (+0.084) | Kent State (-0.958) |
+| 126 | Ball State | Mid-American | 3-8 | -1.626 | Bowling Green (+0.084) | Kent State (-0.958) |
 | 127 | Bowling Green | Mid-American | 3-8 | -1.651 | Miami (OH) (+0.126) | Tarleton State (-1.000) |
 | 128 | Charlotte | American | 1-10 | -1.659 | Temple (+0.117) | The Citadel (-1.000) |
 | 129 | Washington State | Pac-12 | 2-9 | -1.689 | Colorado State (+0.034) | Kansas State (-0.943) |
 | 130 | Temple | American | 2-9 | -1.699 | South Florida (+0.156) | Charlotte (-0.961) |
-| 131 | UL Monroe | Sun Belt | 2-9 | -1.741 | Arkansas State (+0.130) | SE Louisiana (-1.000) |
+| 131 | UL Monroe | Sun Belt | 2-9 | -1.735 | Arkansas State (+0.130) | SE Louisiana (-1.000) |
 | 132 | UTEP | Mountain West | 1-10 | -1.745 | Texas Southern (+0.000) | Hawai'i (-0.864) |
-| 133 | New Mexico State | Conference USA | 3-8 | -1.770 | Western Kentucky (+0.036) | Florida International (-0.973) |
+| 133 | New Mexico State | Conference USA | 3-8 | -1.763 | Western Kentucky (+0.036) | Florida International (-0.973) |
 | 134 | Kent State | Mid-American | 3-9 | -1.837 | Ball State (+0.056) | Sacramento State (-0.986) |
-| 135 | Northern Illinois | Mountain West | 0-11 | -1.928 | — | Illinois State (-1.000) |
+| 135 | Northern Illinois | Mountain West | 0-11 | -1.916 | — | Illinois State (-1.000) |
 | 136 | Sacramento State | Mid-American | 2-9 | -1.980 | Kent State (+0.042) | Ball State (-0.944) |
-| 137 | Akron | Mid-American | 2-10 | -2.004 | Massachusetts (+0.070) | Kent State (-0.958) |
-| 138 | Sam Houston | Conference USA | 1-10 | -2.156 | Nicholls (+0.000) | New Mexico State (-0.982) |
+| 137 | Akron | Mid-American | 2-10 | -1.993 | Massachusetts (+0.070) | Kent State (-0.958) |
+| 138 | Sam Houston | Conference USA | 1-10 | -2.173 | Nicholls (+0.000) | New Mexico State (-0.982) |
 
 </details>
 
@@ -521,34 +521,34 @@ Each team's opponent-strength value, the weight SOR applies when you beat or los
 |---:|:---|:---|---:|---:|---:|---:|---:|
 | 1 | Georgia | SEC | 1 | 1.000 | 1 | 1.000 | 1.000 |
 | 2 | Alabama | SEC | 1 | 1.000 | 2 | 0.938 | 0.938 |
-| 3 | Texas Tech | Big 12 | 2 | 0.909 | 1 | 1.000 | 0.909 |
+| 3 | Utah | Big 12 | 2 | 0.909 | 1 | 1.000 | 0.909 |
 | 4 | Tennessee | SEC | 1 | 1.000 | 3 | 0.875 | 0.875 |
-| 5 | Utah | Big 12 | 2 | 0.909 | 2 | 0.938 | 0.852 |
-| 6 | Indiana | Big Ten | 3 | 0.818 | 1 | 1.000 | 0.818 |
+| 5 | Texas Tech | Big 12 | 2 | 0.909 | 2 | 0.938 | 0.852 |
+| 6 | UCLA | Big Ten | 3 | 0.818 | 1 | 1.000 | 0.818 |
 | 7 | Texas | SEC | 1 | 1.000 | 4 | 0.812 | 0.812 |
 | 8 | BYU | Big 12 | 2 | 0.909 | 3 | 0.875 | 0.795 |
-| 9 | UCLA | Big Ten | 3 | 0.818 | 2 | 0.944 | 0.773 |
+| 9 | Iowa | Big Ten | 3 | 0.818 | 2 | 0.944 | 0.773 |
 | 10 | Oklahoma | SEC | 1 | 1.000 | 5 | 0.750 | 0.750 |
 | 11 | Arizona | Big 12 | 2 | 0.909 | 4 | 0.812 | 0.739 |
-| 12 | Duke | ACC | 4 | 0.727 | 1 | 1.000 | 0.727 |
-| 13 | Iowa | Big Ten | 3 | 0.818 | 3 | 0.889 | 0.727 |
+| 12 | Miami | ACC | 4 | 0.727 | 1 | 1.000 | 0.727 |
+| 13 | Indiana | Big Ten | 3 | 0.818 | 3 | 0.889 | 0.727 |
 | 14 | Ole Miss | SEC | 1 | 1.000 | 6 | 0.688 | 0.688 |
-| 15 | Miami | ACC | 4 | 0.727 | 2 | 0.941 | 0.684 |
+| 15 | Wake Forest | ACC | 4 | 0.727 | 2 | 0.941 | 0.684 |
 | 16 | Oklahoma State | Big 12 | 2 | 0.909 | 5 | 0.750 | 0.682 |
 | 17 | Oregon | Big Ten | 3 | 0.818 | 4 | 0.833 | 0.682 |
-| 18 | Wake Forest | ACC | 4 | 0.727 | 3 | 0.882 | 0.642 |
+| 18 | Louisville | ACC | 4 | 0.727 | 3 | 0.882 | 0.642 |
 | 19 | Ohio State | Big Ten | 3 | 0.818 | 5 | 0.778 | 0.636 |
 | 20 | Notre Dame | FBS Independents | 5 | 0.636 | 1 | 1.000 | 0.636 |
 | 21 | Florida | SEC | 1 | 1.000 | 7 | 0.625 | 0.625 |
 | 22 | Houston | Big 12 | 2 | 0.909 | 6 | 0.688 | 0.625 |
-| 23 | Louisville | ACC | 4 | 0.727 | 4 | 0.824 | 0.599 |
+| 23 | SMU | ACC | 4 | 0.727 | 4 | 0.824 | 0.599 |
 | 24 | Wisconsin | Big Ten | 3 | 0.818 | 6 | 0.722 | 0.591 |
 | 25 | Baylor | Big 12 | 2 | 0.909 | 7 | 0.625 | 0.568 |
 | 26 | Kentucky | SEC | 1 | 1.000 | 8 | 0.562 | 0.562 |
-| 27 | SMU | ACC | 4 | 0.727 | 5 | 0.765 | 0.556 |
+| 27 | Clemson | ACC | 4 | 0.727 | 5 | 0.765 | 0.556 |
 | 28 | USC | Big Ten | 3 | 0.818 | 7 | 0.667 | 0.545 |
 | 29 | UTSA | American | 6 | 0.545 | 1 | 1.000 | 0.545 |
-| 30 | Clemson | ACC | 4 | 0.727 | 6 | 0.706 | 0.513 |
+| 30 | Duke | ACC | 4 | 0.727 | 6 | 0.706 | 0.513 |
 | 31 | UCF | Big 12 | 2 | 0.909 | 8 | 0.562 | 0.511 |
 | 32 | Memphis | American | 6 | 0.545 | 2 | 0.929 | 0.506 |
 | 33 | Missouri | SEC | 1 | 1.000 | 9 | 0.500 | 0.500 |
@@ -568,17 +568,17 @@ Each team's opponent-strength value, the weight SOR applies when you beat or los
 | 47 | Boston College | ACC | 4 | 0.727 | 9 | 0.529 | 0.385 |
 | 48 | South Carolina | SEC | 1 | 1.000 | 11 | 0.375 | 0.375 |
 | 49 | Wyoming | Mountain West | 7 | 0.455 | 3 | 0.800 | 0.364 |
-| 50 | James Madison | Sun Belt | 8 | 0.364 | 1 | 1.000 | 0.364 |
+| 50 | Louisiana Tech | Sun Belt | 8 | 0.364 | 1 | 1.000 | 0.364 |
 | 51 | Nebraska | Big Ten | 3 | 0.818 | 11 | 0.444 | 0.364 |
 | 52 | Florida Atlantic | American | 6 | 0.545 | 6 | 0.643 | 0.351 |
 | 53 | Pittsburgh | ACC | 4 | 0.727 | 10 | 0.471 | 0.342 |
 | 54 | Iowa State | Big 12 | 2 | 0.909 | 11 | 0.375 | 0.341 |
-| 55 | Louisiana Tech | Sun Belt | 8 | 0.364 | 2 | 0.929 | 0.338 |
+| 55 | Georgia Southern | Sun Belt | 8 | 0.364 | 2 | 0.929 | 0.338 |
 | 56 | Air Force | Mountain West | 7 | 0.455 | 4 | 0.700 | 0.318 |
 | 57 | UConn | FBS Independents | 5 | 0.636 | 2 | 0.500 | 0.318 |
 | 58 | Penn State | Big Ten | 3 | 0.818 | 12 | 0.389 | 0.318 |
 | 59 | LSU | SEC | 1 | 1.000 | 12 | 0.312 | 0.312 |
-| 60 | Georgia Southern | Sun Belt | 8 | 0.364 | 3 | 0.857 | 0.312 |
+| 60 | James Madison | Sun Belt | 8 | 0.364 | 3 | 0.857 | 0.312 |
 | 61 | UAB | American | 6 | 0.545 | 7 | 0.571 | 0.312 |
 | 62 | Virginia Tech | ACC | 4 | 0.727 | 11 | 0.412 | 0.299 |
 | 63 | Louisiana | Sun Belt | 8 | 0.364 | 4 | 0.786 | 0.286 |
@@ -626,18 +626,18 @@ Each team's opponent-strength value, the weight SOR applies when you beat or los
 | 105 | Troy | Sun Belt | 8 | 0.364 | 11 | 0.286 | 0.104 |
 | 106 | Utah State | Pac-12 | 9 | 0.273 | 6 | 0.375 | 0.102 |
 | 107 | Central Michigan | Mid-American | 10 | 0.182 | 7 | 0.538 | 0.098 |
-| 108 | Kennesaw State | Conference USA | 11 | 0.091 | 1 | 1.000 | 0.091 |
+| 108 | Liberty | Conference USA | 11 | 0.091 | 1 | 1.000 | 0.091 |
 | 109 | Rutgers | Big Ten | 3 | 0.818 | 17 | 0.111 | 0.091 |
 | 110 | Northern Illinois | Mountain West | 7 | 0.455 | 9 | 0.200 | 0.091 |
 | 111 | Georgia Tech | ACC | 4 | 0.727 | 16 | 0.118 | 0.086 |
 | 112 | Bowling Green | Mid-American | 10 | 0.182 | 8 | 0.462 | 0.084 |
-| 113 | Liberty | Conference USA | 11 | 0.091 | 2 | 0.900 | 0.082 |
+| 113 | Jacksonville State | Conference USA | 11 | 0.091 | 2 | 0.900 | 0.082 |
 | 114 | Rice | American | 6 | 0.545 | 13 | 0.143 | 0.078 |
 | 115 | Old Dominion | Sun Belt | 8 | 0.364 | 12 | 0.214 | 0.078 |
-| 116 | Jacksonville State | Conference USA | 11 | 0.091 | 3 | 0.800 | 0.073 |
+| 116 | Delaware | Conference USA | 11 | 0.091 | 3 | 0.800 | 0.073 |
 | 117 | Massachusetts | Mid-American | 10 | 0.182 | 9 | 0.385 | 0.070 |
 | 118 | Washington State | Pac-12 | 9 | 0.273 | 7 | 0.250 | 0.068 |
-| 119 | Delaware | Conference USA | 11 | 0.091 | 4 | 0.700 | 0.064 |
+| 119 | Kennesaw State | Conference USA | 11 | 0.091 | 4 | 0.700 | 0.064 |
 | 120 | Vanderbilt | SEC | 1 | 1.000 | 16 | 0.062 | 0.062 |
 | 121 | Kansas State | Big 12 | 2 | 0.909 | 16 | 0.062 | 0.057 |
 | 122 | Ball State | Mid-American | 10 | 0.182 | 10 | 0.308 | 0.056 |
@@ -672,7 +672,7 @@ Each team's opponent-strength value, the weight SOR applies when you beat or los
 | In-season gate | passed (90% threshold) |
 | Source file | `data_exports/spi_rankings_2026_w12.csv` |
 | Conference file | `data_exports/conference_rankings_2026_w12.csv` |
-| Generated | 2026-11-27 20:48 UTC |
+| Generated | 2026-11-27 20:56 UTC |
 
 Regenerate with:
 
