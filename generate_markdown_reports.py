@@ -606,6 +606,257 @@ def render_conference_table(rows: List[Dict], conf_path: Optional[str]) -> str:
     return "\n".join(lines)
 
 
+# ----------------------------------------------------------------------------
+# SOR / Nature / opponent-strength detail tables
+# ----------------------------------------------------------------------------
+
+def support_file(label: str, prefix: str) -> Optional[str]:
+    """Locate a per-release support export (team_standings/nature_stats/…)."""
+    path = os.path.join(DATA_EXPORTS_DIR, f"{prefix}_{label}.csv")
+    return path if os.path.exists(path) else None
+
+
+def parse_label_week(label: str, year: int) -> Tuple[Optional[int], bool]:
+    """Return (regular-season week cap, is_postseason) parsed from a release label."""
+    post = re.match(rf"{year}_post_w(\d+)$", label)
+    if post:
+        return int(post.group(1)), True
+    week = re.match(rf"{year}_w(\d+)$", label)
+    if week:
+        return int(week.group(1)), False
+    return None, False
+
+
+def load_team_standings(label: str) -> Dict[str, Dict]:
+    """team -> {overall_index, standing_index, conf_index, conference} for the release."""
+    out: Dict[str, Dict] = {}
+    for r in read_csv(support_file(label, "team_standings") or ""):
+        team = (r.get("team") or "").strip()
+        if not team:
+            continue
+        out[team] = {
+            "conference": (r.get("conference") or "").strip(),
+            "overall_index": to_float(r.get("overall_index"), 0.0),
+            "standing_index": to_float(r.get("standing_index"), 0.0),
+            "conf_index": to_float(r.get("conf_index"), 0.0),
+        }
+    return out
+
+
+def load_nature_margins(label: str) -> Dict[str, float]:
+    """team -> average scoring margin (points/game) from the Nature export."""
+    out: Dict[str, float] = {}
+    for r in read_csv(support_file(label, "nature_stats") or ""):
+        team = (r.get("team") or "").strip()
+        if team:
+            out[team] = to_float(r.get("ave_margin"), 0.0)
+    return out
+
+
+def compute_best_worst(
+    year: int, label: str, standings: Dict[str, Dict]
+) -> Dict[str, Dict]:
+    """Per team, the highest-value win and highest-penalty loss by opponent strength.
+
+    Mirrors the SOR accumulation exactly: a win contributes +overall_index of the
+    opponent, a loss contributes (overall_index - 1). Best win = win over the
+    strongest opponent; worst loss = loss to the weakest opponent.
+    """
+    games_path = os.path.join(DATA_EXPORTS_DIR, f"season_games_{year}.csv")
+    week_cap, is_post = parse_label_week(label, year)
+    result: Dict[str, Dict] = {}
+
+    def oidx(team: str) -> float:
+        return standings.get(team, {}).get("overall_index", 0.0)
+
+    per_team: Dict[str, Dict[str, List[Tuple[str, float]]]] = {}
+    for r in read_csv(games_path):
+        st = (r.get("season_type") or "").strip()
+        if st == "regular":
+            if week_cap is not None and to_int(r.get("week"), 0) > week_cap:
+                continue
+        elif st == "postseason":
+            if not is_post:
+                continue
+        hp, ap = r.get("home_points"), r.get("away_points")
+        if hp in (None, "", "None") or ap in (None, "", "None"):
+            continue
+        hp, ap = to_int(hp, 0), to_int(ap, 0)
+        home, away = (r.get("home_team") or "").strip(), (r.get("away_team") or "").strip()
+        for team, opp, won in ((home, away, hp > ap), (away, home, ap > hp)):
+            if team not in standings:
+                continue
+            bucket = per_team.setdefault(team, {"W": [], "L": []})
+            bucket["W" if won else "L"].append((opp, oidx(opp)))
+
+    for team, bucket in per_team.items():
+        best = max(bucket["W"], key=lambda x: x[1]) if bucket["W"] else None
+        worst = min(bucket["L"], key=lambda x: x[1]) if bucket["L"] else None
+        result[team] = {
+            "best_win": (best[0], best[1]) if best else None,            # impact = +overall_index
+            "worst_loss": (worst[0], worst[1] - 1.0) if worst else None,  # impact = overall_index - 1
+        }
+    return result
+
+
+def render_sor_table(rows: List[Dict], bestworst: Dict[str, Dict]) -> str:
+    lines = [
+        "| # | Team | Conf | Record | SOR | Best Win (opp strength) | Worst Loss (penalty) |",
+        "|---:|:---|:---|:---:|---:|:---|:---|",
+    ]
+    ranked = sorted(rows, key=lambda r: -r["sor_adj"])
+    for i, row in enumerate(ranked, start=1):
+        bw = bestworst.get(row["team"], {})
+        best = bw.get("best_win")
+        worst = bw.get("worst_loss")
+        best_cell = f"{md_escape(best[0])} ({best[1]:+.3f})" if best else "—"
+        worst_cell = f"{md_escape(worst[0])} ({worst[1]:+.3f})" if worst else "—"
+        lines.append(
+            "| {i} | {team} | {conf} | {w}-{l} | {sor:.3f} | {best} | {worst} |".format(
+                i=i,
+                team=md_escape(row["team"]),
+                conf=md_escape(conference_label(row["conference"])),
+                w=row["wins"],
+                l=row["losses"],
+                sor=row["sor_adj"],
+                best=best_cell,
+                worst=worst_cell,
+            )
+        )
+    return "\n".join(lines)
+
+
+def render_nature_table(rows: List[Dict], margins: Dict[str, float]) -> str:
+    lines = [
+        "| # | Team | Conf | Record | Nature | Avg Margin |",
+        "|---:|:---|:---|:---:|---:|---:|",
+    ]
+    ranked = sorted(rows, key=lambda r: -r["n_adj"])
+    for i, row in enumerate(ranked, start=1):
+        margin = margins.get(row["team"])
+        margin_cell = f"{margin:+.1f}" if margin is not None else "—"
+        lines.append(
+            "| {i} | {team} | {conf} | {w}-{l} | {nat:.3f} | {margin} |".format(
+                i=i,
+                team=md_escape(row["team"]),
+                conf=md_escape(conference_label(row["conference"])),
+                w=row["wins"],
+                l=row["losses"],
+                nat=row["n_adj"],
+                margin=margin_cell,
+            )
+        )
+    return "\n".join(lines)
+
+
+def render_opponent_strength_table(standings: Dict[str, Dict]) -> str:
+    teams = [dict(info, team=name) for name, info in standings.items()]
+    # Conference rank from the distinct conference strength coefficients.
+    conf_rank = {
+        conf: i + 1
+        for i, (conf, _ci) in enumerate(
+            sorted({(t["conference"], t["conf_index"]) for t in teams}, key=lambda x: -x[1])
+        )
+    }
+    # Team rank within its own conference by within-conference coefficient.
+    within_rank: Dict[str, int] = {}
+    by_conf: Dict[str, List[Dict]] = {}
+    for t in teams:
+        by_conf.setdefault(t["conference"], []).append(t)
+    for conf, members in by_conf.items():
+        for i, t in enumerate(sorted(members, key=lambda x: -x["standing_index"]), start=1):
+            within_rank[t["team"]] = i
+
+    lines = [
+        "| # | Team | Conf | Conf Rank | Conf Strength | Team Rank in Conf | Team Strength in Conf | Total Team Strength |",
+        "|---:|:---|:---|---:|---:|---:|---:|---:|",
+    ]
+    for i, t in enumerate(sorted(teams, key=lambda x: -x["overall_index"]), start=1):
+        lines.append(
+            "| {i} | {team} | {conf} | {cr} | {cc:.3f} | {tr} | {tc:.3f} | {tot:.3f} |".format(
+                i=i,
+                team=md_escape(t["team"]),
+                conf=md_escape(conference_label(t["conference"])),
+                cr=conf_rank.get(t["conference"], 0),
+                cc=t["conf_index"],
+                tr=within_rank.get(t["team"], 0),
+                tc=t["standing_index"],
+                tot=t["overall_index"],
+            )
+        )
+    return "\n".join(lines)
+
+
+def build_detail_sections(year: int, label: str, rows: List[Dict]) -> List[str]:
+    """SOR / Nature / opponent-strength sections; empty if support files are absent."""
+    standings = load_team_standings(label)
+    margins = load_nature_margins(label)
+    if not standings and not margins:
+        return []
+
+    parts: List[str] = []
+
+    if standings:
+        bestworst = compute_best_worst(year, label, standings)
+        parts += [
+            "## Strength of Record (SOR) — Full FBS",
+            "",
+            "The résumé axis: who you beat and lost to, weighted by each opponent's strength.",
+            "A win adds the opponent's strength rating; a loss subtracts (1 − that rating), so"
+            " losing to a weak team hurts most. **Best Win** is the strongest opponent beaten and"
+            " **Worst Loss** is the weakest team lost to — each shown with its raw impact on SOR"
+            " (opponent-strength units, before normalization). SOR is 65% of SPI.",
+            "",
+            "<details>",
+            f"<summary><b>All {len(rows)} teams by Strength of Record</b></summary>",
+            "",
+            render_sor_table(rows, bestworst),
+            "",
+            "</details>",
+            "",
+        ]
+
+    parts += [
+        "## Nature (Quality of Play) — Full FBS",
+        "",
+        "The on-field axis: how convincingly a team plays, from scoring and efficiency."
+        " **Avg Margin** is points per game above/below opponents. Nature is 35% of SPI.",
+        "",
+        "<details>",
+        f"<summary><b>All {len(rows)} teams by Nature</b></summary>",
+        "",
+        render_nature_table(rows, margins),
+        "",
+        "</details>",
+        "",
+    ]
+
+    if standings:
+        parts += [
+            "## Opponent Strength Ratings — Full FBS",
+            "",
+            "Each team's opponent-strength value, the weight SOR applies when you beat or lose"
+            " to that team. It is built **only** from conference standings — a conference"
+            " strength coefficient (how the league rates against other leagues) multiplied by a"
+            " team's strength within its own conference — and is computed **independently of SPI**."
+            " Estimating opponent strength this way, rather than from the ratings themselves, is"
+            " what lets SPI be calculated without circular logic (no team's SPI feeds back into"
+            " the strength of its opponents).",
+            "",
+            "`Total Team Strength = Conf Strength × Team Strength in Conf`",
+            "",
+            "<details>",
+            f"<summary><b>All {len(rows)} teams by opponent strength</b></summary>",
+            "",
+            render_opponent_strength_table(standings),
+            "",
+            "</details>",
+            "",
+        ]
+
+    return parts
+
+
 def write_rankings_md(year: int, rankings_path: str, rows: List[Dict], label: str, gate: Dict) -> str:
     title = release_title(label, year)
     conf_path = conference_rankings_file(label)
@@ -622,7 +873,9 @@ def write_rankings_md(year: int, rankings_path: str, rows: List[Dict], label: st
     ] + gate_banner(gate, year) + [
         "SPI blends **Nature** (how good a team looks) and **Strength of Record** (what they have",
         "actually done) into a single 0–100 index. `N_adj` and `SOR_adj` are the normalized",
-        "components behind each team's SPI.",
+        "components behind each team's SPI. Full-FBS breakdowns of each component — plus the",
+        "[opponent-strength ratings](#opponent-strength-ratings--full-fbs) that make SPI"
+        " non-circular — are below the main board.",
         "",
         "## Top 25",
         "",
@@ -641,6 +894,7 @@ def write_rankings_md(year: int, rankings_path: str, rows: List[Dict], label: st
         "",
         render_conference_table(rows, conf_path),
         "",
+    ] + build_detail_sections(year, label, rows) + [
         "---",
         "",
         "### Where This Comes From",

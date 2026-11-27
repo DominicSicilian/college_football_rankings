@@ -136,14 +136,17 @@ fi
 log "Committing"
 # Commit the reports plus the data the pipeline actually needs on a fresh CI
 # checkout: ranking releases (the backtest scans these for available weeks),
-# their conference companions, and prediction outputs. Intermediates
-# (nature_stats_*, sor_stats_*, teams_*, team_standings_*) are regenerated on
-# every run, so they stay out of git.
+# their conference companions, and prediction outputs. The SOR / Nature /
+# opponent-strength detail tables in RANKINGS.md read team_standings_* and
+# nature_stats_*, so those are committed too. Remaining intermediates
+# (sor_stats_*, teams_*) are regenerated on every run and stay out of git.
 git add -A UPCOMING.md RANKINGS.md PREDICTIONS.md PERFORMANCE.md README.md docs published_rankings
 shopt -s nullglob
 git add -A data_exports/spi_rankings_*.csv \
            data_exports/conference_rankings_*.csv \
            data_exports/season_games_*.csv \
+           data_exports/team_standings_*.csv \
+           data_exports/nature_stats_*.csv \
            published_rankings/ranking_index.csv \
            data_exports/predictions/*.csv
 shopt -u nullglob
